@@ -1,0 +1,7 @@
+.go-to-top {
+  opacity: 0;
+}
+
+.go-to-top.show {
+  opacity: 1;
+}

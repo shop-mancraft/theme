@@ -1,0 +1,113 @@
+.ttproductcountdown .count.curr,
+.ttproductcountdown .ttcount.bottom {
+    display: none;
+}
+.ttproductcountdown .hidden {
+    display: none;
+}
+.ttpc-main {
+	background: #ffffff;
+	border: none;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+	display: inline-block;
+	float: none;
+	position: relative;
+	vertical-align: top;
+	width: auto;
+	margin: 0 !important;
+}
+.ttproductcountdown {
+    margin: 13px auto 25px;
+    position: relative;
+    text-align: center;
+    background: none;
+    display: none;
+}
+#index .ttproductcountdown {
+    display: inline-block;
+}
+.ttpc-main .time {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    float: right;
+    text-align: center;
+    position: relative;
+	margin: 0 4px;
+	background:#f5f5f5;
+}
+@media (max-width: 767px) {
+    .ttpc-main .time {
+        margin-left: 3px;
+    }
+}
+.ttpc-main .time:last-child .ttcount.next.top::after {
+    content: "";
+}
+.ttpc-main .ttcount {
+	background: #f5f5f5 none repeat scroll 0 0;
+	bottom: 0;
+	box-shadow: none;
+	color: #111;
+	display: block;
+	font: 500 16px/20px "Poppins";
+	height: 100%;
+	margin: auto;
+	overflow: hidden;
+	padding: 10px 0;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 100%;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-khtml-border-radius: 50%;
+}
+.ttpc-main .seconds .ttcount {
+    color: #f13340;
+}
+.ttpc-main .label {
+  bottom: -20px;
+  color: #202020;
+  font-size: 12px;
+  font-weight: 500;
+  right: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  text-align: center;
+  text-transform: capitalize;
+  top: auto;
+  width: 100%;
+}
+.product-miniature.product-grid .thumbnail-container .ttproductcountdown {
+	background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+	border-radius: 0;
+	display: inline-block;
+	float: right;
+	right: 0;
+	padding: 0;
+	position: static;
+	left: 0;
+	text-align: center;
+	top: 0;
+	vertical-align: top;
+	width: 100%;
+}
+
+@media (max-width: 767px) {
+    .product-miniature.product-grid .thumbnail-container:hover .ttproductcountdown {
+		display: inline-block;
+	}
+	.product-miniature.product-grid .thumbnail-container .ttproductcountdown {
+		bottom: 80px;
+		top: auto;
+	}
+}

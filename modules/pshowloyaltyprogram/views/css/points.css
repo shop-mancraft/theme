@@ -1,0 +1,11 @@
+.select2-selection {
+    border: 1px solid #C7D6DB;
+    border-radius: 3px;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    background-color: #F5F8F9;
+}
+
+.select2-container, .select2-drop, .select2-search, .select2-search input {
+    width: 100% !important;
+}

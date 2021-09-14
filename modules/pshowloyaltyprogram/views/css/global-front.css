@@ -1,0 +1,32 @@
+.pshow-points-product-page {
+    margin: 10px 0 10px 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 22px;
+    background: #F6C447;
+    display: block;
+    text-align: center;
+}
+
+.pshow-points-cart {
+    margin: 10px 0 10px 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 15px;
+    background: #F6C447;
+    display: block;
+    text-align: center;
+}
+
+.pshow-points-cart .desc, .pshow-points-product-page .desc {
+    font-size: 0.8rem;
+    display: block;
+    line-height: 12px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.pshow-points-cart .count, .pshow-points-product-page .count {
+    font-weight: bold;
+    font-size: 0.85rem;
+}

@@ -1,0 +1,244 @@
+.pshow-account-balance {
+    background-color: #55c65e;
+    border-color: #48b151;
+    color: #fff;
+    padding: 15px;
+    text-align: right;
+    font-size: 25px;
+    margin-top: 18px;
+    margin-bottom: 9px;
+    font-weight: 500;
+    line-height: 1.1;
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.pshow-account-code {
+    background-color: #5C73F2;
+    border-color: #828282;
+    color: #fff;
+    padding: 10px 0 10px 5px;
+    font-size: 16px;
+    margin-top: 18px;
+    margin-bottom: 9px;
+    font-weight: 500;
+    line-height: 1.1;
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.pshow-account-link {
+    background-color: #5C73F2;
+    border-color: #828282;
+    color: #fff;
+    padding: 10px 0 10px 5px;
+    font-size: 16px;
+    margin-top: 18px;
+    margin-bottom: 9px;
+    font-weight: 500;
+    line-height: 1.1;
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.pshow-waiting {
+    padding: 0 15px 0 15px;
+    text-align: right;
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+}
+
+.pshow-tr-waiting td {
+    font-style: italic;
+    color: #adadad;
+}
+
+.pshow-tr-settled {
+    background-color: lightgray;
+}
+
+.pshow-tr-settled td {
+    text-decoration: line-through;
+}
+
+#points {
+    margin-top: 50px;
+}
+
+.pshow-tr-waiting td i, .pshow-tr-settled td i, .pshow-tr-confirmed td i {
+    /* padding: 6px 12px; */
+    /* width: 39px; */
+    margin-bottom: 0;
+    font-size: 20px;
+    color: #fff;
+    line-height: 1.42857;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    /* border: 1px solid grey; */
+    /* border-radius: 0px; */
+    white-space: nowrap;
+    /* background: white; */
+    display: table-cell;
+}
+
+.pshow-tr-confirmed td i {
+    color: black;
+}
+
+#block-points p {
+    color: black;
+}
+
+#points .control {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 5px;
+    padding-top: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#points .control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+#points .control_indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 0px;
+}
+
+#points .control:hover input ~ .control_indicator,
+#points .control input:focus ~ .control_indicator {
+    background: #cccccc;
+}
+
+#points .control input:checked ~ .control_indicator {
+    background: #00be08;
+}
+
+#points .control:hover input:not([disabled]):checked ~ .control_indicator,
+#points .control input:checked:focus ~ .control_indicator {
+    background: #0e6647d;
+}
+
+#points .control input:disabled ~ .control_indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+#points .control_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+#points .control input:checked ~ .control_indicator:after {
+    display: block;
+}
+
+#points .control-checkbox .control_indicator:after {
+    left: 8px;
+    top: 3px;
+    width: 3px;
+    height: 8px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+#points .control-checkbox input:disabled ~ .control_indicator:after {
+    border-color: #7b7b7b;
+}
+
+#points .control-checkbox .control_indicator::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-left: -1.3rem;
+    margin-top: -1.3rem;
+    background: #2aa1c0;
+    border-radius: 3rem;
+    opacity: 0.6;
+    z-index: 99999;
+    transform: scale(0);
+}
+
+@keyframes s-ripple {
+    0% {
+        transform: scale(0);
+    }
+    20% {
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes s-ripple-dup {
+    0% {
+        transform: scale(0);
+    }
+    30% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+#points .control-checkbox input + .control_indicator::before {
+    animation: s-ripple 250ms ease-out;
+}
+
+#points .control-checkbox input:checked + .control_indicator::before {
+    animation-name: s-ripple-dup;
+}
+
+#voucherCode, #voucherAmount, #voucherExpire {
+    color: black;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+#historyPanel {
+    text-align: right;
+}
+
+.text-right {
+    text-align: right;
+}
+.text-red {
+    color: red;
+}

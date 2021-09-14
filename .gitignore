@@ -1,0 +1,19 @@
+# Old CGI catalog
+cgi-bin
+
+# Node modules
+node_modules/
+
+# Log files and databases
+*.log
+*.sql
+*.sqlite
+
+# Composer dependencies
+vendor
+
+# Enviroment
+.env
+
+# Cache
+cache

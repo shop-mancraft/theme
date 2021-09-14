@@ -1,0 +1,101 @@
+/*
+ * Custom code goes here.
+ * A template should always ship with an empty custom.css
+ */
+
+.ambasador-text{
+    max-width: 600px;
+    width: 100%;
+	z-index: 10;
+    margin-top: 40px;    
+    margin-bottom: 40px;
+   z-index: 1;
+}
+
+@media(min-width: 992px){
+.ambasador-text{
+   margin-top: 80px;     
+}
+}
+
+.ambasador-text h2{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.ambasador-text .card{
+    border-width: 1px;
+	padding: 10px;
+}
+
+.ambasador-text .card p{
+    margin-top: 10px;
+	margin-bottom: 0;
+}
+
+.ambasador-form {
+    margin: auto;
+    float: none;
+}
+
+.ambasador-form .form-maker-form{
+    background: transparent;
+    box-shadow: none;
+}
+
+.ambasador-form .form_maker_captcha label{
+	    color: #fff;
+}
+
+.ambasador-form .form-footer{
+	text-align:center!important;
+}
+
+.ambasador-person{
+	position: absolute;
+	top: auto;
+	left: 0;
+	z-index: 0;
+	bottom: 0;
+    opacity: 0.4;
+}
+
+@media(min-width: 992px){
+.ambasador-person{
+	position: relative;
+	opacity: 1;
+}
+}
+
+.ambasador-form .form_maker_captcha{text-align:center;}
+
+.ambasador-form form{
+    margin-top: 40px;
+}
+
+@media(min-width: 992px){
+.ambasador-form form{
+   margin-top: 80px;     
+}
+}
+
+
+
+
+.ambasador-form .custom-checkbox{
+    border-radius: 10px;
+    line-height: 13px;   
+}
+
+.ambasador-form .custom-checkbox .checkbox-checked{
+    border-radius: 10px;
+    line-height: 13px; 
+}
+
+.ambasador-form .custom-checkbox .checkbox-checked:before{
+    margin: 1px;
+    font-size: 16px;
+}
+
+.ambasador-form label{color:#fff;}

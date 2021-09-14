@@ -1,0 +1,52 @@
+parent: PRS171_01
+name: child_PRS171_01
+display_name: Mancraft custom PRS171_01's theme
+version: 1.0.0
+assets:
+  use_parent_assets: false
+  css:
+    all:
+      - id: lightbox-style-child
+        path: assets/css/lightbox.css
+        priority: 190
+      - id: datatables-responsive-child
+        path: assets/css/responsive.dataTables.min.css
+        priority: 200
+      - id: main-style
+        path: assets/css/index.css
+        priority: 500
+  js:
+    all:
+      - id: owl-lib-child
+        path: assets/js/_owl.carousel.min.js
+        priority: 311
+      - id: cookie-lib-child
+        path: assets/js/_jquery.cookie.js
+        priority: 321
+      - id: lightbox-lib-child
+        path: assets/js/_lightbox-2.6.min.js
+        priority: 331
+      - id: zoom-lib-child
+        path: assets/js/_jquery.zoom.min.js
+        priority: 331
+      - id: datatables-core-lib-child
+        path: assets/js/jquery.dataTables.min.js
+        priority: 331
+      - id: datatables-responsive-lib-child
+        path: assets/js/dataTables.responsive.min.js
+        priority: 332
+      - id: main-script
+        path: assets/js/index.js
+        priority: 500
+
+global_settings:
+  configuration:
+    PS_IMAGE_QUALITY: png
+  modules:
+   to_disable:
+     - tawkto
+     - ttpopupnewsletter
+     - ps_featuredproducts
+     - ps_customtext
+     - ps_banner
+     - ps_advertising
