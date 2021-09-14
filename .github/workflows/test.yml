@@ -3,7 +3,7 @@ name: Deploy on production
 on:
   push:
     branches:
-      - main
+      - test
 
 jobs:
   deploy:
@@ -56,8 +56,8 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-rlgoDzvc --delete"
           SOURCE: ${{ secrets.SOURCE }}
-          TARGET: ${{ secrets.TARGET_PROD }}
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST_PROD }}
+          TARGET: ${{ secrets.TARGET }}
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           EXCLUDE: "/dist/, /node_modules/, /cache/, /.git/, /.github/"
