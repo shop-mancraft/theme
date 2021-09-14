@@ -60,4 +60,4 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          EXCLUDE: "/dist/, /node_modules/, /cache/, .git, .github"
+          EXCLUDE: "/dist/, /node_modules/, /cache/, /.git/, /.github/"
