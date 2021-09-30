@@ -29,7 +29,9 @@
 <div id="popup_container">
     <div class="popup">
         <!-- To-do: change to img -->
-        <div id="close_btn"></div>
+        <div id="close_btn">
+            <i class="material-icons">close</i>
+        </div>
         <div class="popup_main">
             <h2 class="popup_main-text">{l s='Accept the terms of Mancraft Loyalty program and collect points of each order.' d='Custom'}</h2>
             <div class="popup_main-bar"></div>
@@ -73,9 +75,12 @@
         z-index: 999;
         justify-content: center;
         align-items: center;
-        width: 100vw;
-        height: 100vh;
         background: rgba(0,0,0,0.4);
+        max-height: 100%;
+        overflow: auto;
+        width: 100%;
+        height: auto;
+        bottom: 0;
       }
 
       .popup {
@@ -87,15 +92,13 @@
         border-radius: 15px;
         border:solid 2px #A8D727;
         overflow: auto;
+        max-height: 100%;
       }
 
       #close_btn {
         position: absolute;
         right: 20px;
         top: 20px;
-        width: 12px;
-        height: 12px;
-        background: #f00;
         cursor: pointer;
       }
 
@@ -220,7 +223,7 @@
                     $("#popup_container").fadeOut(300);
                     $.ajax({
                             method: "post",
-                            url: "shop-mancraft/unique",
+                            url: "{$link->getModuleLink('webo_loyaltypopup', 'ajax', array())}",
                             dataType: "json",
                             data:{
                                 name: "Someone",
@@ -233,7 +236,7 @@
                     if($('#agree').is(":checked")){
                         $.ajax({
                             method: "POST",
-                            url: "shop-mancraft/unique",
+                            url: "{$link->getModuleLink('webo_loyaltypopup', 'ajax', array())}",
                             dataType: "json",
                             data:{
                                 name: "Someone",
