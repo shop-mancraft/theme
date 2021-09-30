@@ -25,23 +25,26 @@
 
 {assign var="isLoyaltyAvailable" value="true"}
 
+/en/content/41-rules-and-regulations-of-loyalty-program
+/pl/content/41-regulamin-programu-lojalnosciowego
+
 {if isset($isLoyaltyAvailable)}
 <div id="popup_container">
     <div class="popup">
         <!-- To-do: change to img -->
         <div id="close_btn"></div>
         <div class="popup_main">
-            <h2 class="popup_main-text">    Accept the terms of Mancraft Loyalty program and collect points of each order.   </h2>
+            <h2 class="popup_main-text">{l s='Accept the terms of Mancraft Loyalty program and collect points of each order.' d='Custom'}</h2>
             <div class="popup_main-bar"></div>
-            <p class="popup_main-text"> The points collected during the shopping can be exchanged for one of the unique rewards available for selection in the loyalty program panel.   </p>
+            <p class="popup_main-text">{l s='The points collected during the shopping can be exchanged for one of the unique rewards available for selection in the loyalty program panel.' d='Custom'}</p>
             <div class="popup_main-agree">
                 <input type="checkbox" name="agree" id="agree">
-                <label class="popup_main-text"> I agree with the terms of the Mancraft Loyalty program, I want to collect free points for each product purchased and exchange them for great prizes.    </label>
+                <label class="popup_main-text">{l s='I agree with the terms of the Mancraft Loyalty program, I want to collect free points for each product purchased and exchange them for great prizes.' d='Custom'}</label>
             </div>
             <div class="popup_main-btns">
-                <button id="popup_main-btns-accept">Accept and join</button>
+                <button id="popup_main-btns-accept">{l s='Accept and join' d='Custom'}</button>
                 <div class="popup_main-btns-more">
-                    <a href=""> Read more</a>
+                    <a href="{l s='/en/content/41-rules-and-regulations-of-loyalty-program' d='Custom'}">{l s='Read more' d='Custom'}</a>
                     <div class="popup_main-bar"></div>
                 </div>
             </div>
