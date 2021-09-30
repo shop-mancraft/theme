@@ -25,9 +25,6 @@
 
 {assign var="isLoyaltyAvailable" value="true"}
 
-/en/content/41-rules-and-regulations-of-loyalty-program
-/pl/content/41-regulamin-programu-lojalnosciowego
-
 {if isset($isLoyaltyAvailable)}
 <div id="popup_container">
     <div class="popup">
