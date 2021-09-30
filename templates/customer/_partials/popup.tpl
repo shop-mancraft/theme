@@ -23,7 +23,9 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 
+{assign var="isLoyaltyAvailable" value="true"}
 
+{if isset($isLoyaltyAvailable)}
 <div id="popup_container">
     <div class="popup">
         <!-- To-do: change to img -->
@@ -46,10 +48,8 @@
         </div>
     </div>
 </div>
-    
+{/if}
     <style>
-
-        @import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
 
       * {
         margin: 0;
@@ -67,7 +67,10 @@
 
       #popup_container {
         position: fixed;
-        display: none;
+        display: flex;
+        top: 0;
+        left: 0;
+        z-index: 999;
         justify-content: center;
         align-items: center;
         width: 100vw;
@@ -104,7 +107,6 @@
 
       .popup_main-text{
         margin-top: 40px;
-        font-family: 'Goldman', 'Tahoma', 'sans-serif';
         font-weight: lighter;
         color: #fff;
         text-align: center;
@@ -205,52 +207,49 @@
 
     </style>
 
-    {assign var="isLoyaltyAvailable" value="true"}
-
-    <script
-    src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"></script>
-
     <script>
-    var isLoyaltyAvailable = {$isLoyaltyAvailable};
-    if(isLoyaltyAvailable){
-       $("#popup_container").css("display","flex").hide().fadeIn(300); 
-    }
+        var isLoyaltyAvailable = {$isLoyaltyAvailable};
+    
+        (function($){
+            $( document ).ready(function() {
+                if(isLoyaltyAvailable){
+                    $("#popup_container").fadeIn(300); 
+                }
 
-        $("#close_btn").on('click',function () {
-            $("#popup_container").fadeOut(300);
-            $.ajax({
-                    method: "post",
-                    url: "shop-mancraft/unique",
-                    dataType: "json",
-                    data:{
-                        name: "Someone",
-                        nawsletter_status: "Not signed"
+                $("#close_btn").on('click',function () {
+                    $("#popup_container").fadeOut(300);
+                    $.ajax({
+                            method: "post",
+                            url: "shop-mancraft/unique",
+                            dataType: "json",
+                            data:{
+                                name: "Someone",
+                                nawsletter_status: "Not signed"
+                            }
+                        })
+                })
+
+                $("#popup_main-btns-accept").on('click',function () {
+                    if($('#agree').is(":checked")){
+                        $.ajax({
+                            method: "POST",
+                            url: "shop-mancraft/unique",
+                            dataType: "json",
+                            data:{
+                                name: "Someone",
+                                nawsletter_status: "Signed"
+                            },
+                            success: function (response) {
+                                $("#popup_container").fadeOut(300);
+                                alert("Newsletter signup successful!")
+                            },
+                            error: function (response) {
+                                alert("Newsletter signup has failed.")
+                            },
+                            
+                        })
                     }
                 })
-        })
-
-        $("#popup_main-btns-accept").on('click',function () {
-            if($('#agree').is(":checked")){
-                $.ajax({
-                    method: "POST",
-                    url: "shop-mancraft/unique",
-                    dataType: "json",
-                    data:{
-                        name: "Someone",
-                        nawsletter_status: "Signed"
-                    },
-                    success: function (response) {
-                        $("#popup_container").fadeOut(300);
-                        alert("Newsletter signup successful!")
-                    },
-                    error: function (response) {
-                        alert("Newsletter signup has failed.")
-                    },
-                    
-                })
-            }
-        })
-
+            });
+        })(jQuery);
     </script>
