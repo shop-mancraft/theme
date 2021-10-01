@@ -252,10 +252,6 @@ crossorigin="anonymous"></script>
                 });
             }
 
-            if(!ignoreLoyalty){
-                $("#popup_container").fadeIn(300); 
-            }
-
             $("#close_btn").on('click',function () {
                 $("#popup_container").fadeOut(300);
                 setCookie('is_ignore_loyalty', 1, 362);
