@@ -226,8 +226,9 @@
                             url: "{$link->getModuleLink('webo_loyaltypopup', 'ajax', array())}",
                             dataType: "json",
                             data:{
-                                name: "Someone",
-                                nawsletter_status: "Not signed"
+                                email: prestashop.customer.email,
+                                loyalty_status: false,
+                                token: prestashop.token
                             }
                         })
                 })
@@ -239,8 +240,9 @@
                             url: "{$link->getModuleLink('webo_loyaltypopup', 'ajax', array())}",
                             dataType: "json",
                             data:{
-                                name: "Someone",
-                                nawsletter_status: "Signed"
+                                email: prestashop.customer.email,
+                                loyalty_status: true,
+                                token: prestashop.token
                             },
                             success: function (response) {
                                 $("#popup_container").fadeOut(300);
