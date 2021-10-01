@@ -222,7 +222,7 @@ crossorigin="anonymous"></script>
             } else {
                 $.ajax({
                     method: "post",
-                    url: "{$link->getModuleLink('webo_loyaltypopup', 'ajax', array())}",
+                    url: "{/literal}{$link->getModuleLink('webo_loyaltypopup', 'ajax', array())}{literal}",
                     dataType: "json",
                     data:{
                         email: prestashop.customer.email,
@@ -249,7 +249,7 @@ crossorigin="anonymous"></script>
                 if($('#agree').prop('checked')){
                     $.ajax({
                         method: "POST",
-                        url: "{$link->getModuleLink('webo_loyaltypopup', 'ajax', array())}?action=add",
+                        url: "{/literal}{$link->getModuleLink('webo_loyaltypopup', 'ajax', array())}{literal}?action=add",
                         dataType: "json",
                         data:{
                             email: prestashop.customer.email,
