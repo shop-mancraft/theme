@@ -23,9 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 
-{assign var="isLoyaltyAvailable" value="true"}
 
-{if isset($isLoyaltyAvailable)}
 <div id="popup_container">
     <div class="popup">
         <!-- To-do: change to img -->
@@ -50,7 +48,6 @@
         </div>
     </div>
 </div>
-{/if}
 
     <style>
 
@@ -215,33 +212,42 @@
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous"></script>
     <script>
-        var isLoyaltyAvailable = {$isLoyaltyAvailable};
-    
         (function($){
             $( document ).ready(function() {
-                if(isLoyaltyAvailable){
+                var ignoreLoyalty = Cookies.get('is_ignore_loyalty');
+                if(ignoreLoyalty == 1){
+                    $("#popup_container").hide();
+                } else {
+                    $.ajax({
+                        method: "post",
+                        url: "{$link->getModuleLink('webo_loyaltypopup', 'ajax', array())}",
+                        dataType: "json",
+                        data:{
+                            email: prestashop.customer.email,
+                            token: prestashop.token
+                        },
+                        success: function (response) {
+                            if(response['is_added'] && response['is_added'].length > 0){
+                                $("#popup_container").hide();
+                            }
+                        },
+                    });
+                }
+
+                if(!ignoreLoyalty){
                     $("#popup_container").fadeIn(300); 
                 }
 
                 $("#close_btn").on('click',function () {
                     $("#popup_container").fadeOut(300);
-                    $.ajax({
-                            method: "post",
-                            url: "{$link->getModuleLink('webo_loyaltypopup', 'ajax', array())}",
-                            dataType: "json",
-                            data:{
-                                email: prestashop.customer.email,
-                                loyalty_status: false,
-                                token: prestashop.token
-                            }
-                        })
+                    Cookies.set('is_ignore_loyalty', 1, {expires: null});
                 })
 
                 $("#popup_main-btns-accept").on('click',function () {
                     if($('#agree').prop('checked')){
                         $.ajax({
                             method: "POST",
-                            url: "{$link->getModuleLink('webo_loyaltypopup', 'ajax', array())}",
+                            url: "{$link->getModuleLink('webo_loyaltypopup', 'ajax', array())}?action=add",
                             dataType: "json",
                             data:{
                                 email: prestashop.customer.email,
