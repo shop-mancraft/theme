@@ -26,7 +26,6 @@
 
 <div id="popup_container" style="display:none;">
     <div class="popup">
-        <!-- To-do: change to img -->
         <div id="close_btn">
             <i class="material-icons">close</i>
         </div>
