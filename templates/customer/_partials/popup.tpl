@@ -234,7 +234,7 @@
                 })
 
                 $("#popup_main-btns-accept").on('click',function () {
-                    if($('#agree').is(":checked")){
+                    if($('#agree').prop('checked')){
                         $.ajax({
                             method: "POST",
                             url: "{$link->getModuleLink('webo_loyaltypopup', 'ajax', array())}",
