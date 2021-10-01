@@ -214,9 +214,26 @@ src="https://code.jquery.com/jquery-3.6.0.min.js"
 integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 crossorigin="anonymous"></script>
 <script>
+    function setCookie(key, value, expiry) {
+        var expires = new Date();
+        expires.setTime(expires.getTime() + (expiry * 24 * 60 * 60 * 1000));
+        document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+    }
+
+    function getCookie(key) {
+        var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+        return keyValue ? keyValue[2] : null;
+    }
+
+    function eraseCookie(key) {
+        var keyValue = getCookie(key);
+        setCookie(key, keyValue, '-1');
+    }
+
+
     (function($){
         $( document ).ready(function() {
-            var ignoreLoyalty = Cookies.get('is_ignore_loyalty');
+            var ignoreLoyalty = getCookie('is_ignore_loyalty');
             if(ignoreLoyalty == 1){
                 $("#popup_container").hide();
             } else {
@@ -242,7 +259,7 @@ crossorigin="anonymous"></script>
 
             $("#close_btn").on('click',function () {
                 $("#popup_container").fadeOut(300);
-                Cookies.set('is_ignore_loyalty', 1, {expires: null});
+                setCookie('is_ignore_loyalty', 1, 1, 1);
             })
 
             $("#popup_main-btns-accept").on('click',function () {
