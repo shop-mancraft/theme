@@ -6,8 +6,8 @@ assets:
   use_parent_assets: false
   css:
     all:
-      - id: socials-fb-style
-        path: modules/hifacebookconnect/views/css/facebook-connect-front.css
+      - id: socials-btn-style
+        path: assets/css/socials-btn-styles.css
         priority: 180
       - id: lightbox-style-child
         path: assets/css/lightbox.css
