@@ -48,223 +48,226 @@
         </div>
     </div>
 </div>
+{literal}
+    
 
-    <style>
+<style>
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
 
-      h2{
-          font-size: 25px;
-      }
+    h2{
+        font-size: 25px;
+    }
 
-      p{
-          font-size: 14px;
-      }
+    p{
+        font-size: 14px;
+    }
 
-      #popup_container {
-        position: fixed;
+    #popup_container {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.4);
+    max-height: 100%;
+    overflow: auto;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    }
+
+    .popup {
+    position: relative;
+    padding: 10px;
+    width: 600px;
+    height: 450px;
+    background: #0A0A0A;
+    border-radius: 15px;
+    border:solid 2px #A8D727;
+    overflow: auto;
+    max-height: 100%;
+    }
+
+    #close_btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    }
+
+    .popup_main{
         display: flex;
-        top: 0;
-        left: 0;
-        z-index: 999;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .popup_main-text{
+    margin-top: 40px;
+    font-weight: lighter;
+    color: #fff;
+    text-align: center;
+    max-width: 467px;
+    }
+
+    .popup_main-bar{
+        margin-top: 10px;
+        height: 2px;
+        width: 50px;
+        background: #A8D727;
+    }
+
+    .popup_main-agree{
+        display: flex;
+        margin-top: 40px;
+    }
+
+    .popup_main-agree .popup_main-text{
+        font-size: 12px;
+        max-width: 446px;
+        margin: 0px;
+        text-align: left;
+    }
+
+    .popup_main-agree input{
+        width: 16px;
+        height: 16px;
+        margin: 0 20px 20px 0px;
+    }
+
+    .popup_main-agree input::before{
+        display: block;
+        content: '';
+        box-sizing: border-box;
+        width: 16px;
+        height: 16px;
+        border:1px solid #A8D727 ;
+        border-radius: 2px;
+    }
+
+    .popup_main-btns{
+    display: flex;
+    justify-content: center;
+    gap: 51px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    }
+
+    #popup_main-btns-accept{
+        width: 179px;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        background: #A8D727;
+        font-family: 'Goldman', 'Tahoma', 'sans-serif';
+        font-weight: lighter;
+        font-size: 15px;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    #popup_main-btns-accept:hover{
+        background: #000;
+    }
+
+    .popup_main-btns-more{
+        display: flex;
+        position: relative;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: rgba(0,0,0,0.4);
-        max-height: 100%;
-        overflow: auto;
-        width: 100%;
-        height: auto;
-        bottom: 0;
-      }
+    }
 
-      .popup {
-        position: relative;
-        padding: 10px;
-        width: 600px;
-        height: 450px;
-        background: #0A0A0A;
-        border-radius: 15px;
-        border:solid 2px #A8D727;
-        overflow: auto;
-        max-height: 100%;
-      }
-
-      #close_btn {
-        position: absolute;
-        right: 20px;
-        top: 20px;
-        cursor: pointer;
-      }
-
-      .popup_main{
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-      }
-
-      .popup_main-text{
-        margin-top: 40px;
+    .popup_main-btns-more a{
+        font-family: 'Goldman', 'Tahoma', 'sans-serif';
         font-weight: lighter;
+        font-size: 15px;
+        line-height: 18px;
+        text-decoration: none;
         color: #fff;
-        text-align: center;
-        max-width: 467px;
-      }
+        transition: color 0.3s;
+    }
 
-      .popup_main-bar{
-          margin-top: 10px;
-          height: 2px;
-          width: 50px;
-          background: #A8D727;
-      }
+    .popup_main-btns-more a:hover{
+        color: #A8D727;
+    }
 
-      .popup_main-agree{
-          display: flex;
-          margin-top: 40px;
-      }
-
-      .popup_main-agree .popup_main-text{
-          font-size: 12px;
-          max-width: 446px;
-          margin: 0px;
-          text-align: left;
-      }
-
-      .popup_main-agree input{
-          width: 16px;
-          height: 16px;
-          margin: 0 20px 20px 0px;
-      }
-
-      .popup_main-agree input::before{
-          display: block;
-          content: '';
-          box-sizing: border-box;
-          width: 16px;
-          height: 16px;
-          border:1px solid #A8D727 ;
-          border-radius: 2px;
-      }
-
-      .popup_main-btns{
-        display: flex;
-        justify-content: center;
-        gap: 51px;
-        flex-wrap: wrap;
-        margin-top: 20px;
-      }
-
-      #popup_main-btns-accept{
-          width: 179px;
-          height: 50px;
-          border: none;
-          border-radius: 10px;
-          background: #A8D727;
-          font-family: 'Goldman', 'Tahoma', 'sans-serif';
-          font-weight: lighter;
-          font-size: 15px;
-          color: #fff;
-          cursor: pointer;
-          transition: background-color 0.3s;
-      }
-
-      #popup_main-btns-accept:hover{
-          background: #000;
-      }
-
-      .popup_main-btns-more{
-          display: flex;
-          position: relative;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-      }
-
-      .popup_main-btns-more a{
-          font-family: 'Goldman', 'Tahoma', 'sans-serif';
-          font-weight: lighter;
-          font-size: 15px;
-          line-height: 18px;
-          text-decoration: none;
-          color: #fff;
-          transition: color 0.3s;
-      }
-
-      .popup_main-btns-more a:hover{
-          color: #A8D727;
-      }
-
-      .popup_main-btns-more .popup_main-bar{
-          position: absolute;
-          background: #fff;
-          width: 125px;
-          height: 1px;
-          margin-top: 29px;
-      }
+    .popup_main-btns-more .popup_main-bar{
+        position: absolute;
+        background: #fff;
+        width: 125px;
+        height: 1px;
+        margin-top: 29px;
+    }
 
 
-    </style>
-    <script
-    src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"></script>
-    <script>
-        (function($){
-            $( document ).ready(function() {
-                var ignoreLoyalty = Cookies.get('is_ignore_loyalty');
-                if(ignoreLoyalty == 1){
-                    $("#popup_container").hide();
-                } else {
+</style>
+<script
+src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+crossorigin="anonymous"></script>
+<script>
+    (function($){
+        $( document ).ready(function() {
+            var ignoreLoyalty = Cookies.get('is_ignore_loyalty');
+            if(ignoreLoyalty == 1){
+                $("#popup_container").hide();
+            } else {
+                $.ajax({
+                    method: "post",
+                    url: "{$link->getModuleLink('webo_loyaltypopup', 'ajax', array())}",
+                    dataType: "json",
+                    data:{
+                        email: prestashop.customer.email,
+                        token: prestashop.token
+                    },
+                    success: function (response) {
+                        if(response['is_added'] && response['is_added'].length > 0){
+                            $("#popup_container").hide();
+                        }
+                    },
+                });
+            }
+
+            if(!ignoreLoyalty){
+                $("#popup_container").fadeIn(300); 
+            }
+
+            $("#close_btn").on('click',function () {
+                $("#popup_container").fadeOut(300);
+                Cookies.set('is_ignore_loyalty', 1, {expires: null});
+            })
+
+            $("#popup_main-btns-accept").on('click',function () {
+                if($('#agree').prop('checked')){
                     $.ajax({
-                        method: "post",
-                        url: "{$link->getModuleLink('webo_loyaltypopup', 'ajax', array())}",
+                        method: "POST",
+                        url: "{$link->getModuleLink('webo_loyaltypopup', 'ajax', array())}?action=add",
                         dataType: "json",
                         data:{
                             email: prestashop.customer.email,
+                            loyalty_status: true,
                             token: prestashop.token
                         },
                         success: function (response) {
-                            if(response['is_added'] && response['is_added'].length > 0){
-                                $("#popup_container").hide();
-                            }
+                            $("#popup_container").fadeOut(300);
+                            alert("Newsletter signup successful!")
                         },
-                    });
+                        error: function (response) {
+                            alert("Newsletter signup has failed.")
+                        },
+                        
+                    })
                 }
-
-                if(!ignoreLoyalty){
-                    $("#popup_container").fadeIn(300); 
-                }
-
-                $("#close_btn").on('click',function () {
-                    $("#popup_container").fadeOut(300);
-                    Cookies.set('is_ignore_loyalty', 1, {expires: null});
-                })
-
-                $("#popup_main-btns-accept").on('click',function () {
-                    if($('#agree').prop('checked')){
-                        $.ajax({
-                            method: "POST",
-                            url: "{$link->getModuleLink('webo_loyaltypopup', 'ajax', array())}?action=add",
-                            dataType: "json",
-                            data:{
-                                email: prestashop.customer.email,
-                                loyalty_status: true,
-                                token: prestashop.token
-                            },
-                            success: function (response) {
-                                $("#popup_container").fadeOut(300);
-                                alert("Newsletter signup successful!")
-                            },
-                            error: function (response) {
-                                alert("Newsletter signup has failed.")
-                            },
-                            
-                        })
-                    }
-                })
-            });
-        })(jQuery);
-    </script>
+            })
+        });
+    })(jQuery);
+</script>
+{/literal}}
