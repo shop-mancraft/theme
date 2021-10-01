@@ -24,7 +24,7 @@
  *}
 
 
-<div id="popup_container">
+<div id="popup_container" style="display:none;">
     <div class="popup">
         <!-- To-do: change to img -->
         <div id="close_btn">
