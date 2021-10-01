@@ -259,7 +259,7 @@ crossorigin="anonymous"></script>
 
             $("#close_btn").on('click',function () {
                 $("#popup_container").fadeOut(300);
-                setCookie('is_ignore_loyalty', 1, 1, 1);
+                setCookie('is_ignore_loyalty', 1, 1);
             })
 
             $("#popup_main-btns-accept").on('click',function () {
