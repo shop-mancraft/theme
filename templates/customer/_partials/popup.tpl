@@ -270,4 +270,4 @@ crossorigin="anonymous"></script>
         });
     })(jQuery);
 </script>
-{/literal}}
+{/literal}
