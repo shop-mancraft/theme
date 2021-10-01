@@ -51,6 +51,8 @@
     </div>
 </div>
 {/if}
+
+{block name='hook_before_body_closing_tag'}
     <style>
 
       * {
@@ -258,3 +260,4 @@
             });
         })(jQuery);
     </script>
+{/block}
