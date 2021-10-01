@@ -233,9 +233,7 @@ crossorigin="anonymous"></script>
     (function($){
         $( document ).ready(function() {
             var ignoreLoyalty = getCookie('is_ignore_loyalty');
-            if(ignoreLoyalty == 1){
-                $("#popup_container").hide();
-            } else {
+            if(ignoreLoyalty != 1){
                 $.ajax({
                     method: "post",
                     url: "{/literal}{$link->getModuleLink('webo_loyaltypopup', 'ajax', array())}{literal}",
@@ -245,8 +243,8 @@ crossorigin="anonymous"></script>
                         token: prestashop.token
                     },
                     success: function (response) {
-                        if(response['is_added'] && response['is_added'].length > 0){
-                            $("#popup_container").hide();
+                        if(response['is_added'] && response['is_added'].length == 0){
+                            $("#popup_container").show();
                         }
                     },
                 });
@@ -270,12 +268,8 @@ crossorigin="anonymous"></script>
                         },
                         success: function (response) {
                             $("#popup_container").fadeOut(300);
-                            alert("Newsletter signup successful!")
+                            alert("Loyalty program activated!")
                         },
-                        error: function (response) {
-                            alert("Newsletter signup has failed.")
-                        },
-                        
                     })
                 }
             })
