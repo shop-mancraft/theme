@@ -151,3 +151,21 @@
 .hi_overflow{
     overflow:hidden;
 }
+
+/* Custom Sign in buttons */
+
+.profile-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 105px !important;
+    padding: 2px 5px;
+    margin-top: 3px;
+    color: #fff !important;
+    font-size: 11px !important;
+    background: #5474B7;
+}
+
+.profile-btn:hover{
+    background: #5464A7;
+}
