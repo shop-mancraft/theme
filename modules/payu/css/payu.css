@@ -255,15 +255,10 @@ p.payment_module a.payu-widget-installments-mini {
     background: #ffffff url('../img/payu_logo_small.png') no-repeat center;
 }
 
-.payu-payment-fieldset-1-7 {
-    border: 1px solid #a6c307;
-    margin: 0 2px;
-    padding-left: 8px;
-    padding-right: 8px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
+.currency-eur #payMethodContainer-ai{
+	display:none;
 }
+
 .payu-payment-legend-1-7 {
     width: 0;
 }
@@ -273,6 +268,11 @@ p.payment_module a.payu-widget-installments-mini {
     height: 30px;
     width: 70px;
     background: #ffffff url('../img/payu_logo_small.png') no-repeat center;
+}
+
+
+.payu-payment-legend-1-7{
+    display: none;
 }
 
 .payu-marker-class {
