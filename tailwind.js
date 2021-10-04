@@ -1,11 +1,12 @@
 module.exports = {
   purge: {
-    enabled: false,
+    enabled: true,
     content: [
-      './theme/**/*.html',
-      './theme/**/*.php',
-      './theme/**/*.vue',
-      './theme/**/*.jsx',
+      './**/*.html',
+      './**/*.php',
+      './**/*.vue',
+      './**/*.jsx',
+      './**/*.tpl',
     ],
   },
   theme: {
