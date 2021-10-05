@@ -152,7 +152,7 @@
       flex-basis: 50%;
     }
 
-    #checkout-delivery-step .content .flex-auto .row:first-child div{
+    #checkout-delivery-step .content .flex-auto .row .col-xs-3{
       max-width: 120px;
     }
 
