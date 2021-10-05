@@ -121,4 +121,41 @@
   </div>
 
   <div id="extra_carrier"></div>
+
+  {* MOBILE DELIVERY CHECKOUT LOGO FIX *}
+
+  <style>
+
+  @media screen and (max-width: 767px) {
+
+    #checkout-delivery-step .content{
+      padding: 0 20px !important;
+    }
+
+    #checkout-delivery-step .content .col-sm-1{
+      padding: 0;
+      margin: 10px 10px 0 0;
+    }
+
+    #checkout-delivery-step .content label{
+      padding: 0;
+    }
+
+    #checkout-delivery-step .content .flex-auto .row{
+      display: flex;
+      margin: 0;
+      gap: 10px;
+    }
+
+    #checkout-delivery-step .content .flex-auto .row div{
+      padding: 0;
+      flex-basis: 50%;
+    }
+
+
+  }
+  </style>
+
+  {* MOBILE DELIVERY CHECKOUT LOGO FIX *}
+
 {/block}
