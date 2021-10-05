@@ -152,6 +152,10 @@
       flex-basis: 50%;
     }
 
+    #checkout-delivery-step .content .flex-auto .row:first-child div{
+      max-width: 120px;
+    }
+
 
   }
   </style>
