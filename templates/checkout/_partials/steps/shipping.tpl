@@ -48,7 +48,7 @@
                         <span></span>
                       </span>
                     </div>
-                    <label for="delivery_option_{$carrier.id}" class="col-sm-11 delivery-option-2">
+                    <label for="delivery_option_{$carrier.id}" class="delivery-option-2 w-full">
                       <div class="flex justify-between">
                         <div class="mr-4">
                           <div class="tablet:flex">
@@ -57,7 +57,7 @@
                                 <img src="{$carrier.logo}" alt="{$carrier.name}" />
                             </div>
                             {/if}
-                            <div class="{if $carrier.logo}col-xs-9{else}col-xs-12{/if}">
+                            <div class="{if $carrier.logo}flex-1{else}col-xs-12{/if}">
                               <span class="h6 carrier-name">{$carrier.name}</span>
                               <br>
                               <span class="carrier-delay">{$carrier.delay}</span>
