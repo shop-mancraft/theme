@@ -35,11 +35,10 @@
     <div class="clearfix">
       <form method="GET" action="{$urls.pages.order}">
         <button
-          class="continue btn btn-primary"
+          class="continue btn btn-primary float-xs-right"
           name="controller"
           type="submit"
           value="order"
-          style="margin-top: 12px;"
         >
           {l s='Continue' d='Shop.Theme.Actions'}
         </button>
