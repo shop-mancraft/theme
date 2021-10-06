@@ -41,31 +41,30 @@
           {block name='delivery_options'}
             <div class="delivery-options">
               {foreach from=$delivery_options item=carrier key=carrier_id}
-                  <div class="row delivery-option">
-                    <div class="col-sm-1">
-                      <span class="custom-radio float-xs-left">
+                  <div class="delivery-option flex w-full px-4">
+                    <div class="ml-2 mr-6">
+                      <span class="custom-radio">
                         <input type="radio" name="delivery_option[{$id_address}]" id="delivery_option_{$carrier.id}" value="{$carrier_id}"{if $delivery_option == $carrier_id} checked{/if}>
                         <span></span>
                       </span>
                     </div>
                     <label for="delivery_option_{$carrier.id}" class="col-sm-11 delivery-option-2">
-                      <div class="flex justify-start items-start">
-                        <div class="flex-auto">
-                          <div class="row">
+                      <div class="flex justify-between">
+                        <div class="mr-4">
+                          <div class="tablet:flex">
                             {if $carrier.logo}
-                            <div class="col-xs-3">
+                            <div class="mb-4 w-24 tablet:mb-0 tablet:mr-4 tablet:w-28">
                                 <img src="{$carrier.logo}" alt="{$carrier.name}" />
                             </div>
                             {/if}
                             <div class="{if $carrier.logo}col-xs-9{else}col-xs-12{/if}">
                               <span class="h6 carrier-name">{$carrier.name}</span>
+                              <br>
+                              <span class="carrier-delay">{$carrier.delay}</span>
                             </div>
                           </div>
                         </div>
-                        <div class="flex-auto">
-                          <span class="carrier-delay">{$carrier.delay}</span>
-                        </div>
-                        <div class="flex-initial">
+                        <div>
                           <span class="carrier-price">{$carrier.price}</span>
                         </div>
                       </div>
@@ -121,45 +120,5 @@
   </div>
 
   <div id="extra_carrier"></div>
-
-  {* MOBILE DELIVERY CHECKOUT LOGO FIX *}
-
-  <style>
-
-  @media screen and (max-width: 767px) {
-
-    #checkout-delivery-step .content{
-      padding: 0 20px !important;
-    }
-
-    #checkout-delivery-step .content .col-sm-1{
-      padding: 0;
-      margin: 10px 10px 0 0;
-    }
-
-    #checkout-delivery-step .content label{
-      padding: 0;
-    }
-
-    #checkout-delivery-step .content .flex-auto .row{
-      display: flex;
-      margin: 0;
-      gap: 10px;
-    }
-
-    #checkout-delivery-step .content .flex-auto .row div{
-      padding: 0;
-      flex-basis: 50%;
-    }
-
-    #checkout-delivery-step .content .flex-auto .row .col-xs-3{
-      max-width: 120px;
-    }
-
-
-  }
-  </style>
-
-  {* MOBILE DELIVERY CHECKOUT LOGO FIX *}
 
 {/block}
