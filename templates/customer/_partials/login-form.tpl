@@ -66,12 +66,12 @@
       <hr><span>or</span><hr>
     </div>
 
-    <a onclick="fb_login();" class="profile-btn-lg onclick-btn" title="{l s='Sign in with Facebook' mod='hifacebookconnect'}">
+    <span onclick="fb_login();" class="profile-btn-lg onclick-btn" title="{l s='Sign in with Facebook' mod='hifacebookconnect'}">
        Sign in with 
        <svg width="25" height="25" viewBox="0 0 18 34" fill="none" xmlns="http://www.w3.org/2000/svg">
        <path d="M14.6624 5.64542H17.7663V0.239417C17.2308 0.16575 15.3891 0 13.2443 0C3.42398 0 6.09581 11.1208 5.70481 12.75H0.764893V18.7935H5.70339V34H11.7582V18.7949H16.497L17.2492 12.7514H11.7568C12.0231 8.75075 10.6787 5.64542 14.6624 5.64542Z" fill="white"></path>
        </svg>
-    </a>
+    </span>
 
   </div>
 
@@ -92,11 +92,12 @@
   .spacer hr{
     width: 120px;
     transform: translateY(-10px);
+    margin: 20px 0 !important;
   }
 
   </style>
 
-  {* FACEBOOK Sing In *}
+  {* /end FACEBOOK Sing In *}
 
 
 {/block}
