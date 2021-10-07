@@ -16,4 +16,6 @@ vendor
 .env
 
 # Cache
-cache
+cache/*
+!cache
+!cache/index.php
