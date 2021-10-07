@@ -64,7 +64,7 @@
           <div class="w-full p-0 flex mt-2">
             {if $conditions}
               <input type="checkbox" class="border border-white checked:bg-white flex-none h-4 mr-2 w-4" name="legal-agreements" id="legal-agreements" required/>
-              <label for="legal-agreements" class="leading-normal text-white text-xs text-left float-left w-auto"><span id="newsletter-short-text">{$conditions|truncate:90:"":false:false} <a onclick="handleReadMoreNewsletter(this);" href="javascript:void(0)" class="duration-300 transition-colors"> ... więcej</a></span><span id="agreement-newsletter-more" style="display: none;"> {$conditions}</span></label>
+              <label for="legal-agreements" class="leading-normal text-white text-xs text-left float-left w-auto"><span id="newsletter-short-text">{$conditions|truncate:90:"":false:false} <a onclick="handleReadMoreNewsletter(this);" href="javascript:void(0)" class="duration-300 transition-colors">{l s=' ... more' d='Shop.Theme.Global'}</a></span><span id="agreement-newsletter-more" style="display: none;"> {$conditions}</span></label>
 
               <script type="text/javascript">
                 //<![CDATA[
