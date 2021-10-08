@@ -268,7 +268,7 @@ crossorigin="anonymous"></script>
                         },
                         success: function (response) {
                             $("#popup_container").fadeOut(300);
-                            alert("Loyalty program activated!")
+                            alert("{/literal}{l s='Loyalty program activated!' d='Custom'}{literal}")
                         },
                     })
                 }
