@@ -33,7 +33,7 @@
 				<input type="number" name="qty" class="quantity_wanted input-group" value="{$product.minimal_quantity}" min="{$product.minimal_quantity}"/>
 			</div>
 			{if $product.quantity > 0 && $product.quantity >= $product.minimal_quantity || $product.allow_oosp}
-				<button class="button ajax_add_to_cart_button add-to-cart btn btn-default" data-button-action="add-to-cart" title="{l s='Add to cart'}" {if !$product.add_to_cart_url}
+				<button class="button ajax_add_to_cart_button add-to-cart btn btn-default" data-button-action="add-to-cart" title="{l s='Add to cart' d='Shop.Theme.Actions'}" {if !$product.add_to_cart_url}
               disabled
             {/if}>
 					<span>{l s='Add to cart' d='Shop.Theme.Actions'}</span>
