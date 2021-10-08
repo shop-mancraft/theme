@@ -136,7 +136,7 @@
 			{hook h='displayTtCompareButton' product=$product}
 			{block name='quick_view'}
 				<div class="quick-view-block">
-					<a href="#" class="quick-view btn" data-link-action="quickview" title="{l s='Quick view'}">
+					<a href="#" class="quick-view btn" data-link-action="quickview" title="{l s='Quick view' d='Shop.Theme.Actions'}}">
 						<i class="material-icons search">search</i> <span>{l s='Quick view' d='Shop.Theme.Actions'}</span>
 					</a>
 				</div>
