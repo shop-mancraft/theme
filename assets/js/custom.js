@@ -5,13 +5,17 @@
 
 $(document).ready(function() {
 
-var mylist = $('.product-variants select.form-control');
-var listitems = mylist.children('option').get();
-listitems.sort(function(a, b) {
-   return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
-})
-$.each(listitems, function(idx, itm) { mylist.append(itm); });
+    var mylist = $('.product-variants select.form-control');
+    $.each(mylist, function(key, list) { 
+        var listitems = $(list).children('option').get();
+        listitems.sort(function(a, b) {
+            return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
+        })
+        $.each(list, function(idx, itm) { list.append(itm); });
+    });
+
 });
+
 
 
 /*
