@@ -11,7 +11,7 @@ $(document).ready(function() {
         listitems.sort(function(a, b) {
             return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
         })
-        $.each(list, function(idx, itm) { list.append(itm); });
+        $(list).append(listitems);
     });
 
 });
