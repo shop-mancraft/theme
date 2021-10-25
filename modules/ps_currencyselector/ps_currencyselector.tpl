@@ -25,7 +25,7 @@
 <div class="ps_currencyselector cursor-pointer float-right text-center relative m-4 tablet-narrow:my-1 mx-2 tablet-narrow:mx-0 flex-auto">
   <div class="currency-selector dropdown ttdropdown js-dropdown">
     <span id="currency-selector-label" class="hidden">{l s='Currency:' d='Shop.Theme.Global'}</span>
-    <button data-target="#" data-toggle="dropdown" class="hidden-sm-down" aria-haspopup="true" aria-expanded="false" aria-label="{l s='Currency dropdown' d='Shop.Theme.Global'}">
+    <button data-toggle="dropdown" class="hidden-sm-down" aria-haspopup="true" aria-expanded="false" aria-label="{l s='Currency dropdown' d='Shop.Theme.Global'}">
       <span class="expand-more _gray-darker">{$current_currency.iso_code}</span>
       <i class="material-icons expand-more">
         <svg xmlns="http://www.w3.org/2000/svg" height="13px" viewBox="0 0 24 24" width="24px" fill="#888"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
