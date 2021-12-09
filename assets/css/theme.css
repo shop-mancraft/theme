@@ -9621,7 +9621,7 @@ li.product-flag.on-sale {
     margin-left: -10px;
 }
 .block-promo .promo-input {
-    color: #414141;
+    color: #414141!important;
     border: #666666 1px solid;
     height: 2.5rem;
     text-indent: 0.625rem;
