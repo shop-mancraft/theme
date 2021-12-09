@@ -46,7 +46,7 @@
 		</div>
 		{/if}
     <div class="ttfeatured-content products">
-		<div class="owl-wrapper-outer"><div class="owl-wrapper" style="    width: 999999px;">
+		<div class="owl-wrapper-outer" style="max-height:452px;"><div class="owl-wrapper">
         {foreach from=$products item="product"}
 			
 			{if $tt_total > 12}
