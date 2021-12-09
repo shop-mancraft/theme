@@ -37,6 +37,7 @@
 							height="300"
 							alt = "{if !empty($product.cover.legend)}{$product.cover.legend}{else}{$product.name|truncate:30:'...'}{/if}"
 							data-full-size-image-url = "{$product.cover.large.url}"
+							loading="lazy"
 						>
 						{hook h="displayTtproductImageHover" id_product=$product.id_product home='home_default' large='large_default'}
 					</a>
@@ -45,6 +46,7 @@
 						<img
 							class="ttproduct-img1"
 							src = "{$urls.no_picture_image.bySize.home_default.url}"
+							loading="lazy"
 						>
 					</a>
 				{/if}
