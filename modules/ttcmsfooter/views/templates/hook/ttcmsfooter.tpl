@@ -29,7 +29,7 @@
 			</svg>
 		</p>
 
-		<p class="mb-4">
-	  	{$cms_infos.text nofilter}
-		</p>
+		<div class="mb-4">
+	  	{$cms_infos.text|regex_replace:"/(<p>|<p [^>]*>|<\\/p>)/":""}
+		</div>
 	</div>
