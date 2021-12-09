@@ -38,7 +38,8 @@
             <a href="{smartblog::GetSmartBlogLink('smartblog')}" class="tt-title">{l s='Assembly guide' d='Shop.Theme.Global'}</a>
           </h2>
         </div>
-		<p style="text-align:left;">{l s='Learn reliable, airsoft assembly and installation tricks with Mancraft specialists.' d='Shop.Theme.Global'}</p>
+		    
+        <p class="text-left mb-3">{l s='Learn reliable, airsoft assembly and installation tricks with Mancraft specialists.' d='Shop.Theme.Global'}</p>
 
         {if $tt_total > 3}
           <div class="customNavigation">

@@ -14114,12 +14114,7 @@ color: #fff !important;
 	vertical-align:top;
 }
 /*---------------------- Start product customNavigation css --------------------*/
-.customNavigation a.prev::before{
-	content: "\e314";
-}
-.customNavigation a.next::before{
-	content: "\e315";
-}
+
 .customNavigation a::before{
 	color: #555;
 	font-family: "Material Icons";
@@ -17103,9 +17098,6 @@ position: static !important;
 	-moz-opacity: 1!important;
     -khtml-opacity: 1!important;
     -webkit-opacity: 1!important;
-}
-.ttspecial-products .ttspecial-list{
-	position:relative;
 }
 .ttspecial-products .ttspecial-list .product-title{
 	margin:5px 0 14px !important;
