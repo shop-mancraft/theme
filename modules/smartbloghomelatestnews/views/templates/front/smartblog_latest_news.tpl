@@ -71,7 +71,7 @@
                 <div class="blog_post col-sm-12">
                   <div class="news_module_image_holder">
                     <a href="{smartblog::GetSmartBlogLink('smartblog_post',$options)}">
-                      <img alt="{$post.title}" class="feat_img_small" src="{$link->getMediaLink($smart_module_dir)}/smartblog/views/img/{$post.post_img}-home-default.jpg" width="370" height="240">
+                      <img alt="{$post.title}" class="feat_img_small" src="{$link->getMediaLink($smart_module_dir)}/smartblog/views/img/{$post.post_img}-home-default.jpg" width="370" height="240" loading="lazy">
                       <span class="blog-hover"></span>
                     </a>
 
