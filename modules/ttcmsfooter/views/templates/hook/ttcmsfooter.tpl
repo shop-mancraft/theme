@@ -29,7 +29,7 @@
 			</svg>
 		</p>
 
-		<div class="mb-4">
+		<p class="mb-4">
 	  	{$cms_infos.text|regex_replace:"/(<p>|<p [^>]*>|<\\/p>)/":""}
-		</div>
+		</p>
 	</div>
