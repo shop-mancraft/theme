@@ -516,7 +516,7 @@ form#searchbox .button.button-small i {
     border:none;
     border-right: none;
 }
-#search_block_top .select-wrapper::after {
+#search_block_top .select-wrapper .arrow {
     content: "\E5CF";
     font-family: Material Icons;
     position: absolute;
@@ -556,7 +556,7 @@ form#searchbox .button.button-small i {
 	#search_category{
 		padding:5px;
 	}
-	#search_block_top .select-wrapper::after{
+	#search_block_top .select-wrapper .arrow{
 		right:5px;
 	}
 	#search_block_top .btn.button-search span {
@@ -567,9 +567,6 @@ form#searchbox .button.button-small i {
     }
 }
 @media (max-width: 991px) {
-    #search_block_top .btn.button-search:before {
-        display: block;
-    }
 	#ttsearch_content_result {
     	top: 80px;
 	}

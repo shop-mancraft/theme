@@ -142,7 +142,7 @@
     width: 20px;
   }
 
-  #search_block_top .select-wrapper::after{
+  #search_block_top .select-wrapper .arrow{
     right: 10px;
   }
 

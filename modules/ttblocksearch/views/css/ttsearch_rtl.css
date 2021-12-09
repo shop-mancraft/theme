@@ -98,15 +98,6 @@ body.fixed {
     -khtml-border-radius: 8px;
 }
 
-#search_block_top .btn.button-search:before {
-    content: "\E8B6";
-    font-family: "Material Icons";
-    font-size: 18px;
-    width: 100%;
-    text-align: center;
-    color: #fff;
-    vertical-align: middle;
-}
 #search_block_top .btn.button-search:hover:before {
     color: #fff;
 }
@@ -525,7 +516,7 @@ form#searchbox .button.button-small i {
     border:none;
     border-left: none;
 }
-#search_block_top .select-wrapper::after {
+#search_block_top .select-wrapper .arrow {
     content: "\E5CF";
     font-family: Material Icons;
     position: absolute;
@@ -565,7 +556,7 @@ form#searchbox .button.button-small i {
 	#search_category{
 		padding:5px;
 	}
-	#search_block_top .select-wrapper::after{
+	#search_block_top .select-wrapper .arrow{
 		left:5px;
 	}
 	#search_block_top .btn.button-search span {
@@ -576,9 +567,6 @@ form#searchbox .button.button-small i {
     }
 }
 @media (max-width: 991px) {
-    #search_block_top .btn.button-search:before {
-        display: block;
-    }
 	#ttsearch_content_result {
     	top: 80px;
 	}
