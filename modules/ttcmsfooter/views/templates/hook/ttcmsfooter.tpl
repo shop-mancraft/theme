@@ -29,9 +29,7 @@
 			</svg>
 		</p>
 
-	  {$cms_infos.text nofilter}
+		<p class="mb-4">
+	  	{$cms_infos.text nofilter}
+		</p>
 	</div>
-{* TAILWIND PURGE / DON'T REMOVE
-<p class="mb-4 desktop:mb-8 desktop:text-center"><img src="https://dev.shop-mancraft.com/img/cms/Macraft%20logo%20white.png" alt="footer-logo" width="222" height="27"></p>
-<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-*}
