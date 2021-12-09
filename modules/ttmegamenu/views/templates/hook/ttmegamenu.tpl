@@ -48,6 +48,11 @@
 						<i class="material-icons">{$menu.icon|escape:'html':'UTF-8'}</i>
 					{/if}
 					<span class="catagory">{$menu.title|escape:'html':'UTF-8'}</span>
+			
+					{if count($menu.sub_menu) > 0}
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" fill="#fff" style="width: 18px;"/></svg>
+					{/if}
+
 					{if $menu.subtitle != ''}<div class="menu-subtitle">{$menu.subtitle|escape:'html':'UTF-8'}</div>{/if}
 					</a>
 					<span class="icon-drop-mobile"></span>
