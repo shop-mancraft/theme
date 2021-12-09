@@ -517,8 +517,6 @@ form#searchbox .button.button-small i {
     border-left: none;
 }
 #search_block_top .select-wrapper .arrow {
-    content: "\E5CF";
-    font-family: Material Icons;
     position: absolute;
     left: 15px;
     top: 12px;
@@ -526,7 +524,7 @@ form#searchbox .button.button-small i {
     z-index: -1;
     cursor: pointer;
 	color:#555;
-	font-size:15px;
+	width:15px;
 }
 #search_block_top .select-wrapper::before {
     border-left: 1px solid #cfcfcf;
