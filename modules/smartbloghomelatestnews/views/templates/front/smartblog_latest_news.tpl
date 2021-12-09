@@ -43,8 +43,18 @@
 
         {if $tt_total > 3}
           <div class="customNavigation">
-            <a class="btn prev ttblog_prev">{l s='Prev' d='Shop.Theme.Global'}</a>
-            <a class="btn next ttblog_next">{l s='Next' d='Shop.Theme.Global'}</a>
+            <a class="btn prev ttblog_prev">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 22px;margin: 3px 2px;">
+                <path d="M0 0h24v24H0V0z" fill="none"></path>
+                <path d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" fill="#fff"></path>
+              </svg>
+            </a>
+            <a class="btn next ttblog_next">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 22px;margin: 3px 2px;">
+                <path d="M0 0h24v24H0V0z" fill="none"></path>
+                <path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" fill="#fff"></path>
+              </svg>
+            </a>
           </div>
         {/if}
 
