@@ -30,7 +30,6 @@
 	<div class="title-menu-mobile active"><span>
 		{l s='Shop Categories' mod='ttmegamenu'}</span>
 		<svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" class="float-right">
-			<path d="M0 0h24v24H0z" fill="none"/>
 			<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" fill="#fff"/>
 		</svg>
 	</div>
@@ -50,7 +49,9 @@
 					<span class="catagory">{$menu.title|escape:'html':'UTF-8'}</span>
 			
 					{if count($menu.sub_menu) > 0}
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" fill="#fff" style="width: 18px;"/></svg>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" fill="#fff" style="width: 18px;"/>
+						</svg>
 					{/if}
 
 					{if $menu.subtitle != ''}<div class="menu-subtitle">{$menu.subtitle|escape:'html':'UTF-8'}</div>{/if}

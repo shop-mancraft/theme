@@ -6690,7 +6690,9 @@ body#checkout #gift_message {
     content: "";
 }
 .carousel .carousel-control .icon-next i,
-.carousel .carousel-control .icon-prev i {
+.carousel .carousel-control .icon-next svg,
+.carousel .carousel-control .icon-prev i,
+.carousel .carousel-control .icon-prev svg {
     color: #000000;
     display: inline-block;
     float: none;
@@ -6703,8 +6705,12 @@ body#checkout #gift_message {
 }
 .carousel .carousel-control .icon-next:hover i,
 .carousel .carousel-control:focus .icon-next i,
+.carousel .carousel-control .icon-next:hover svg path,
+.carousel .carousel-control:focus .icon-next svg path,
 .carousel .carousel-control .icon-prev:hover i,
-.carousel .carousel-control:focus .icon-prev i {
+.carousel .carousel-control:focus .icon-prev i,
+.carousel .carousel-control .icon-prev:hover svg path,
+.carousel .carousel-control:focus .icon-prev svg path {
     color: #fff;
 }
 .carousel .carousel-control .icon-prev {
