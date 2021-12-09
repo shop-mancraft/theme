@@ -168,6 +168,7 @@ $(document).ready(function() {
     /* ----------- carousel For FeatureProduct ----------- */
 
     var ttfeature = $(".ttfeatured-products .products");
+    ttfeature.find('.owl-wrapper-outer').unwrap().find('.owl-wrapper').unwrap();
     ttfeature.owlCarousel({
         items: 5, //10 items above 1000px browser width
         itemsDesktop: [1599, 4],

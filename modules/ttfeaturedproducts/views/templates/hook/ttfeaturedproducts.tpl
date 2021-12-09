@@ -46,6 +46,7 @@
 		</div>
 		{/if}
     <div class="ttfeatured-content products">
+		<div class="owl-wrapper-outer"><div class="owl-wrapper">
         {foreach from=$products item="product"}
 			
 			{if $tt_total > 12}
@@ -83,5 +84,7 @@
 			{/if}
 		{/if}
     </div>
+		</div>
+</div>
     <div class="allproduct"><a href="{$allProductsLink}">{l s='All products' mod='ttfeaturedproducts'}</a></div>
 </section>
