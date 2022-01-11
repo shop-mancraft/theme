@@ -3,20 +3,6 @@
  * A template should always ship with an empty custom.js
  */
 
-$(document).ready(function() {
-
-    var mylist = $('.product-variants select.form-control');
-    $.each(mylist, function(key, list) { 
-        var listitems = $(list).children('option').get();
-        listitems.sort(function(a, b) {
-            return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
-        })
-        $(list).append(listitems);
-    });
-
-});
-
-
 
 /*
  * Custom code goes here.
