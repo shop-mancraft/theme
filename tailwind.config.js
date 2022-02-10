@@ -1,10 +1,10 @@
 module.exports = {
-    content: ['./**/*.{html,php,vue,jsx,tpl}'],
-    safelist: [
-      {
-        pattern: /./ 
-      },
-    ],
+  content: ['./**/*.{html,php,vue,jsx,tpl}'],
+  safelist: [
+    {
+      pattern: /./ 
+    },
+  ],
   theme: {
     fontFamily: {
       'fallback': ['Tahoma', 'sans-serif'],
