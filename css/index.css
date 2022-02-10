@@ -1,4 +1,4 @@
-@import "tailwindcss/base";
+@tailwind base;
 
 body{
 }
@@ -124,9 +124,9 @@ select.form-control:not([size]):not([multiple]){
   background-position: 95% 7px;
 }
 
-@import "tailwindcss/components";
+@tailwind components;
 
-@import "tailwindcss/utilities";
+@tailwind utilities;
 
 @import "bootstrap-touchspin.css";
 @import "button.css";
