@@ -1,4 +1,23 @@
+@import "bootstrap-touchspin.css";
+@import "button.css";
+@import "go-to-top.css";
+
+@import "alert.css";
+
+@import "data-table.css";
+
+@import "ybc_instagram.css";
+
+/* @import "advanced-cms.css"; */
+
+@import "overide.css";
+
+
 @tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
 
 body{
 }
@@ -124,26 +143,9 @@ select.form-control:not([size]):not([multiple]){
   background-position: 95% 7px;
 }
 
-@tailwind components;
-
-@tailwind utilities;
-
-@import "bootstrap-touchspin.css";
-@import "button.css";
-@import "go-to-top.css";
-
-@import "alert.css";
-
-@import "data-table.css";
-
-@import "ybc_instagram.css";
-
-/* @import "advanced-cms.css"; */
-
-@import "overide.css";
-
 .footer-container li a{
   max-width: 300px;
   display: block;
 }
+
 
