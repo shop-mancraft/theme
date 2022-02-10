@@ -1,14 +1,10 @@
 module.exports = {
-  purge: {
-    enabled: false,
-    content: [
-      './**/*.html',
-      './**/*.php',
-      './**/*.vue',
-      './**/*.jsx',
-      './**/*.tpl',
+    content: ['./**/*.{html,php,vue,jsx,tpl}'],
+    safelist: [
+      {
+        pattern: /./ 
+      },
     ],
-  },
   theme: {
     fontFamily: {
       'fallback': ['Tahoma', 'sans-serif'],

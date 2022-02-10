@@ -22,6 +22,9 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
+
+{* TW classes: max-w-screen-tablet pb-8 *}
+
 {block name='head_charset'}
   <meta charset="utf-8">
 {/block}
