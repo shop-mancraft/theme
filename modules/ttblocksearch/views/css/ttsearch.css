@@ -98,15 +98,6 @@ body.fixed {
     -khtml-border-radius: 8px;
 }
 
-#search_block_top .btn.button-search:before {
-    content: "\E8B6";
-    font-family: "Material Icons";
-    font-size: 18px;
-    width: 100%;
-    text-align: center;
-    color: #fff;
-    vertical-align: middle;
-}
 #search_block_top .btn.button-search:hover:before {
     color: #fff;
 }
@@ -525,9 +516,7 @@ form#searchbox .button.button-small i {
     border:none;
     border-right: none;
 }
-#search_block_top .select-wrapper::after {
-    content: "\E5CF";
-    font-family: Material Icons;
+#search_block_top .select-wrapper .arrow {
     position: absolute;
     right: 15px;
     top: 12px;
@@ -535,7 +524,7 @@ form#searchbox .button.button-small i {
     z-index: -1;
     cursor: pointer;
 	color:#555;
-	font-size:15px;
+	width:15px;
 }
 #search_block_top .select-wrapper::before {
     border-right: 1px solid #cfcfcf;
@@ -565,7 +554,7 @@ form#searchbox .button.button-small i {
 	#search_category{
 		padding:5px;
 	}
-	#search_block_top .select-wrapper::after{
+	#search_block_top .select-wrapper .arrow{
 		right:5px;
 	}
 	#search_block_top .btn.button-search span {
@@ -576,9 +565,6 @@ form#searchbox .button.button-small i {
     }
 }
 @media (max-width: 991px) {
-    #search_block_top .btn.button-search:before {
-        display: block;
-    }
 	#ttsearch_content_result {
     	top: 80px;
 	}

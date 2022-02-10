@@ -47,6 +47,9 @@
             <option value="all">{l s='All Categories' mod='ttblocksearch'}</option>
             {$search_category|escape:'quotes':'UTF-8' nofilter}   
         </select>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  class="arrow">
+					<path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z" fill="#555"/>
+				</svg>
 		</div>
 		<input class="search_query form-control" type="text" id="search_query_top" name="s" placeholder="{l s='Search here...' mod='ttblocksearch'}" value="{$search_query|escape:'htmlall':'UTF-8'|stripslashes}" />
 		
@@ -56,6 +59,9 @@
 		</div>
 		</div>
 		<button type="submit" name="submit_search" class="btn btn-default button-search">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 18px;" class="inline">
+				<path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="#fff"/>
+			</svg>
 			<span>{l s='Search' mod='ttblocksearch'}</span>
 		</button>
 	</form>

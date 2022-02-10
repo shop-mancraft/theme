@@ -1,7 +1,8 @@
 @import "tailwindcss/base";
 
 body{
-  
+  opacity: 10%;
+  background-color: red;
 }
 
 h1,

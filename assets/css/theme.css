@@ -6690,7 +6690,9 @@ body#checkout #gift_message {
     content: "";
 }
 .carousel .carousel-control .icon-next i,
-.carousel .carousel-control .icon-prev i {
+.carousel .carousel-control .icon-next svg,
+.carousel .carousel-control .icon-prev i,
+.carousel .carousel-control .icon-prev svg {
     color: #000000;
     display: inline-block;
     float: none;
@@ -6703,8 +6705,12 @@ body#checkout #gift_message {
 }
 .carousel .carousel-control .icon-next:hover i,
 .carousel .carousel-control:focus .icon-next i,
+.carousel .carousel-control .icon-next:hover svg path,
+.carousel .carousel-control:focus .icon-next svg path,
 .carousel .carousel-control .icon-prev:hover i,
-.carousel .carousel-control:focus .icon-prev i {
+.carousel .carousel-control:focus .icon-prev i,
+.carousel .carousel-control .icon-prev:hover svg path,
+.carousel .carousel-control:focus .icon-prev svg path {
     color: #fff;
 }
 .carousel .carousel-control .icon-prev {
@@ -9615,7 +9621,7 @@ li.product-flag.on-sale {
     margin-left: -10px;
 }
 .block-promo .promo-input {
-    color: #414141;
+    color: #414141!important;
     border: #666666 1px solid;
     height: 2.5rem;
     text-indent: 0.625rem;
@@ -14114,12 +14120,7 @@ color: #fff !important;
 	vertical-align:top;
 }
 /*---------------------- Start product customNavigation css --------------------*/
-.customNavigation a.prev::before{
-	content: "\e314";
-}
-.customNavigation a.next::before{
-	content: "\e315";
-}
+
 .customNavigation a::before{
 	color: #555;
 	font-family: "Material Icons";
@@ -17103,9 +17104,6 @@ position: static !important;
 	-moz-opacity: 1!important;
     -khtml-opacity: 1!important;
     -webkit-opacity: 1!important;
-}
-.ttspecial-products .ttspecial-list{
-	position:relative;
 }
 .ttspecial-products .ttspecial-list .product-title{
 	margin:5px 0 14px !important;

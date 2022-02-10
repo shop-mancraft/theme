@@ -37,7 +37,7 @@
  
   <ul id="contact-footer" class="collapse"> 
 	  <li class="block">
-	  	<div class="icon"><i class="material-icons">place</i></div>
+	  	<div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z" fill="#666"/></svg></div>
       <div class="data">{$contact_infos.address.formatted nofilter}</div>
 	  </li>
 	  
@@ -61,7 +61,11 @@
     {if $contact_infos.email}
     <li class="block">
 		  <div class="data">
-	  	  <div class="icon"><i class="material-icons">mail</i></div>
+	  	  <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" fill="#666" />
+          </svg>
+        </div>
         {* [1][/1] is for a HTML tag. *}
        <span class="title">{l
           s='Email us:</span> [1]%email%[/1]'

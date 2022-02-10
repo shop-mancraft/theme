@@ -52,13 +52,17 @@
     <div class="direction" aria-label="{l s='Carousel buttons' d='Shop.Theme.Global'}">
       <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
         <span class="icon-prev hidden-xs" aria-hidden="true">
-          <i class="material-icons">chevron_left</i>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+          </svg>
         </span>
         <span class="sr-only">{l s='Previous' d='Shop.Theme.Global'}</span>
       </a>
       <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
         <span class="icon-next" aria-hidden="true">
-          <i class="material-icons">chevron_right</i>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+          </svg>
         </span>
         <span class="sr-only">{l s='Next' d='Shop.Theme.Global'}</span>
       </a>

@@ -3,16 +3,6 @@
  * A template should always ship with an empty custom.js
  */
 
-$(document).ready(function() {
-
-var mylist = $('.product-variants select.form-control');
-var listitems = mylist.children('option').get();
-listitems.sort(function(a, b) {
-   return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
-})
-$.each(listitems, function(idx, itm) { mylist.append(itm); });
-});
-
 
 /*
  * Custom code goes here.
@@ -164,6 +154,10 @@ $(document).ready(function() {
     /* ----------- carousel For FeatureProduct ----------- */
 
     var ttfeature = $(".ttfeatured-products .products");
+    
+    $(ttfeature).find('.owl-wrapper-outer').children().unwrap();
+    $(ttfeature).find('.owl-wrapper').children().unwrap();
+
     ttfeature.owlCarousel({
         items: 5, //10 items above 1000px browser width
         itemsDesktop: [1599, 4],

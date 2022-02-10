@@ -35,6 +35,7 @@
 							width="300"
 							height="300"
 							alt = "{if !empty($product.cover.legend)}{$product.cover.legend}{else}{$product.name}{/if}"
+							loading="lazy"
 						>
 					</a>
 				{else}
@@ -42,6 +43,7 @@
 						<img
 							class="ttproduct-img1 js-qv-product-cover-img"
 							src = "{$urls.no_picture_image.bySize.home_default.url}"
+							loading="lazy"
 						>
 					</a>
 				{/if}

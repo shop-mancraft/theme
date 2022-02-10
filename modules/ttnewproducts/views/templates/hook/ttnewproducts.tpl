@@ -32,12 +32,22 @@
 	<div class="tt-titletab">
 		<h3 class="tt-title">{l s='New products' d='Shop.Theme.Global'}</h3>
 	</div>
-    <p style="text-align:left;">{l s='Innovative HPA systems, new Airsoft components, upgrades of mancraft products.' d='Shop.Theme.Global'}</p>
+	
+	<p class="text-left mb-3">{l s='Innovative HPA systems, new Airsoft components, upgrades of mancraft products.' d='Shop.Theme.Global'}</p>
+
   <div class="ttspecial-list">
     {if $tt_total > 1}
 			<div class="customNavigation">
-				<a class="btn prev ttnewproducts_prev">{l s='Prev' d='Shop.Theme.Global'}</a>
-				<a class="btn next ttnewproducts_next">{l s='Next' d='Shop.Theme.Global'}</a>
+				<a class="btn prev ttnewproducts_prev">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 22px;margin: 3px 2px;">
+						<path d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" fill="#fff"/>
+					</svg>
+				</a>
+				<a class="btn next ttnewproducts_next">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 22px;margin: 3px 2px;">
+						<path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" fill="#fff"/>
+					</svg>
+				</a>
 			</div>
 		{/if}
 
