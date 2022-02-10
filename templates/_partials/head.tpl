@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 
-{* TW classes: w-0 phablet:hidden phablet:w-full tablet:hidden tablet:w-full desktop:w-[1140px] tablet:p-5 desktop:p-[100px] *}
+{* TW classes: w-0 phablet:px-8 tablet-narrow:px-16 phablet:hidden phablet:w-full tablet-wide:w-[1140px] tablet:p-5 tablet-wide:p-[100px] tablet-wide:px-20 *}
 
 {block name='head_charset'}
   <meta charset="utf-8">
