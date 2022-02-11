@@ -36,7 +36,7 @@
 <h1 class="quickhead csvhead">{$head_name_{$id_lang}|escape:'htmlall':'UTF-8'}</h1>
 <div class="bg-gray-normal  mb-10 rounded-lg col-lg-10">
     <div class="col-lg-1 col-xs-12 top_buttons">
-        <p style="text-xl text-white py-2 ">{l s='Filters:' mod='quickproducttable'}</p>
+        <p class=" py-2 ">{l s='Filters:' mod='quickproducttable'}</p>
         
     </div>
     {if $new_enable == 1}
@@ -62,16 +62,18 @@
 
     {if $advance_enable == 1}
     <div class="col-lg-3 col-xs-12 top_buttons">
-        <a class="border-0 rounded-md bg-main py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$base_url|escape:'htmlall':'UTF-8'}{$route_name|escape:'htmlall':'UTF-8'}?product_type=advance">{l s='Advance Search' mod='quickproducttable'}</a>
+        <a class="border-0 rounded-md bg-main py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$base_url|escape:'htmlall':'UTF-8'}{$route_name|escape:'htmlall':'UTF-8'}?product_type=advance">
+            <svg class="mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 18px;" class="inline">
+		    	<path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="#fff"></path>
+	        </svg>
+            {l s='Advance Search' mod='quickproducttable'}
+        </a>
     </div>
     {/if}
 </div>
 {if $csv_enable == 1}
 <div class="col-lg-2 col-xs-12 top_buttons">
     <a class="border-0 rounded-md bg-main py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$base_url|escape:'htmlall':'UTF-8'}{$route_name|escape:'htmlall':'UTF-8'}?product_type=csv">
-    <svg class="mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 18px;" class="inline">
-			<path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="#fff"></path>
-	</svg>
     {l s='Add In Bulk' mod='quickproducttable'}</a>
 </div>
 {/if}
