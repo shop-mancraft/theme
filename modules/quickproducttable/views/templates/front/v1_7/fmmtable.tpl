@@ -36,46 +36,46 @@
 <h1 class="quickhead csvhead">{$head_name_{$id_lang}|escape:'htmlall':'UTF-8'}</h1>
 <div class="border col-lg-10">
     <div class="col-lg-1 col-xs-12 top_buttons">
-        <p style="padding-top: 8px;font-weight: bolder;">{l s='Filters:' mod='quickproducttable'}</p>
+        <p style="text-xl text-white ">{l s='Filters:' mod='quickproducttable'}</p>
         
     </div>
     {if $new_enable == 1}
     <div class="col-lg-2 col-xs-12 top_buttons" >
-        <a class="btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$base_url|escape:'htmlall':'UTF-8'}{$route_name|escape:'htmlall':'UTF-8'}?product_type=new">{l s='New Products' mod='quickproducttable'}</a>
+        <a class="border-0 rounded-md bg-primary py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$base_url|escape:'htmlall':'UTF-8'}{$route_name|escape:'htmlall':'UTF-8'}?product_type=new">{l s='New Products' mod='quickproducttable'}</a>
     </div>
     {/if}
     {if $best_enable == 1}
     <div class="col-lg-2 col-xs-12 top_buttons" >
-        <a class="btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$base_url|escape:'htmlall':'UTF-8'}{$route_name|escape:'htmlall':'UTF-8'}?product_type=best">{l s='Best Sales' mod='quickproducttable'}</a>
+        <a class="border-0 rounded-md bg-primary py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$base_url|escape:'htmlall':'UTF-8'}{$route_name|escape:'htmlall':'UTF-8'}?product_type=best">{l s='Best Sales' mod='quickproducttable'}</a>
     </div>
     {/if}
     {if $all_enable == 1}
     <div class="col-lg-2 col-xs-12 top_buttons">
-        <a class="btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$base_url|escape:'htmlall':'UTF-8'}{$route_name|escape:'htmlall':'UTF-8'}?product_type=all">{l s='All Products' mod='quickproducttable'}</a>
+        <a class="border-0 rounded-md bg-primary py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$base_url|escape:'htmlall':'UTF-8'}{$route_name|escape:'htmlall':'UTF-8'}?product_type=all">{l s='All Products' mod='quickproducttable'}</a>
     </div>
     {/if}
     {if $sale_enable == 1}
     <div class="col-lg-2 col-xs-12 top_buttons">
-        <a class="btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$base_url|escape:'htmlall':'UTF-8'}{$route_name|escape:'htmlall':'UTF-8'}?product_type=sale">{l s='Prices Drop' mod='quickproducttable'}</a>
+        <a class="border-0 rounded-md bg-primary py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$base_url|escape:'htmlall':'UTF-8'}{$route_name|escape:'htmlall':'UTF-8'}?product_type=sale">{l s='Prices Drop' mod='quickproducttable'}</a>
     </div>
     {/if}
 
     {if $advance_enable == 1}
     <div class="col-lg-3 col-xs-12 top_buttons">
-        <a class="btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$base_url|escape:'htmlall':'UTF-8'}{$route_name|escape:'htmlall':'UTF-8'}?product_type=advance">{l s='Advance Search' mod='quickproducttable'}</a>
+        <a class="border-0 rounded-md bg-primary py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$base_url|escape:'htmlall':'UTF-8'}{$route_name|escape:'htmlall':'UTF-8'}?product_type=advance">{l s='Advance Search' mod='quickproducttable'}</a>
     </div>
     {/if}
 </div>
 {if $csv_enable == 1}
 <div class="col-lg-2 col-xs-12 top_buttons">
-    <a class="btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$base_url|escape:'htmlall':'UTF-8'}{$route_name|escape:'htmlall':'UTF-8'}?product_type=csv">{l s='Add In Bulk' mod='quickproducttable'}</a>
+    <a class="border-0 rounded-md bg-primary py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$base_url|escape:'htmlall':'UTF-8'}{$route_name|escape:'htmlall':'UTF-8'}?product_type=csv">{l s='Add In Bulk' mod='quickproducttable'}</a>
 </div>
 {/if}
 
 
 <input type="hidden" name="ajax_url" id="ajax_url" value="{$ajax_url|escape:'htmlall':'UTF-8'}">
 <table id="fmm_table" class="display nowrap">
-        <thead>
+        <thead class="text-base tablet:text-xl text-white font-normal">
             <tr>
                 <th>{l s='ID' mod='quickproducttable'}</th>
                 <th>{l s='Image' mod='quickproducttable'}</th>
@@ -85,7 +85,7 @@
                 <th>{l s='Action ' mod='quickproducttable'}<span style="font-size: smaller;display: ruby;color: #8e9293;"><input type="checkbox" data-toggle="toggle" id="chkal" data-size="xs"><p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p></span></th>
             </tr>
         </thead>
-        <tbody id="fmm_table_body">
+        <tbody id="fmm_table_body text-white font-normal text-sm tablet:text-base">
           {foreach from=$all_products item=product name=product}
             <tr>
                 <td>{$product.id_product|escape:'htmlall':'UTF-8'}</td>
@@ -98,7 +98,7 @@
                         {$options.name|escape:'htmlall':'UTF-8'}
                         {assign var="group_count" value={$group_count|escape:'htmlall':'UTF-8'}+1}
                         
-                        <select id="select_fmm" onchange="changeAttr({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'})" class="fmm_option_{$product.id_product|escape:'htmlall':'UTF-8'}_{$group_count|escape:'htmlall':'UTF-8'}">
+                        <select id="select_fmm text-black" onchange="changeAttr({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'})" class="fmm_option_{$product.id_product|escape:'htmlall':'UTF-8'}_{$group_count|escape:'htmlall':'UTF-8'}">
                             {foreach from=$options.values item=values name=values}
 
                                 <option value="{$values.id|escape:'htmlall':'UTF-8'}">{$values.value|escape:'htmlall':'UTF-8'}</option>
@@ -113,15 +113,15 @@
                 <td>
                     <div class="col-lg-2">
                         <div class="number" id="number">
-                        <span class="minus">-</span>
-                        <input class="qty_id" id="quantity_{$product.id_product|escape:'htmlall':'UTF-8'}" type="text" value="1"/>
-                        <span class="plus">+</span>
+                        <span class="minus p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary active:scale-0.95 transform translate">-</span>
+                        <input class="qty_id text-xl w-10 text-center" id="quantity_{$product.id_product|escape:'htmlall':'UTF-8'}" type="text" value="1"/>
+                        <span class="plus p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary active:scale-0.95 transform translate">+</span>
                         </div>
                     </div>
                 </td>
                 <td>
                     <input type="hidden" name="group" id="group_{$product.id_product|escape:'htmlall':'UTF-8'}" value="{$group_count|escape:'htmlall':'UTF-8'}">
-                    <button class="btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" onclick="fmmAddCart({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'});" >{l s='Add To Cart' mod='quickproducttable'}</button>
+                    <button class="border-0 rounded-md bg-primary py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" onclick="fmmAddCart({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'});" >{l s='Add To Cart' mod='quickproducttable'}</button>
                     <input type="checkbox"  id="{$product.id_product|escape:'htmlall':'UTF-8'}_{$group_count|escape:'htmlall':'UTF-8'}" name="fmm_check" class="fmm_check" value="{$product.id_product|escape:'htmlall':'UTF-8'}">
                 </td>
             </tr>
@@ -147,8 +147,8 @@
 
 
 <div class="col-lg-12 col-xs-12 top_buttons" >
-    <a class="btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$cart_url|escape:'htmlall':'UTF-8'}?action=show">{l s='View Cart' mod='quickproducttable'}</a>
-    <button class="btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" onclick="fmmAddAllCart();" >{l s='Add Selected To Cart' mod='quickproducttable'}</button>
+    <a class="border-0 rounded-md bg-primary py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$cart_url|escape:'htmlall':'UTF-8'}?action=show">{l s='View Cart' mod='quickproducttable'}</a>
+    <button class="border-0 rounded-md bg-primary py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" onclick="fmmAddAllCart();" >{l s='Add Selected To Cart' mod='quickproducttable'}</button>
 </div>
 
     {if $ajax_load}

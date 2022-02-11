@@ -148,3 +148,7 @@ select.form-control:not([size]):not([multiple]){
   display: block;
 }
 
+
+#fmm_table_body a{
+  @apply hover:text-main transition;
+}
