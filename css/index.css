@@ -159,7 +159,7 @@ select.form-control:not([size]):not([multiple]){
   }
 
 .section-5 .row:nth-child(2n+3){
-  @apply flex-shrink-0 flex-grow-0 basis-[85%] phablet:basis-[40%] py-0 px-5 mx-0 mb-[10px]
+  @apply flex-shrink-0 flex-grow-0 basis-[85%] phablet:basis-[40%] py-0 px-5 mx-0 mb-[10px] desktop:pr-2 desktop-wide:pr-5
 }
 
 
