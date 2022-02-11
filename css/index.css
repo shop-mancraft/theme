@@ -149,6 +149,10 @@ select.form-control:not([size]):not([multiple]){
 }
 
 
-#fmm_table_body a{
+div#fmm_table_wrapper tbody#fmm_table_body a{
   @apply hover:text-main transition;
+}
+
+div#fmm_table_wrapper tbody#fmm_table_body{
+  @apply text-white font-normal text-sm tablet:text-base
 }

@@ -85,7 +85,7 @@
                 <th>{l s='Action ' mod='quickproducttable'}<span style="font-size: smaller;display: ruby;color: #8e9293;"><input type="checkbox" data-toggle="toggle" id="chkal" data-size="xs"><p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p></span></th>
             </tr>
         </thead>
-        <tbody id="fmm_table_body text-white font-normal text-sm tablet:text-base">
+        <tbody id="fmm_table_body">
           {foreach from=$all_products item=product name=product}
             <tr>
                 <td>{$product.id_product|escape:'htmlall':'UTF-8'}</td>
@@ -113,9 +113,9 @@
                 <td>
                     <div class="col-lg-2">
                         <div class="number" id="number">
-                        <span class="minus p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary active:scale-0.95 transform translate">-</span>
-                        <input class="qty_id text-xl w-10 text-center" id="quantity_{$product.id_product|escape:'htmlall':'UTF-8'}" type="text" value="1"/>
-                        <span class="plus p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary active:scale-0.95 transform translate">+</span>
+                        <span class="minus align-sub p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary active:scale-0.9 transform translate duration-75">-</span>
+                        <input class="qty_id text-xl w-10 text-center text-gray-dark" id="quantity_{$product.id_product|escape:'htmlall':'UTF-8'}" type="text" value="1"/>
+                        <span class="plus align-sub p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary active:scale-0.9 transform translate duration-75">+</span>
                         </div>
                     </div>
                 </td>
@@ -127,7 +127,7 @@
             </tr>
             {/foreach}
         </tbody>
-        <tfoot>
+        <tfoot class="text-base tablet:text-xl text-white font-normal">
             <tr>
                 <th>{l s='ID' mod='quickproducttable'}</th>
                 <th>{l s='Image' mod='quickproducttable'}</th>
