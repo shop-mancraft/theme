@@ -50,15 +50,15 @@
                 <td>
                     <div class="col-lg-2">
                         <div class="number" id="number">
-                        <span class="minus">-</span>
-                        <input class="qty_id" id="quantity_{$product.id_product|escape:'htmlall':'UTF-8'}" type="text" value="1"/>
-                        <span class="plus">+</span>
+                        <span class="minus align-sub p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary active:scale-95 transform translate duration-75">-</span>
+                        <input class="qty_id text-xl w-10 text-center text-gray-dark" id="quantity_{$product.id_product|escape:'htmlall':'UTF-8'}" type="text" value="1"/>
+                        <span class="plus align-sub p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary active:scale-95 transform translate duration-75">+</span>
                         </div>
                     </div>
                 </td>
                 <td>
                     <input type="hidden" name="group" id="group_{$product.id_product|escape:'htmlall':'UTF-8'}" value="{$group_count|escape:'htmlall':'UTF-8'}">
-                    <button class="btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" onclick="fmmAddCart({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'});" >{l s='Add To Cart' mod='quickproducttable'}</button>
+                    <button class="border-0 rounded-md bg-main py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" onclick="fmmAddCart({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'});" >{l s='Add To Cart' mod='quickproducttable'}</button>
                     <input type="checkbox"  id="{$product.id_product|escape:'htmlall':'UTF-8'}_{$group_count|escape:'htmlall':'UTF-8'}" name="fmm_check" class="fmm_check" value="{$product.id_product|escape:'htmlall':'UTF-8'}">
                 </td>
             </tr>
