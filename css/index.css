@@ -170,3 +170,7 @@ select.form-control:not([size]):not([multiple]){
 .section-5 .row:nth-child(2n+2) img{
   @apply max-w-[50px]
 }
+
+#fmm_table_body a{
+  @apply hover:text-main transition;
+}
