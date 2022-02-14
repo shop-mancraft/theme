@@ -33,7 +33,7 @@
 <input type="hidden" name="product_type" id="product_type" value="{$product_type|escape:'htmlall':'UTF-8'}">
 
 {if $in_ary == true}
-<h1 class="quickhead csvhead">{$head_name_{$id_lang}|escape:'htmlall':'UTF-8'}</h1>
+<h1 class="text-white text-xl mb-5">{$head_name_{$id_lang}|escape:'htmlall':'UTF-8'}</h1>
 <div class="bg-gray-normal  mb-10 rounded-lg col-lg-10">
     <div class="col-lg-1 col-xs-12 top_buttons">
         <p class=" py-2 ">{l s='Filters:' mod='quickproducttable'}</p>
@@ -87,7 +87,7 @@
                 <th>{l s='Name' mod='quickproducttable'}</th>
                 <th>{l s='Price' mod='quickproducttable'}</th>
                 <th>{l s='Quantity' mod='quickproducttable'}</th>
-                <th>{l s='Action ' mod='quickproducttable'}<span class="flex items-center w-full"><p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p><input class="ml-10" type="checkbox" data-toggle="toggle" id="chkal3" data-size="xs"></span></th>
+                <th>{l s='Action ' mod='quickproducttable'}<span class="flex items-center w-full"><p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p><input class="ml-[42px]" type="checkbox" data-toggle="toggle" id="chkal3" data-size="xs"></span></th>
             </tr>
         </thead>
         <tbody id="fmm_table_body">
@@ -138,7 +138,11 @@
                 <th>{l s='Name' mod='quickproducttable'}</th>
                 <th>{l s='Price' mod='quickproducttable'}</th>
                 <th>{l s='Quantity' mod='quickproducttable'}</th>
+<<<<<<< HEAD
                 <th>{l s='Action ' mod='quickproducttable'}<span class="flex items-center w-full"><p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p><input class="ml-10" type="checkbox" data-toggle="toggle" id="chkal3" data-size="xs"></span></th>
+=======
+                <th>{l s='Action ' mod='quickproducttable'}<span class="flex items-center w-full"><p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p><input class="ml-[42px]" type="checkbox" data-toggle="toggle" id="chkal3" data-size="xs"></span></th>
+>>>>>>> MCRAFT-267
             </tr>
         </tfoot>
     </table>

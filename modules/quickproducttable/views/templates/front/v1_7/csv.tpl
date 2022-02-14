@@ -25,7 +25,7 @@
 
 {extends file=$layout}
 {block name='content'}
-<h1 class="quickhead csvhead">{$head_name_{$id_lang}|escape:'htmlall':'UTF-8'}</h1>
+<h1 class="text-white text-xl mb-5">{$head_name_{$id_lang}|escape:'htmlall':'UTF-8'}</h1>
 {if isset($count) AND $count > 0}
     <div class="alert alert-success" role="alert">
   {$count|escape:'htmlall':'UTF-8'}{l s=' Products Successfully Added' mod='quickproducttable'}
