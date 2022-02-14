@@ -83,18 +83,16 @@
 <table id="fmm_table" class="display nowrap">
         <thead class="text-base tablet:text-xl text-white font-normal">
             <tr>
-                <th>{l s='ID' mod='quickproducttable'}</th>
                 <th>{l s='Image' mod='quickproducttable'}</th>
                 <th>{l s='Name' mod='quickproducttable'}</th>
                 <th>{l s='Price' mod='quickproducttable'}</th>
                 <th>{l s='Quantity' mod='quickproducttable'}</th>
-                <th>{l s='Action ' mod='quickproducttable'}<span class="flex items-center justify-between w-full"><p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p><input class="mr-1" type="checkbox" data-toggle="toggle" id="chkal3" data-size="xs"></span></th>
+                <th>{l s='Action ' mod='quickproducttable'}<span class="flex items-center w-full"><p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p><input class="ml-10" type="checkbox" data-toggle="toggle" id="chkal3" data-size="xs"></span></th>
             </tr>
         </thead>
         <tbody id="fmm_table_body">
           {foreach from=$all_products item=product name=product}
             <tr>
-                <td>{$product.id_product|escape:'htmlall':'UTF-8'}</td>
                 <td><a href="{$product.link|escape:'htmlall':'UTF-8'}"> <img src="{$product.cover_image_url|escape:'htmlall':'UTF-8'}"></a> </td>
                 <td>
                     <a href="{$product.link|escape:'htmlall':'UTF-8'}">{$product.name|escape:'htmlall':'UTF-8'}</a>
@@ -128,7 +126,7 @@
                 </td>
                 <td>
                     <input type="hidden" name="group" id="group_{$product.id_product|escape:'htmlall':'UTF-8'}" value="{$group_count|escape:'htmlall':'UTF-8'}">
-                    <button class="border-0 rounded-[4px] bg-main py-3 hover:bg-black hover:border-1 hover:border-solid hover:border-main transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" onclick="fmmAddCart({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'});" >{l s='Add To Cart' mod='quickproducttable'}</button>
+                    <button class="border-0 rounded-[4px] bg-main py-3 hover:bg-black hover:border hover:border-solid hover:border-main transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" onclick="fmmAddCart({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'});" >{l s='Add To Cart' mod='quickproducttable'}</button>
                     <input type="checkbox"  id="{$product.id_product|escape:'htmlall':'UTF-8'}_{$group_count|escape:'htmlall':'UTF-8'}" name="fmm_check" class="fmm_check" value="{$product.id_product|escape:'htmlall':'UTF-8'}">
                 </td>
             </tr>
@@ -141,7 +139,7 @@
                 <th>{l s='Name' mod='quickproducttable'}</th>
                 <th>{l s='Price' mod='quickproducttable'}</th>
                 <th>{l s='Quantity' mod='quickproducttable'}</th>
-                <th>{l s='Action ' mod='quickproducttable'}<span class="flex items-center justify-between w-full"><p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p><input class="mr-1" type="checkbox" data-toggle="toggle" id="chkal3" data-size="xs"></span></th>
+                <th>{l s='Action ' mod='quickproducttable'}<span class="flex items-center w-full"><p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p><input class="ml-10" type="checkbox" data-toggle="toggle" id="chkal3" data-size="xs"></span></th>
             </tr>
         </tfoot>
     </table>

@@ -182,7 +182,7 @@ div#fmm_table_wrapper tbody#fmm_table_body{
 }
 
 #fmm_table_body .btn.btn-info{
-  @apply border-0 rounded-[4px] bg-main px-4 py-3 hover:bg-black transition active:bg-black;
+  @apply rounded-[4px] bg-main px-4 py-3 hover:bg-black transition active:bg-black;
 }
 
 #fmm_table_body tr td a{

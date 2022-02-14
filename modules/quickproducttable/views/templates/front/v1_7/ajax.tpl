@@ -25,7 +25,6 @@
 
 {foreach from=$all_products item=product name=product}
             <tr>
-                <td>{$product.id_product|escape:'htmlall':'UTF-8'}</td>
                 <td><a href="{$product.link|escape:'htmlall':'UTF-8'}"> <img src="{$product.cover_image_url|escape:'htmlall':'UTF-8'}"></a> </td>
                 <td>
                     <a href="{$product.link|escape:'htmlall':'UTF-8'}">{$product.name|escape:'htmlall':'UTF-8'}</a>
