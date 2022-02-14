@@ -188,7 +188,7 @@ div#fmm_table_wrapper tbody#fmm_table_body{
 }
 
 #fmm_table_body .number .minus{
-  @apply align-sub p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary select-none translate duration-75
+  @apply align-sub p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary select-none duration-75
 }
 
 #fmm_table_body .number .plus{
@@ -196,7 +196,7 @@ div#fmm_table_wrapper tbody#fmm_table_body{
 }
 
 #fmm_table_body .number .qty_id{
-  @apply align-sub p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary select-none translate duration-75;
+  @apply align-sub p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary select-none duration-75;
 }
 
 #fmm_table_body .btn.btn-info{
