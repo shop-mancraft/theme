@@ -81,6 +81,8 @@
                 <th>{l s='Image' mod='quickproducttable'}</th>
                 <th>{l s='Name' mod='quickproducttable'}</th>
                 <th>{l s='Price' mod='quickproducttable'}</th>
+                <th>{l s='Discounts' mod='quickproducttable'}</th>
+                <th>{l s='Stock' mod='quickproducttable'}</th>
                 <th>{l s='Quantity' mod='quickproducttable'}</th>
                 <th>{l s='Action ' mod='quickproducttable'}<span style="font-size: smaller;display: ruby;color: #8e9293;"><input type="checkbox" data-toggle="toggle" id="chkal" data-size="xs"><p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p></span></th>
             </tr>
@@ -110,6 +112,34 @@
                     </div>
                 </td>
                 <td>{$product.default_currency_sign|escape:'htmlall':'UTF-8'}<span id="price_{$product.id_product|escape:'htmlall':'UTF-8'}">{$product.price|number_format:2}</span></td>
+                <td>
+                    {if $product.quantity_discounts}
+                        <p class="h6 product-discounts-title">{l s='Volume discounts' d='Shop.Theme.Catalog'}</p>
+                        {block name='product_discount_table'}
+                        <table class="table-product-discounts">
+                            <thead>
+                            <tr>
+                            <th>{l s='Quantity' d='Shop.Theme.Catalog'}</th>
+                            <th>{$configuration.quantity_discount.label}</th>
+                            <th>{l s='You Save' d='Shop.Theme.Catalog'}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {foreach from=$product.quantity_discounts item='quantity_discount' name='quantity_discounts'}
+                            <tr data-discount-type="{$quantity_discount.reduction_type}" data-discount="{$quantity_discount.real_value}" data-discount-quantity="{$quantity_discount.quantity}">
+                                <td>{$quantity_discount.quantity}</td>
+                                <td>{$quantity_discount.discount}</td>
+                                <td>{$quantity_discount.save}</td>
+                            </tr>
+                            {/foreach}
+                            </tbody>
+                        </table>
+                        {/block}
+                    {/if}
+                </td>
+                <td>
+                    {$product.qty_in_stock}
+                </td>
                 <td>
                     <div class="col-lg-2">
                         <div class="number" id="number">
