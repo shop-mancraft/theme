@@ -290,9 +290,6 @@ function changeAttr(id, group) {
  $('div.dataTables_filter input').addClass('form-control');
 $( document ).ready(function() {
         $('#fmm_table').DataTable({
-        rowReorder: {
-            selector: 'td:nth-child(2)'
-        },
         "lengthChange": false,
         "info":     false,
         responsive: true,
