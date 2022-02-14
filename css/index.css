@@ -191,11 +191,11 @@ div#fmm_table_wrapper tbody#fmm_table_body{
   @apply align-sub p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary select-none duration-75
 }
 
-#fmm_table_body .number .plus{
+#fmm_table_body .number .qty_id{
   @apply text-xl w-10 text-center text-gray-dark;
 }
 
-#fmm_table_body .number .qty_id{
+#fmm_table_body .number .plus{
   @apply align-sub p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary select-none duration-75;
 }
 
@@ -204,13 +204,13 @@ div#fmm_table_wrapper tbody#fmm_table_body{
 }
 
 #fmm_table_body tr td a{
-  @apply max-w-2xl whitespace-normal 
+  @apply max-w-3xl whitespace-normal 
 }
 
 #fmm_table_body tr td div{
-  @apply max-w-2xl whitespace-normal 
+  @apply max-w-3xl whitespace-normal 
 }
 
 #fmm_table_body tr td div #select_fmm{
-  @apply max-w-2xl whitespace-normal mr-5;
+  @apply whitespace-normal mr-5 mb-2;
 }

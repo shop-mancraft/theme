@@ -29,9 +29,10 @@
                 <td><a href="{$product.link|escape:'htmlall':'UTF-8'}"> <img src="{$product.cover_image_url|escape:'htmlall':'UTF-8'}"></a> </td>
                 <td>
                     <a href="{$product.link|escape:'htmlall':'UTF-8'}">{$product.name|escape:'htmlall':'UTF-8'}</a>
-                    <div>
+                    <div class="flex flex-wrap">
                     {assign var="group_count" value=0}
                     {foreach from=$product.options item=options name=options}
+                        <span>
                         {$options.name|escape:'htmlall':'UTF-8'}
                         {assign var="group_count" value={$group_count|escape:'htmlall':'UTF-8'}+1}
                         
@@ -42,7 +43,7 @@
 
                             {/foreach}
                         </select> 
-                        
+                       </span> 
                     {/foreach}
                     </div>
                 </td>
