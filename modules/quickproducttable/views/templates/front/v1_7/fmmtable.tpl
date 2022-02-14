@@ -134,7 +134,6 @@
         </tbody>
         <tfoot class="text-base tablet:text-xl text-white font-normal">
             <tr>
-                <th>{l s='ID' mod='quickproducttable'}</th>
                 <th>{l s='Image' mod='quickproducttable'}</th>
                 <th>{l s='Name' mod='quickproducttable'}</th>
                 <th>{l s='Price' mod='quickproducttable'}</th>
