@@ -184,7 +184,6 @@
                                 } else {                               
                                    $("#loader").hide();
                                 }
-                                $('#fmm_table').DataTable().ajax.reload();
                             }
 
                         });
