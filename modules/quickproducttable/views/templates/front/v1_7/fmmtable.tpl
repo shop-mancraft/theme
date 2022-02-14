@@ -187,7 +187,6 @@
                             }
 
                         });
-                        $('#fmm_table').DataTable().ajax.reload();
 
                     }
                 });
