@@ -241,6 +241,13 @@ $('#chkal2').on( 'change', function() {
       $('input:checkbox').removeAttr('checked');
     }
   });
+$('#chkal3').on( 'change', function() {
+    if($(this).prop("checked") == true){
+        $('input:checkbox').prop('checked',true);
+    }else{
+      $('input:checkbox').removeAttr('checked');
+    }
+  });
 
 function changeAttr(id, group) {
         var id_product = id;

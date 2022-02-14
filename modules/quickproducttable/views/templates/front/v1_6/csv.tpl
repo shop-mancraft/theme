@@ -78,7 +78,7 @@
 <div class="col-lg-6" style="margin-top: 40px;">
 <form action="" method="POST" enctype="multipart/form-data">
          <input type="file" name="quickcsv" />
-         <input class="border-2 border-solid border-main rounded-md px-4 mt-2 hover:bg-main active:bg-main btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" value="Submit" type="submit"/>
+         <input class="border-2 border-solid border-main rounded-[4px] px-4 mt-2 hover:bg-main active:bg-main btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" value="Submit" type="submit"/>
       </form>
     <p id="downloadcsvfile"><a href="{$base_url|escape:'htmlall':'UTF-8'}modules/quickproducttable/views/img/sample.csv">{l s='Download a sample CSV file' mod='quickproducttable'}</a>
     </p>
@@ -88,7 +88,7 @@
     <p>{l s='Format: reference,qty,attribute' mod='quickproducttable'}</p>
     <p>{l s='e.g demo_1,2,1' mod='quickproducttable'}</p>
     <p>{l s='e.g demo_10,5' mod='quickproducttable'}</p>
-     <input class=" border-2 border-solid border-main rounded-md px-4 mt-2 hover:bg-main active:bg-main btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}"  onclick="textareaClick();" value="Add To Cart" type="submit"/>
+     <input class=" border-2 border-solid border-main rounded-[4px] px-4 mt-2 hover:bg-main active:bg-main btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}"  onclick="textareaClick();" value="Add To Cart" type="submit"/>
     </div>
  <div class="clearfix"></div>
 </div>
