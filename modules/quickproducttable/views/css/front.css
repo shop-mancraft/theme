@@ -59,40 +59,6 @@ padding: .5rem 1rem;
 width: 100%;
 }
 
-#select_fmm{
-width: 80px !important;
-    margin-top: 5px;
-    border-radius: 3px;
-
-
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
-    background: #fff url('../img/select.png') no-repeat 100% 45% !important;
-        background-size: auto;
-    background-size: 30px 60px;
-    border: 1px solid #ccc;
-    height: 32px;
-    padding-right: 25px;
-    text-indent: .01em;
-    text-overflow: '';
-
-
-    background: #fff;
-    background-clip: padding-box;
-    border: 1px solid #c2c2c2;
-    border-radius: 1px;
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    height: 32px;
-    line-height: 1.42857143;
-    padding: 5px 10px 4px;
-        padding-right: 10px;
-    vertical-align: baseline;
-    width: 100%;
-    box-sizing: border-box;
-}
 
         .minus, .plus{
             cursor:pointer; 
@@ -190,11 +156,7 @@ padding-top: 20px;
 
 
 .fmmpanel{
-    background-color: #fff;
 
-border: 1px solid #d3d8db;
-
-border-radius: 5px;
 
 margin-bottom: 20px;
 

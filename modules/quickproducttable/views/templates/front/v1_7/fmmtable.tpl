@@ -63,7 +63,7 @@
     {if $advance_enable == 1}
     <div class="col-lg-3 col-xs-12 top_buttons">
         <a class="border-0 rounded-md bg-main py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$base_url|escape:'htmlall':'UTF-8'}{$route_name|escape:'htmlall':'UTF-8'}?product_type=advance">
-            <svg class="mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 18px;" class="inline">
+            <svg class="mr-1 inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 18px;" class="inline">
 		    	<path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="#fff"></path>
 	        </svg>
             {l s='Advance Search' mod='quickproducttable'}
@@ -104,7 +104,7 @@
                         {$options.name|escape:'htmlall':'UTF-8'}
                         {assign var="group_count" value={$group_count|escape:'htmlall':'UTF-8'}+1}
                         
-                        <select id="select_fmm text-black" onchange="changeAttr({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'})" class="fmm_option_{$product.id_product|escape:'htmlall':'UTF-8'}_{$group_count|escape:'htmlall':'UTF-8'}">
+                        <select id="select_fmm" onchange="changeAttr({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'})" class="fmm_option_{$product.id_product|escape:'htmlall':'UTF-8'}_{$group_count|escape:'htmlall':'UTF-8'}">
                             {foreach from=$options.values item=values name=values}
 
                                 <option value="{$values.id|escape:'htmlall':'UTF-8'}">{$values.value|escape:'htmlall':'UTF-8'}</option>
@@ -119,9 +119,9 @@
                 <td>
                     <div class="col-lg-2">
                         <div class="number" id="number">
-                        <span class="minus align-sub p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary active:scale-95 transform translate duration-75">-</span>
+                        <span class="minus align-sub p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary select-none translate duration-75">-</span>
                         <input class="qty_id text-xl w-10 text-center text-gray-dark" id="quantity_{$product.id_product|escape:'htmlall':'UTF-8'}" type="text" value="1"/>
-                        <span class="plus align-sub p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary active:scale-95 transform translate duration-75">+</span>
+                        <span class="plus align-sub p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary select-none translate duration-75">+</span>
                         </div>
                     </div>
                 </td>
@@ -146,7 +146,7 @@
     </table>
     {if $ajax_load}
     <input type="hidden" id="pageno" value="1">
-    <span style="text-align: center;display: flow-root;">
+    <span class="flex justify-center invert blend-exclusion">
     <img id="loader" src="{$base_url}modules/quickproducttable/views/img/loading.svg">
     </span>
     {/if}
