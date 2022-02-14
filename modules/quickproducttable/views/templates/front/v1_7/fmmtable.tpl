@@ -184,10 +184,10 @@
                                 } else {                               
                                    $("#loader").hide();
                                 }
-                                $('#fmm_table').DataTable().ajax.reload();
                             }
 
                         });
+                        $('#fmm_table').DataTable().ajax.reload();
 
                     }
                 });
