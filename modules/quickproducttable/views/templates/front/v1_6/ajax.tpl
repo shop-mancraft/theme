@@ -49,7 +49,7 @@
                 </td>
                  <td>{$product.default_currency_sign|escape:'htmlall':'UTF-8'}<span id="price_{$product.id_product|escape:'htmlall':'UTF-8'}">{$product.price|number_format:2}</span></td>
                 <td>
-                    <div class="col-lg-2">
+                    <div class="">
                         <div class="number" id="number">
                         
                         <input class="qty_id" id="quantity_{$product.id_product|escape:'htmlall':'UTF-8'}" type="text" value="1"/>

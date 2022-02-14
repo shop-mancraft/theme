@@ -180,11 +180,15 @@ div#fmm_table_wrapper tbody#fmm_table_body{
 }
 
 #fmm_table_wrapper{
-  @apply border-2 border-main border-solid;
+  @apply border-2 border-main border-solid rounded-[4px];
 }
 
 #fmm_table_wrapper table.dataTable#fmm_table{
   @apply border-0;
+}
+
+#fmm_table_body .number{
+  @apply min-w-max;
 }
 
 #fmm_table_body .number .minus{
@@ -200,7 +204,7 @@ div#fmm_table_wrapper tbody#fmm_table_body{
 }
 
 #fmm_table_body .btn.btn-info{
-  @apply border-0 rounded-md bg-main px-4 py-3 hover:bg-black transition active:bg-black;
+  @apply border-0 rounded-[4px] bg-main px-4 py-3 hover:bg-black transition active:bg-black;
 }
 
 #fmm_table_body tr td a{
@@ -212,5 +216,9 @@ div#fmm_table_wrapper tbody#fmm_table_body{
 }
 
 #fmm_table_body tr td div #select_fmm{
-  @apply ml-2 mr-5 mb-2 text-ellipsis;
+  @apply ml-2 mr-5 mb-2 text-ellipsis indent-0 pl-1;
+}
+
+.btn-info:active, .btn-info:focus{
+  @apply bg-main
 }
