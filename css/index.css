@@ -208,9 +208,9 @@ div#fmm_table_wrapper tbody#fmm_table_body{
 }
 
 #fmm_table_body tr td div{
-  @apply max-w-3xl whitespace-normal 
+  @apply max-w-3xl whitespace-normal
 }
 
 #fmm_table_body tr td div #select_fmm{
-  @apply whitespace-normal mr-5 mb-2;
+  @apply ml-2 mr-5 mb-2 text-ellipsis;
 }
