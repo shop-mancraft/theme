@@ -148,3 +148,58 @@ select.form-control:not([size]):not([multiple]){
   display: block;
 }
 
+
+div#fmm_table_wrapper tbody#fmm_table_body a{
+  @apply hover:text-main transition;
+}
+#fmm_table_wrapper table#fmm_table thead th{
+  @apply font-normal
+}
+
+div#fmm_table_wrapper tbody#fmm_table_body{
+  @apply text-white font-normal text-sm tablet:text-base
+}
+
+#fmm_table_wrapper{
+  @apply border-2 border-main border-solid rounded-[4px];
+}
+
+#fmm_table_wrapper table.dataTable#fmm_table{
+  @apply border-0;
+}
+
+#fmm_table_body .number{
+  @apply min-w-max;
+}
+
+#fmm_table_body .number .minus{
+  @apply align-sub p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary select-none duration-75
+}
+
+#fmm_table_body .number .qty_id{
+  @apply text-xl w-10 text-center text-gray-dark;
+}
+
+#fmm_table_body .number .plus{
+  @apply align-sub p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary select-none duration-75;
+}
+
+#fmm_table_body .btn.btn-info{
+  @apply rounded-[4px] bg-main px-4 py-3 hover:bg-black transition active:bg-black;
+}
+
+#fmm_table_body tr td a{
+  @apply max-w-3xl whitespace-normal 
+}
+
+#fmm_table_body tr td div{
+  @apply max-w-3xl whitespace-normal
+}
+
+#fmm_table_body tr td div #select_fmm{
+  @apply ml-2 mr-5 mb-2 text-ellipsis indent-0 pl-1;
+}
+
+.btn-info:active, .btn-info:focus{
+  @apply bg-main
+}

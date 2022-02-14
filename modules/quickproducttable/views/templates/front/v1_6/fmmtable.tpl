@@ -71,7 +71,7 @@
 
 <input type="hidden" name="ajax_url" id="ajax_url" value="{$ajax_url|escape:'htmlall':'UTF-8'}">
 <table id="fmm_table" class="display nowrap">
-        <thead>
+        <thead class="text-base tablet:text-xl text-white font-normal">
             <tr>
                 <th>{l s='ID' mod='quickproducttable'}</th>
                 <th>{l s='Image' mod='quickproducttable'}</th>
@@ -81,16 +81,17 @@
                 <th>{l s='Action ' mod='quickproducttable'}</th>
             </tr>
         </thead>
-        <tbody id="fmm_table_body">
+        <tbody id="fmm_table_body text-white font-normal text-sm tablet:text-base">
           {foreach from=$all_products item=product name=product}
             <tr>
                 <td>{$product.id_product|escape:'htmlall':'UTF-8'}</td>
                 <td><a href="{$product.link|escape:'htmlall':'UTF-8'}"> <img src="{$product.cover_image_url|escape:'htmlall':'UTF-8'}"></a> </td>
                 <td>
                     <a href="{$product.link|escape:'htmlall':'UTF-8'}">{$product.name|escape:'htmlall':'UTF-8'}</a>
-                    <div>
+                    <div class="flex flex-wrap">
                     {assign var="group_count" value=0}
                     {foreach from=$product.options item=options name=options}
+                        <span>
                         {$options.name|escape:'htmlall':'UTF-8'}
                         {assign var="group_count" value={$group_count|escape:'htmlall':'UTF-8'}+1}
                         
@@ -101,13 +102,13 @@
 
                             {/foreach}
                         </select> 
-                        
+                       </span> 
                     {/foreach}
                     </div>
                 </td>
                  <td>{$product.default_currency_sign|escape:'htmlall':'UTF-8'}<span id="price_{$product.id_product|escape:'htmlall':'UTF-8'}">{$product.price|number_format:2}</span></td>
                 <td>
-                    <div class="col-lg-2">
+                    <div class="">
                         <div class="number" id="number">
                         
                         <input class="qty_id" id="quantity_{$product.id_product|escape:'htmlall':'UTF-8'}" type="text" value="1"/>

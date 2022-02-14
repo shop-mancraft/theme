@@ -32,6 +32,7 @@ module.exports = {
       },
       colors: {
         'primary': '#A8D727',
+        'main': '#A8D727',
         'gray-blackish': '#0A0A0A',
         'gray-dark': '#666666',
         'gray-normal' : '#151515',

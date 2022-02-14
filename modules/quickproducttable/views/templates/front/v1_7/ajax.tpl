@@ -25,13 +25,13 @@
 
 {foreach from=$all_products item=product name=product}
             <tr>
-                <td>{$product.id_product|escape:'htmlall':'UTF-8'}</td>
                 <td><a href="{$product.link|escape:'htmlall':'UTF-8'}"> <img src="{$product.cover_image_url|escape:'htmlall':'UTF-8'}"></a> </td>
                 <td>
                     <a href="{$product.link|escape:'htmlall':'UTF-8'}">{$product.name|escape:'htmlall':'UTF-8'}</a>
-                    <div>
+                    <div class="flex flex-wrap">
                     {assign var="group_count" value=0}
                     {foreach from=$product.options item=options name=options}
+                        <span>
                         {$options.name|escape:'htmlall':'UTF-8'}
                         {assign var="group_count" value={$group_count|escape:'htmlall':'UTF-8'}+1}
                         
@@ -42,23 +42,23 @@
 
                             {/foreach}
                         </select> 
-                        
+                       </span> 
                     {/foreach}
                     </div>
                 </td>
                 <td>{$product.default_currency_sign|escape:'htmlall':'UTF-8'}<span id="price_{$product.id_product|escape:'htmlall':'UTF-8'}">{$product.price|number_format:2}</span></td>
                 <td>
-                    <div class="col-lg-2">
+                    <div class="">
                         <div class="number" id="number">
-                        <span class="minus">-</span>
-                        <input class="qty_id" id="quantity_{$product.id_product|escape:'htmlall':'UTF-8'}" type="text" value="1"/>
-                        <span class="plus">+</span>
+                        <span class="minus align-sub p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary select-none  duration-75">-</span>
+                        <input class="qty_id text-xl w-10 text-center text-gray-dark" id="quantity_{$product.id_product|escape:'htmlall':'UTF-8'}" type="text" value="1"/>
+                        <span class="plus align-sub p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary select-none  duration-75">+</span>
                         </div>
                     </div>
                 </td>
                 <td>
                     <input type="hidden" name="group" id="group_{$product.id_product|escape:'htmlall':'UTF-8'}" value="{$group_count|escape:'htmlall':'UTF-8'}">
-                    <button class="btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" onclick="fmmAddCart({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'});" >{l s='Add To Cart' mod='quickproducttable'}</button>
+                    <button class="border border-solid border-main rounded-[4px] bg-main py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" onclick="fmmAddCart({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'});" >{l s='Add To Cart' mod='quickproducttable'}</button>
                     <input type="checkbox"  id="{$product.id_product|escape:'htmlall':'UTF-8'}_{$group_count|escape:'htmlall':'UTF-8'}" name="fmm_check" class="fmm_check" value="{$product.id_product|escape:'htmlall':'UTF-8'}">
                 </td>
             </tr>
