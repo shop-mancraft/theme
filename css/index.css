@@ -156,3 +156,39 @@ div#fmm_table_wrapper tbody#fmm_table_body a{
 div#fmm_table_wrapper tbody#fmm_table_body{
   @apply text-white font-normal text-sm tablet:text-base
 }
+
+#fmm_table_wrapper{
+  @apply border-2 border-main border-solid;
+}
+
+#fmm_table_wrapper table.dataTable#fmm_table{
+  @apply border-0;
+}
+
+#fmm_table_body .number .minus{
+  @apply align-sub p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary select-none translate duration-75
+}
+
+#fmm_table_body .number .plus{
+  @apply text-xl w-10 text-center text-gray-dark;
+}
+
+#fmm_table_body .number .qty_id{
+  @apply align-sub p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary select-none translate duration-75;
+}
+
+#fmm_table_body .btn.btn-info{
+  @apply border-0 rounded-md bg-main px-4 py-3 hover:bg-black transition active:bg-black;
+}
+
+#fmm_table_body tr td a{
+  @apply max-w-2xl whitespace-normal 
+}
+
+#fmm_table_body tr td div{
+  @apply max-w-2xl whitespace-normal 
+}
+
+#fmm_table_body tr td div #select_fmm{
+  @apply max-w-2xl whitespace-normal mr-5;
+}
