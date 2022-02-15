@@ -85,7 +85,7 @@
             <tr>
                 <th>{l s='Image' mod='quickproducttable'}</th>
                 <th>{l s='Name' mod='quickproducttable'}</th>
-                <th class="options2"></th>
+                <th class="desktop options2"></th>
                 <th>{l s='Stock' mod='quickproducttable'}</th>
                 <th>{l s='Price' mod='quickproducttable'}</th>
                 <th>{l s='Discounts' mod='quickproducttable'}</th>
@@ -117,7 +117,7 @@
                     {/foreach}
                     </div>
                 </td>
-                <td class="options2">
+                <td class="desktop options2">
                     <div class="flex flex-wrap">
                     {assign var="group_count" value=0}
                     {foreach from=$product.options item=options name=options}
@@ -169,7 +169,7 @@
             <tr>
                 <th>{l s='Image' mod='quickproducttable'}</th>
                 <th>{l s='Name' mod='quickproducttable'}</th>
-                <th class="options2"></th>
+                <th class="desktop options2"></th>
                 <th>{l s='Stock' mod='quickproducttable'}</th>
                 <th>{l s='Price' mod='quickproducttable'}</th>
                 <th>{l s='Discounts' mod='quickproducttable'}</th>

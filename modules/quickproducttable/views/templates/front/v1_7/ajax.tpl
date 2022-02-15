@@ -46,7 +46,7 @@
             {/foreach}
             </div>
         </td>
-        <td class="options2">
+        <td class="desktop options2">
             <div class=" flex flex-wrap">
             {assign var="group_count" value=0}
             {foreach from=$product.options item=options name=options}
@@ -75,7 +75,7 @@
         <td>{$product.default_currency_sign|escape:'htmlall':'UTF-8'}<span id="price_{$product.id_product|escape:'htmlall':'UTF-8'}">{$product.price|number_format:2}</span></td>
         <td>
             {if isset($product.specific_prices) && !empty($product.specific_prices)}
-                <span class="text-red-500"> -{$product.specific_prices['reduction']|number_format:2} {$currency["sign"]}</span>
+                <span class="text-red-500"> -{$product.specific_prices['reduction']|number_format:2} </span>
             {/if}
         </td>
         <td>
