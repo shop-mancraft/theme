@@ -213,10 +213,6 @@ ul.dtr-details li{
 }
 
 #fmm_table_wrapper.dataTables_wrapper #fmm_table .options{
-  @apply block
-}
-
-#fmm_table_wrapper.dataTables_wrapper #fmm_table .options.flex{
   @apply flex
 }
 
@@ -229,13 +225,8 @@ ul.dtr-details li{
 }
 
 #fmm_table_wrapper.dataTables_wrapper #fmm_table.collapsed .options2{
-  @apply block
-}
-
-#fmm_table_wrapper.dataTables_wrapper #fmm_table.collapsed .options2.flex{
   @apply flex
 }
-
 
 #fmm_table_wrapper.dataTables_wrapper table#fmm_table li[data-dtr-index="7"] .dtr-title{
   @apply hidden
