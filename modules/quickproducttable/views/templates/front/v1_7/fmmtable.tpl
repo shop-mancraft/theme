@@ -128,7 +128,7 @@
                     {/if}
                 </td>
                 <td>
-                    <div class="col-lg-2">
+                    <div class="">
                         <div class="number" id="number">
                         <span class="minus align-sub p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary select-none  duration-75">-</span>
                         <input class="qty_id text-xl w-10 text-center text-gray-dark" id="quantity_{$product.id_product|escape:'htmlall':'UTF-8'}" type="text" value="1"/>
