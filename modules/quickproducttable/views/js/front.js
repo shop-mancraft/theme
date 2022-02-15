@@ -295,7 +295,12 @@ $( document ).ready(function() {
         responsive: {
           details:{
             display: $.fn.dataTable.Responsive.display.childRowImmediate,
-          }
+          },
+          breakpoints: [
+            { name: 'desktop-full', width: Infinity },
+            { name: 'dekstop',  width: 1200 },
+            { name: 'tablet-p',  width: 768 }
+        ]
         },
         columnDefs: [
           { responsivePriority: -1, targets: 0 },

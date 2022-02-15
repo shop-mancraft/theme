@@ -46,7 +46,7 @@
             {/foreach}
             </div>
         </td>
-        <td class="desktop	 options2">
+        <td class="desktop-full	 options2">
             <div class=" flex flex-wrap">
             {assign var="group_count" value=0}
             {foreach from=$product.options item=options name=options}
@@ -67,13 +67,13 @@
             </div>
         </td>
 
-        <td class="min-tablet-p		">
+        <td class="min-tablet-l		">
             {if isset($product.quantity)}
                 {$product.quantity}
             {/if}
         </td>
         <td class="min-tablet-p		">{$product.default_currency_sign|escape:'htmlall':'UTF-8'}<span id="price_{$product.id_product|escape:'htmlall':'UTF-8'}">{$product.price|number_format:2}</span></td>
-        <td class="min-tablet-p		">
+        <td class="desktop		">
             {if isset($product.specific_prices) && !empty($product.specific_prices)}
                 <span class="text-red-500"> -{$product.specific_prices['reduction']|number_format:2} </span>
             {/if}
@@ -87,7 +87,7 @@
                 </div>
             </div>
         </td>
-        <td class="desktop	">
+        <td class="desktop-full	">
             <input type="hidden" name="group" id="group_{$product.id_product|escape:'htmlall':'UTF-8'}" value="{$group_count|escape:'htmlall':'UTF-8'}">
             <button class="border border-solid border-main rounded-[4px] bg-main py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" onclick="fmmAddCart({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'});" >{l s='Add To Cart' mod='quickproducttable'}</button>
             <input type="checkbox"  id="{$product.id_product|escape:'htmlall':'UTF-8'}_{$group_count|escape:'htmlall':'UTF-8'}" name="fmm_check" class="fmm_check" value="{$product.id_product|escape:'htmlall':'UTF-8'}">
