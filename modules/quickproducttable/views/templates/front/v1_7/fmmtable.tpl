@@ -145,7 +145,7 @@
                 <td>{$product.default_currency_sign|escape:'htmlall':'UTF-8'}<span id="price_{$product.id_product|escape:'htmlall':'UTF-8'}">{$product.price|number_format:2}</span></td>
                 <td>
                     {if isset($product.specific_prices) && !empty($product.specific_prices)}
-                      <span class="text-red-500"> -{$product.specific_prices['reduction']|number_format:2} </span>
+                      <span class="text-red-500"> -{$product.specific_prices['reduction']|number_format:2} {$currency["sign"]}</span>
                     {/if}
                 </td>
                 <td>
