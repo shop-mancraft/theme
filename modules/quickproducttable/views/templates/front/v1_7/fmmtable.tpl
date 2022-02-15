@@ -83,22 +83,21 @@
 <table id="fmm_table" class="display nowrap">
         <thead class="text-base tablet:text-xl text-white font-normal">
             <tr>
-                <th class="max-desktop	">{l s='Image' mod='quickproducttable'}</th>
-                <th class="max-desktop	">{l s='Name' mod='quickproducttable'}</th>
+                <th >{l s='Image' mod='quickproducttable'}</th>
+                <th >{l s='Name' mod='quickproducttable'}</th>
                 <th class="max-desktop	 options2"></th>
                 <th class="max-desktop	">{l s='Stock' mod='quickproducttable'}</th>
                 <th class="max-desktop	">{l s='Price' mod='quickproducttable'}</th>
                 <th class="max-desktop	">{l s='Discounts' mod='quickproducttable'}</th>
                 <th class="max-desktop	">{l s='Quantity' mod='quickproducttable'}</th>
                 <th class="max-desktop	">{l s='Action ' mod='quickproducttable'}<span class="flex items-center w-full"><p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p><input class="ml-[42px]" type="checkbox" data-toggle="toggle" id="chkal3" data-size="xs"></span></th>
-                <input class="options2 absolute right-4 top-4" type="checkbox" data-toggle="toggle"  data-size="xs">
             </tr>
         </thead>
         <tbody id="fmm_table_body">
           {foreach from=$all_products item=product name=product}
             <tr>
-                <td class="max-desktop	"><a href="{$product.link|escape:'htmlall':'UTF-8'}"> <img src="{$product.cover_image_url|escape:'htmlall':'UTF-8'}"></a> </td>
-                <td class="max-desktop	">
+                <td ><a href="{$product.link|escape:'htmlall':'UTF-8'}"> <img src="{$product.cover_image_url|escape:'htmlall':'UTF-8'}"></a> </td>
+                <td >
                     <a href="{$product.link|escape:'htmlall':'UTF-8'}">{$product.name|escape:'htmlall':'UTF-8'}</a>
                     <div class="options flex flex-wrap">
                     {assign var="group_count" value=0}
@@ -168,8 +167,8 @@
         </tbody>
         <tfoot class="text-base tablet:text-xl text-white font-normal">
             <tr>
-                <th class="max-desktop	">{l s='Image' mod='quickproducttable'}</th>
-                <th class="max-desktop	">{l s='Name' mod='quickproducttable'}</th>
+                <th >{l s='Image' mod='quickproducttable'}</th>
+                <th >{l s='Name' mod='quickproducttable'}</th>
                 <th class="max-desktop	 options2"></th>
                 <th class="max-desktop	">{l s='Stock' mod='quickproducttable'}</th>
                 <th class="max-desktop	">{l s='Price' mod='quickproducttable'}</th>

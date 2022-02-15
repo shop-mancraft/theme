@@ -25,8 +25,8 @@
 
 {foreach from=$all_products item=product name=product}
     <tr>
-        <td class="max-desktop	"><a href="{$product.link|escape:'htmlall':'UTF-8'}"> <img src="{$product.cover_image_url|escape:'htmlall':'UTF-8'}"></a> </td>
-        <td class="max-desktop	">
+        <td ><a href="{$product.link|escape:'htmlall':'UTF-8'}"> <img src="{$product.cover_image_url|escape:'htmlall':'UTF-8'}"></a> </td>
+        <td >
             <a href="{$product.link|escape:'htmlall':'UTF-8'}">{$product.name|escape:'htmlall':'UTF-8'}</a>
             <div class="options flex flex-wrap">
             {assign var="group_count" value=0}
