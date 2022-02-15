@@ -85,6 +85,7 @@
             <tr>
                 <th>{l s='Image' mod='quickproducttable'}</th>
                 <th>{l s='Name' mod='quickproducttable'}</th>
+                <th></th>
                 <th>{l s='Stock' mod='quickproducttable'}</th>
                 <th>{l s='Price' mod='quickproducttable'}</th>
                 <th>{l s='Discounts' mod='quickproducttable'}</th>
@@ -168,6 +169,7 @@
             <tr>
                 <th>{l s='Image' mod='quickproducttable'}</th>
                 <th>{l s='Name' mod='quickproducttable'}</th>
+                <th></th>
                 <th>{l s='Stock' mod='quickproducttable'}</th>
                 <th>{l s='Price' mod='quickproducttable'}</th>
                 <th>{l s='Discounts' mod='quickproducttable'}</th>
