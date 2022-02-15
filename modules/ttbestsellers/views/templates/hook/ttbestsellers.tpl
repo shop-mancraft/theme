@@ -54,12 +54,10 @@
 		{foreach from=$products item="product"}
 			{if $tt_total > 10}
 						<!-- Start TemplateTrip 2 product slide code -->
-						{if $tt_cnt % 2 != 0}
 						<ul>
 							<li class="bestsellerli">
 								<ul>
 								<li class="item">
-						{/if}
 					{/if}
 						<!-- End TemplateTrip 2 product slide code -->
 		
@@ -67,12 +65,10 @@
 		
 						<!-- Start TemplateTrip 2 product slide code -->
 					{if $tt_total > 10}
-						{if $tt_cnt % 2 == 0}
 								</li>
 								</ul>
 							</li>
 							</ul>
-						{/if}
 						{/if}
 		
 						{$tt_cnt = $tt_cnt+1}
