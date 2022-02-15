@@ -189,11 +189,11 @@ div#fmm_table_wrapper tbody#fmm_table_body{
 }
 
 #fmm_table_body tr td a{
-  @apply max-w-3xl whitespace-normal 
+  @apply max-w-2xl whitespace-normal 
 }
 
 #fmm_table_body tr td div{
-  @apply max-w-3xl whitespace-normal
+  @apply max-w-2xl whitespace-normal
 }
 
 #fmm_table_body tr td div span span{
@@ -201,7 +201,7 @@ div#fmm_table_wrapper tbody#fmm_table_body{
 }
 
 #fmm_table_body tr td div #select_fmm{
-  @apply mr-5 mb-2 text-ellipsis indent-0 max-w-[250px] tablet:max-w-sm pl-1;
+  @apply mr-5 mb-2 text-ellipsis indent-0 max-w-[250px]  pl-1;
 }
 
 .btn-info:active, .btn-info:focus{
@@ -216,6 +216,10 @@ ul.dtr-details li{
   @apply block
 }
 
+#fmm_table_wrapper.dataTables_wrapper #fmm_table .options.flex{
+  @apply flex
+}
+
 #fmm_table_wrapper.dataTables_wrapper #fmm_table .options2{
   @apply hidden
 }
@@ -226,6 +230,10 @@ ul.dtr-details li{
 
 #fmm_table_wrapper.dataTables_wrapper #fmm_table.collapsed .options2{
   @apply block
+}
+
+#fmm_table_wrapper.dataTables_wrapper #fmm_table.collapsed .options2.flex{
+  @apply flex
 }
 
 
