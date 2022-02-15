@@ -189,12 +189,14 @@
                             data: {
                                 lastItem: lastItem ,ajax:1,noofrow:noofrow, product_type:product_type, old_page:old_page, action: 'productChangeLength'
                             },
+                            dataType: "html",
                             success: function(response){
                                 if (response != 2) {
                                     var b = 1;
                                     var new_page = parseInt(old_page, 10) + parseInt(b, 10);
                                     //$('#fmm_table_body').append(response);
                                     console.log(response);
+                                    ParsedResponse = $(response)
                                     $('#page_no').val(new_page);
                                 } else {                               
                                    $("#loader").hide();
