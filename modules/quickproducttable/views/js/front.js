@@ -301,6 +301,7 @@ $( document ).ready(function() {
           { responsivePriority: -1, targets: 0 },
           { responsivePriority: -1, targets: 1 },
           { responsivePriority: 10001, targets: 2 }
+          { responsivePriority: 10001, targets: -1 }
         ],
         "pageLength": noofrow
     });
