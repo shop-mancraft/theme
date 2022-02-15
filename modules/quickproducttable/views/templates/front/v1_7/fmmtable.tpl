@@ -85,7 +85,7 @@
             <tr>
                 <th>{l s='Image' mod='quickproducttable'}</th>
                 <th>{l s='Name' mod='quickproducttable'}</th>
-                <th></th>
+                <th class="options2"></th>
                 <th>{l s='Stock' mod='quickproducttable'}</th>
                 <th>{l s='Price' mod='quickproducttable'}</th>
                 <th>{l s='Discounts' mod='quickproducttable'}</th>
@@ -99,7 +99,7 @@
                 <td><a href="{$product.link|escape:'htmlall':'UTF-8'}"> <img src="{$product.cover_image_url|escape:'htmlall':'UTF-8'}"></a> </td>
                 <td>
                     <a href="{$product.link|escape:'htmlall':'UTF-8'}">{$product.name|escape:'htmlall':'UTF-8'}</a>
-                    <div class="flex flex-wrap">
+                    <div class="options flex flex-wrap">
                     {assign var="group_count" value=0}
                     {foreach from=$product.options item=options name=options}
                         <span>
@@ -117,25 +117,25 @@
                     {/foreach}
                     </div>
                 </td>
-                <td>
-                <div class="options flex flex-wrap">
-                {assign var="group_count" value=0}
-                {foreach from=$product.options item=options name=options}
-                    <span class="flex flex-col w-full">
+                <td class="options2">
+                    <div class="flex flex-wrap">
+                    {assign var="group_count" value=0}
+                    {foreach from=$product.options item=options name=options}
+                        <span class="flex flex-col w-full">
 
-                    <span >{$options.name|escape:'htmlall':'UTF-8'}</span>
-                    {assign var="group_count" value={$group_count|escape:'htmlall':'UTF-8'}+1}
-                    
-                    <select id="select_fmm" onchange="changeAttr({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'})" class="fmm_option_{$product.id_product|escape:'htmlall':'UTF-8'}_{$group_count|escape:'htmlall':'UTF-8'}">
-                        {foreach from=$options.values item=values name=values}
+                        <span >{$options.name|escape:'htmlall':'UTF-8'}</span>
+                        {assign var="group_count" value={$group_count|escape:'htmlall':'UTF-8'}+1}
+                        
+                        <select id="select_fmm" onchange="changeAttr({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'})" class="fmm_option_{$product.id_product|escape:'htmlall':'UTF-8'}_{$group_count|escape:'htmlall':'UTF-8'}">
+                            {foreach from=$options.values item=values name=values}
 
-                            <option value="{$values.id|escape:'htmlall':'UTF-8'}">{$values.value|escape:'htmlall':'UTF-8'}</option>
+                                <option value="{$values.id|escape:'htmlall':'UTF-8'}">{$values.value|escape:'htmlall':'UTF-8'}</option>
 
-                        {/foreach}
-                    </select> 
-                   </span> 
-                {/foreach}
-                </div>
+                            {/foreach}
+                        </select> 
+                    </span> 
+                    {/foreach}
+                    </div>
                 </td>
                 <td>
                     {if isset($product.quantity)}
@@ -169,7 +169,7 @@
             <tr>
                 <th>{l s='Image' mod='quickproducttable'}</th>
                 <th>{l s='Name' mod='quickproducttable'}</th>
-                <th></th>
+                <th class="options2"></th>
                 <th>{l s='Stock' mod='quickproducttable'}</th>
                 <th>{l s='Price' mod='quickproducttable'}</th>
                 <th>{l s='Discounts' mod='quickproducttable'}</th>
