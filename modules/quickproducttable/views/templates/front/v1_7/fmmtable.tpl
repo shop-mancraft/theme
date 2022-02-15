@@ -194,9 +194,7 @@
                                 if (response != 2) {
                                     var b = 1;
                                     var new_page = parseInt(old_page, 10) + parseInt(b, 10);
-                                    //$('#fmm_table_body').append(response);
-                                    //console.log(response);
-                                    $('#fmm_table').DataTable().rows.add($(response).filter('tr')).draw()
+                                    $('#fmm_table_body').append(response);
 
                                 } else {                               
                                    $("#loader").hide();
