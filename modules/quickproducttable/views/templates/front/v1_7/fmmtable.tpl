@@ -86,7 +86,7 @@
             <th class="all" >{l s='Image' mod='quickproducttable'}</th>
             <th class="all" >{l s='Name' mod='quickproducttable'}</th>
             <th class="desktop	 options2"></th>
-            <th class="min-tablet-l	">{l s='Stock' mod='quickproducttable'}</th>
+            <th class="desktop	">{l s='Stock' mod='quickproducttable'}</th>
             <th class="min-tablet-p 	">{l s='Price' mod='quickproducttable'}</th>
             <th class="desktop	">{l s='Discounts' mod='quickproducttable'}</th>
             <th class="desktop	">{l s='Quantity' mod='quickproducttable'}</th>
@@ -138,7 +138,7 @@
                     {/foreach}
                     </div>
                 </td>
-                <td class="min-tablet-l		">
+                <td class="desktop		">
                     {if isset($product.quantity)}
                         {$product.quantity}
                     {/if}
@@ -171,7 +171,7 @@
                 <th class="all" >{l s='Image' mod='quickproducttable'}</th>
                 <th class="all" >{l s='Name' mod='quickproducttable'}</th>
                 <th class="desktop	 options2"></th>
-                <th class="min-tablet-l	">{l s='Stock' mod='quickproducttable'}</th>
+                <th class="desktop	">{l s='Stock' mod='quickproducttable'}</th>
                 <th class="min-tablet-p 	">{l s='Price' mod='quickproducttable'}</th>
                 <th class="desktop	">{l s='Discounts' mod='quickproducttable'}</th>
                 <th class="desktop	">{l s='Quantity' mod='quickproducttable'}</th>

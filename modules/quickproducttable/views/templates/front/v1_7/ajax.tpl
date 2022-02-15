@@ -67,7 +67,7 @@
             </div>
         </td>
 
-        <td class="min-tablet-l		">
+        <td class="desktop		">
             {if isset($product.quantity)}
                 {$product.quantity}
             {/if}
