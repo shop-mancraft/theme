@@ -233,6 +233,10 @@ ul.dtr-details li{
   @apply hidden
 }
 
+#fmm_table_wrapper.dataTables_wrapper table#fmm_table li[data-dtr-index="2"] .dtr-title{
+  @apply hidden
+}
+
 #fmm_table_wrapper.dataTables_wrapper table#fmm_table li[data-dtr-index="7"] .dtr-data{
   @apply ml-auto
 }
