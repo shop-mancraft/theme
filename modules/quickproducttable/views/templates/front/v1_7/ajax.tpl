@@ -46,7 +46,7 @@
             {/foreach}
             </div>
         </td>
-        <td class="options2">
+        <td class="desktop options2">
             <div class=" flex flex-wrap">
             {assign var="group_count" value=0}
             {foreach from=$product.options item=options name=options}

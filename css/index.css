@@ -244,3 +244,7 @@ ul.dtr-details li{
 table.dataTable.display tbody tr.child td{
   @apply border-gray-blackish
 }
+
+#fmm_table_wrapper.dataTables_wrapper  table#fmm_table.dataTable>tbody>tr.child ul.dtr-details>li{
+  @apply border-0
+}
