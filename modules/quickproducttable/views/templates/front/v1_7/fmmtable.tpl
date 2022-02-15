@@ -195,11 +195,8 @@
                                     var b = 1;
                                     var new_page = parseInt(old_page, 10) + parseInt(b, 10);
                                     //$('#fmm_table_body').append(response);
-                                    console.log(response);
-                                    console.log(response.querySelectorAll('tr'));
-                                    //ParsedResponse = $(response);
-                                    //console.log(ParsedResponse);
-                                    $('#page_no').val(new_page);
+                                    //console.log(response);
+                                    $(response).filter('tr')
                                 } else {                               
                                    $("#loader").hide();
                                 }
