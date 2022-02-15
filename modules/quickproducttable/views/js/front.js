@@ -293,9 +293,16 @@ $( document ).ready(function() {
         "lengthChange": false,
         "info":     false,
         responsive: true,
+        columnDefs: [
+          { responsivePriority: -1, targets: 0 },
+          { responsivePriority: -1, targets: 1 },
+          { responsivePriority: 3, targets: 2 }
+        ]
         "pageLength": noofrow
     });
          $("#fmm_table_paginate").hide();
     var content = '<i class="material-icons srcicon" tabindex="0" role="button">search</i>';
     $("#fmm_table_filter").append(content); 
+
+    $('#fmm_table').DataTable()
 });

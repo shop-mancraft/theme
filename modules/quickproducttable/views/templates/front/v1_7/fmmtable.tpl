@@ -117,6 +117,26 @@
                     </div>
                 </td>
                 <td>
+                <div class="options flex flex-wrap">
+                {assign var="group_count" value=0}
+                {foreach from=$product.options item=options name=options}
+                    <span class="flex flex-col w-full">
+
+                    <span >{$options.name|escape:'htmlall':'UTF-8'}</span>
+                    {assign var="group_count" value={$group_count|escape:'htmlall':'UTF-8'}+1}
+                    
+                    <select id="select_fmm" onchange="changeAttr({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'})" class="fmm_option_{$product.id_product|escape:'htmlall':'UTF-8'}_{$group_count|escape:'htmlall':'UTF-8'}">
+                        {foreach from=$options.values item=values name=values}
+
+                            <option value="{$values.id|escape:'htmlall':'UTF-8'}">{$values.value|escape:'htmlall':'UTF-8'}</option>
+
+                        {/foreach}
+                    </select> 
+                   </span> 
+                {/foreach}
+                </div>
+                </td>
+                <td>
                     {if isset($product.quantity)}
                         {$product.quantity}
                     {/if}
@@ -124,7 +144,7 @@
                 <td>{$product.default_currency_sign|escape:'htmlall':'UTF-8'}<span id="price_{$product.id_product|escape:'htmlall':'UTF-8'}">{$product.price|number_format:2}</span></td>
                 <td>
                     {if isset($product.specific_prices) && !empty($product.specific_prices)}
-                        -{$product.specific_prices['reduction']|number_format:2}
+                      <span class="text-red-500"> -{$product.specific_prices['reduction']|number_format:2} </span>
                     {/if}
                 </td>
                 <td>
