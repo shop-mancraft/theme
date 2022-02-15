@@ -292,7 +292,11 @@ $( document ).ready(function() {
         $('#fmm_table').DataTable({
         "lengthChange": false,
         "info":     false,
-        responsive: true,
+        responsive: {
+          details:{
+            display: $.fn.dataTable.Responsive.display.childRowImmediate,
+          }
+        },
         columnDefs: [
           { responsivePriority: -1, targets: 0 },
           { responsivePriority: -1, targets: 1 },
