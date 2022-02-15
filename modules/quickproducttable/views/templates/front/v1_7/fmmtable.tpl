@@ -86,6 +86,8 @@
                 <th>{l s='Image' mod='quickproducttable'}</th>
                 <th>{l s='Name' mod='quickproducttable'}</th>
                 <th>{l s='Price' mod='quickproducttable'}</th>
+                <th>{l s='Discounts' mod='quickproducttable'}</th>
+                <th>{l s='Stock' mod='quickproducttable'}</th>
                 <th>{l s='Quantity' mod='quickproducttable'}</th>
                 <th>{l s='Action ' mod='quickproducttable'}<span class="flex items-center w-full"><p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p><input class="ml-[42px]" type="checkbox" data-toggle="toggle" id="chkal3" data-size="xs"></span></th>
             </tr>
@@ -116,6 +118,16 @@
                 </td>
                 <td>{$product.default_currency_sign|escape:'htmlall':'UTF-8'}<span id="price_{$product.id_product|escape:'htmlall':'UTF-8'}">{$product.price|number_format:2}</span></td>
                 <td>
+                    {if isset($product.specific_prices) && !empty($product.specific_prices)}
+                        -{$product.specific_prices['reduction']|number_format:2}
+                    {/if}
+                </td>
+                <td>
+                    {if isset($product.quantity)}
+                        {$product.quantity}
+                    {/if}
+                </td>
+                <td>
                     <div class="">
                         <div class="number" id="number">
                         <span class="minus align-sub p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary select-none  duration-75">-</span>
@@ -137,6 +149,8 @@
                 <th>{l s='Image' mod='quickproducttable'}</th>
                 <th>{l s='Name' mod='quickproducttable'}</th>
                 <th>{l s='Price' mod='quickproducttable'}</th>
+                <th>{l s='Discounts' mod='quickproducttable'}</th>
+                <th>{l s='Stock' mod='quickproducttable'}</th>
                 <th>{l s='Quantity' mod='quickproducttable'}</th>
                 <th>{l s='Action ' mod='quickproducttable'}<span class="flex items-center w-full"><p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p><input class="ml-[42px]" type="checkbox" data-toggle="toggle" id="chkal3" data-size="xs"></span></th>
             </tr>
