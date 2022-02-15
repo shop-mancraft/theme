@@ -196,7 +196,8 @@
                                     var new_page = parseInt(old_page, 10) + parseInt(b, 10);
                                     //$('#fmm_table_body').append(response);
                                     //console.log(response);
-                                    $(response).filter('tr')
+                                    $('#fmm_table').DataTable().rows.add($(response).filter('tr')).draw()
+
                                 } else {                               
                                    $("#loader").hide();
                                 }
