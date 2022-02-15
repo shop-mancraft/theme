@@ -85,9 +85,9 @@
             <tr>
                 <th>{l s='Image' mod='quickproducttable'}</th>
                 <th>{l s='Name' mod='quickproducttable'}</th>
+                <th>{l s='Stock' mod='quickproducttable'}</th>
                 <th>{l s='Price' mod='quickproducttable'}</th>
                 <th>{l s='Discounts' mod='quickproducttable'}</th>
-                <th>{l s='Stock' mod='quickproducttable'}</th>
                 <th>{l s='Quantity' mod='quickproducttable'}</th>
                 <th>{l s='Action ' mod='quickproducttable'}<span class="flex items-center w-full"><p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p><input class="ml-[42px]" type="checkbox" data-toggle="toggle" id="chkal3" data-size="xs"></span></th>
             </tr>
@@ -116,15 +116,15 @@
                     {/foreach}
                     </div>
                 </td>
+                <td>
+                    {if isset($product.quantity)}
+                        {$product.quantity}
+                    {/if}
+                </td>
                 <td>{$product.default_currency_sign|escape:'htmlall':'UTF-8'}<span id="price_{$product.id_product|escape:'htmlall':'UTF-8'}">{$product.price|number_format:2}</span></td>
                 <td>
                     {if isset($product.specific_prices) && !empty($product.specific_prices)}
                         -{$product.specific_prices['reduction']|number_format:2}
-                    {/if}
-                </td>
-                <td>
-                    {if isset($product.quantity)}
-                        {$product.quantity}
                     {/if}
                 </td>
                 <td>
@@ -148,9 +148,9 @@
             <tr>
                 <th>{l s='Image' mod='quickproducttable'}</th>
                 <th>{l s='Name' mod='quickproducttable'}</th>
+                <th>{l s='Stock' mod='quickproducttable'}</th>
                 <th>{l s='Price' mod='quickproducttable'}</th>
                 <th>{l s='Discounts' mod='quickproducttable'}</th>
-                <th>{l s='Stock' mod='quickproducttable'}</th>
                 <th>{l s='Quantity' mod='quickproducttable'}</th>
                 <th>{l s='Action ' mod='quickproducttable'}<span class="flex items-center w-full"><p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p><input class="ml-[42px]" type="checkbox" data-toggle="toggle" id="chkal3" data-size="xs"></span></th>
             </tr>
@@ -194,8 +194,8 @@
                                 if (response != 2) {
                                     var b = 1;
                                     var new_page = parseInt(old_page, 10) + parseInt(b, 10);
-                                    $('#fmm_table_body').append(response);
-
+                                    $('#fmm_table').DataTable().rows.add($(response).filter('tr')).draw()
+                                    $('#page_no').val(new_page);
                                 } else {                               
                                    $("#loader").hide();
                                 }
