@@ -85,12 +85,12 @@
         <tr>
             <th class="all" >{l s='Image' mod='quickproducttable'}</th>
             <th class="all" >{l s='Name' mod='quickproducttable'}</th>
-            <th class="desktop-full	 options2"></th>
+            <th class="desktop	 options2"></th>
             <th class="min-tablet-l	">{l s='Stock' mod='quickproducttable'}</th>
             <th class="min-tablet-p 	">{l s='Price' mod='quickproducttable'}</th>
             <th class="desktop	">{l s='Discounts' mod='quickproducttable'}</th>
             <th class="desktop	">{l s='Quantity' mod='quickproducttable'}</th>
-            <th class="desktop-full	select-all-chk">{l s='Action ' mod='quickproducttable'}<span class=" flex items-center w-full"><p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p><input class="ml-[42px]" type="checkbox" data-toggle="toggle" id="chkal3" data-size="xs"></span></th>
+            <th class="desktop	select-all-chk">{l s='Action ' mod='quickproducttable'}<span class=" flex items-center w-full"><p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p><input class="ml-[42px]" type="checkbox" data-toggle="toggle" id="chkal3" data-size="xs"></span></th>
         </tr>
 
         </thead>
@@ -118,7 +118,7 @@
                     {/foreach}
                     </div>
                 </td>
-                <td class="desktop-full		 options2">
+                <td class="desktop		 options2">
                     <div class="flex flex-wrap">
                     {assign var="group_count" value=0}
                     {foreach from=$product.options item=options name=options}
@@ -158,7 +158,7 @@
                         </div>
                     </div>
                 </td>
-                <td class="desktop-full	">
+                <td class="desktop	">
                     <input type="hidden" name="group" id="group_{$product.id_product|escape:'htmlall':'UTF-8'}" value="{$group_count|escape:'htmlall':'UTF-8'}">
                     <button class="border border-solid border-main rounded-[4px] bg-main py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" onclick="fmmAddCart({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'});" >{l s='Add To Cart' mod='quickproducttable'}</button>
                     <input type="checkbox"  id="{$product.id_product|escape:'htmlall':'UTF-8'}_{$group_count|escape:'htmlall':'UTF-8'}" name="fmm_check" class="fmm_check" value="{$product.id_product|escape:'htmlall':'UTF-8'}">
@@ -170,12 +170,12 @@
             <tr>
                 <th class="all" >{l s='Image' mod='quickproducttable'}</th>
                 <th class="all" >{l s='Name' mod='quickproducttable'}</th>
-                <th class="desktop-full	 options2"></th>
+                <th class="desktop	 options2"></th>
                 <th class="min-tablet-l	">{l s='Stock' mod='quickproducttable'}</th>
                 <th class="min-tablet-p 	">{l s='Price' mod='quickproducttable'}</th>
                 <th class="desktop	">{l s='Discounts' mod='quickproducttable'}</th>
                 <th class="desktop	">{l s='Quantity' mod='quickproducttable'}</th>
-                <th class="desktop-full	"><span class="col-title">{l s='Action ' mod='quickproducttable'}</span><span class="flex items-center w-full"><p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p><input class="ml-[42px]" type="checkbox" data-toggle="toggle" id="chkal3" data-size="xs"></span></th>
+                <th class="desktop	"><span class="col-title">{l s='Action ' mod='quickproducttable'}</span><span class="flex items-center w-full"><p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p><input class="ml-[42px]" type="checkbox" data-toggle="toggle" id="chkal3" data-size="xs"></span></th>
             </tr>
         </tfoot>
     </table>

@@ -272,7 +272,7 @@ table.dataTable.display tbody tr.child td{
 
 #fmm_table_wrapper.dataTables_wrapper #fmm_table.collapsed thead tr [style="display: none;"].select-all-chk{
   display: block !important;
-  @apply absolute right-1 top-4 justify-end
+  @apply absolute right-2 top-4 justify-end p-0 
 }
 
 #fmm_table.collapsed [style="display: none;"].select-all-chk input{

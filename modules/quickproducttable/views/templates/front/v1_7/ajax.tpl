@@ -46,7 +46,7 @@
             {/foreach}
             </div>
         </td>
-        <td class="desktop-full	 options2">
+        <td class="desktop	 options2">
             <div class=" flex flex-wrap">
             {assign var="group_count" value=0}
             {foreach from=$product.options item=options name=options}
@@ -87,7 +87,7 @@
                 </div>
             </div>
         </td>
-        <td class="desktop-full	">
+        <td class="desktop	">
             <input type="hidden" name="group" id="group_{$product.id_product|escape:'htmlall':'UTF-8'}" value="{$group_count|escape:'htmlall':'UTF-8'}">
             <button class="border border-solid border-main rounded-[4px] bg-main py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" onclick="fmmAddCart({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'});" >{l s='Add To Cart' mod='quickproducttable'}</button>
             <input type="checkbox"  id="{$product.id_product|escape:'htmlall':'UTF-8'}_{$group_count|escape:'htmlall':'UTF-8'}" name="fmm_check" class="fmm_check" value="{$product.id_product|escape:'htmlall':'UTF-8'}">
