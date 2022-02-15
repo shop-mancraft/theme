@@ -212,10 +212,31 @@ ul.dtr-details li{
   @apply flex justify-between items-center
 }
 
-#fmm_table .options{
+#fmm_table_wrapper.dataTables_wrapper #fmm_table .options{
+  @apply block
+}
+
+#fmm_table_wrapper.dataTables_wrapper #fmm_table .options2{
   @apply hidden
 }
 
-#fmm_table.collapsed .options{
+#fmm_table_wrapper.dataTables_wrapper #fmm_table.collapsed .options{
+  @apply hidden
+}
+
+#fmm_table_wrapper.dataTables_wrapper #fmm_table.collapsed .options2{
   @apply block
+}
+
+
+#fmm_table_wrapper.dataTables_wrapper table#fmm_table li[data-dtr-index="7"] .dtr-title{
+  @apply hidden
+}
+
+#fmm_table_wrapper.dataTables_wrapper table#fmm_table li[data-dtr-index="7"] .dtr-data{
+  @apply ml-auto
+}
+
+table.dataTable.display tbody tr.child td{
+  @apply border-gray-blackish
 }
