@@ -32,7 +32,7 @@
     <ul class="dropdown-menu" aria-labelledby="currency-selector-label">
       {foreach from=$currencies item=currency}
         <li>
-          <a title="{$currency.name}" rel="nofollow" href="{$currency.url}" class=" text-base font-normal dropdown-item {if $currency.current} current  text-main {else} text-black {/if} ">{$currency.iso_code}</a>
+          <a title="{$currency.name}" rel="nofollow" href="{$currency.url}" class=" text-base font-normal dropdown-item transition {if $currency.current} current  text-main hover:text-main {else} text-gray-dark hover:text-black {/if} ">{$currency.iso_code}</a>
         </li>
       {/foreach}
     </ul>
