@@ -22,7 +22,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="ps_currencyselector hidden tablet:block cursor-pointer float-right text-center relative m-4 tablet-narrow:my-1 mx-2 tablet-narrow:mx-0 flex-auto">
+<div class="ps_currencyselector hidden tablet-narrow:block cursor-pointer float-right text-center relative m-4 tablet-narrow:my-1 mx-2 tablet-narrow:mx-0 flex-auto">
   <div class="currency-selector dropdown ttdropdown js-dropdown">
     <span id="currency-selector-label" class="hidden">{l s='Currency:' d='Shop.Theme.Global'}</span>
     <button data-toggle="dropdown" class=" text-white hover:text-white bg-main hover:bg-black transition rounded-[10px] p-2.5 ml-1 my-[11px] " aria-haspopup="true" aria-expanded="false" aria-label="{l s='Currency dropdown' d='Shop.Theme.Global'}">
