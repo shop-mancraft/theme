@@ -161,5 +161,5 @@ select.form-control:not([size]):not([multiple]){
 }
 
 .header-nav select.link{
-  @apply tablet-narrow:hidden;
+  @apply hidden;
 }
