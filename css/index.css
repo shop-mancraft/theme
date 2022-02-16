@@ -290,8 +290,8 @@ table.dataTable.display tbody tr.child td{
   @apply focus:outline-0;
 }
 
-.header-nav .dropdown.open svg.expand-icon{
-  @apply inline-block fill-current transition transform
+.header-nav .dropdown svg.expand-icon{
+  @apply inline-block fill-current transition transform rotate-0 align-sub
 }
 
 .header-nav .dropdown.open svg.expand-icon{

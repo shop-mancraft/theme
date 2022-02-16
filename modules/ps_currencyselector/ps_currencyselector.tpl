@@ -22,21 +22,22 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="ps_currencyselector cursor-pointer float-right text-center relative m-4 tablet-narrow:my-1 mx-2 tablet-narrow:mx-0 flex-auto">
+<div class="ps_currencyselector hidden tablet:block cursor-pointer float-right text-center relative m-4 tablet-narrow:my-1 mx-2 tablet-narrow:mx-0 flex-auto">
   <div class="currency-selector dropdown ttdropdown js-dropdown">
     <span id="currency-selector-label" class="hidden">{l s='Currency:' d='Shop.Theme.Global'}</span>
-    <button data-toggle="dropdown text-white bg-main hover:bg-black transition rounded-[10px]" class="hidden-sm-down" aria-haspopup="true" aria-expanded="false" aria-label="{l s='Currency dropdown' d='Shop.Theme.Global'}">
-      <span class="expand-more text-[19px]">{$current_currency.iso_code}</span>
-      <svg class="expand-icon fill-current" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="24px" ><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
-      </button>
-    <ul class="dropdown-menu hidden-sm-down" aria-labelledby="currency-selector-label">
+    <button data-toggle="dropdown" class=" text-white hover:text-white bg-main hover:bg-black transition rounded-[10px] p-2.5 ml-3 my-[11px] " aria-haspopup="true" aria-expanded="false" aria-label="{l s='Currency dropdown' d='Shop.Theme.Global'}">
+      <span class="text-[19px] transition font-normal">{$current_currency.iso_code}</span>
+      <svg class="expand-icon" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="24px" ><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="currency-selector-label">
       {foreach from=$currencies item=currency}
-        <li {if $currency.current} class="current" {/if}>
+        
+        <li class=" text-base font-normal {if $currency.current} current  text-main {else} text-black {/if} " >
           <a title="{$currency.name}" rel="nofollow" href="{$currency.url}" class="dropdown-item">{$currency.iso_code}</a>
         </li>
       {/foreach}
     </ul>
-    <select class="link hidden-md-up appearance-none w-full tablet-narrow:w-auto" aria-labelledby="currency-selector-label">
+    <select class="link hidden appearance-none w-full tablet-narrow:w-auto" aria-labelledby="currency-selector-label">
       {foreach from=$currencies item=currency}
         <option value="{$currency.url}"{if $currency.current} selected="selected"{/if}>{$currency.iso_code}</option>
       {/foreach}
