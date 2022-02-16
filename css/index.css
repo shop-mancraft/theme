@@ -163,3 +163,8 @@ select.form-control:not([size]):not([multiple]){
 .header-nav select.link{
   @apply hidden;
 }
+
+.header-nav .ps_languageselector,.header-nav .ps_currencyselector{
+  @apply hidden tablet-narrow:block
+}
+
