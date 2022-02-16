@@ -22,11 +22,11 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="ps_languageselector hidden tablet-narrow:block cursor-pointer float-right text-center relative m-4 tablet-narrow:my-1 mx-2 tablet-narrow:mx-0 flex-auto">
+<div class="ps_languageselector cursor-pointer float-right text-center relative m-4 tablet-narrow:my-1 mx-2 tablet-narrow:mx-0 flex-auto">
   <div class="language-selector-wrapper">
     <span id="language-selector-label" class="hidden">{l s='Language:' d='Shop.Theme.Global'}</span>
     <div class="language-selector dropdown js-dropdown">
-      <button data-toggle="dropdown" class="text-black hover:text-main p-2.5 my-[11px]" aria-haspopup="true" aria-expanded="false" aria-label="{l s='Language dropdown' d='Shop.Theme.Global'}">
+      <button data-toggle="dropdown" class="hidden tablet-narrow:block text-black hover:text-main p-2.5 my-[11px]" aria-haspopup="true" aria-expanded="false" aria-label="{l s='Language dropdown' d='Shop.Theme.Global'}">
         <span class="text-[19px] transition font-normal">{$current_language.name_simple}</span>
         <svg class="expand-icon" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="24px" ><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
       </button>
@@ -37,7 +37,7 @@
           </li>
         {/foreach}
       </ul>
-      <select class="link hidden appearance-none w-full tablet-narrow:w-auto" aria-labelledby="language-selector-label">
+      <select class="link tablet-narrow:hidden appearance-none w-full tablet-narrow:w-auto" aria-labelledby="language-selector-label">
         {foreach from=$languages item=language}
           <option value="{url entity='language' id=$language.id_lang}"{if $language.id_lang == $current_language.id_lang} selected="selected"{/if} data-iso-code="{$language.iso_code}">
             {$language.name_simple}
