@@ -25,15 +25,10 @@
 <div class="ps_currencyselector cursor-pointer float-right text-center relative m-4 tablet-narrow:my-1 mx-2 tablet-narrow:mx-0 flex-auto">
   <div class="currency-selector dropdown ttdropdown js-dropdown">
     <span id="currency-selector-label" class="hidden">{l s='Currency:' d='Shop.Theme.Global'}</span>
-    <button data-toggle="dropdown" class="hidden-sm-down" aria-haspopup="true" aria-expanded="false" aria-label="{l s='Currency dropdown' d='Shop.Theme.Global'}">
-      <span class="expand-more _gray-darker">{$current_currency.iso_code}</span>
-      <i class="material-icons expand-more">
-        <svg xmlns="http://www.w3.org/2000/svg" height="13px" viewBox="0 0 24 24" width="24px" fill="#888"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
-      </i>
-      <i class="material-icons expand-less">
-        <svg xmlns="http://www.w3.org/2000/svg" height="13px" viewBox="0 0 24 24" width="24px" fill="#888"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
-      </i>
-    </button>
+    <button data-toggle="dropdown text-white bg-main hover:bg-black transition rounded-[10px]" class="hidden-sm-down" aria-haspopup="true" aria-expanded="false" aria-label="{l s='Currency dropdown' d='Shop.Theme.Global'}">
+      <span class="expand-more text-[19px]">{$current_currency.iso_code}</span>
+      <svg class="expand-icon fill-current" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="24px" ><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+      </button>
     <ul class="dropdown-menu hidden-sm-down" aria-labelledby="currency-selector-label">
       {foreach from=$currencies item=currency}
         <li {if $currency.current} class="current" {/if}>
@@ -48,5 +43,3 @@
     </select>
   </div>
 </div>
-
-<div class="hidden tablet-narrow:block float-right border-l border-gray-light m-auto h-6 my-4"></div>
