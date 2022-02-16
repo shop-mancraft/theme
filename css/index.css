@@ -303,5 +303,5 @@ table.dataTable.display tbody tr.child td{
 }
 
 .header-nav select.link{
-  @apply tablet-narrow:hidden;
+  @apply hidden;
 }
