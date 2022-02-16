@@ -202,7 +202,7 @@ $(document).ready(function() {
 
     const swiperBestseller = new Swiper('[data-bestsellers-swiper]',{
         slidesPerView: 1,
-        spaceBetween: 30,
+        spaceBetween: 15,
         autoplay: {
             delay: 4000,
             disableOnInteraction: false
