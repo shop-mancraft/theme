@@ -155,3 +155,7 @@ select.form-control:not([size]):not([multiple]){
 .header-nav .dropdown.open svg.expand-icon{
   @apply rotate-180
 }
+
+.header-nav .currency-selector.dropdown.open button{
+  @apply bg-black
+}

@@ -10517,7 +10517,6 @@ li.product-flag.on-sale {
 }
 .currency-selector .dropdown-menu li.current a,
 .language-selector-wrapper .dropdown-menu li.current a {
-    color: #000 !important;
 	text-transform:capitalize;
 }
 #_desktop_language_selector ul li .dropdown-item, #_desktop_currency_selector ul li .dropdown-item{

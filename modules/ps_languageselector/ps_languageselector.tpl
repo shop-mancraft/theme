@@ -32,8 +32,8 @@
       </button>
       <ul class="dropdown-menu hidden-sm-down" aria-labelledby="language-selector-label">
         {foreach from=$languages item=language}
-          <li class=" text-base font-normal {if $language.id_lang == $current_language.id_lang} current  text-main {else} text-black {/if} " >
-            <a href="{url entity='language' id=$language.id_lang}" class="dropdown-item" data-iso-code="{$language.iso_code}">{$language.name_simple}</a>
+          <li>
+            <a href="{url entity='language' id=$language.id_lang}" class="dropdown-item text-base font-normal {if $language.id_lang == $current_language.id_lang} current  text-main {else} text-black {/if} " data-iso-code="{$language.iso_code}">{$language.name_simple}</a>
           </li>
         {/foreach}
       </ul>
