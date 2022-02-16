@@ -148,3 +148,7 @@ select.form-control:not([size]):not([multiple]){
   display: block;
 }
 
+.ttbestseller-products .customNavigation a.btn{
+  @apply focus:outline-0;
+}
+
