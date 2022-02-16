@@ -43,7 +43,7 @@ assets:
         priority: 332
       - id: swiper-js
         path: assets/js/swiper.js
-        priority: 332
+        priority: 342
       - id: main-script
         path: assets/js/index.js
         priority: 500
