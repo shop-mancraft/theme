@@ -51,36 +51,10 @@
 	<p class="text-left mb-3">{l s='Products especially appreciated by our customers. Meet our airsoft bestsellers.' d='Shop.Theme.Global'}</p>
 	
 	<div class="ttbestseller-content products">
-		{foreach from=$products item="product"}
-			{if $tt_total > 10}
-						<!-- Start TemplateTrip 2 product slide code -->
-						<ul>
-							<li class="bestsellerli">
-								<ul>
-								<li class="item">
-					{/if}
-						<!-- End TemplateTrip 2 product slide code -->
-		
-						{include file="catalog/_partials/miniatures/ttbestsellerlist.tpl" product=$product}
-		
-						<!-- Start TemplateTrip 2 product slide code -->
-					{if $tt_total > 10}
-								</li>
-								</ul>
-							</li>
-							</ul>
-						{/if}
-		
-						{$tt_cnt = $tt_cnt+1}
-						<!-- End TemplateTrip 2 product slide code -->
-				{/foreach}
-				{if $tt_total > 10}
-							</li>
-							</ul>
-						</li>
-						</ul>
-				{/if}
-	  </div>
+		{foreach from=$products item="product"}		
+			{include file="catalog/_partials/miniatures/ttbestsellerlist.tpl" product=$product}
+		{/foreach}
+	</div>
 	   <!-- Left and right controls -->
    <div class="allproduct"><a href="{$allBestSellers}">{l s='All best sellers' mod='ttbestsellers'}</a></div>
 </section>
