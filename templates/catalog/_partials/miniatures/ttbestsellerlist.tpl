@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='product_miniature_item'}
-<article class=" swiper-slide product-miniature js-product-miniature" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}" itemscope itemtype="http://schema.org/Product">
+<article class="swiper-slide product-miniature js-product-miniature product-grid relative px-4 float-left tablet:w-3/12 phone-wide:w-1/2 w-full" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}" itemscope itemtype="http://schema.org/Product">
 	<div class="thumbnail-container">
 	<div class="ttimge-bg"></div>
 		<div class="ttproduct-image">

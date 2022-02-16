@@ -286,3 +286,7 @@ table.dataTable.display tbody tr.child td{
 #fmm_table.collapsed [style="display: none;"].select-all-chk .col-title{
   @apply hidden
 }
+.ttbestseller-products .customNavigation a.btn{
+  @apply focus:outline-0;
+}
+
