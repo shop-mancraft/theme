@@ -30,7 +30,7 @@
         <span class="text-sm transition font-normal">{$current_language.name_simple}</span>
         <svg class="expand-icon" xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 0 24 24" width="24px" ><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
       </button>
-      <ul class="dropdown-menu hidden-sm-down" aria-labelledby="language-selector-label">
+      <ul class="dropdown-menu rounded-[10px]" aria-labelledby="language-selector-label">
         {foreach from=$languages item=language}
           <li>
             <a href="{url entity='language' id=$language.id_lang}" class="dropdown-item text-sm font-normal transition {if $language.id_lang == $current_language.id_lang} current  text-main hover:text-main {else} text-gray-dark hover:text-black {/if} " data-iso-code="{$language.iso_code}">{$language.name_simple}</a>
