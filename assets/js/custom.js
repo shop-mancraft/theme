@@ -206,6 +206,10 @@ $(document).ready(function() {
         itemsMobile: [480, 1]
     });
 
+    ttbestseller.on('resized.owl.carousel', function (event) {
+        console.log('!!!');
+    })
+
     // Custom Navigation Events
     $(".ttbestseller_next").click(function() {
         ttbestseller.trigger('owl.next');
