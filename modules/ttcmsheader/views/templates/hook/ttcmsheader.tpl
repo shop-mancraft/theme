@@ -39,7 +39,7 @@
 		</div>
 	</div>
 
-	<div class="border-0 border-r-2 last:border-r-0 border-black border-solid border-opacity-5 border-opacity-5 mx-3.5">
+	<div class="border-0 border-r-2 last:border-r-0 border-black border-solid border-opacity-5 border-opacity-5 mx-3.5 h-[30px] tablet-narrow:h-[40px]">
 	</div>
 
 	<div class=" flex flex-wrap items-center  w-auto  justify-center tablet-narrow:justify-startborder-opacity-5 mr-1 ">
@@ -51,7 +51,7 @@
 		</div>
 	</div>
 
-	<div class="border-0 border-r-2 last:border-r-0 border-black border-solid border-opacity-5 border-opacity-5 mx-3.5">
+	<div class="border-0 border-r-2 last:border-r-0 border-black border-solid border-opacity-5 border-opacity-5 mx-3.5 h-[30px] tablet-narrow:h-[40px]">
 	</div>
 
 	<div class="flex flex-wrap items-center  w-auto  justify-center tablet-narrow:justify-startborder-opacity-5 mr-1 ">
