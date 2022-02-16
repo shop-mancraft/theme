@@ -26,13 +26,13 @@
   <div class="currency-selector dropdown ttdropdown js-dropdown">
     <span id="currency-selector-label" class="hidden">{l s='Currency:' d='Shop.Theme.Global'}</span>
     <button data-toggle="dropdown" class="hidden tablet-narrow:block text-white hover:text-white bg-main hover:bg-black transition rounded-[10px] p-2.5 ml-1 my-[11px] " aria-haspopup="true" aria-expanded="false" aria-label="{l s='Currency dropdown' d='Shop.Theme.Global'}">
-      <span class="text-[19px] transition font-normal">{$current_currency.iso_code}</span>
-      <svg class="expand-icon" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="24px" ><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+      <span class="text-sm transition font-normal">{$current_currency.iso_code}</span>
+      <svg class="expand-icon" xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 0 24 24" width="24px" ><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
     </button>
     <ul class="dropdown-menu" aria-labelledby="currency-selector-label">
       {foreach from=$currencies item=currency}
         <li>
-          <a title="{$currency.name}" rel="nofollow" href="{$currency.url}" class=" text-base font-normal dropdown-item transition {if $currency.current} current  text-main hover:text-main {else} text-gray-dark hover:text-black {/if} ">{$currency.iso_code}</a>
+          <a title="{$currency.name}" rel="nofollow" href="{$currency.url}" class=" text-sm font-normal dropdown-item transition {if $currency.current} current  text-main hover:text-main {else} text-gray-dark hover:text-black {/if} ">{$currency.iso_code}</a>
         </li>
       {/foreach}
     </ul>
