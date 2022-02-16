@@ -35,7 +35,7 @@
 		</svg>
 
 		<div class="text-center tablet-narrow:text-left h-[30px] tablet-narrow:h-[40px]">
-			<a class="text-xs align-bottom desktop:text-sm text-black hover:text-main transition" href="/{$language.iso_code}/cms/mancraft-brand-ambassador-program">{l s='Ambassador program' d='Shop.Theme.Global'}a>
+			<a class="text-xs align-bottom desktop:text-sm text-black hover:text-main transition" href="/{$language.iso_code}/cms/mancraft-brand-ambassador-program">{l s='Ambassador program' d='Shop.Theme.Global'}</a>
 		</div>
 	</div>
 
