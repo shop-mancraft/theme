@@ -202,13 +202,16 @@ $(document).ready(function() {
 
     const swiperBestseller = new Swiper('[data-bestsellers-swiper]',{
         slidesPerView: 1,
-        spaceBetween: 60,
+        spaceBetween: 30,
         breakpoints:{
             480: {
                 slidesPerView: 2,
             },
             768: {
                 slidesPerView: 3,
+                slidesPerGroup: 1,
+              	slidesPerColumn: 1,
+				slidesPerColumnFill : 'column',
             },
             1200: {
                 slidesPerView: 4,
