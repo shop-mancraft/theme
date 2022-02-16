@@ -153,5 +153,5 @@ select.form-control:not([size]):not([multiple]){
 }
 
 .header-nav .dropdown.open svg.expand-icon{
-  @apply rotate(180)
+  @apply rotate-180
 }
