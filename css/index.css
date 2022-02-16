@@ -148,8 +148,8 @@ select.form-control:not([size]):not([multiple]){
   display: block;
 }
 
-.header-nav .dropdown.open svg.expand-icon{
-  @apply inline-block fill-current transition transform
+.header-nav .dropdown svg.expand-icon{
+  @apply inline-block fill-current transition transform rotate-0 align-sub
 }
 
 .header-nav .dropdown.open svg.expand-icon{

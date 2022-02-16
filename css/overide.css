@@ -42,17 +42,6 @@
   }
 }
 
-.header-nav .ps_languageselector,
-.header-nav .ps_currencyselector{
-  display: none;
-}
-
-@media (min-width: 992px){
-  .header-nav .ps_languageselector,
-  .header-nav .ps_currencyselector{
-    display: block;
-  }
-}
 
 
 
