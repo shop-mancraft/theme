@@ -141,12 +141,15 @@ $(document).ready(function() {
 
 
     var cols_count = $('#right-column, #left-column').length;
-    if (cols_count == 2) {
-        $('#content .products .product-miniature, #content-wrapper .products .product-miniature').attr('class', 'product-miniature js-product-miniature product-grid relative px-4 float-left tablet:w-1/2 w-full');
-    } else if (cols_count == 1) {
-        $('#content .products .product-miniature, #content-wrapper .products .product-miniature').attr('class', 'product-miniature js-product-miniature product-grid relative px-4 float-left tablet:w-3/12 phone-wide:w-1/2 w-full');
-    } else {
-        $('#content .products .product-miniature, #content-wrapper .products .product-miniature').attr('class', 'product-miniature js-product-miniature product-grid relative px-4 float-left tablet:w-3/12 phone-wide:w-1/2 w-full');
+    var prod_miniature = $('#content .products .product-miniature, #content-wrapper .products .product-miniature');
+    if(!prod_miniature.hasClass('swiper-slide')){
+        if (cols_count == 2) {
+            prod_miniature.attr('class', 'product-miniature js-product-miniature product-grid relative px-4 float-left tablet:w-1/2 w-full');
+        } else if (cols_count == 1) {
+            prod_miniature.attr('class', 'product-miniature js-product-miniature product-grid relative px-4 float-left tablet:w-3/12 phone-wide:w-1/2 w-full');
+        } else {
+            prod_miniature.attr('class', 'product-miniature js-product-miniature product-grid relative px-4 float-left tablet:w-3/12 phone-wide:w-1/2 w-full');
+        }
     }
 
     /* ------------ End Add Product Bootsrap class JS --------------- */
@@ -197,7 +200,7 @@ $(document).ready(function() {
 
     /* ----------- carousel For bestseller ----------- */
 
-    const swiperBestseller = new Swiper('.ttbestseller-products',{
+    const swiperBestseller = new Swiper('[data-bestsellers-swiper]',{
         slidesPerView: 1,
         breakpoints:{
             480: {

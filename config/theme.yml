@@ -15,6 +15,9 @@ assets:
       - id: datatables-responsive-child
         path: assets/css/responsive.dataTables.min.css
         priority: 200
+      - id: swiper-styles
+        path: assets/css/swiper.css
+        priority: 210
       - id: main-style
         path: assets/css/index.css
         priority: 500
@@ -37,6 +40,9 @@ assets:
         priority: 331
       - id: datatables-responsive-lib-child
         path: assets/js/dataTables.responsive.min.js
+        priority: 332
+      - id: swiper-js
+        path: assets/js/swiper.js
         priority: 332
       - id: main-script
         path: assets/js/index.js
