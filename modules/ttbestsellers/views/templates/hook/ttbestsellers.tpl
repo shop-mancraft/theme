@@ -75,12 +75,10 @@
 						<!-- End TemplateTrip 2 product slide code -->
 				{/foreach}
 				{if $tt_total > 10}
-					{if $tt_cnt % 2 == 0}
 							</li>
 							</ul>
 						</li>
 						</ul>
-					{/if}
 				{/if}
 	  </div>
 	   <!-- Left and right controls -->
