@@ -301,3 +301,7 @@ table.dataTable.display tbody tr.child td{
 .header-nav .currency-selector.dropdown.open button{
   @apply bg-black
 }
+
+.header-nav select.link{
+  @apply tablet-narrow:hidden;
+}
