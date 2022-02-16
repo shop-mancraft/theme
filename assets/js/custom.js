@@ -197,28 +197,33 @@ $(document).ready(function() {
 
     /* ----------- carousel For bestseller ----------- */
 
-    var ttbestseller = $(".ttbestseller-products .products");
-    ttbestseller.owlCarousel({
-        items: 5, //10 items above 1000px browser width
-        itemsDesktop: [1599, 4],
-        itemsDesktopSmall: [1199, 3],
-        itemsTablet: [767, 2],
-        itemsMobile: [480, 1]
+    const swiperBestseller = new Swiper('.ttbestseller-products',{
+        slidesPerView: 1,
+        breakpoints:{
+            480: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1200: {
+                slidesPerView: 4,
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+                slidesPerColumn: 2,
+                slidesPerColumnFill: 'row',
+            },
+            1600: {
+                slidesPerView: 5,
+            },
+
+        },
+        navigation: {
+            nextEl: '.ttbestseller_next',
+            prevEl: '.ttbestseller_prev'
+        },
     });
-
-    ttbestseller.on('resized.owl.carousel', function (event) {
-        console.log('!!!');
-    })
-
-    // Custom Navigation Events
-    $(".ttbestseller_next").click(function() {
-        ttbestseller.trigger('owl.next');
-    })
-
-    $(".ttbestseller_prev").click(function() {
-        ttbestseller.trigger('owl.prev');
-    })
-
+    
     /* ----------- carousel For ttspecial ----------- */
 
     var ttspecial = $(".ttspecial-products:not(.ttnewproducts-products) .products");

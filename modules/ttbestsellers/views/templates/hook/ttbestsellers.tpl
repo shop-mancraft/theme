@@ -51,9 +51,11 @@
 	<p class="text-left mb-3">{l s='Products especially appreciated by our customers. Meet our airsoft bestsellers.' d='Shop.Theme.Global'}</p>
 	
 	<div class="ttbestseller-content products">
-		{foreach from=$products item="product"}		
-			{include file="catalog/_partials/miniatures/ttbestsellerlist.tpl" product=$product}
-		{/foreach}
+		<div class="swiper-wrapper">
+			{foreach from=$products item="product"}		
+				{include file="catalog/_partials/miniatures/ttbestsellerlist.tpl" product=$product}
+			{/foreach}
+		</div>
 	</div>
 	   <!-- Left and right controls -->
    <div class="allproduct"><a href="{$allBestSellers}">{l s='All best sellers' mod='ttbestsellers'}</a></div>
