@@ -203,9 +203,9 @@ $(document).ready(function() {
     const swiperBestseller = new Swiper('[data-bestsellers-swiper]',{
         slidesPerView: 1,
         spaceBetween: 30,
-        loop: true,
         autoplay: {
-            delay: 5000,
+            delay: 4000,
+            disableOnInteraction: false
           },
         breakpoints:{
             480: {

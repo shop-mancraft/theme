@@ -50,8 +50,8 @@
 	
 	<p class="text-left mb-3">{l s='Products especially appreciated by our customers. Meet our airsoft bestsellers.' d='Shop.Theme.Global'}</p>
 	
-	<div class="ttbestseller-content overflow-x-hidden products" data-bestsellers-swiper>
-		<div class="swiper-wrapper">
+	<div class="ttbestseller-content overflow-x-hidden  products" data-bestsellers-swiper>
+		<div class="swiper-wrapper my-10">
 			{foreach from=$products item="product"}		
 				{include file="catalog/_partials/miniatures/ttbestsellerlist.tpl" product=$product}
 			{/foreach}
