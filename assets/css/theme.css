@@ -10504,6 +10504,7 @@ li.product-flag.on-sale {
 .currency-selector .dropdown-menu {
 	right:0;
 	left:auto;
+    top: 45px;
 }
 #_desktop_language_selector .language-selector.dropdown.js-dropdown.open span,#_desktop_language_selector .language-selector.dropdown.js-dropdown.open i,
 #_desktop_currency_selector .currency-selector.dropdown.js-dropdown.open span,#_desktop_currency_selector .currency-selector.dropdown.js-dropdown.open i {
