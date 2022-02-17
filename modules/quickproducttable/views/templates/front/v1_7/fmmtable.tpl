@@ -160,8 +160,12 @@
                 </td>
                 <td class="desktop	">
                     <input type="hidden" name="group" id="group_{$product.id_product|escape:'htmlall':'UTF-8'}" value="{$group_count|escape:'htmlall':'UTF-8'}">
-                    <button class="border border-solid border-main rounded-[4px] bg-main py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" onclick="fmmAddCart({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'});" >{l s='Add To Cart' mod='quickproducttable'}</button>
-                    <input type="checkbox"  id="{$product.id_product|escape:'htmlall':'UTF-8'}_{$group_count|escape:'htmlall':'UTF-8'}" name="fmm_check" class="fmm_check" value="{$product.id_product|escape:'htmlall':'UTF-8'}">
+                    <button class="align-baseline border border-solid border-main rounded-[4px] bg-main py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" onclick="fmmAddCart({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'});" >{l s='Add To Cart' mod='quickproducttable'}</button>
+                    <span class="custom-checkbox ml-5">
+                        <input type="checkbox"  id="{$product.id_product|escape:'htmlall':'UTF-8'}_{$group_count|escape:'htmlall':'UTF-8'}" name="fmm_check" class="fmm_check top-0 z-10" value="{$product.id_product|escape:'htmlall':'UTF-8'}">
+                        <span><i class="material-icons rtl-no-flip checkbox-checked"></i></span>
+                    </span>
+    
                 </td>
             </tr>
             {/foreach}
@@ -175,7 +179,15 @@
                 <th class="min-tablet-p 	">{l s='Price' mod='quickproducttable'}</th>
                 <th class="desktop	">{l s='Discounts' mod='quickproducttable'}</th>
                 <th class="desktop	">{l s='Quantity' mod='quickproducttable'}</th>
-                <th class="desktop	">{l s='Action ' mod='quickproducttable'}<span class="flex items-center w-full"><p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p><input class="ml-[42px]" type="checkbox" data-toggle="toggle" id="chkal3" data-size="xs"></span></th>
+                <th class="desktop	">{l s='Action ' mod='quickproducttable'}
+                    <span class="flex items-center w-full">
+                        <p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p>
+                        <span class="custom-checkbox">
+                            <input class="" type="checkbox" data-toggle="toggle" id="chkal3" data-size="xs">
+                            <span><i class="material-icons rtl-no-flip checkbox-checked"></i></span>
+                        </span>
+                    </span>
+                </th>
             </tr>
         </tfoot>
     </table>
