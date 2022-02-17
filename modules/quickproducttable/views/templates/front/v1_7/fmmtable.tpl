@@ -93,7 +93,7 @@
             <th class="desktop	select-all-chk"><span class="col-title">{l s='Action ' mod='quickproducttable'}</span>
                 <span class="flex items-center justify-between w-full">
                     <p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p>
-                    <span class="custom-checkbox">
+                    <span class="custom-checkbox mr-[3px]">
                         <input class="" type="checkbox" data-toggle="toggle" id="chkal3" data-size="xs">
                         <span><i class="material-icons rtl-no-flip checkbox-checked"></i></span>
                     </span>
@@ -192,7 +192,7 @@
                 <th class="desktop	">{l s='Action ' mod='quickproducttable'}
                     <span class="flex items-center justify-between w-full">
                         <p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p>
-                        <span class="custom-checkbox">
+                        <span class="custom-checkbox  mr-[3px]">
                             <input class="" type="checkbox" data-toggle="toggle" id="chkal3" data-size="xs">
                             <span><i class="material-icons rtl-no-flip checkbox-checked"></i></span>
                         </span>
