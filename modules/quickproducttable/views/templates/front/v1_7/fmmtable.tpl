@@ -90,8 +90,18 @@
             <th class="min-tablet-p 	">{l s='Price' mod='quickproducttable'}</th>
             <th class="desktop	">{l s='Discounts' mod='quickproducttable'}</th>
             <th class="desktop	">{l s='Quantity' mod='quickproducttable'}</th>
-            <th class="desktop	select-all-chk"><span class="col-title">{l s='Action ' mod='quickproducttable'}</span><span class=" flex items-center w-full"><p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p><input class="ml-[42px]" type="checkbox" data-toggle="toggle" id="chkal3" data-size="xs"></span></th>
+            <th class="desktop	select-all-chk"><span class="col-title">{l s='Action ' mod='quickproducttable'}</span>
+                <span class="flex items-center justify-between w-full">
+                    <p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p>
+                    <span class="custom-checkbox">
+                        <input class="" type="checkbox" data-toggle="toggle" id="chkal3" data-size="xs">
+                        <span><i class="material-icons rtl-no-flip checkbox-checked"></i></span>
+                    </span>
+                </span>
+            </th>
         </tr>
+
+        
 
         </thead>
         <tbody id="fmm_table_body">
@@ -180,7 +190,7 @@
                 <th class="desktop	">{l s='Discounts' mod='quickproducttable'}</th>
                 <th class="desktop	">{l s='Quantity' mod='quickproducttable'}</th>
                 <th class="desktop	">{l s='Action ' mod='quickproducttable'}
-                    <span class="flex items-center w-full">
+                    <span class="flex items-center justify-between w-full">
                         <p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p>
                         <span class="custom-checkbox">
                             <input class="" type="checkbox" data-toggle="toggle" id="chkal3" data-size="xs">
