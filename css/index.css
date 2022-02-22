@@ -318,3 +318,11 @@ table.dataTable.display tbody tr.child td{
   @apply flex-row;
 }
 
+#fmm_table .price{
+  @apply flex flex-col;
+}
+
+#fmm_table.collapsed .price{
+  @apply flex-row;
+}
+
