@@ -109,15 +109,7 @@
                     {/foreach}
                     </div>
                 </td>
-                <td class="min-tablet-p	price">
-				    <span class="text-red-600 mr-3">{$product.default_currency_sign|escape:'htmlall':'UTF-8'}{Product::getPriceStatic($product['id_product'], true, null, 2, null, false, true, 1, true, null, null, null, $nothing, true, false, null)|number_format:2}</span>
-                    <span id="price_{$product.id_product|escape:'htmlall':'UTF-8'}">{$product.default_currency_sign|escape:'htmlall':'UTF-8'}{$product.price|number_format:2}</span>
-                </td>
-                <td class="desktop	">
-                    {if isset($product.specific_prices) && !empty($product.specific_prices)}
-                      <span class="text-red-500"> - {if $product.specific_prices['reduction_type'] == 'amount'}{$product.specific_prices['reduction']|number_format:2} {$product.default_currency_sign|escape:'htmlall':'UTF-8'}{else}{$product.specific_prices['reduction']|number_format:2}%{/if}</span>
-                    {/if}
-                </td>                
+                <td>{$product.default_currency_sign|escape:'htmlall':'UTF-8'}<span id="price_{$product.id_product|escape:'htmlall':'UTF-8'}">{$product.price|number_format:2}</span></td>
                 <td>
                     <div class="col-lg-2">
                         <div class="number" id="number">
