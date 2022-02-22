@@ -46,7 +46,7 @@
                     {/foreach}
                     </div>
                 </td>
-                <td class="min-tablet-p	price">
+                <td class="min-tablet-p">
                     <div class="price">
                         <span class="line-through text-red-600 mr-3">{$product.default_currency_sign|escape:'htmlall':'UTF-8'}{Product::getPriceStatic($product['id_product'], true, null, 2, null, false, true, 1, true, null, null, null, $nothing, true, false, null)|number_format:2}</span>
                         <span id="price_{$product.id_product|escape:'htmlall':'UTF-8'}">{$product.default_currency_sign|escape:'htmlall':'UTF-8'}{$product.price|number_format:2}</span>
