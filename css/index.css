@@ -148,3 +148,11 @@ select.form-control:not([size]):not([multiple]){
   display: block;
 }
 
+#fmm_table .price{
+  @apply flex flex-col;
+}
+
+#fmm_table.collapsed .price{
+  @apply flex-row;
+}
+
