@@ -310,3 +310,11 @@ table.dataTable.display tbody tr.child td{
   @apply hidden tablet-narrow:block
 }
 
+#fmm_table .price{
+  @apply flex flex-col;
+}
+
+#fmm_table.collapsed .price{
+  @apply flex-row;
+}
+
