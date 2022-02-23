@@ -22,7 +22,7 @@
 *  @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-
+{assign var="customer_group_reduction" value=Group::getReduction(null)}
 {foreach from=$all_products item=product name=product}
             <tr>
                 <td>{$product.id_product|escape:'htmlall':'UTF-8'}</td>

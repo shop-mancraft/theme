@@ -86,6 +86,7 @@
             </tr>
         </thead>
         <tbody id="fmm_table_body">
+        {assign var="customer_group_reduction" value=Group::getReduction(null)}
           {foreach from=$all_products item=product name=product}
             <tr>
                 <td>{$product.id_product|escape:'htmlall':'UTF-8'}</td>
