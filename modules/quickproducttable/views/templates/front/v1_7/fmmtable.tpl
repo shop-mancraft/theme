@@ -160,9 +160,7 @@
                     </div>
                 </td>
                 <td class="desktop	">
-                    {if isset($product.specific_prices) && !empty($product.specific_prices)}
-                      <span class="text-red-500"> - {if $product.specific_prices['reduction_type'] == 'amount'}{$product.specific_prices['reduction']|number_format:2} {$product.default_currency_sign|escape:'htmlall':'UTF-8'}{else}{$product.specific_prices['reduction']|number_format:2}%{/if}</span>
-                    {/if}
+                    -{$customer_group_reduction}%
                 </td>
                 <td class="desktop	">
                     <div class="">
