@@ -45,7 +45,7 @@ jobs:
           node-version: 12.x
 
       - name: Install dependency in theme
-        run: npm install && npm run generate
+        run: npm install && npm run deploy
 
       - name: Remove node
         run: sudo rm -rf node_modules  

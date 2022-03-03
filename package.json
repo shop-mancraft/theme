@@ -2,67 +2,57 @@
   "name": "mancraft-theme",
   "version": "1.0.0",
   "description": "Theme",
-  "main": "webpack --mode production",
+  "main": "npm run production",
+  "license": "GPLv3",
+  "private": true,
+  "homepage": "https://mancraft.pl/",
   "repository": {
     "type": "git",
     "url": "https://github.com/webo-agency/mancraft.git"
   },
+  "bugs": {
+    "url": "https://github.com/webo-agency/mancraft/issues"
+  },
+  "contributors": [
+    {
+      "name": "Patryk Padus",
+      "email": "patryk.padus@webo.agency",
+      "url": "https://www.webo.agency"
+    },
+    {
+      "name": "Maciej Zawadzki",
+      "email": "maciej.zawadzki@webo.agency",
+      "url": "https://www.webo.agency"
+    }
+  ],
+  "engines": {
+    "node": ">=v16.11.1",
+    "npm": ">=8.0.0"
+  },
   "scripts": {
-    "dev-server": "webpack-dev-server --mode development",
-    "webpack-build": "webpack",
-    "gulp-build": "gulp sass",
-    "build": "concurrently --kill-others \"npm run webpack-build\" \"npm run gulp-build\"",
-    "generate": "webpack --mode production"
+    "cf_token": "bash ./cf_token.sh 'https://test.shop-mancraft.com' true",
+    "serve": "cross-env NODE_ENV=development TEST_URL=https://test.shop-mancraft.com concurrently \"postcss ./css/index.css -o assets/css/styles.min.css --watch\"  \"npx browser-sync start --config bs-config.js\"",
+    "development": "cross-env NODE_ENV=development postcss ./css/index.css -o assets/css/styles.min.css",
+    "production": "cross-env NODE_ENV=production postcss ./css/index.css -o assets/css/styles.min.css",
+    "deploy": "npm run production"
   },
   "dependencies": {
-    "@babel/cli": "^7.12.10",
-    "@babel/core": "^7.12.10",
-    "@babel/plugin-proposal-class-properties": "^7.12.1",
-    "@babel/plugin-transform-runtime": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
-    "@babel/runtime": "^7.12.5",
-    "@fortawesome/fontawesome-free": "^5.15.2",
-    "autoprefixer": "^9.8.6",
-    "babel-loader": "^8.2.2",
-    "browser-sync": "^2.26.14",
-    "concurrently": "^5.3.0",
-    "css-loader": "^3.6.0",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "fibers": "^5.0.0",
-    "file-loader": "^6.2.0",
-    "mini-css-extract-plugin": "^0.9.0",
-    "modernizr": "^3.11.4",
-    "postcss": "^7.0.35",
-    "postcss-loader": "^3.0.0",
-    "postcss-nested": "^4.2.3",
-    "style-loader": "^1.3.0",
-    "tailwindcss": "^1.9.6",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/forms": "^0.4.0",
+    "@tailwindcss/line-clamp": "^0.3.0",
+    "@tailwindcss/typography": "^0.5.0",
+    "autoprefixer": "^10.4.0",
+    "browser-sync": "2.24.6",
+    "concurrently": "^6.3.0",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.0.12",
+    "dotenv": "^10.0.0",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
+    "postcss-import": "^14.0.2",
+    "postcss-nesting": "^10.0.3",
+    "tailwindcss": "^3.0.2",
     "tailwindcss-blend-mode": "^1.0.0",
-    "tailwindcss-gradients": "^3.0.0",
-    "vue": "^2.6.12",
-    "vuex": "^3.6.2",
-    "webpack": "^4.46.0",
-    "webpack-dev-server": "^3.11.2"
-  },
-  "browserslist": [
-    "> 1%",
-    "ie >= 8",
-    "edge >= 15",
-    "ie_mob >= 10",
-    "ff >= 45",
-    "chrome >= 45",
-    "safari >= 7",
-    "opera >= 23",
-    "ios >= 7",
-    "android >= 4",
-    "bb >= 10"
-  ],
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "vue-loader": "^15.9.6",
-    "vue-template-compiler": "^2.6.12",
-    "webpack-cli": "^3.3.12"
+    "tailwindcss-gradients": "^3.0.0"
   }
 }

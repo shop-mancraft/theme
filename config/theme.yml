@@ -16,7 +16,7 @@ assets:
         path: assets/css/responsive.dataTables.min.css
         priority: 200
       - id: main-style
-        path: assets/css/index.css
+        path: assets/css/styles.min.css
         priority: 500
   js:
     all:

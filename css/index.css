@@ -1,7 +1,25 @@
-@import "tailwindcss/base";
+@import "bootstrap-touchspin.css";
+@import "button.css";
+@import "go-to-top.css";
+
+@import "alert.css";
+
+@import "data-table.css";
+
+@import "ybc_instagram.css";
+
+/* @import "advanced-cms.css"; */
+
+@import "overide.css";
+
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
 
 body{
-  
 }
 
 h1,
@@ -125,26 +143,30 @@ select.form-control:not([size]):not([multiple]){
   background-position: 95% 7px;
 }
 
-@import "tailwindcss/components";
-
-@import "tailwindcss/utilities";
-
-@import "bootstrap-touchspin.css";
-@import "button.css";
-@import "go-to-top.css";
-
-@import "alert.css";
-
-@import "data-table.css";
-
-@import "ybc_instagram.css";
-
-/* @import "advanced-cms.css"; */
-
-@import "overide.css";
-
 .footer-container li a{
   max-width: 300px;
   display: block;
 }
 
+
+
+.section-3 .row:nth-child(2n+3){
+  @apply flex-grow-0 flex-shrink-0 basis-[85%] mb-[10px]
+  }
+  
+  .section-3 .row:nth-child(2n+2){
+  @apply flex-grow-0 flex-shrink-0 basis-1/5 mb-[10px]
+  }
+
+.section-5 .row:nth-child(2n+3){
+  @apply flex-shrink-0 flex-grow-0 basis-[85%] phablet:basis-[40%] py-0 px-5 mx-0 mb-[10px] desktop:pr-1.5 desktop-wide:pr-5
+}
+
+
+.section-5 .row:nth-child(2n+2){
+  @apply flex-shrink-0 flex-grow-0 basis-[15%] phablet:basis-[10%] py-0 mx-0 flex justify-center flex-col mb-[10px]
+}
+
+.section-5 .row:nth-child(2n+2) img{
+  @apply max-w-[50px]
+}
