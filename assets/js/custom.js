@@ -228,6 +228,7 @@ $(document).ready(function() {
                 slidesPerGroup: 1,
                 slidesPerColumn: 2,
                 slidesPerColumnFill: 'row',
+                allowTouchMove: false,
             },
 
         },
