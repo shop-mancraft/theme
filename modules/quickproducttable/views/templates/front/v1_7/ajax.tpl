@@ -66,35 +66,28 @@
             {/foreach}
             </div>
         </td>
-
-        <td class="desktop		">
-            {if isset($product.quantity)}
-                {$product.quantity}
-            {/if}
+        <td class="min-tablet-p">
+            <div class="price">
+                <span class="line-through text-red-600 mr-3">{$product.default_currency_sign|escape:'htmlall':'UTF-8'}{Product::getPriceStatic($product['id_product'], true, null, 2, null, false, true, 1, true, null, null, null, $nothing, true, false, null)|number_format:2}</span>
+                <span id="price_{$product.id_product|escape:'htmlall':'UTF-8'}">{$product.default_currency_sign|escape:'htmlall':'UTF-8'}{$product.price|number_format:2}</span>
+            </div>
         </td>
-        <td class="min-tablet-p		">{$product.default_currency_sign|escape:'htmlall':'UTF-8'}<span id="price_{$product.id_product|escape:'htmlall':'UTF-8'}">{$product.price|number_format:2}</span></td>
-        <td class="desktop		">
-            {if isset($product.specific_prices) && !empty($product.specific_prices)}
-                <span class="text-red-500"> -{$product.specific_prices['reduction']|number_format:2} </span>
-            {/if}
-        </td>
-        <td class="desktop	">
-            <div class="">
+        <td>
+            <div class="col-lg-2">
                 <div class="number" id="number">
-                <span class="minus align-sub p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary select-none  duration-75">-</span>
-                <input class="qty_id text-xl w-10 text-center text-gray-dark" id="quantity_{$product.id_product|escape:'htmlall':'UTF-8'}" type="text" value="1"/>
-                <span class="plus align-sub p-0 px-1 text-xl tablet:text-2xl text-white hover:text-primary select-none  duration-75">+</span>
+                <span class="minus">-</span>
+                <input class="qty_id" id="quantity_{$product.id_product|escape:'htmlall':'UTF-8'}" type="text" value="1"/>
+                <span class="plus">+</span>
                 </div>
             </div>
         </td>
-        <td class="desktop	">
+        <td>
             <input type="hidden" name="group" id="group_{$product.id_product|escape:'htmlall':'UTF-8'}" value="{$group_count|escape:'htmlall':'UTF-8'}">
-            <button class="align-baseline border border-solid border-main rounded-[4px] bg-main py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" onclick="fmmAddCart({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'});" >{l s='Add To Cart' mod='quickproducttable'}</button>
-            
-            <span class="custom-checkbox ml-5">
-                <input type="checkbox"  id="{$product.id_product|escape:'htmlall':'UTF-8'}_{$group_count|escape:'htmlall':'UTF-8'}" name="fmm_check" class="fmm_check top-0 z-10" value="{$product.id_product|escape:'htmlall':'UTF-8'}">
-                <span><i class="material-icons rtl-no-flip checkbox-checked"></i></span>
-            </span>
+            <button class="btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" onclick="fmmAddCart({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'});" >{l s='Add To Cart' mod='quickproducttable'}</button>
+            <input type="checkbox"  id="{$product.id_product|escape:'htmlall':'UTF-8'}_{$group_count|escape:'htmlall':'UTF-8'}" name="fmm_check" class="fmm_check" value="{$product.id_product|escape:'htmlall':'UTF-8'}">
         </td>
     </tr>
     {/foreach}
+
+
+    

@@ -285,3 +285,11 @@ table.dataTable.display tbody tr.child td{
 #fmm_table.collapsed [style="display: none;"].select-all-chk .col-title{
   @apply hidden
 }
+#fmm_table .price{
+  @apply flex flex-col;
+}
+
+#fmm_table.collapsed .price{
+  @apply flex-row;
+}
+
