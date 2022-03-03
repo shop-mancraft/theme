@@ -241,6 +241,13 @@ $('#chkal2').on( 'change', function() {
       $('input:checkbox').removeAttr('checked');
     }
   });
+$('#chkal3').on( 'change', function() {
+    if($(this).prop("checked") == true){
+        $('input:checkbox').prop('checked',true);
+    }else{
+      $('input:checkbox').removeAttr('checked');
+    }
+  });
 
 function changeAttr(id, group) {
         var id_product = id;
@@ -283,15 +290,29 @@ function changeAttr(id, group) {
  $('div.dataTables_filter input').addClass('form-control');
 $( document ).ready(function() {
         $('#fmm_table').DataTable({
-        rowReorder: {
-            selector: 'td:nth-child(2)'
-        },
         "lengthChange": false,
         "info":     false,
-        responsive: true,
+        responsive: {
+          details:{
+            display: $.fn.dataTable.Responsive.display.childRowImmediate,
+          },
+          breakpoints: [
+            { name: 'desktop-full', width: Infinity },
+            { name: 'dekstop',  width: 1200 },
+            { name: 'tablet-p',  width: 768 }
+        ]
+        },
+        columnDefs: [
+          { responsivePriority: -1, targets: 0 },
+          { responsivePriority: -1, targets: 1 },
+          { responsivePriority: 10001, targets: 2 },
+          { responsivePriority: 10001, targets: -1 }
+        ],
         "pageLength": noofrow
     });
          $("#fmm_table_paginate").hide();
     var content = '<i class="material-icons srcicon" tabindex="0" role="button">search</i>';
     $("#fmm_table_filter").append(content); 
+
+    $('#fmm_table').DataTable()
 });
