@@ -43,7 +43,6 @@ module.exports = {
     container: [],
   },
   corePlugins: {
-    preflight: false,
     container: false,
     gridTemplateColumns: false,
     gridColumn: false,
