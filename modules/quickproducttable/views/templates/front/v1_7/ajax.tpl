@@ -22,7 +22,7 @@
 *  @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-
+{assign var="customer_group_reduction" value=Group::getReduction(null)}
 {foreach from=$all_products item=product name=product}
     <tr>
         <td class="all" ><a href="{$product.link|escape:'htmlall':'UTF-8'}"> <img src="{$product.cover_image_url|escape:'htmlall':'UTF-8'}"></a> </td>
@@ -79,10 +79,8 @@
             </div>
         </td>
         <td class="desktop	">
-            {if isset($product.specific_prices) && !empty($product.specific_prices)}
-              <span class="text-red-500"> - {if $product.specific_prices['reduction_type'] == 'amount'}{$product.specific_prices['reduction']|number_format:2} {$product.default_currency_sign|escape:'htmlall':'UTF-8'}{else}{$product.specific_prices['reduction']|number_format:2}%{/if}</span>
-            {/if}
-        </td>
+        -{$customer_group_reduction}%
+    </td>
         <td class="desktop	">
             <div class="">
                 <div class="number" id="number">
