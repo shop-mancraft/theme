@@ -10495,15 +10495,7 @@ li.product-flag.on-sale {
     text-transform: uppercase;
     white-space: nowrap;
 }
-.header-nav .language-selector span,
-.header-nav .currency-selector span {
-    color: #333;
-	letter-spacing:1px;
-}
-.header-nav .language-selector:hover span,
-.header-nav .currency-selector:hover span {
-    color: #000;
-}
+
 .language-selector-wrapper .dropdown-menu {
     left: auto;
     right:0;
@@ -10512,6 +10504,7 @@ li.product-flag.on-sale {
 .currency-selector .dropdown-menu {
 	right:0;
 	left:auto;
+    top: 45px;
 }
 #_desktop_language_selector .language-selector.dropdown.js-dropdown.open span,#_desktop_language_selector .language-selector.dropdown.js-dropdown.open i,
 #_desktop_currency_selector .currency-selector.dropdown.js-dropdown.open span,#_desktop_currency_selector .currency-selector.dropdown.js-dropdown.open i {
@@ -10525,7 +10518,6 @@ li.product-flag.on-sale {
 }
 .currency-selector .dropdown-menu li.current a,
 .language-selector-wrapper .dropdown-menu li.current a {
-    color: #000 !important;
 	text-transform:capitalize;
 }
 #_desktop_language_selector ul li .dropdown-item, #_desktop_currency_selector ul li .dropdown-item{
@@ -13395,26 +13387,6 @@ color: #fff !important;
 	}
 }
 
-/*------------ start language,currency icon-------------*/
-
-.language-selector .material-icons,
-.currency-selector .material-icons {
-    font-size: 13px;
-}
-.language-selector .material-icons.expand-less,
-.currency-selector .material-icons.expand-less {
-    display: none;
-}
-.language-selector.open .material-icons.expand-less,
-.currency-selector.open .material-icons.expand-less {
-    display: inline-block;
-}
-.language-selector.open .material-icons.expand-more,
-.currency-selector.open .material-icons.expand-more {
-    display: none;
-}
-/*------------ End labguage,currency icon-------------*/
-
 #js-product-list .container {
     padding: 0 15px;
 }
@@ -14226,16 +14198,6 @@ color: #fff !important;
 	margin: 10px 0;
 	text-align: right;
 	width: 100%;
-}
-.language-selector-wrapper button {
-    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    border: medium none;
-    padding: 14px 10px;
-}
-.currency-selector button {
-    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    border: medium none;
-    padding: 14px 0 14px 10px;
 }
 .block-contact .block {
     margin: 0 0 5px;

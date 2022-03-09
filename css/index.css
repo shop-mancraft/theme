@@ -186,3 +186,23 @@ table.dataTable.display tbody tr.child td {
 #fmm_table.collapsed .price {
   @apply flex-row;
 }
+.header-nav .dropdown svg.expand-icon{
+  @apply inline-block fill-current transition transform rotate-0 align-sub
+}
+
+.header-nav .dropdown.open svg.expand-icon{
+  @apply rotate-180
+}
+
+.header-nav .currency-selector.dropdown.open button{
+  @apply bg-black
+}
+
+.header-nav select.link{
+  @apply hidden;
+}
+
+.header-nav .ps_languageselector,.header-nav .ps_currencyselector{
+  @apply hidden tablet-narrow:block
+}
+
