@@ -1467,26 +1467,6 @@ select.form-control:not([size]):not([multiple]){
   mix-blend-mode: exclusion;
 }
 
-.h1,
-  .h2{
-
-  }
-
-.h3,
-  .h4,
-  .h5,
-  .h6{
-
-  }
-
-.p {
-
-  }
-
-.\!p {
-
-  }
-
 /*
  *  Bootstrap TouchSpin - v3.1.1
  *  A mobile and touch friendly input spinner component for Bootstrap 3.
