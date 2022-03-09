@@ -1,3 +1,11 @@
+@import "tailwindcss/base";
+
+@import "base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
 @import "bootstrap-touchspin.css";
 @import "button.css";
 @import "go-to-top.css";
@@ -13,135 +21,6 @@
 @import "overide.css";
 
 
-@tailwind base;
-
-@tailwind components;
-
-@tailwind utilities;
-
-body{
-}
-
-h1,
-h2{
-  @screen phone-wide{
-
-  }
-}
-
-h3,
-h4,
-h5,
-h6{
-  @screen phone-wide{
-
-  }
-}
-
-p {
-
-}
-
-
-@responsive {
-  .h1,
-  .h2{
-
-  }
-  
-  .h3,
-  .h4,
-  .h5,
-  .h6{
-
-  }
-  
-  .p {
-
-  }
-}
-
-
-
-.alert-warning{
-  color: #fff;
-}
-
-.table-responsive,
-.table-bordered{
-  border-radius: 5px;
-  border: 2px solid #A8D727;
-}
-
-.table-responsive .table-bordered{
-  border: 0;
-  border-radius: 0;
-} 
-
-.table-bordered thead th,
-.table-bordered thead td,
-.table-bordered th, 
-.table-bordered td{
-  border: 1px solid #151515;
-  background: #000000;
-  color: #fff;
-}
-
-.table-bordered a,
-.table-bordered i{
-  color: #fff;
-}
-
-.table-bordered a:hover{
-  color: #A8D727;
-}
-
-.table,
-#module-ttproductwishlist-mywishlist th{
-  color: #fff;
-}
-
-
-
-
-
-#header{
-  background: #000;
-  padding-bottom: 20px;
-  margin: 0;
-}
-
-
-
-select,
-.dropdown select,
-.product-variants > .product-variants-item select{
-  background: transparent;
-  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
-  background-repeat: no-repeat;
-  background-position-x: 100%;
-  background-position-y: 0px;
-  border: 1px solid #dfdfdf;
-  border-radius: 2px;
-  font-size: 12px;
-  padding: 2px;
-  padding-right: 2rem;
-  color: #fff;
-  text-indent: 4px;
-  border-radius: 5px;
-  appearance: none;
-}
-
-select option,
-.dropdown select option,
-.product-variants > .product-variants-item select option{
-  color: #000;
-  @apply font-fallback;
-}
-
-select.form-control:not([size]):not([multiple]){
-  background-position: 95% 7px;
-}
 
 .footer-container li a{
   max-width: 300px;
