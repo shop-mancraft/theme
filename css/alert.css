@@ -1,18 +1,20 @@
-.alert{
+.alert {
   @apply rounded;
   @apply p-4;
   @apply mb-4;
   @apply text-sm;
+
   border: 1px solid transparent;
 }
-
 
 .alert.alert-danger > ul {
   margin: 0;
 }
+
 .alert-heading {
   color: inherit;
 }
+
 .alert-link {
   font-weight: bold;
 }
@@ -23,98 +25,99 @@
 
 .alert-dismissible .close {
   position: relative;
-  top: -.125rem;
+  top: -0.125rem;
   right: -1rem;
   color: inherit;
 }
 
-
-
 .alert-success {
-  background-color: #F2F9DF;
-  border-color: #A8D727;
-  float:left;
-  width:100%;
-  color: #A8D727;
-
+  background-color: #f2f9df;
+  border-color: #a8d727;
+  float: left;
+  width: 100%;
+  color: #a8d727;
 }
 
-#contact .alert.alert-success > ul{
-  margin:0;
+#contact .alert.alert-success > ul {
+  margin: 0;
 }
+
 .alert-success hr {
-  border-top-color: #A8D727;
-}
-.alert-success .alert-link {
-  color: #A8D727;
+  border-top-color: #a8d727;
 }
 
+.alert-success .alert-link {
+  color: #a8d727;
+}
 
 .alert-info {
   background-color: #d9edf7;
   border-color: #bcdff1;
   color: #31708f;
 }
+
 .alert-info hr {
   border-top-color: #a6d5ec;
 }
+
 .alert-info .alert-link {
   color: #245269;
 }
 
-
 .alert-warning {
-  background-color: rgba(255, 154, 82, 0.3);
-  border-color: #FF312B;
-  color: #FF312B;
-  float:left;
-  width:100%;
-}
-.alert-warning hr {
-  border-top-color: #FF312B;
-}
-.alert-warning .alert-link {
-  color: #282828;
-}
-.alert-danger {
-  background-color: #f2dede;
-  border-color: #FF312B;
-  color: #FF312B;
+  background-color: rgb(255 154 82 / 0.3);
+  border-color: #ff312b;
+  color: #ff312b;
   float: left;
   width: 100%;
 }
-.alert-danger hr {
-  border-top-color: #FF312B;
+
+.alert-warning hr {
+  border-top-color: #ff312b;
 }
+
+.alert-danger {
+  background-color: #f2dede;
+  border-color: #ff312b;
+  color: #ff312b;
+  float: left;
+  width: 100%;
+}
+
+.alert-danger hr {
+  border-top-color: #ff312b;
+}
+
 .alert-danger .alert-link {
-  color: #FF312B;
+  color: #ff312b;
   text-decoration: underline;
 }
 
-
-
-
 .alert-warning .material-icons {
-  color: #FF312B;
+  color: #ff312b;
   font-size: 2rem;
   margin-right: 0.625rem;
   padding-top: 0.3125rem;
 }
+
 .alert-warning .alert-text {
   font-size: 0.9375rem;
   padding-top: 0.625rem;
 }
+
 .alert-warning .alert-link {
   border-width: 2px;
   margin-left: 0.625rem;
   padding: 0.3125rem 1.25rem;
   font-weight: 600;
   font-size: 0.8125rem;
-  color: #FF312B;
+  color: #ff312b;
 }
+
 .alert-warning ul li:last-child .alert-link {
   color: white;
 }
+
 .alert-warning .warning-buttons {
   margin-top: 0.3125rem;
 }

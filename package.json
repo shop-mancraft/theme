@@ -32,6 +32,8 @@
   "scripts": {
     "cf_token": "bash ./cf_token.sh 'https://test.shop-mancraft.com' true",
     "serve": "cross-env NODE_ENV=development TEST_URL=https://test.shop-mancraft.com concurrently \"postcss ./css/index.css -o assets/css/styles.min.css --watch\"  \"npx browser-sync start --config bs-config.js\"",
+    "test": "npx stylelint './assets/**/*.css'",
+    "stylelint-check": "stylelint-config-prettier-check",
     "development": "cross-env NODE_ENV=development postcss ./css/index.css -o assets/css/styles.min.css",
     "production": "cross-env NODE_ENV=production postcss ./css/index.css -o assets/css/styles.min.css",
     "deploy": "npm run production"
@@ -47,12 +49,22 @@
     "cross-env": "^7.0.3",
     "cssnano": "^5.0.12",
     "dotenv": "^10.0.0",
-    "postcss": "^8.4.5",
+    "postcss": "^8.4.8",
     "postcss-cli": "^9.1.0",
+    "postcss-discard-empty": "^5.1.0",
     "postcss-import": "^14.0.2",
     "postcss-nesting": "^10.0.3",
+    "postcss-reporter": "^7.0.5",
     "tailwindcss": "^3.0.2",
     "tailwindcss-blend-mode": "^1.0.0",
     "tailwindcss-gradients": "^3.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1",
+    "prettier-plugin-tailwindcss": "^0.1.8",
+    "prettier-stylelint": "^0.4.2",
+    "stylelint": "^14.5.3",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^25.0.0"
   }
 }

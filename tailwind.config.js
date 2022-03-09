@@ -54,6 +54,10 @@ module.exports = {
     gridAutoRows: false,
     gridAutoFlow: false,
     gap: false,
+    ringColor: false,
+    ringOffsetColor: false,
+    ringOpacity: false,
+    ringWidth: false,
   },
   plugins: [
     require('tailwindcss-gradients'),

@@ -19,3 +19,6 @@ vendor
 cache/*
 !cache
 !cache/index.php
+
+# Generated
+*.min.css

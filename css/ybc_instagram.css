@@ -1,11 +1,11 @@
 /* Grid system disabled */
-.ybc_instagram .grid{
+.ybc_instagram .grid {
   @apply block;
 }
 
 /* Instagram module */
 .ybc_instagram.ybc_ins_hook_footer_product,
-.ybc_instagram.ybc_ins_hook_home{
+.ybc_instagram.ybc_ins_hook_home {
   @apply border-0;
   @apply p-0;
   @apply m-0;
@@ -13,11 +13,11 @@
   @apply bg-transparent;
 }
 
-.ybc_instagram .ybc_instagram_header_content{
+.ybc_instagram .ybc_instagram_header_content {
   @apply float-left;
 }
 
-.ybc_ins_product_item{
+.ybc_ins_product_item {
   @apply flex;
   @apply align-middle;
   @apply justify-items-center;
@@ -25,56 +25,56 @@
 }
 
 .ybc_ins_product_item:hover,
-.ybc_ins_item .grab_button_table_cell a{
+.ybc_ins_item .grab_button_table_cell a {
   @apply transition-colors;
   @apply duration-200;
 }
 
-.ybc_ins_popup_product_sort .ybc_ins_product_item>a,
-.ybc_ins_item .ybc_ins_product_item > a{
+.ybc_ins_popup_product_sort .ybc_ins_product_item > a,
+.ybc_ins_item .ybc_ins_product_item > a {
   @apply flex;
   @apply items-center;
   @apply justify-items-center;
   @apply w-full;
 }
 
-.ybc_ins_product_item span{
+.ybc_ins_product_item span {
   @apply m-auto;
 }
 
 .ybc_instagram_header .h3,
-.ybc_instagram_header .ybc_instagram_header_content a{
+.ybc_instagram_header .ybc_instagram_header_content a {
   @apply text-white;
 }
 
-.ybc_instagram_header .ybc_instagram_header_content a{
+.ybc_instagram_header .ybc_instagram_header_content a {
   @apply transition-colors;
   @apply duration-200;
 }
 
-.ybc_instagram_header .ybc_instagram_header_content a:hover{
+.ybc_instagram_header .ybc_instagram_header_content a:hover {
   @apply text-primary;
 }
 
 .ybc_ins_product_list .add_to_cart_button,
-.ybc_ins_popup_product_item .product-line-info.product-price{
+.ybc_ins_popup_product_item .product-line-info.product-price {
   @apply hidden;
 }
 
-@media (max-width: 768px){
-  .ybc_instagram .ybc_instagram_header_content{
+@media (max-width: 768px) {
+  .ybc_instagram .ybc_instagram_header_content {
     @apply text-center;
     @apply flex;
     @apply items-center;
     @apply flex-col;
   }
 
-  .ybc_instagram_header a.ins_button_grab{
+  .ybc_instagram_header a.ins_button_grab {
     @apply m-auto;
     @apply float-none;
   }
 
-  .ybc_instagram_header{
+  .ybc_instagram_header {
     @apply text-center;
   }
 }
