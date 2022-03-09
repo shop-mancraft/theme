@@ -3,11 +3,6 @@ module.exports = {
     './**/*.{html,php,vue,jsx,tpl}',
     './assets/**/*.{html,php,vue,js,jsx,tpl}'
   ],
-  safelist: [
-    {
-      pattern: /./ 
-    },
-  ],
   theme: {
     fontFamily: {
       'fallback': ['Tahoma', 'sans-serif'],
