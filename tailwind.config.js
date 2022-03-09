@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['./**/*.{html,php,vue,jsx,tpl}'],
+  content: ['./**/*.{html,php,vue,js,jsx,tpl}'],
   safelist: [
     {
       pattern: /./ 
