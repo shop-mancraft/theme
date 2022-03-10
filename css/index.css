@@ -1,22 +1,20 @@
-@import "tailwindcss/base";
+@import 'tailwindcss/base';
 
-@import "base";
+@import 'base';
 
-@import "tailwindcss/components";
+@import 'tailwindcss/components';
 
+@import 'bootstrap-touchspin.css';
+@import 'button.css';
+@import 'go-to-top.css';
 
+@import 'alert.css';
 
-@import "bootstrap-touchspin.css";
-@import "button.css";
-@import "go-to-top.css";
+@import 'data-table.css';
 
-@import "alert.css";
+@import 'ybc_instagram.css';
 
-@import "data-table.css";
-
-@import "ybc_instagram.css";
-
-@import "overide.css";
+@import 'overide.css';
 
 .footer-container li a {
   max-width: 300px;
@@ -126,21 +124,21 @@ ul.dtr-details li {
 
 #fmm_table_wrapper.dataTables_wrapper
   table#fmm_table
-  li[data-dtr-index="7"]
+  li[data-dtr-index='7']
   .dtr-title {
   @apply hidden;
 }
 
 #fmm_table_wrapper.dataTables_wrapper
   table#fmm_table
-  li[data-dtr-index="2"]
+  li[data-dtr-index='2']
   .dtr-title {
   @apply hidden;
 }
 
 #fmm_table_wrapper.dataTables_wrapper
   table#fmm_table
-  li[data-dtr-index="7"]
+  li[data-dtr-index='7']
   .dtr-data {
   @apply ml-auto;
 }
@@ -162,20 +160,20 @@ table.dataTable.display tbody tr.child td {
   #fmm_table.collapsed
   thead
   tr
-  [style="display: none;"].select-all-chk {
+  [style='display: none;'].select-all-chk {
   display: block !important;
   @apply absolute right-2 top-4 justify-end p-0;
 }
 
-#fmm_table.collapsed [style="display: none;"].select-all-chk input {
+#fmm_table.collapsed [style='display: none;'].select-all-chk input {
   @apply ml-0;
 }
 
-#fmm_table.collapsed [style="display: none;"].select-all-chk p {
+#fmm_table.collapsed [style='display: none;'].select-all-chk p {
   @apply hidden;
 }
 
-#fmm_table.collapsed [style="display: none;"].select-all-chk .col-title {
+#fmm_table.collapsed [style='display: none;'].select-all-chk .col-title {
   @apply hidden;
 }
 
@@ -186,26 +184,25 @@ table.dataTable.display tbody tr.child td {
 #fmm_table.collapsed .price {
   @apply flex-row;
 }
-.header-nav .dropdown svg.expand-icon{
-  @apply inline-block fill-current transition transform rotate-0 align-sub
+.header-nav .dropdown svg.expand-icon {
+  @apply inline-block fill-current transition transform rotate-0 align-sub;
 }
 
-.header-nav .dropdown.open svg.expand-icon{
-  @apply rotate-180
+.header-nav .dropdown.open svg.expand-icon {
+  @apply rotate-180;
 }
 
-.header-nav .currency-selector.dropdown.open button{
-  @apply bg-black
+.header-nav .currency-selector.dropdown.open button {
+  @apply bg-black;
 }
 
-.header-nav select.link{
+.header-nav select.link {
   @apply hidden;
 }
 
-.header-nav .ps_languageselector,.header-nav .ps_currencyselector{
-  @apply hidden tablet-narrow:block
+.header-nav .ps_languageselector,
+.header-nav .ps_currencyselector {
+  @apply hidden tablet-narrow:block;
 }
 
-
-
-@import "tailwindcss/utilities";
+@import 'tailwindcss/utilities';
