@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 
-{* TW classes: max-w-screen-tablet max-w-screen-phone text-center pb-6 pb-8 w-0 w-4/5 mx-auto my-10 tablet:my-20 border-gray-dark phablet:px-8 tablet-narrow:px-16 phablet:hidden phablet:w-full tablet-wide:max-w-[1140px] tablet:p-5 tablet-wide:p-[100px] desktop:px-16 tablet:text-xl tablet:text-[40px] text-[#F0F0F0] tablet:mb-12 tablet:text-base max-h-[600px] tablet-narrow:px-28 desktop:px-28 tablet-narrow:max-w-screen-tablet tablet:text-3xl tablet-narrow:h-[500px] tablet-narrow:w-1/2 tablet-narrow:pb-20 tablet-narrow:pb-0 pb-20 desktop:mx-16 desktop:pl-16 max-h-[500px] tablet-narrow:items-end tablet-wide:py-[100px] tablet-wide:pt-[100px] *}
+{* TW classes: max-w-screen-tablet max-w-screen-tablet-narrow max-w-screen-phone text-center pb-6 pb-8 w-0 w-4/5 mx-auto my-10 tablet:my-20 border-gray-dark phablet:px-8 tablet-narrow:px-16 phablet:hidden phablet:w-full tablet-wide:max-w-[1140px] tablet:p-5 tablet-wide:p-[100px] desktop:px-16 tablet:text-xl tablet:text-[40px] text-[#F0F0F0] tablet:mb-12 tablet:text-base max-h-[600px] tablet-narrow:px-28 desktop:px-28 tablet-narrow:max-w-screen-tablet tablet:text-3xl tablet-narrow:h-[500px] tablet-narrow:w-1/2 tablet-narrow:pb-20 tablet-narrow:pb-0 pb-20 desktop:mx-16 desktop:pl-16 max-h-[500px] tablet-narrow:items-end tablet-wide:py-[100px] tablet-wide:pt-[100px] *}
 
 {block name='head_charset'}
   <meta charset="utf-8">
