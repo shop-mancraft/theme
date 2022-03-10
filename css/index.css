@@ -4,7 +4,7 @@
 
 @import "tailwindcss/components";
 
-@import "tailwindcss/utilities";
+
 
 @import "bootstrap-touchspin.css";
 @import "button.css";
@@ -206,3 +206,6 @@ table.dataTable.display tbody tr.child td {
   @apply hidden tablet-narrow:block
 }
 
+
+
+@import "tailwindcss/utilities";
