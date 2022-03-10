@@ -248,7 +248,7 @@
 @media (min-width: 992px) {
   .tt-menu-horizontal.tt-menu-horizontal .main-menu::before,
   .tt-menu-horizontal.tt-menu-horizontal .main-menu::after {
-    content: "";
+    content: '';
     width: 0;
     height: 0;
     left: 23px;
@@ -1672,10 +1672,10 @@ body#checkout section.checkout-step.-reachable.-complete h1 .done {
   font-size: 17px;
 }
 
-body#checkout .custom-checkbox input[type="checkbox"],
-.custom-checkbox input[type="checkbox"],
+body#checkout .custom-checkbox input[type='checkbox'],
+.custom-checkbox input[type='checkbox'],
 body#checkout .custom-checkbox,
-.custom-checkbox input[type="checkbox"] + span,
+.custom-checkbox input[type='checkbox'] + span,
 .custom-checkbox {
   border-radius: 5px;
 }
@@ -1684,14 +1684,14 @@ body#checkout .custom-checkbox:checked span,
 .custom-checkbox:checked span,
 body#checkout
   .custom-checkbox
-  input[type="checkbox"]:checked
+  input[type='checkbox']:checked
   + span
   .checkbox-checked,
-.custom-checkbox input[type="checkbox"]:checked + span .checkbox-checked,
-body#checkout .custom-radio input[type="radio"]:checked + span,
-.custom-radio input[type="radio"]:checked + span,
-body#checkout .custom-checkbox input[type="checkbox"]:checked + span,
-.custom-checkbox input[type="checkbox"]:checked + span {
+.custom-checkbox input[type='checkbox']:checked + span .checkbox-checked,
+body#checkout .custom-radio input[type='radio']:checked + span,
+.custom-radio input[type='radio']:checked + span,
+body#checkout .custom-checkbox input[type='checkbox']:checked + span,
+.custom-checkbox input[type='checkbox']:checked + span {
   background-color: #a8d727;
 }
 
@@ -1742,8 +1742,8 @@ body#checkout section.checkout-step .payment-options label {
   text-align: left;
 }
 
-.payment-option img[src*="payu_logo_small.png"],
-.payment-option img[src*="payu_cards.png"] {
+.payment-option img[src*='payu_logo_small.png'],
+.payment-option img[src*='payu_cards.png'] {
   margin-top: -3px;
   margin-left: 11px;
 }

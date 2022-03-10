@@ -561,7 +561,7 @@ table.dataTable td {
 .dataTables_wrapper::after {
   visibility: hidden;
   display: block;
-  content: "";
+  content: '';
   clear: both;
   height: 0;
 }
@@ -616,9 +616,9 @@ table.dataTable.dataTable.dtr-inline.collapsed
   box-sizing: content-box;
   text-align: center;
   text-indent: 0 !important;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   line-height: 1em;
-  content: "˅";
+  content: '˅';
   font-size: 20px;
   border: 0;
   border-radius: 0;
@@ -635,7 +635,7 @@ table.dataTable.dataTable.dtr-inline.collapsed
   > tbody
   > tr.parent
   > th.dtr-control::before {
-  content: "˄";
+  content: '˄';
   background-color: #d33333;
 }
 
