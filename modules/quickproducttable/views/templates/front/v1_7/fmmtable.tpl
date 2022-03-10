@@ -217,8 +217,8 @@
     <a class="border-0 rounded-[4px] bg-main py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$cart_url|escape:'htmlall':'UTF-8'}?action=show">{l s='View Cart' mod='quickproducttable'}</a>
     <button class="border-0 rounded-[4px] bg-main py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" onclick="fmmAddAllCart();" >{l s='Add Selected To Cart' mod='quickproducttable'}</button>
 </div>
-
     {if $ajax_load}
+        {literal}
     <script type="text/javascript">
                 
                 $('#loader').on('inview', function(event, isInView) {
@@ -260,6 +260,7 @@
             font-size: small;
         }
     </style>
+    {/literal}
     {/if}
 {/if}
 {/block}
