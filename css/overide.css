@@ -95,7 +95,7 @@
   flex: 1 1 auto;
 }
 
-#search_block_top #search_query_top:placeholder {
+#search_block_top #search_query_top::placeholder {
   /* Firefox 18- */
   color: #555;
 }
