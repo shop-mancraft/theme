@@ -186,3 +186,11 @@ table.dataTable.display tbody tr.child td {
 .header-nav .ps_currencyselector {
   @apply hidden tablet-narrow:block;
 }
+
+div.inpost-shipping-container{
+  @apply bg-transparent;
+}
+
+div.inpost-shipping-container .btn{
+  @apply whitespace-normal;
+}
