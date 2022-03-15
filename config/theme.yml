@@ -20,7 +20,7 @@ assets:
         priority: 210
       - id: main-style
         path: assets/css/styles.min.css
-        priority: 500
+        priority: 1000
   js:
     all:
       - id: owl-lib-child

@@ -1,9 +1,7 @@
 module.exports = {
-  content: ['./**/*.{html,php,vue,jsx,tpl}'],
-  safelist: [
-    {
-      pattern: /./ 
-    },
+  content: [
+    './**/*.{html,php,vue,jsx,tpl}',
+    './assets/**/*.{html,php,vue,js,jsx,tpl}'
   ],
   theme: {
     fontFamily: {
@@ -56,6 +54,10 @@ module.exports = {
     gridAutoRows: false,
     gridAutoFlow: false,
     gap: false,
+    ringColor: false,
+    ringOffsetColor: false,
+    ringOpacity: false,
+    ringWidth: false,
   },
   plugins: [
     require('tailwindcss-gradients'),
