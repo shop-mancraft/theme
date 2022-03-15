@@ -33,7 +33,7 @@
           id="group_{$id_attribute_group}"
           data-product-attribute="{$id_attribute_group}"
           name="group[{$id_attribute_group}]">
-          {foreach from=$group.attributes|@sortby:"name" key=id_attribute item=group_attribute}
+          {foreach from=$group.attributes key=id_attribute item=group_attribute}
             <option value="{$id_attribute}" title="{$group_attribute.name}"{if $group_attribute.selected} selected="selected"{/if}>{$group_attribute.name}</option>
           {/foreach}
         </select>
