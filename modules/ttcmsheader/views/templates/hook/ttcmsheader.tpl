@@ -43,7 +43,7 @@
 	<div class="hidden border-0 border-r-2 last:border-r-0 border-black border-solid border-opacity-5 mx-3.5 h-[30px] tablet-narrow:h-[40px]">
 	</div>
 
-	{if $this->context->customer->isLogged() && (
+	{if $customer.is_logged && (
 		Customer::getDefaultGroupId(Context::getContext()->customer->id) == 6
 		|| Customer::getDefaultGroupId(Context::getContext()->customer->id) == 7
 		|| Customer::getDefaultGroupId(Context::getContext()->customer->id) == 9
