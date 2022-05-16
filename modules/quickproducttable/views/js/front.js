@@ -121,6 +121,9 @@ function fmmAddCart(id, group) {
       dataType: 'json',
       success: function (data) {
         if (data == 1) {
+          prestashop.emit('updateCart', {
+            reason: data,
+          })
           $.simplyToast(
             'success',
             'Product successfully added to your shopping cart',
