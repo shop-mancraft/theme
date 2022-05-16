@@ -112,24 +112,9 @@
                 <td class="all" >
                     <a href="{$product.link|escape:'htmlall':'UTF-8'}">{$product.name|escape:'htmlall':'UTF-8'}</a>
                     <div class="options flex flex-wrap">
-                    {assign var="group_count" value=0}
-                    {foreach from=$product.options item=options name=options}
-                        <span>
-                        {$options.name|escape:'htmlall':'UTF-8'}
-                        {assign var="group_count" value={$group_count|escape:'htmlall':'UTF-8'}+1}
-                        
-                        <select id="select_fmm" onchange="changeAttr({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'})" class="fmm_option_{$product.id_product|escape:'htmlall':'UTF-8'}_{$group_count|escape:'htmlall':'UTF-8'}">
-                            {foreach from=$options.values item=values name=values}
-
-                                <option value="{$values.id|escape:'htmlall':'UTF-8'}">{$values.value|escape:'htmlall':'UTF-8'}</option>
-
-                            {/foreach}
-                        </select> 
-                       </span> 
-                    {/foreach}
                     </div>
                 </td>
-                <td class="desktop		 options2">
+                <td class="desktop">
                     <div class="flex flex-wrap">
                     {assign var="group_count" value=0}
                     {foreach from=$product.options item=options name=options}
