@@ -361,7 +361,7 @@ $(document).ready(function () {
     responsive: {
       details: {
         display: $.fn.dataTable.Responsive.display.childRowImmediate,
-        renderer: 'listHiddenNodes',
+        renderer: $.fn.dataTable.Responsive.renderer.listHiddenNodes(),
       },
       breakpoints: [
         { name: 'desktop-full', width: Infinity },
