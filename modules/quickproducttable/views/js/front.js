@@ -54,7 +54,11 @@ function fmmAddAllCart() {
         action: 'productAddToCart',
       },
       dataType: 'json',
-      success: function (data) {},
+      success: function (response) {
+        prestashop.emit('updateCart', {
+          reason: response,
+        })
+      },
     })
   })
   if (coun == 1) {
