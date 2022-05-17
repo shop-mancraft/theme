@@ -1934,6 +1934,7 @@ body#checkout section.checkout-step .delivery-option:first-child {
 .page-content.page-cms * {
   color: #fff;
   max-width: 100%;
+  word-break: break-word;
 }
 
 .page-content.page-cms ul,
