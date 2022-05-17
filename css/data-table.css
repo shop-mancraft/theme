@@ -616,7 +616,7 @@ table.dataTable.dataTable.dtr-inline.collapsed
   box-sizing: content-box;
   text-align: center;
   text-indent: 0 !important;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Arial, 'Courier New', Courier, monospace;
   line-height: 1em;
   content: '˅';
   font-size: 20px;
