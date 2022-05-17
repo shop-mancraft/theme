@@ -35,7 +35,7 @@
       {if isset($smartshowhometitle) && $smartshowhometitle}
         <div class="tt-titletab">
           <h2 class="homepage-heading">
-            <a href="{smartblog::GetSmartBlogLink('smartblog')}" class="tt-title">{l s='Assembly guide' d='Shop.Theme.Global'}</a>
+            <a href="{smartblog::GetSmartBlogLink('module-smartblog-category')}" class="tt-title">{l s='Assembly guide' d='Shop.Theme.Global'}</a>
           </h2>
         </div>
 		    
