@@ -217,10 +217,6 @@
   fill: #a8d727;
 }
 
-.cart_block::after {
-  color: #fff;
-}
-
 .cart_block .cart-buttons .btn-primary:hover {
   color: #fff;
 }

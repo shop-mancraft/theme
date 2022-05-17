@@ -15857,16 +15857,7 @@ table#product_comparison .product-rating {
 		left:auto;
     }
 }
-.cart_block::after {
-    color: #e5e5e5;
-    content: "\E5C7";
-    font-family: "Material Icons";
-    font-size: 45px;
-    right: 0;
-    position: absolute;
-    top: -12px;
-    left: auto;
-}
+
 .blockcart:hover .cart_block {
     opacity: 1;
     -moz-opacity: 1;
