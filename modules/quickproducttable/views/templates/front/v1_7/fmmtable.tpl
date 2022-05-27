@@ -86,10 +86,10 @@
             <th class="all" >{l s='Image' d='Modules.Quickproducttable.Fmmtable'}</th>
             <th class="all" >{l s='Name' d='Modules.Quickproducttable.Fmmtable'}</th>
             <th class="desktop	 options2"></th>
-            <th class="desktop	">{l s='Stock' d='Modules.Quickproducttable.Fmmtable'}</th>
+            <th class="desktop	"></th>
             <th class="min-tablet-p 	">
                 <span class="hidden desktop:block">{l s='Quantity' d='Modules.Quickproducttable.Fmmtable'}</span>
-                <span class="desktop:hidden">{l s='Discounts' d='Modules.Quickproducttable.Fmmtable'}</span>
+                <span class="desktop:hidden">{l s='Price' d='Modules.Quickproducttable.Fmmtable'}</span>
             <th class="desktop	">
                 <span class="hidden desktop:block">{l s='Price' d='Modules.Quickproducttable.Fmmtable'}</span>
                 <span class="desktop:hidden">{l s='Discounts' d='Modules.Quickproducttable.Fmmtable'}</span>
