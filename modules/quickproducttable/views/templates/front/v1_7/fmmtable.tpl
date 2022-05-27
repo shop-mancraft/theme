@@ -87,9 +87,9 @@
             <th class="all" >{l s='Name' d='Modules.Quickproducttable.Fmmtable'}</th>
             <th class="desktop	 options2"></th>
             <th class="desktop	">{l s='Stock' d='Modules.Quickproducttable.Fmmtable'}</th>
-            <th class="min-tablet-p 	">{l s='Price' d='Modules.Quickproducttable.Fmmtable'}</th>
+            <th class="min-tablet-p 	">{l s='Quantity' d='Modules.Quickproducttable.Fmmtable'}</th>
+            <th class="desktop	">{l s='Price' d='Modules.Quickproducttable.Fmmtable'}</th>
             <th class="desktop	">{l s='Discounts' d='Modules.Quickproducttable.Fmmtable'}</th>
-            <th class="desktop	">{l s='Quantity' d='Modules.Quickproducttable.Fmmtable'}</th>
             <th class="desktop	select-all-chk"><span class="col-title">{l s='Action ' d='Modules.Quickproducttable.Fmmtable'}</span>
                 <span class="flex items-center justify-between w-full">
                     <p style="padding-left: 22px;">{l s="Select all" d='Modules.Quickproducttable.Fmmtable'}</p>
