@@ -23,19 +23,19 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {foreach $javascript.external as $js}
-  <script type="text/javascript" src="{$js.uri}" {$js.attribute}></script>
+  <script defer type="text/javascript" src="{$js.uri}" {$js.attribute}></script>
 {/foreach}
 
 {foreach $javascript.inline as $js}
-  <script type="text/javascript">
+  <script defer type="text/javascript" src="data:text/javascript,
     {$js.content nofilter}
-  </script>
+  "></script>
 {/foreach}
 
 {if isset($vars) && $vars|@count}
-  <script type="text/javascript">
+  <script defer type="text/javascript" src="data:text/javascript,
     {foreach from=$vars key=var_name item=var_value}
     var {$var_name} = {$var_value|json_encode nofilter};
     {/foreach}
-  </script>
+ "></script>
 {/if}
