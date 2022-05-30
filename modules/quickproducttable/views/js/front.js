@@ -345,7 +345,7 @@ function changeAttr(id, group) {
       },
       dataType: 'json',
       success: function (data) {
-        $('#price_' + id_product).text(data)
+        $('#price_' + id_product).text(data.price)
       },
     })
   }
