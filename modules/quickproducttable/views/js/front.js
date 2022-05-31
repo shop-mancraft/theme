@@ -346,7 +346,12 @@ function changeAttr(id, group) {
       dataType: 'json',
       success: function (data) {
         $('#price_' + id_product).text(data.price)
-        $('#stock_' + id_product).text(data.stock)
+        if (data.combination) {
+          if (data.combination.price !== '0.000000') {
+            $('#price_' + id_product).text(data.combination.price)
+          }
+          $('#stock_' + id_product).text(data.combination.quantity)
+        }
       },
     })
   }

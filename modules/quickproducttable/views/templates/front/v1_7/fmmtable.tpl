@@ -116,14 +116,12 @@
                 </td>
                 <td class="desktop">
                     <div class="flex flex-wrap">
-                    {assign var="group_count" value=0}
                     {foreach from=$product.options item=options name=options}
                         <span class="flex flex-col w-full">
 
                         <span >{$options.name|escape:'htmlall':'UTF-8'}</span>
-                        {assign var="group_count" value={$group_count|escape:'htmlall':'UTF-8'}+1}
                         
-                        <select id="select_fmm" onchange="changeAttr({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'})" class="fmm_option_{$product.id_product|escape:'htmlall':'UTF-8'}_{$group_count|escape:'htmlall':'UTF-8'}">
+                        <select id="select_fmm" onchange="changeAttr({$product.id_product|escape:'htmlall':'UTF-8'}, {$smarty.foreach.options.total})" class="fmm_option_{$product.id_product|escape:'htmlall':'UTF-8'}_{$smarty.foreach.options.iteration}">
                             {foreach from=$options.values item=values name=values}
 
                                 <option value="{$values.id|escape:'htmlall':'UTF-8'}">{$values.value|escape:'htmlall':'UTF-8'}</option>
