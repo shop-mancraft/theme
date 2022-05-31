@@ -116,7 +116,9 @@
                 </td>
                 <td class="desktop">
                     <div class="flex flex-wrap">
+                    {assign var="group_count" value=0}
                     {foreach from=$product.options item=options name=options}
+                        {assign var="group_count" value={$group_count|escape:'htmlall':'UTF-8'}+1}
                         <span class="flex flex-col w-full">
 
                         <span >{$options.name|escape:'htmlall':'UTF-8'}</span>
