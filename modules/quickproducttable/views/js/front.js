@@ -378,7 +378,14 @@ function changeAttr(id, group) {
             .parent()
             .parent()
             .find('img')
-            .attr('src', '[data-default-image]')
+            .attr(
+              'src',
+              $('#group_' + id_product)
+                .parent()
+                .parent()
+                .find('img')
+                .data('defaultImage'),
+            )
         }
       },
     })
