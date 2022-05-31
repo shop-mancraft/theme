@@ -354,10 +354,6 @@ function changeAttr(id, group) {
             .siblings('.custom-checkbox')
             .find('input')
             .removeAttr('disabled')
-
-          if (data.combination.price !== '0.000000') {
-            $('#price_' + id_product).text(data.combination.price)
-          }
           $('#stock_' + id_product).text(data.combination.quantity)
         } else {
           $('#stock_' + id_product).text(0)
