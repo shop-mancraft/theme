@@ -360,6 +360,7 @@ function changeAttr(id, group) {
           }
           $('#stock_' + id_product).text(data.combination.quantity)
         } else {
+          $('#stock_' + id_product).text(0)
           $('#group_' + id_product)
             .siblings('button')
             .attr('disabled', 'disabled')
