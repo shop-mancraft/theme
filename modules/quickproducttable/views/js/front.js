@@ -347,10 +347,26 @@ function changeAttr(id, group) {
       success: function (data) {
         $('#price_' + id_product).text(data.price)
         if (data.combination) {
+          $('#group_' + id_product)
+            .siblings('button')
+            .removeAttr('disabled')
+          $('#group_' + id_product)
+            .siblings('.custom-checkbox')
+            .find('input')
+            .removeAttr('disabled')
+
           if (data.combination.price !== '0.000000') {
             $('#price_' + id_product).text(data.combination.price)
           }
           $('#stock_' + id_product).text(data.combination.quantity)
+        } else {
+          $('#group_' + id_product)
+            .siblings('button')
+            .attr('disabled', 'disabled')
+          $('#group_' + id_product)
+            .siblings('.custom-checkbox')
+            .find('input')
+            .attr('disabled', 'disabled')
         }
       },
     })
