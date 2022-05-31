@@ -373,6 +373,12 @@ function changeAttr(id, group) {
               .find('img')
               .attr('src', data.image.url)
           }
+        } else {
+          $('#group_' + id_product)
+            .parent()
+            .parent()
+            .find('img')
+            .attr('src', '[data-default-image]')
         }
       },
     })
