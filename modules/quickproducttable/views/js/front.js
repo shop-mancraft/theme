@@ -365,6 +365,15 @@ function changeAttr(id, group) {
             .find('input')
             .attr('disabled', 'disabled')
         }
+        if (data.image) {
+          if (data.image.url) {
+            $('#group_' + id_product)
+              .parent()
+              .parent()
+              .find('img')
+              .attr('src', data.image.url)
+          }
+        }
       },
     })
   }
