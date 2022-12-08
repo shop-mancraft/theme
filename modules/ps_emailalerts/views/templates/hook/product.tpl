@@ -50,6 +50,9 @@
 </div>
 {literal}
 <style>
+    .js-mailalert .form-control{
+    margin-bottom: 10px!important; 
+}
     .js-mailalert .btn{
      margin-bottom: 10px!important;
     width: 100%;
