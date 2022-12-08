@@ -24,7 +24,7 @@
 *}
 
 <div class="tabs">
-    <div class="js-mailalert text-center" data-url="{url entity='module' name='ps_emailalerts' controller='actions' params=['process' => 'add']}">
+    <div class="js-mailalert text-left" data-url="{url entity='module' name='ps_emailalerts' controller='actions' params=['process' => 'add']}">
     {if empty($has_notification)}
         {if !empty($email)}
             <input class="form-control" type="email" placeholder="{l s='your@email.com' d='Modules.Emailalerts.Shop'}"/>
