@@ -305,7 +305,7 @@ div.inpost-shipping-container .btn{
   @apply tablet:opacity-0 transition-opacity
 }
 [data-payments-swiper].swiper .swiper-slide.swiper-slide-visible{
-  @apply opacity-100 
+  @apply opacity-100
 }
 
 [data-payments-swiper] .swiper-slide:not(.swiper-slide-visible ~ .swiper-slide-visible),
@@ -315,4 +315,10 @@ div.inpost-shipping-container .btn{
 
 .stickers-box-list .img-sticker img {
   @apply !border-none !border-0 !bg-transparent
+}
+.tax-shipping-delivery-label .gm_omniprice{
+  @apply hidden
+}
+.gm_omniprice{
+  @apply bg-black border border-main  p-3 rounded-md
 }
