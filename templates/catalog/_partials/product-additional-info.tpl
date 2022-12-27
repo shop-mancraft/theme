@@ -23,5 +23,6 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div class="product-additional-info">
+  {hook h='displayProductPriceBlock' product=$product type="after_price"}
   {hook h='displayProductAdditionalInfo' product=$product}
 </div>
