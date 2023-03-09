@@ -46,9 +46,11 @@
   <section class="order-message-form box">
     <p class="mb-4">{l s='If you have any questions regarding your order, please contact us by e-mail: [1] kontakt@mancraft.com [/1] or write to us via chat.' 
     sprintf=[
-      "[1]" => ("<a href='mailto:%s'>", $shop.email),
+      "[1]" => "<a href='mailto: %s '>",
       "[/1]" => "</a>"
       ] 
+
+    sprintf_args=[$shop.email]
       d='Shop.Theme.Customeraccount'}
       </p>
     <p>{l s='Best regards, %nl Mancraft team.' sprintf=["%nl" => "<br>"] d='Shop.Theme.Customeraccount'}</p>
