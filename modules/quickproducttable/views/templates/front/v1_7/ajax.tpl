@@ -25,7 +25,7 @@
 {assign var="customer_group_reduction" value=Group::getReduction(null)}
 {foreach from=$all_products item=product name=product}
     <tr>
-        <td class="all" ><a href="{$product.link|escape:'htmlall':'UTF-8'}"> <img src="{$product.cover_image_url|escape:'htmlall':'UTF-8'}"></a> </td>
+    <td class="all" ><a href="{$product.link|escape:'htmlall':'UTF-8'}"> <img src="{$product.cover_image_url|escape:'htmlall':'UTF-8'}" data-default-image="{$product.cover_image_url|escape:'htmlall':'UTF-8'}"></a> </td>
         <td class="all" >
             <a href="{$product.link|escape:'htmlall':'UTF-8'}">{$product.name|escape:'htmlall':'UTF-8'}</a>
             <div class="options flex flex-wrap">
@@ -46,24 +46,24 @@
             {/foreach}
             </div>
         </td>
-        <td class="desktop	 options2">
-            <div class=" flex flex-wrap">
+        <td class="desktop">
+            <div class="flex flex-wrap">
             {assign var="group_count" value=0}
             {foreach from=$product.options item=options name=options}
-                <span class="flex flex-col w-full">
-
-                <span >{$options.name|escape:'htmlall':'UTF-8'}</span>
                 {assign var="group_count" value={$group_count|escape:'htmlall':'UTF-8'}+1}
-                
-                <select id="select_fmm" onchange="changeAttr({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'})" class="fmm_option_{$product.id_product|escape:'htmlall':'UTF-8'}_{$group_count|escape:'htmlall':'UTF-8'}">
-                    {foreach from=$options.values item=values name=values}
+                    <span class="flex flex-col w-full">
 
-                        <option value="{$values.id|escape:'htmlall':'UTF-8'}">{$values.value|escape:'htmlall':'UTF-8'}</option>
+                    <span >{$options.name|escape:'htmlall':'UTF-8'}</span>
+                    
+                    <select id="select_fmm" onchange="changeAttr({$product.id_product|escape:'htmlall':'UTF-8'}, {$smarty.foreach.options.total})" class="fmm_option_{$product.id_product|escape:'htmlall':'UTF-8'}_{$smarty.foreach.options.iteration}">
+                        {foreach from=$options.values item=values name=values}
 
-                    {/foreach}
-                </select> 
-            </span> 
-            {/foreach}
+                            <option value="{$values.id|escape:'htmlall':'UTF-8'}">{$values.value|escape:'htmlall':'UTF-8'}</option>
+
+                        {/foreach}
+                    </select> 
+                </span> 
+                {/foreach}
             </div>
         </td>
 
@@ -74,8 +74,8 @@
         </td>
         <td class="min-tablet-p">
             <div class="price">
-                <span class="line-through text-red-600 mr-3">{$product.default_currency_sign|escape:'htmlall':'UTF-8'}{Product::getPriceStatic($product['id_product'], true, null, 2, null, false, true, 1, true, null, null, null, $nothing, true, false, null)|number_format:2}</span>
-                <span id="price_{$product.id_product|escape:'htmlall':'UTF-8'}">{$product.default_currency_sign|escape:'htmlall':'UTF-8'}{$product.price|number_format:2}</span>
+                <span class="line-through text-red-600 mr-3">{Tools::displayPrice(Product::getPriceStatic($product['id_product'], true, null, 2, null, false, true, 1, true, null, null, null, $nothing, true, false, null))}</span>
+                <span id="price_{$product.id_product|escape:'htmlall':'UTF-8'}">{Tools::displayPrice($product.price)}</span> 
             </div>
         </td>
         <td class="desktop	">

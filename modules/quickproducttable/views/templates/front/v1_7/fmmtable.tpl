@@ -36,27 +36,27 @@
 <h1 class="text-white text-xl mb-5">{$head_name_{$id_lang}|escape:'htmlall':'UTF-8'}</h1>
 <div class="bg-gray-normal  mb-10 rounded-lg col-lg-10">
     <div class="col-lg-1 col-xs-12 top_buttons">
-        <p class=" py-2 ">{l s='Filters:' mod='quickproducttable'}</p>
+        <p class=" py-2 ">{l s='Filters:' d='Modules.Quickproducttable.Fmmtable'}</p>
         
     </div>
     {if $new_enable == 1}
     <div class="col-lg-2 col-xs-12 top_buttons" >
-        <a class="border-0 rounded-[4px] bg-black py-3 hover:bg-main transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$base_url|escape:'htmlall':'UTF-8'}{$route_name|escape:'htmlall':'UTF-8'}?product_type=new">{l s='New Products' mod='quickproducttable'}</a>
+        <a class="border-0 rounded-[4px] bg-black py-3 hover:bg-main transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$base_url|escape:'htmlall':'UTF-8'}{$route_name|escape:'htmlall':'UTF-8'}?product_type=new">{l s='New Products' d='Modules.Quickproducttable.Fmmtable'}</a>
     </div>
     {/if}
     {if $best_enable == 1}
     <div class="col-lg-2 col-xs-12 top_buttons" >
-        <a class="border-0 rounded-[4px] bg-black py-3 hover:bg-main transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$base_url|escape:'htmlall':'UTF-8'}{$route_name|escape:'htmlall':'UTF-8'}?product_type=best">{l s='Best Sales' mod='quickproducttable'}</a>
+        <a class="border-0 rounded-[4px] bg-black py-3 hover:bg-main transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$base_url|escape:'htmlall':'UTF-8'}{$route_name|escape:'htmlall':'UTF-8'}?product_type=best">{l s='Best Sales' d='Modules.Quickproducttable.Fmmtable'}</a>
     </div>
     {/if}
     {if $all_enable == 1}
     <div class="col-lg-2 col-xs-12 top_buttons">
-        <a class="border-0 rounded-[4px] bg-black py-3 hover:bg-main transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$base_url|escape:'htmlall':'UTF-8'}{$route_name|escape:'htmlall':'UTF-8'}?product_type=all">{l s='All Products' mod='quickproducttable'}</a>
+        <a class="border-0 rounded-[4px] bg-black py-3 hover:bg-main transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$base_url|escape:'htmlall':'UTF-8'}{$route_name|escape:'htmlall':'UTF-8'}?product_type=all">{l s='All Products' d='Modules.Quickproducttable.Fmmtable'}</a>
     </div>
     {/if}
     {if $sale_enable == 1}
     <div class="col-lg-2 col-xs-12 top_buttons">
-        <a class="border-0 rounded-[4px] bg-black py-3 hover:bg-main transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$base_url|escape:'htmlall':'UTF-8'}{$route_name|escape:'htmlall':'UTF-8'}?product_type=sale">{l s='Prices Drop' mod='quickproducttable'}</a>
+        <a class="border-0 rounded-[4px] bg-black py-3 hover:bg-main transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$base_url|escape:'htmlall':'UTF-8'}{$route_name|escape:'htmlall':'UTF-8'}?product_type=sale">{l s='Prices Drop' d='Modules.Quickproducttable.Fmmtable'}</a>
     </div>
     {/if}
 
@@ -66,7 +66,7 @@
             <svg class="mr-1 inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 18px;" class="inline">
 		    	<path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="#fff"></path>
 	        </svg>
-            {l s='Advance Search' mod='quickproducttable'}
+            {l s='Advance Search' d='Modules.Quickproducttable.Fmmtable'}
         </a>
     </div>
     {/if}
@@ -74,7 +74,7 @@
 {if $csv_enable == 1}
 <div class="col-lg-2 col-xs-12 top_buttons">
     <a class="border-0 rounded-[4px] bg-main py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$base_url|escape:'htmlall':'UTF-8'}{$route_name|escape:'htmlall':'UTF-8'}?product_type=csv">
-    {l s='Add In Bulk' mod='quickproducttable'}</a>
+    {l s='Add In Bulk' d='Modules.Quickproducttable.Fmmtable'}</a>
 </div>
 {/if}
 
@@ -83,16 +83,16 @@
 <table id="fmm_table" class="display nowrap">
         <thead class="text-base tablet:text-xl text-white font-normal">
         <tr>
-            <th class="all" >{l s='Image' mod='quickproducttable'}</th>
-            <th class="all" >{l s='Name' mod='quickproducttable'}</th>
-            <th class="desktop	 options2"></th>
-            <th class="desktop	">{l s='Stock' mod='quickproducttable'}</th>
-            <th class="min-tablet-p 	">{l s='Price' mod='quickproducttable'}</th>
-            <th class="desktop	">{l s='Discounts' mod='quickproducttable'}</th>
-            <th class="desktop	">{l s='Quantity' mod='quickproducttable'}</th>
-            <th class="desktop	select-all-chk"><span class="col-title">{l s='Action ' mod='quickproducttable'}</span>
+            <th class="all" >{l s='Image' d='Modules.Quickproducttable.Fmmtable'}</th>
+            <th class="all" >{l s='Name' d='Modules.Quickproducttable.Fmmtable'}</th>
+            <th class="desktop"></th>
+            <th class="desktop	">{l s='Stock' d='Modules.Quickproducttable.Fmmtable'}</th>
+            <th class="min-tablet-p 	">{l s='Price' d='Modules.Quickproducttable.Fmmtable'}</th>
+            <th class="desktop	">{l s='Discounts' d='Modules.Quickproducttable.Fmmtable'}</th>
+            <th class="desktop	">{l s='Quantity' d='Modules.Quickproducttable.Fmmtable'}</th>
+            <th class="desktop	select-all-chk"><span class="col-title">{l s='Action ' d='Modules.Quickproducttable.Fmmtable'}</span>
                 <span class="flex items-center justify-between w-full">
-                    <p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p>
+                    <p style="padding-left: 22px;">{l s="Select all" d='Modules.Quickproducttable.Fmmtable'}</p>
                     <span class="custom-checkbox mr-[3px]">
                         <input class="" type="checkbox" data-toggle="toggle" id="chkal3" data-size="xs">
                         <span><i class="material-icons rtl-no-flip checkbox-checked"></i></span>
@@ -108,37 +108,22 @@
         {assign var="customer_group_reduction" value=Group::getReduction(null)}
           {foreach from=$all_products item=product name=product}
             <tr>
-                <td class="all" ><a href="{$product.link|escape:'htmlall':'UTF-8'}"> <img src="{$product.cover_image_url|escape:'htmlall':'UTF-8'}"></a> </td>
+                <td class="all" ><a href="{$product.link|escape:'htmlall':'UTF-8'}"> <img src="{$product.cover_image_url|escape:'htmlall':'UTF-8'}" data-default-image="{$product.cover_image_url|escape:'htmlall':'UTF-8'}"></a> </td>
                 <td class="all" >
                     <a href="{$product.link|escape:'htmlall':'UTF-8'}">{$product.name|escape:'htmlall':'UTF-8'}</a>
                     <div class="options flex flex-wrap">
-                    {assign var="group_count" value=0}
-                    {foreach from=$product.options item=options name=options}
-                        <span>
-                        {$options.name|escape:'htmlall':'UTF-8'}
-                        {assign var="group_count" value={$group_count|escape:'htmlall':'UTF-8'}+1}
-                        
-                        <select id="select_fmm" onchange="changeAttr({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'})" class="fmm_option_{$product.id_product|escape:'htmlall':'UTF-8'}_{$group_count|escape:'htmlall':'UTF-8'}">
-                            {foreach from=$options.values item=values name=values}
-
-                                <option value="{$values.id|escape:'htmlall':'UTF-8'}">{$values.value|escape:'htmlall':'UTF-8'}</option>
-
-                            {/foreach}
-                        </select> 
-                       </span> 
-                    {/foreach}
                     </div>
                 </td>
-                <td class="desktop		 options2">
+                <td class="desktop">
                     <div class="flex flex-wrap">
                     {assign var="group_count" value=0}
                     {foreach from=$product.options item=options name=options}
+                        {assign var="group_count" value={$group_count|escape:'htmlall':'UTF-8'}+1}
                         <span class="flex flex-col w-full">
 
                         <span >{$options.name|escape:'htmlall':'UTF-8'}</span>
-                        {assign var="group_count" value={$group_count|escape:'htmlall':'UTF-8'}+1}
                         
-                        <select id="select_fmm" onchange="changeAttr({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'})" class="fmm_option_{$product.id_product|escape:'htmlall':'UTF-8'}_{$group_count|escape:'htmlall':'UTF-8'}">
+                        <select id="select_fmm" onchange="changeAttr({$product.id_product|escape:'htmlall':'UTF-8'}, {$smarty.foreach.options.total})" class="fmm_option_{$product.id_product|escape:'htmlall':'UTF-8'}_{$smarty.foreach.options.iteration}">
                             {foreach from=$options.values item=values name=values}
 
                                 <option value="{$values.id|escape:'htmlall':'UTF-8'}">{$values.value|escape:'htmlall':'UTF-8'}</option>
@@ -150,14 +135,16 @@
                     </div>
                 </td>
                 <td class="desktop		">
-                    {if isset($product.quantity)}
-                        {$product.quantity}
-                    {/if}
+                    <span id="stock_{$product.id_product|escape:'htmlall':'UTF-8'}">
+                        {if isset($product.quantity)}
+                            {$product.quantity}
+                        {/if}
+                    </span>
                 </td>
                 <td class="min-tablet-p">
                     <div class="price">
-                        <span class="line-through text-red-600 mr-3">{$product.default_currency_sign|escape:'htmlall':'UTF-8'}{Product::getPriceStatic($product['id_product'], true, null, 2, null, false, true, 1, true, null, null, null, $nothing, true, false, null)|number_format:2}</span>
-                        <span id="price_{$product.id_product|escape:'htmlall':'UTF-8'}">{$product.default_currency_sign|escape:'htmlall':'UTF-8'}{$product.price|number_format:2}</span>
+                        <span class="line-through text-red-600 mr-3">{Tools::displayPrice(Product::getPriceStatic($product['id_product'], true, null, 2, null, false, true, 1, true, null, null, null, $nothing, true, false, null))}</span>
+                        <span id="price_{$product.id_product|escape:'htmlall':'UTF-8'}">{Tools::displayPrice($product.price)}</span> 
                     </div>
                 </td>
                 <td class="desktop	">
@@ -174,7 +161,7 @@
                 </td>
                 <td class="desktop	">
                     <input type="hidden" name="group" id="group_{$product.id_product|escape:'htmlall':'UTF-8'}" value="{$group_count|escape:'htmlall':'UTF-8'}">
-                    <button class="align-baseline border border-solid border-main rounded-[4px] bg-main py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" onclick="fmmAddCart({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'});" >{l s='Add To Cart' mod='quickproducttable'}</button>
+                    <button class="align-baseline border border-solid border-main rounded-[4px] bg-main py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" onclick="fmmAddCart({$product.id_product|escape:'htmlall':'UTF-8'}, {$group_count|escape:'htmlall':'UTF-8'});" >{l s='Add To Cart' d='Modules.Quickproducttable.Fmmtable'}</button>
                     <span class="custom-checkbox ml-5">
                         <input type="checkbox"  id="{$product.id_product|escape:'htmlall':'UTF-8'}_{$group_count|escape:'htmlall':'UTF-8'}" name="fmm_check" class="fmm_check top-0 z-10" value="{$product.id_product|escape:'htmlall':'UTF-8'}">
                         <span><i class="material-icons rtl-no-flip checkbox-checked"></i></span>
@@ -186,23 +173,24 @@
         </tbody>
         <tfoot class="text-base tablet:text-xl text-white font-normal">
             <tr>
-                <th class="all" >{l s='Image' mod='quickproducttable'}</th>
-                <th class="all" >{l s='Name' mod='quickproducttable'}</th>
-                <th class="desktop	 options2"></th>
-                <th class="desktop	">{l s='Stock' mod='quickproducttable'}</th>
-                <th class="min-tablet-p 	">{l s='Price' mod='quickproducttable'}</th>
-                <th class="desktop	">{l s='Discounts' mod='quickproducttable'}</th>
-                <th class="desktop	">{l s='Quantity' mod='quickproducttable'}</th>
-                <th class="desktop	">{l s='Action ' mod='quickproducttable'}
+                <th class="all" >{l s='Image' d='Modules.Quickproducttable.Fmmtable'}</th>
+                <th class="all" >{l s='Name' d='Modules.Quickproducttable.Fmmtable'}</th>
+                <th class="desktop"></th>
+                <th class="desktop	">{l s='Stock' d='Modules.Quickproducttable.Fmmtable'}</th>
+                <th class="min-tablet-p 	">{l s='Price' d='Modules.Quickproducttable.Fmmtable'}</th>
+                <th class="desktop	">{l s='Discounts' d='Modules.Quickproducttable.Fmmtable'}</th>
+                <th class="desktop	">{l s='Quantity' d='Modules.Quickproducttable.Fmmtable'}</th>
+                <th class="desktop	select-all-chk"><span class="col-title">{l s='Action ' d='Modules.Quickproducttable.Fmmtable'}</span>
                     <span class="flex items-center justify-between w-full">
-                        <p style="padding-left: 22px;">{l s="Select all" mod='quickproducttable'}</p>
-                        <span class="custom-checkbox  mr-[3px]">
+                        <p style="padding-left: 22px;">{l s="Select all" d='Modules.Quickproducttable.Fmmtable'}</p>
+                        <span class="custom-checkbox mr-[3px]">
                             <input class="" type="checkbox" data-toggle="toggle" id="chkal3" data-size="xs">
                             <span><i class="material-icons rtl-no-flip checkbox-checked"></i></span>
                         </span>
                     </span>
                 </th>
             </tr>
+
         </tfoot>
     </table>
     {if $ajax_load}
@@ -214,8 +202,8 @@
 
 
 <div class="col-lg-12 col-xs-12 top_buttons" >
-    <a class="border-0 rounded-[4px] bg-main py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$cart_url|escape:'htmlall':'UTF-8'}?action=show">{l s='View Cart' mod='quickproducttable'}</a>
-    <button class="border-0 rounded-[4px] bg-main py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" onclick="fmmAddAllCart();" >{l s='Add Selected To Cart' mod='quickproducttable'}</button>
+    <a class="border-0 rounded-[4px] bg-main py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" href="{$cart_url|escape:'htmlall':'UTF-8'}?action=show">{l s='View Cart' d='Modules.Quickproducttable.Fmmtable'}</a>
+    <button class="border-0 rounded-[4px] bg-main py-3 hover:bg-black transition btn btn-{$btn_clr|escape:'htmlall':'UTF-8'}" onclick="fmmAddAllCart();" >{l s='Add Selected To Cart' d='Modules.Quickproducttable.Fmmtable'}</button>
 </div>
     {if $ajax_load}
         {literal}
