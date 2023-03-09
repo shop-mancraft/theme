@@ -195,6 +195,6 @@ div.inpost-shipping-container .btn{
   @apply whitespace-normal;
 }
 
-.order-message-form header a {
+.order-message-form a {
   @apply hover:text-main
 }
