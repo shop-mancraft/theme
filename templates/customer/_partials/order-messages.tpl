@@ -42,10 +42,9 @@
 {/block}
 
 {block name='order_message_form'}
-  {debug}
-  {if $contact_infos.email}
+  {if $shop.email}
   <section class="order-message-form box">
-    <p class="mb-4">{l s='If you have any questions regarding your order, please contact us by e-mail: [1]kontakt@mancraft.com[/1] or write to us via chat.' tags=['<a href="mailto:%s">'] sprintf=[$contact_infos.email] d='Shop.Theme.Customeraccount'}</p>
+    <p class="mb-4">{l s='If you have any questions regarding your order, please contact us by e-mail: [1]kontakt@mancraft.com[/1] or write to us via chat.' tags=['<a href="mailto:%s">'] sprintf=[$shop.email] d='Shop.Theme.Customeraccount'}</p>
     <p>{l s='Best regards, %nl Mancraft team.' sprintf=["%nl" => "<br>"] d='Shop.Theme.Customeraccount'}</p>
   </section>
   {/if}
