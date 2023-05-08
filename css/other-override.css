@@ -199,14 +199,18 @@ div.inpost-shipping-container .btn{
   @apply hover:text-main
 }
 
+.top-logo{
+  @apply w-[150px] phone-wide:w-auto
+}
+
 #search_block_top #searchbox{
   @apply !p-1 tablet:!p-[10px] !h-10 tablet:!h-[50px]
 }
 
 #search_block_top .btn.button-search{
-  @apply !px-2 !py-[7px] tablet:!p-[10px] !min-w-0 tablet:!min-w-[40px]
+  @apply !px-2 !py-[7px] tablet:!p-[10px] !min-w-0 tablet:!min-w-[40px] !right-1 tablet:!right-[9px]
 }
 
 #search_category{
-  @apply !h-9 tablet:!h-10
+  @apply !h-[34px] tablet:!h-10
 }
