@@ -200,7 +200,7 @@ div.inpost-shipping-container .btn{
 }
 
 .top-logo{
-  @apply w-[150px] phone-wide:w-auto
+  @apply !w-[150px] phone-wide:!w-auto
 }
 
 #search_block_top #searchbox{
