@@ -204,7 +204,7 @@ div.inpost-shipping-container .btn{
 }
 
 #search_block_top .btn.button-search{
-  @apply !px-2 !py-[7px] tablet:!p-[10px] !min-w-auto tablet:!min-w-[40px]
+  @apply !px-2 !py-[7px] tablet:!p-[10px] !min-w-0 tablet:!min-w-[40px]
 }
 
 #search_category{
