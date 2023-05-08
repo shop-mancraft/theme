@@ -38,7 +38,7 @@
 		</div>
 		<div id="right-nav-header" class="w-full float-left">
 			<div class="container text-center">
-			<div class="top-logo" id="_mobile_logo"></div>
+			<div class="top-logo w-[150px] phone-wide:w-auto" id="_mobile_logo"></div>
 				<div class="col-sm-3 hidden-sm-down" id="_desktop_logo">
 					{if $page.page_name == 'index'}
 						<h1>
