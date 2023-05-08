@@ -208,5 +208,5 @@ div.inpost-shipping-container .btn{
 }
 
 #search_category{
-  @apply !h-9 taablet:!h-10
+  @apply !h-9 tablet:!h-10
 }
