@@ -200,7 +200,7 @@ div.inpost-shipping-container .btn{
 }
 
 #search_block_top #searchbox{
-  @apply !p-1 md:!p-[10px] !h-10 tablet:!h-[50px]
+  @apply !p-1 tablet:!p-[10px] !h-10 tablet:!h-[50px]
 }
 
 #search_block_top .btn.button-search{
