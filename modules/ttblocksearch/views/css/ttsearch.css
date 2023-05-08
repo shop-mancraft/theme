@@ -566,7 +566,7 @@ form#searchbox .button.button-small i {
 }
 @media (max-width: 991px) {
 	#ttsearch_content_result {
-    	top: 80px;
+    	top: 56px !important;
 	}
     #search_block_top #search_query_top {
 		display: inline-block;
