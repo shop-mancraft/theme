@@ -32,13 +32,13 @@
 				{foreach from=$ttcategorysliderinfos item=ttcategorysliderinfo}
 					<div class="swiper-slide p-5">
 						<div class="p-5 w-full aspect-[4/3] border-main border-[3px] border-solid rounded-[5px] ">
-							<a href="{$link->getCategoryLink($ttcategorysliderinfo.id)}" class="w-full h-full flex items-end">
+							<a href="{$link->getCategoryLink($ttcategorysliderinfo.id)}" class="group w-full h-full flex items-end">
 								<div class="mr-5 tablet:max-w-[50%]">
 								{*  *}
 									<h3 class=" text-white text-lg tablet:text-[22px]">{$ttcategorysliderinfo.name}</h3>
 								</div>
-								<span class="rounded-full border border-solid border-white">
-									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+								<span class="rounded-full border border-solid border-white bg-transparent group-hover:bg-white transition duration-300">
+									<svg class="fill-white group-hover:fill-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
 										<path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
 									</svg>
 								</span>
