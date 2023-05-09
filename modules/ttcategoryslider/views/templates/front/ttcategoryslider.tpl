@@ -24,50 +24,52 @@
 *}
 
 {{debug}}
-<div id="ttcategorytabs" class="tabs products_block clearfix"> 
-<div class="tt-titletab">
-	<h1 class="h1 products-section-title text-uppercase tt-title">{l s='Top Categories' mod='ttcategoryslider'}</h1> 
-	 <ul id="ttcategory-tabs" class="nav nav-tabs clearfix">
-		{$count=0}
-		{foreach from=$ttcategorysliderinfos item=ttcategorysliderinfo}
-			<li class="nav-item">
-				<a href="#tab_{$ttcategorysliderinfo.id}" data-toggle="tab" class="nav-link {if $count == 0}active{/if}"><h3 class="tab-title">{$ttcategorysliderinfo.name}</h3></a>
-			</li>
-			{$count= $count+1}
-		{/foreach}
-	</ul>
-</div>
+<div id="ttcategorytabs" class="tabs products_block clearfix">
+	<div class="tt-titletab">
+		<h1 class="h1 products-section-title text-uppercase tt-title">{l s='Top Categories' mod='ttcategoryslider'}</h1>
+		<ul id="ttcategory-tabs" class="nav nav-tabs clearfix">
+			{$count=0}
+			{foreach from=$ttcategorysliderinfos item=ttcategorysliderinfo}
+				<li class="nav-item">
+					{$ttcategorysliderinfo}
+					{* <a href="#tab_{$ttcategorysliderinfo.id}" data-toggle="tab" class="nav-link {if $count == 0}active{/if}"><h3 class="tab-title">{$ttcategorysliderinfo.name}</h3></a> *}
+				</li>
+				{$count= $count+1}
+			{/foreach}
+		</ul>
+	</div>
 	<div class="tab-content">
 		{$tabcount=0}
 		{$tabcat=0}
 		{foreach from=$ttcategorysliderinfos item=ttcategorysliderinfo}
 			<div id="tab_{$ttcategorysliderinfo.id}" class="tab-pane {if $tabcount == 0}active{/if} row">
-					{assign var="tt_cnt" value="1"}
-					{assign var="tt_total" value="0"}
-					{foreach from=$ttcategorysliderinfo.product item='product'}
-						{$tt_total = $tt_total+1}
-					{/foreach}
-					{if $tt_total > 6}
-						<div class="customNavigation">
-							<a class="btn prev ttcategory_prev">{l s='prev' mod='ttcategoryslider'}</a>
-							<a class="btn next ttcategory_next">{l s='next' mod='ttcategoryslider'}</a>
-						</div>
-					{/if} 
+				{assign var="tt_cnt" value="1"}
+				{assign var="tt_total" value="0"}
+				{foreach from=$ttcategorysliderinfo.product item='product'}
+					{$tt_total = $tt_total+1}
+				{/foreach}
+				{if $tt_total > 6}
+					<div class="customNavigation">
+						<a class="btn prev ttcategory_prev">{l s='prev' mod='ttcategoryslider'}</a>
+						<a class="btn next ttcategory_next">{l s='next' mod='ttcategoryslider'}</a>
+					</div>
+				{/if}
 				{if isset($ttcategorysliderinfo.product) && $ttcategorysliderinfo.product}
-                  <div class="categoryimage col-sm-2">
-					{if isset($ttcategorysliderinfo.cate_id) && $ttcategorysliderinfo.cate_id}
-	                        {if $ttcategorysliderinfo.id == $ttcategorysliderinfo.cate_id.id_category}
-                                <img src="{$image_url}/{$ttcategorysliderinfo.cate_id.image}" alt="" class="category_img"/>
+					<div class="categoryimage col-sm-2">
+						{if isset($ttcategorysliderinfo.cate_id) && $ttcategorysliderinfo.cate_id}
+							{if $ttcategorysliderinfo.id == $ttcategorysliderinfo.cate_id.id_category}
+								<img src="{$image_url}/{$ttcategorysliderinfo.cate_id.image}" alt="" class="category_img" />
 							{else}
-								<img src="{$image_url}/{$ttcategorysliderinfo.cate_id.image}" alt="" class="category_img"/>
+								<img src="{$image_url}/{$ttcategorysliderinfo.cate_id.image}" alt="" class="category_img" />
 							{/if}
-                    {/if}
-                   </div>
+						{/if}
+					</div>
+					
 				{else}
 					<div class="alert alert-info">{l s='No Products in current tab at this time.' mod='ttcategoryslider'}</div>
 				{/if}
-			</div> 
-		{$tabcount= $tabcount+1}
+			</div>
+			{$tabcount= $tabcount+1}
 		{/foreach}
-	</div> 
+	</div>
 </div>
