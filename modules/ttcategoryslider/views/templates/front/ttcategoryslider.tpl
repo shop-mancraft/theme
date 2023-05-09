@@ -25,25 +25,23 @@
 
 <divclass="overflow-hidden">
 	<div class="container">
-		<h3 class="h1 tt-title">
+		<h3 class="h1 tt-title mb-8 min-[543px]:text-center">
 			{l s='Recommended Categories' mod='ttcategoryslider'}</h3>
-		<div class="mx-[-10px]" data-categories-swiper>
+		<div class="mx-[-10px] mb-10 pr-[25%] phablet:pr-0" data-categories-swiper>
 			<div class="swiper-wrapper">
 				{foreach from=$ttcategorysliderinfos item=ttcategorysliderinfo}
-					<div class="swiper-slide p-2.5 pt-0">
-						<div class="p-5 w-full aspect-[4/3] border-main border-[3px] border-solid rounded-[5px] ">
-							<a href="{$link->getCategoryLink($ttcategorysliderinfo.id)}" class="group w-full h-full flex items-end justify-between">
-								<div class="mr-5 tablet:max-w-[75%]">
+					<div class="swiper-slide p-2.5">
+						<a href="{$link->getCategoryLink($ttcategorysliderinfo.id)}" class="p-3 tablet:p-5 w-full aspect-[4/3] border-main border-[3px] border-solid rounded-[5px] group w-full h-full flex items-end justify-between">
+							<div class="mr-5 tablet:max-w-[75%]">
 								{*  *}
-									<h3 class=" text-white text-lg tablet:text-[22px] text-left">{$ttcategorysliderinfo.name}</h3>
-								</div>
-								<span class="rounded-full border border-solid border-white bg-transparent group-hover:bg-white transition duration-300">
-									<svg class="fill-white group-hover:fill-black w-7 tablet:w-[50px]" xmlns="http://www.w3.org/2000/svg" viewBox="-12 -11 47 47">
-										<path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-									</svg>
-								</span>
-							</a>
-						</div>
+								<h3 class=" text-white text-lg tablet:text-[22px] text-left">{$ttcategorysliderinfo.name}</h3>
+							</div>
+							<span class="rounded-full border border-solid border-white bg-transparent group-hover:bg-white transition duration-300">
+								<svg class="fill-white group-hover:fill-black w-8 tablet:w-[50px]" xmlns="http://www.w3.org/2000/svg" viewBox="-12 -11 47 47">
+									<path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+								</svg>
+							</span>
+						</a>
 					</div>
 				{/foreach}
 			</div>

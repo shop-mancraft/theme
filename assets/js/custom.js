@@ -1110,7 +1110,7 @@ $(document).ready(function () {
       disableOnInteraction: false,
     },
     breakpoints: {
-      768: {
+      560: {
         slidesPerView: 2,
         slidesPerGroup: 1,
         slidesPerColumn: 2,
