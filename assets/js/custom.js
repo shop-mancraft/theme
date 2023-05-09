@@ -1071,3 +1071,29 @@ $(document).ready(function () {
     $('#product .block-title:contains("Dożywotnia gwarancja")').parent().hide()
   }
 })
+
+
+$(document).ready(function () {
+  const swiperIcons = new Swiper('[data-icons-swiper]', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      480: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 4,
+        allowTouchMove: false,
+      },      
+    },
+  })
+})
+
+
