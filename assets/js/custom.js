@@ -1116,7 +1116,7 @@ $(document).ready(function () {
         slidesPerColumn: 2,
         slidesPerColumnFill: 'row',
       },
-      1200: {
+      992: {
         slidesPerView: 3,
         slidesPerGroup: 1,
         slidesPerColumn: 2,

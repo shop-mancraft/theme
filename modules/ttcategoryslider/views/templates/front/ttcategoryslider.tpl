@@ -30,7 +30,7 @@
 		<div class="mx-[-10px] mb-10 pr-[25%] phablet:pr-0" data-categories-swiper>
 			<div class="swiper-wrapper flex flex-wrap">
 				{foreach from=$ttcategorysliderinfos item=ttcategorysliderinfo}
-					<div class="swiper-slide p-2.5 basis-full phablet:basis-1/2 desktop:basis-1/3">
+					<div class="swiper-slide p-2.5">
 						<a href="{$link->getCategoryLink($ttcategorysliderinfo.id)}" class="p-3 tablet:p-5 w-full aspect-[4/3] border-[#313131] hover:border-main transition duration-300 border-[3px] border-solid rounded-[5px] group w-full h-full flex items-end justify-between">
 							<div class="mr-5 tablet:max-w-[75%]">
 								{*  *}
