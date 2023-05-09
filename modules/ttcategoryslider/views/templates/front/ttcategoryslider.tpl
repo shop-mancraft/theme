@@ -23,7 +23,7 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
-{{debug}}
+{debug}
 <div id="ttcategorytabs" class="tabs products_block clearfix">
 	<div class="tt-titletab">
 		<h1 class="h1 products-section-title text-uppercase tt-title">{l s='Top Categories' mod='ttcategoryslider'}</h1>
