@@ -204,7 +204,7 @@ div.inpost-shipping-container .btn{
 }
 
 [data-icons-swiper] .swiper-slide .swiper-slide_container{
-  @apply flex flex-nowrap items-center justify-center px-5;
+  @apply flex flex-nowrap items-center justify-center px-5 tablet:px-10;
 }
 
 [data-icons-swiper] .swiper-slide .swiper-slide_container svg{
@@ -212,5 +212,5 @@ div.inpost-shipping-container .btn{
 }
 
 [data-icons-swiper] .swiper-slide .swiper-slide_container p{
-  @apply w-28 tablet:w-48 text-white text-base tablet:text-xl;
+  @apply w-28 tablet:w-48 text-white text-base text-left;
 }
