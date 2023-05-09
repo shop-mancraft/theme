@@ -44,6 +44,7 @@
 							{if isset($ttcategorysliderinfo.cate_id) && $ttcategorysliderinfo.cate_id}
 								<div class="absolute inset-0 z-10">
 									<img class="w-full h-full object-cover" src="{$image_url}/{$ttcategorysliderinfo.cate_id.image}">
+									<div class="absolute z-10 inset-0 bg-gradient-to-t from-gray-blackish/50 to-transparent"></div>
 								</div>
 							{/if}
 						</a>
@@ -51,8 +52,8 @@
 				{/foreach}
 			</div>
 		</div>
-		<div class=" mt-5 tablet:mt-10">
-			<a class="text-center text-white text-lg p-4 border border-white rounded-full ">{l s='Go to B2B zone' mod='ttcategoryslider'}</a>
+		<div class=" mt-5 tablet:mt-10 flex justify-center">
+			<a class="block text-center text-white text-lg p-4 border border-white rounded-full hover:text-white hover:bg-main hover:border-main ">{l s='Go to B2B zone' mod='ttcategoryslider'}</a>
 		</div>
 	</div>
 </div>
