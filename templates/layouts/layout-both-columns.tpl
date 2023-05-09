@@ -51,7 +51,7 @@
 			<div id="top_column">
         {hook h='displayTopColumn'}	
       </div>
-      <div class="container overflow-hidden w-full py-2 tablet:py-5 border-b border-solid border-gray-blackish" data-icons-swiper>
+      <div class="container bg-gray-blackish overflow-hidden w-full py-2 tablet:py-5 border-b border-solid border-gray-normal" data-icons-swiper>
         <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="swiper-slide_container">
