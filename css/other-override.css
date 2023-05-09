@@ -234,6 +234,14 @@ div.inpost-shipping-container .btn{
   @apply tablet:max-w-[200px] text-white text-base text-left;
 }
 
+.swiper-nav-container{
+  @apply absolute z-10 top-0 bottom-0 flex items-center
+}
+
 .swiper-icons-prev, .swiper-icons-next{
-  @apply absolute desktop:hidden
+  @apply desktop:hidden w-10 fill-[#666] cursor-pointer
+}
+
+.swiper-icons-prev.swiper-button-disabled, .swiper-icons-next.swiper-button-disabled{
+  @apply opacity-50 !cursor-default
 }
