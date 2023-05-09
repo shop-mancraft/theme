@@ -136,6 +136,8 @@
             </div>
           </div>
 
+          {widget name="ttcategoryslider"}
+
         </div>
       {/block}
     {/if}
