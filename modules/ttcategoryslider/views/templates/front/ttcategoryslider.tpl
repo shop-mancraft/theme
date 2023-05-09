@@ -31,7 +31,8 @@
 			{$count=0}
 			{foreach from=$ttcategorysliderinfos item=ttcategorysliderinfo}
 				<li class="nav-item">
-					<a href="#tab_{$ttcategorysliderinfo.id}" data-toggle="tab" class="nav-link {if $count == 0}active{/if}"><h3 class="tab-title">{$ttcategorysliderinfo.name}</h3></a>
+					{{$ttcategorysliderinfo}}
+					{* <a href="#tab_{$ttcategorysliderinfo.id}" data-toggle="tab" class="nav-link {if $count == 0}active{/if}"><h3 class="tab-title">{$ttcategorysliderinfo.name}</h3></a> *}
 				</li>
 				{$count= $count+1}
 			{/foreach}
