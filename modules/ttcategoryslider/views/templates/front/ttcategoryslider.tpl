@@ -23,17 +23,27 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
-<div id="ttcategorytabs" class="overflow-hidden">
+<divclass="overflow-hidden">
 	<div class="container">
-		<h3 class="h1 products-section-title text-uppercase tt-title">
+		<h3 class="h1 tt-title">
 			{l s='Recommended Categories' mod='ttcategoryslider'}</h3>
 		<div data-categories-swiper>
 			<div class="swiper-wrapper">
 				{foreach from=$ttcategorysliderinfos item=ttcategorysliderinfo}
-					<div class="swiper-slide p-5 border-main border-[3px] border-solid rounded-[5px] aspect-[4/3]">
-						<a href="{$link->getCategoryLink($ttcategorysliderinfo.id)}" class="w-full h-full flex items-end">
-							<h3 class="tab-title">{$ttcategorysliderinfo.name}</h3>
-						</a>
+					<div class="swiper-slide p-5">
+						<div class="p-5 w-full aspect-[4/3] border-main border-[3px] border-solid rounded-[5px] ">
+							<a href="{$link->getCategoryLink($ttcategorysliderinfo.id)}" class="w-full h-full flex items-end">
+								<div class="mr-5 tablet:max-w-[50%]">
+								{*  *}
+									<h3 class=" text-white text-lg tablet:text-[22px]">{$ttcategorysliderinfo.name}</h3>
+								</div>
+								<span class="rounded-full border border-solid border-white">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+										<path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+									</svg>
+								</span>
+							</a>
+						</div>
 					</div>
 				{/foreach}
 			</div>

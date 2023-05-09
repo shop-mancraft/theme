@@ -1104,7 +1104,6 @@ $(document).ready(function () {
     slidesPerGroup: 1,
     slidesPerColumn: 2,
     slidesPerColumnFill: 'row',
-    spaceBetween: 20,
     watchOverflow: true,
     autoplay: {
       delay: 4000,
