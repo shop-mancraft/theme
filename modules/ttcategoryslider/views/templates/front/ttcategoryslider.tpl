@@ -28,10 +28,10 @@
 		<h3 class="h1 tt-title mb-8 min-[543px]:text-center">
 			{l s='Recommended Categories' mod='ttcategoryslider'}</h3>
 		<div class="mx-[-10px] mb-10 pr-[25%] phablet:pr-0" data-categories-swiper>
-			<div class="swiper-wrapper">
+			<div class="swiper-wrapper flex flex-wrap">
 				{foreach from=$ttcategorysliderinfos item=ttcategorysliderinfo}
-					<div class="swiper-slide p-2.5">
-						<a href="{$link->getCategoryLink($ttcategorysliderinfo.id)}" class="p-3 tablet:p-5 w-full aspect-[4/3] border-[#313131] hover:border-main tranisiton du8ration-300 border-[3px] border-solid rounded-[5px] group w-full h-full flex items-end justify-between">
+					<div class="swiper-slide p-2.5 basis-full phablet:basis-1/2 desktop:basis-1/3">
+						<a href="{$link->getCategoryLink($ttcategorysliderinfo.id)}" class="p-3 tablet:p-5 w-full aspect-[4/3] border-[#313131] hover:border-main transition duration-300 border-[3px] border-solid rounded-[5px] group w-full h-full flex items-end justify-between">
 							<div class="mr-5 tablet:max-w-[75%]">
 								{*  *}
 								<h3 class=" text-white text-lg tablet:text-[22px] text-left">{$ttcategorysliderinfo.name}</h3>

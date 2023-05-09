@@ -1099,7 +1099,7 @@ $(document).ready(function () {
     },
   })
 
-  const swiperBestseller = new Swiper('[data-categories-swiper]', {
+  const swiperCategories = new Swiper('[data-categories-swiper]', {
     slidesPerView: 1,
     slidesPerGroup: 1,
     slidesPerColumn: 2,
