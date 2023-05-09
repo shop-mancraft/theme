@@ -226,3 +226,7 @@ div.inpost-shipping-container .btn{
 .swiper-icons-prev.swiper-button-disabled, .swiper-icons-next.swiper-button-disabled{
   @apply opacity-25 !cursor-default
 }
+
+[data-categories-swiper]:not(.swiper-container-initialized) .swiper-slide{
+  @apply basis-full phablet:basis-1/2 tablet-narrow:basis-1/3
+}
