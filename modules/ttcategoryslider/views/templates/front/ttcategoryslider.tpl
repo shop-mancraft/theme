@@ -23,7 +23,7 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
-<divclass="overflow-hidden">
+<div class="overflow-hidden">
 	<div class="container">
 		<h3 class="h1 tt-title mb-8 min-[543px]:text-center">
 			{l s='Recommended Categories' mod='ttcategoryslider'}</h3>
@@ -31,7 +31,7 @@
 			<div class="swiper-wrapper">
 				{foreach from=$ttcategorysliderinfos item=ttcategorysliderinfo}
 					<div class="swiper-slide p-2.5">
-						<a href="{$link->getCategoryLink($ttcategorysliderinfo.id)}" class="p-3 tablet:p-5 w-full aspect-[4/3] border-main border-[3px] border-solid rounded-[5px] group w-full h-full flex items-end justify-between">
+						<a href="{$link->getCategoryLink($ttcategorysliderinfo.id)}" class="p-3 tablet:p-5 w-full aspect-[4/3] border-[#313131] hover:border-main tranisiton du8ration-300 border-[3px] border-solid rounded-[5px] group w-full h-full flex items-end justify-between">
 							<div class="mr-5 tablet:max-w-[75%]">
 								{*  *}
 								<h3 class=" text-white text-lg tablet:text-[22px] text-left">{$ttcategorysliderinfo.name}</h3>
