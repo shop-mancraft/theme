@@ -212,5 +212,9 @@ div.inpost-shipping-container .btn{
 }
 
 [data-icons-swiper] .swiper-slide .swiper-slide_container p{
-  @apply max-w-[170px] tablet:max-w-[200px] text-white text-base text-left;
+  @apply tablet:max-w-[200px] text-white text-base text-left;
+}
+
+.swiper-icons-prev, .swiper-icons-next{
+  @apply absolute desktop:hidden
 }

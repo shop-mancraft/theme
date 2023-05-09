@@ -1093,6 +1093,10 @@ $(document).ready(function () {
         allowTouchMove: false,
       },      
     },
+    navigation: {
+      nextEl: '.swiper-icons-next',
+      prevEl: '.swiper-icons-prev',
+    },
   })
 })
 
