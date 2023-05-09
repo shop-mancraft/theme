@@ -12034,7 +12034,6 @@ li.product-flag.on-sale {
 	float:left;
 	width:100%;
 	text-align:center;
-	margin:0 0 25px;
 }
 #wrapper{
 	float: left;
@@ -12046,11 +12045,7 @@ li.product-flag.on-sale {
 	position:relative;
 	width: 100%;
 }
-@media (max-width: 543px) {
-#top_column {
-    margin: 0 0 15px;
-}
-}
+
 /*--------------------------- Start Homepage tab --------------------------*/
 
 #hometab {
