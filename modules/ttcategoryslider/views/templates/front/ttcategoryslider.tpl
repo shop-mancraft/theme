@@ -31,7 +31,7 @@
 			<div class="swiper-wrapper flex flex-wrap">
 				{foreach from=$ttcategorysliderinfos item=ttcategorysliderinfo}
 					<div class="swiper-slide p-2.5">
-						<a href="{$link->getCategoryLink($ttcategorysliderinfo.id)}" class="relative p-3 tablet:p-5 w-full aspect-[4/3] border-[#313131] hover:border-main transition duration-300 border-[3px] border-solid rounded-[5px] group w-full h-full flex items-end justify-between">
+						<a href="{$link->getCategoryLink($ttcategorysliderinfo.id)}" class="relative p-3 tablet:p-5 w-full aspect-[4/3] border-[#313131] hover:border-main transition duration-300 border-[3px] border-solid rounded-[5px] group w-full h-full flex items-end justify-between overflow-hidden">
 							<div class="relative z-20 mr-5 tablet:max-w-[75%]">
 								{*  *}
 								<h3 class=" text-white text-lg tablet:text-[22px] text-left">{$ttcategorysliderinfo.name}</h3>
