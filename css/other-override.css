@@ -208,9 +208,9 @@ div.inpost-shipping-container .btn{
 }
 
 [data-icons-swiper] .swiper-slide .swiper-slide_container svg{
-  @apply w-10 tablet:w-[60px] aspect-square pr-5;
+  @apply w-10 tablet:w-[60px] aspect-square pr-5 shrink-0;
 }
 
 [data-icons-swiper] .swiper-slide .swiper-slide_container p{
-  @apply w-28 tablet:w-48 text-white text-base text-left;
+  @apply max-w-[120px] tablet:max-w-[200px] text-white text-base text-left;
 }
