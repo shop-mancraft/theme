@@ -30,7 +30,8 @@
 		{$count=0}
 		{foreach from=$ttcategorysliderinfos item=ttcategorysliderinfo}
 			<li class="nav-item">
-				<a href="#tab_{$ttcategorysliderinfo.id}" data-toggle="tab" class="nav-link {if $count == 0}active{/if}"><h3 class="tab-title">{$ttcategorysliderinfo.name}</h3></a>
+				{$ttcategorysliderinfo}
+				{* <a href="#tab_{$ttcategorysliderinfo.id}" data-toggle="tab" class="nav-link {if $count == 0}active{/if}"><h3 class="tab-title">{$ttcategorysliderinfo.name}</h3></a> *}
 			</li>
 			{$count= $count+1}
 		{/foreach}
@@ -62,43 +63,6 @@
 							{/if}
                     {/if}
                    </div>
-						<div class="ttcategory col-sm-10">
-						<div class="products owl-carousel row">
-							{foreach from=$ttcategorysliderinfo.product item='product'}
-								{if $tt_total >= 3}
-									<!-- Start TemplateTrip 2 product slide code -->
-									{if $tt_cnt % 3 == 1}
-									<ul>
-										<li class="categoryslider">
-											<ul>
-											<li>
-										{/if}
-									{/if}
-									<!-- End TemplateTrip 2 product slide code -->
-									{include file="modules/ttcategoryslider/views/templates/front/ttcategoryproduct.tpl" product=$product}
-									  <!-- Start TemplateTrip 2 product slide code -->
-									{if $tt_total >= 3}
-										{if $tt_cnt % 3 == 0}
-												</li>
-												</ul>
-											</li>
-											</ul>
-										{/if}
-										{/if}
-						
-										{$tt_cnt = $tt_cnt+1}
-								<!-- End TemplateTrip 2 product slide code -->
-							{/foreach}
-							{if $tt_total >= 3}
-								{if $tt_cnt % 3 == 0}
-										</li>
-										</ul>
-									</li>
-									</ul>
-								{/if}
-							{/if}
-						</div>
-					</div>
 				{else}
 					<div class="alert alert-info">{l s='No Products in current tab at this time.' mod='ttcategoryslider'}</div>
 				{/if}
