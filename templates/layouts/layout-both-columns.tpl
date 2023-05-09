@@ -122,14 +122,14 @@
             </div>
             <div class="left-0">
               <div class="swiper-nav-container swiper-icons-prev">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="5 2 14 20">
                   <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
                 </svg>
               </div>
             </div>
-            <div class="swiper-nav-container right-0">
+            <div class="swiper-nav-container right-[14px]">
               <div class="swiper-icons-next">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="5 2 14 20">
                   <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
                 </svg>
               </div>
