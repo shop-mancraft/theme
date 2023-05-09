@@ -23,51 +23,28 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
-<div id="ttcategorytabs" class="tabs products_block clearfix"> 
-<div class="tt-titletab">
-	<h1 class="h1 products-section-title text-uppercase tt-title">{l s='Top Categories' mod='ttcategoryslider'}</h1> 
-	 <ul id="ttcategory-tabs" class="nav nav-tabs clearfix">
-		{$count=0}
-		{foreach from=$ttcategorysliderinfos item=ttcategorysliderinfo}
-			<li class="nav-item">
-				{$ttcategorysliderinfo}
-				{* <a href="#tab_{$ttcategorysliderinfo.id}" data-toggle="tab" class="nav-link {if $count == 0}active{/if}"><h3 class="tab-title">{$ttcategorysliderinfo.name}</h3></a> *}
-			</li>
-			{$count= $count+1}
-		{/foreach}
-	</ul>
-</div>
-	<div class="tab-content">
-		{$tabcount=0}
-		{$tabcat=0}
-		{foreach from=$ttcategorysliderinfos item=ttcategorysliderinfo}
-			<div id="tab_{$ttcategorysliderinfo.id}" class="tab-pane {if $tabcount == 0}active{/if} row">
-					{assign var="tt_cnt" value="1"}
-					{assign var="tt_total" value="0"}
-					{foreach from=$ttcategorysliderinfo.product item='product'}
-						{$tt_total = $tt_total+1}
-					{/foreach}
-					{if $tt_total > 6}
-						<div class="customNavigation">
-							<a class="btn prev ttcategory_prev">{l s='prev' mod='ttcategoryslider'}</a>
-							<a class="btn next ttcategory_next">{l s='next' mod='ttcategoryslider'}</a>
-						</div>
-					{/if} 
-				{if isset($ttcategorysliderinfo.product) && $ttcategorysliderinfo.product}
-                  <div class="categoryimage col-sm-2">
-					{if isset($ttcategorysliderinfo.cate_id) && $ttcategorysliderinfo.cate_id}
-	                        {if $ttcategorysliderinfo.id == $ttcategorysliderinfo.cate_id.id_category}
-                                <img src="{$image_url}/{$ttcategorysliderinfo.cate_id.image}" alt="" class="category_img"/>
-							{else}
-								<img src="{$image_url}/{$ttcategorysliderinfo.cate_id.image}" alt="" class="category_img"/>
-							{/if}
-                    {/if}
-                   </div>
-				{else}
-					<div class="alert alert-info">{l s='No Products in current tab at this time.' mod='ttcategoryslider'}</div>
-				{/if}
-			</div> 
-		{$tabcount= $tabcount+1}
-		{/foreach}
-	</div> 
+<div class="overflow-hidden">
+	<div class="container">
+		<h3 class="h1 tt-title mb-8 min-[543px]:text-center">
+			{l s='Recommended Categories' mod='ttcategoryslider'}</h3>
+		<div class="mx-[-10px] mb-10 pr-[25%] phablet:pr-0" data-categories-swiper>
+			<div class="swiper-wrapper">
+				{foreach from=$ttcategorysliderinfos item=ttcategorysliderinfo}
+					<div class="swiper-slide p-2.5">
+						<a href="{$link->getCategoryLink($ttcategorysliderinfo.id)}" class="p-3 tablet:p-5 w-full aspect-[4/3] border-[#313131] hover:border-main tranisiton du8ration-300 border-[3px] border-solid rounded-[5px] group w-full h-full flex items-end justify-between">
+							<div class="mr-5 tablet:max-w-[75%]">
+								{*  *}
+								<h3 class=" text-white text-lg tablet:text-[22px] text-left">{$ttcategorysliderinfo.name}</h3>
+							</div>
+							<span class="rounded-full border border-solid border-white bg-transparent group-hover:bg-white transition duration-300">
+								<svg class="fill-white group-hover:fill-black w-8 tablet:w-[50px]" xmlns="http://www.w3.org/2000/svg" viewBox="-12 -11 47 47">
+									<path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+								</svg>
+							</span>
+						</a>
+					</div>
+				{/foreach}
+			</div>
+		</div>
+	</div>
 </div>
