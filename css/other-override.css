@@ -196,5 +196,21 @@ div.inpost-shipping-container .btn{
 }
 
 .order-message-form a {
-  @apply hover:text-main
+  @apply hover:text-main;
+}
+
+[data-icons-swiper] .swiper-slide{
+  @apply flex items-center justify-center;
+}
+
+[data-icons-swiper] .swiper-slide .swiper-slide_container{
+  @apply flex flex-nowrap items-center justify-center px-5;
+}
+
+[data-icons-swiper] .swiper-slide .swiper-slide_container svg{
+  @apply w-10 tablet:w-[60px] aspect-square pr-5;
+}
+
+[data-icons-swiper] .swiper-slide .swiper-slide_container p{
+  @apply w-28 tablet:w-48 text-white text-base tablet:text-xl;
 }
