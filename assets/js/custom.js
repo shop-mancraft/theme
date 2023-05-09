@@ -1098,6 +1098,34 @@ $(document).ready(function () {
       prevEl: '.swiper-icons-prev',
     },
   })
+
+  const swiperBestseller = new Swiper('[data-categories-swiper]', {
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    slidesPerColumn: 2,
+    slidesPerColumnFill: 'row',
+    spaceBetween: 0,
+    watchOverflow: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 1,
+        slidesPerColumn: 2,
+        slidesPerColumnFill: 'row',
+      },
+      1600: {
+        slidesPerView: 3,
+        slidesPerGroup: 1,
+        slidesPerColumn: 2,
+        slidesPerColumnFill: 'row',
+        allowTouchMove: false,
+      },
+    },
+  })
 })
 
 

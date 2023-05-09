@@ -23,51 +23,20 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
-<div id="ttcategorytabs" class="tabs products_block clearfix">
-	<div class="tt-titletab">
-		<h1 class="h1 products-section-title text-uppercase tt-title">{l s='Top Categories' mod='ttcategoryslider'}</h1>
-		<ul id="ttcategory-tabs" class="nav nav-tabs clearfix">
-			{$count=0}
-			{foreach from=$ttcategorysliderinfos item=ttcategorysliderinfo}
-				<li class="nav-item">
-					<a href="{$link->getCategoryLink($ttcategorysliderinfo.id)}" class="nav-link {if $count == 0}active{/if}"><h3 class="tab-title">{$ttcategorysliderinfo.name}</h3></a>
-				</li>
-				{$count= $count+1}
-			{/foreach}
-		</ul>
-	</div>
-	<div class="tab-content">
-		{$tabcount=0}
-		{$tabcat=0}
-		{foreach from=$ttcategorysliderinfos item=ttcategorysliderinfo}
-			<div id="tab_{$ttcategorysliderinfo.id}" class="tab-pane {if $tabcount == 0}active{/if} row">
-				{assign var="tt_cnt" value="1"}
-				{assign var="tt_total" value="0"}
-				{foreach from=$ttcategorysliderinfo.product item='product'}
-					{$tt_total = $tt_total+1}
+<div id="ttcategorytabs" class="overflow-hidden">
+	<div class="container">
+		<h3 class="h1 products-section-title text-uppercase tt-title">
+			{l s='Recommended Categories' mod='ttcategoryslider'}</h3>
+		<div data-categories-swiper>
+			<div class="swiper-wrapper">
+				{foreach from=$ttcategorysliderinfos item=ttcategorysliderinfo}
+					<div class="swiper-slide p-5 border-main border-[3px] border-solid rounded-[5px] aspect-[4/3]">
+						<a href="{$link->getCategoryLink($ttcategorysliderinfo.id)}" class="w-full h-full flex items-end">
+							<h3 class="tab-title">{$ttcategorysliderinfo.name}</h3>
+						</a>
+					</div>
 				{/foreach}
-				{if $tt_total > 6}
-					<div class="customNavigation">
-						<a class="btn prev ttcategory_prev">{l s='prev' mod='ttcategoryslider'}</a>
-						<a class="btn next ttcategory_next">{l s='next' mod='ttcategoryslider'}</a>
-					</div>
-				{/if}
-				{if isset($ttcategorysliderinfo.product) && $ttcategorysliderinfo.product}
-					<div class="categoryimage col-sm-2">
-						{if isset($ttcategorysliderinfo.cate_id) && $ttcategorysliderinfo.cate_id}
-							{if $ttcategorysliderinfo.id == $ttcategorysliderinfo.cate_id.id_category}
-								<img src="{$image_url}/{$ttcategorysliderinfo.cate_id.image}" alt="" class="category_img" />
-							{else}
-								<img src="{$image_url}/{$ttcategorysliderinfo.cate_id.image}" alt="" class="category_img" />
-							{/if}
-						{/if}
-					</div>
-					
-				{else}
-					<div class="alert alert-info">{l s='No Products in current tab at this time.' mod='ttcategoryslider'}</div>
-				{/if}
 			</div>
-			{$tabcount= $tabcount+1}
-		{/foreach}
+		</div>
 	</div>
 </div>
