@@ -23,7 +23,6 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
-{debug}
 <div id="ttcategorytabs" class="tabs products_block clearfix">
 	<div class="tt-titletab">
 		<h1 class="h1 products-section-title text-uppercase tt-title">{l s='Top Categories' mod='ttcategoryslider'}</h1>
@@ -31,8 +30,7 @@
 			{$count=0}
 			{foreach from=$ttcategorysliderinfos item=ttcategorysliderinfo}
 				<li class="nav-item">
-					{{$ttcategorysliderinfo}}
-					{* <a href="#tab_{$ttcategorysliderinfo.id}" data-toggle="tab" class="nav-link {if $count == 0}active{/if}"><h3 class="tab-title">{$ttcategorysliderinfo.name}</h3></a> *}
+					<a href="{$link->getCategoryLink($ttcategorysliderinfo.id)}" class="nav-link {if $count == 0}active{/if}"><h3 class="tab-title">{$ttcategorysliderinfo.name}</h3></a>
 				</li>
 				{$count= $count+1}
 			{/foreach}
