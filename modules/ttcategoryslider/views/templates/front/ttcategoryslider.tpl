@@ -27,11 +27,11 @@
 	<div class="container">
 		<h3 class="h1 tt-title">
 			{l s='Recommended Categories' mod='ttcategoryslider'}</h3>
-		<div data-categories-swiper>
+		<div class="mx-[-10px]" data-categories-swiper>
 			<div class="swiper-wrapper">
 				{foreach from=$ttcategorysliderinfos item=ttcategorysliderinfo}
-					<div class="swiper-slide p-5">
-						<div class="p-2.5 w-full aspect-[4/3] border-main border-[3px] border-solid rounded-[5px] ">
+					<div class="swiper-slide p-2.5 pt-0">
+						<div class="p-5 w-full aspect-[4/3] border-main border-[3px] border-solid rounded-[5px] ">
 							<a href="{$link->getCategoryLink($ttcategorysliderinfo.id)}" class="group w-full h-full flex items-end justify-between">
 								<div class="mr-5 tablet:max-w-[75%]">
 								{*  *}
