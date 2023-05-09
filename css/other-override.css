@@ -239,9 +239,9 @@ div.inpost-shipping-container .btn{
 }
 
 .swiper-icons-prev, .swiper-icons-next{
-  @apply desktop:hidden w-10 fill-[#666] cursor-pointer
+  @apply desktop:hidden w-10 fill-[#666] cursor-pointer transition duration-300
 }
 
 .swiper-icons-prev.swiper-button-disabled, .swiper-icons-next.swiper-button-disabled{
-  @apply opacity-50 !cursor-default
+  @apply opacity-25 !cursor-default
 }
