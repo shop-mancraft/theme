@@ -1121,6 +1121,11 @@ $(document).ready(function () {
         allowTouchMove: false,
       },
     },
+    navigation: {
+      nextEl: '.categories-swiper-next',
+      prevEl: '.categories-swiper-prev',
+    },
+
   })
 
 })

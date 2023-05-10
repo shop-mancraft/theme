@@ -24,9 +24,21 @@
 *}
 
 <div class="overflow-hidden mb-10 tablet:mb-20">
-	<div class="container">
+	<div class="container relative">
 		<h3 class="h1 tt-title mb-8 min-[543px]:text-center">
 			{l s='Recommended Categories' mod='ttcategoryslider'}</h3>
+		<div class="customNavigation tablet-narrow:hidden">
+			<a class="btn prev categories-swiper-prev">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 22px;margin: 3px 2px;">
+				<path d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" fill="#fff"></path>
+				</svg>
+			</a>
+			<a class="btn next categories-swiper-next">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 22px;margin: 3px 2px;">
+				<path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" fill="#fff"></path>
+				</svg>
+			</a>
+		</div>
 		<div class="mx-[-10px] pr-[25%] phablet:pr-0" data-categories-swiper>
 			<div class="swiper-wrapper flex flex-wrap">
 				{foreach from=$ttcategorysliderinfos item=ttcategorysliderinfo}
@@ -53,7 +65,7 @@
 			</div>
 		</div>
 		<div class=" mt-5 tablet:mt-10 flex justify-center">
-			<a class="block text-center text-white text-lg p-4 border border-white rounded-full hover:text-white hover:bg-main hover:border-main ">{l s='Go to B2B zone' mod='ttcategoryslider'}</a>
+			<a href="/{$language.iso_code}/cms/b2b-mancraft" class="block text-center text-white text-lg p-4 border border-white rounded-full hover:text-white hover:bg-main hover:border-main ">{l s='Go to B2B zone' mod='ttcategoryslider'}</a>
 		</div>
 	</div>
 </div>
