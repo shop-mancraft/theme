@@ -42,10 +42,26 @@
 		<div class="mx-[-10px] pr-[25%] phablet:pr-0" data-categories-swiper>
 			<div class="swiper-wrapper flex flex-wrap">
 				{foreach from=$ttcategorysliderinfos item=ttcategorysliderinfo}
+
+					{if $ttcategorysliderinfo.id == 10 ||
+						$ttcategorysliderinfo.id == 11}
+						{assign var="tagline" value="TOP QUALITY" }
+					{/if}
+					{if $ttcategorysliderinfo.id == 25}
+						{assign var="tagline" value="HIGH QUALITY" }
+					{/if}
+					{if $ttcategorysliderinfo.id == 31}
+						{assign var="tagline" value="MANCRAFT" }
+					{/if}
+
 					<div class="swiper-slide p-2.5">
 						<a href="{$link->getCategoryLink($ttcategorysliderinfo.id)}" class="relative p-3 tablet:p-5 w-full aspect-[4/3] border-[#313131] hover:border-main transition duration-300 border-[3px] border-solid rounded-[5px] group w-full h-full flex items-end justify-between overflow-hidden">
 							<div class="relative z-20 mr-5 tablet:max-w-[75%]">
-								{*  *}
+								{if isset($tagline) && $tagline}
+									<p class="text-main text-base text-left uppercase before:content-[''] before:bg-main before:h-0.5 before:w-4 before:inline-block before:mb-1 before:mr-2">
+										{$tagline}
+									</p>									
+								{/if}
 								<h3 class=" text-white text-lg tablet:text-[22px] text-left">{$ttcategorysliderinfo.name}</h3>
 							</div>
 							<span class="relative z-20 rounded-full border border-solid border-white bg-transparent group-hover:bg-white transition duration-300">
