@@ -1105,16 +1105,13 @@ $(document).ready(function () {
     slidesPerColumn: 2,
     slidesPerColumnFill: 'row',
     watchOverflow: true,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
     breakpoints: {
       560: {
         slidesPerView: 2,
         slidesPerGroup: 1,
         slidesPerColumn: 2,
         slidesPerColumnFill: 'row',
+        allowTouchMove: true,
       },
       992: {
         slidesPerView: 3,
@@ -1124,6 +1121,11 @@ $(document).ready(function () {
         allowTouchMove: false,
       },
     },
+    navigation: {
+      nextEl: '.categories-swiper-next',
+      prevEl: '.categories-swiper-prev',
+    },
+
   })
 })
 
