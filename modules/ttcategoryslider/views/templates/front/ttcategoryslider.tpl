@@ -46,12 +46,12 @@
 					{if $ttcategorysliderinfo.id == 10 ||
 						$ttcategorysliderinfo.id == 11}
 						{assign var="tagline" value="TOP QUALITY" }
-					{/if}
-					{if $ttcategorysliderinfo.id == 25}
+					{elseif $ttcategorysliderinfo.id == 25}
 						{assign var="tagline" value="HIGH QUALITY" }
-					{/if}
-					{if $ttcategorysliderinfo.id == 31}
+					{elseif $ttcategorysliderinfo.id == 31}
 						{assign var="tagline" value="MANCRAFT" }
+					{else}
+						{assign var="tagline" value="" }
 					{/if}
 
 					<div class="swiper-slide p-2.5">
