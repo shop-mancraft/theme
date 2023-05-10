@@ -27,7 +27,7 @@
 	<div class="container relative">
 		<h3 class="h1 tt-title mb-8 min-[543px]:text-center">
 			{l s='Recommended Categories' mod='ttcategoryslider'}</h3>
-		<div class="customNavigation tablet-narrow:hidden">
+		<div class="customNavigation tablet-narrow:hidden !right-2.5">
 			<a class="btn prev categories-swiper-prev">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 22px;margin: 3px 2px;">
 				<path d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" fill="#fff"></path>
