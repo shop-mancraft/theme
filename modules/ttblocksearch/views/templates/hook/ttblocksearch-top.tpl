@@ -42,15 +42,6 @@
 		<input type="hidden" name="controller" value="search">
 		<input type="hidden" name="orderby" value="position" />
 		<input type="hidden" name="orderway" value="desc" />
-		<div class="select-wrapper">
-        <select id="search_category" name="search_category" class="form-control">
-            <option value="all">{l s='All Categories' mod='ttblocksearch'}</option>
-            {$search_category|escape:'quotes':'UTF-8' nofilter}   
-        </select>
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  class="arrow">
-					<path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z" fill="#555"/>
-				</svg>
-		</div>
 		<input class="search_query form-control" type="text" id="search_query_top" name="s" placeholder="{l s='Search here...' mod='ttblocksearch'}" value="{$search_query|escape:'htmlall':'UTF-8'|stripslashes}" />
 		
 
