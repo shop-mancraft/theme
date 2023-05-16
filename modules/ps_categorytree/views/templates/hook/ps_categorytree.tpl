@@ -30,7 +30,7 @@
         {foreach from=$nodes item=node}
           <li data-depth="{$depth}">
             {if $depth===0}
-              {if $node.id != 48 || $node.id != 49 || $node.id != 50 || $node.id != 51 || $node.id != 52 || $node.id != 53 }
+              {if $node.id != 48 && $node.id != 49 && $node.id != 50 && $node.id != 51 && $node.id != 52 && $node.id != 53 }
                 <a href="{$node.link}">{$node.name}</a>
                 {if $node.children}
                   <div class="navbar-toggler collapse-icons" data-toggle="collapse" data-target="#exCollapsingNavbar{$node.id}">
