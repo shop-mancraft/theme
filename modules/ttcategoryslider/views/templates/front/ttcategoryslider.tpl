@@ -73,7 +73,7 @@
 							</span>
 							{if isset($ttcategorysliderinfo.cate_id) && $ttcategorysliderinfo.cate_id}
 								<div class="absolute inset-0 z-10">
-									<img class="w-full h-full object-cover hover:scale-75" src="{$image_url}/{$ttcategorysliderinfo.cate_id.image}">
+									<img class="w-full h-full object-cover group-hover:scale-125 transition-all" src="{$image_url}/{$ttcategorysliderinfo.cate_id.image}">
 									<div class="absolute z-10 inset-0 bg-gradient-to-t from-gray-blackish/75 to-transparent"></div>
 								</div>
 							{/if}
