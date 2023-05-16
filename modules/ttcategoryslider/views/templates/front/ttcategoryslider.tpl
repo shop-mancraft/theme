@@ -55,7 +55,7 @@
 					{/if}
 
 					<div class="swiper-slide p-2.5">
-						<a href="{$link->getCategoryLink($ttcategorysliderinfo.id)}" class="relative p-3 tablet:p-5 w-full aspect-[4/3] border-[#313131] hover:border-main transition duration-300 border-px border-solid rounded-[5px] group w-full h-full flex items-end justify-between overflow-hidden">
+						<a href="{$link->getCategoryLink($ttcategorysliderinfo.id)}" class="relative p-3 tablet:p-5 w-full aspect-[4/3] border-[#313131] hover:border-main transition duration-300 border border-solid rounded-[5px] group w-full h-full flex items-end justify-between overflow-hidden">
 							<div class="relative z-20 mr-5 tablet:max-w-[75%]">
 								{if isset($tagline) && $tagline}
 									<p class="text-main text-base text-left uppercase before:content-[''] before:bg-main before:h-0.5 before:w-4 before:inline-block before:mb-1 before:mr-2">
