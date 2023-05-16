@@ -7,20 +7,20 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
         with:
           fetch-depth: 2
-      
+
       - name: Get Composer Cache Directory
         id: composer-cache
         run: |
           echo "::set-output name=dir::$(composer config cache-files-dir)"
 
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         with:
           path: ${{ steps.composer-cache.outputs.dir }}
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
@@ -31,33 +31,42 @@ jobs:
         id: npm-cache
         run: |
           echo "::set-output name=dir::$(npm config get cache)"
-          
-      - uses: actions/cache@v2
+
+      - uses: actions/cache@v3
         with:
           path: ${{ steps.npm-cache.outputs.dir }}
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v1
+      - name: Use Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: 12.x
+          node-version: lts/*
 
       - name: Install dependency in theme
         run: npm install && npm run deploy
 
       - name: Remove node
-        run: sudo rm -rf node_modules  
+        run: sudo rm -rf node_modules
 
       - name: Deploy to Server
-        uses: easingthemes/ssh-deploy@v2.1.5
+        uses: easingthemes/ssh-deploy@v4
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rlgoDzvc --delete"
+          SOURCE: ${{ secrets.SOURCE }}
+          TARGET: ${{ secrets.TARGET_PROD }}
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST_PROD }}
+          REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          EXCLUDE: "/dist/, /node_modules/, /cache/, /.git/, /.github/"
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-rlgoDzvc --delete"
           SOURCE: ${{ secrets.SOURCE }}
-          TARGET: ${{ secrets.TARGET }}
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          TARGET: ${{ secrets.TARGET_PROD }}
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST_PROD }}
           REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           EXCLUDE: "/dist/, /node_modules/, /cache/, /.git/, /.github/"
