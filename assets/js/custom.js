@@ -1071,3 +1071,63 @@ $(document).ready(function () {
     $('#product .block-title:contains("Dożywotnia gwarancja")').parent().hide()
   }
 })
+
+
+$(document).ready(function () {
+  const swiperIcons = new Swiper('[data-icons-swiper]', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      480: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 4,
+        allowTouchMove: false,
+      },      
+    },
+    navigation: {
+      nextEl: '.swiper-icons-next',
+      prevEl: '.swiper-icons-prev',
+    },
+  })
+
+  const swiperCategories = new Swiper('[data-categories-swiper]', {
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    slidesPerColumn: 2,
+    slidesPerColumnFill: 'row',
+    watchOverflow: true,
+    breakpoints: {
+      560: {
+        slidesPerView: 2,
+        slidesPerGroup: 1,
+        slidesPerColumn: 2,
+        slidesPerColumnFill: 'row',
+        allowTouchMove: true,
+      },
+      992: {
+        slidesPerView: 3,
+        slidesPerGroup: 1,
+        slidesPerColumn: 2,
+        slidesPerColumnFill: 'row',
+        allowTouchMove: false,
+      },
+    },
+    navigation: {
+      nextEl: '.categories-swiper-next',
+      prevEl: '.categories-swiper-prev',
+    },
+
+  })
+
+})
+
+

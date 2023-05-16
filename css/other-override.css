@@ -196,7 +196,39 @@ div.inpost-shipping-container .btn{
 }
 
 .order-message-form a {
-  @apply hover:text-main
+  @apply hover:text-main;
+}
+
+[data-icons-swiper] .swiper-slide{
+  @apply flex items-center justify-center;
+}
+
+[data-icons-swiper] .swiper-slide .swiper-slide_container{
+  @apply flex flex-nowrap items-center justify-center px-5 tablet:px-10;
+}
+
+[data-icons-swiper] .swiper-slide .swiper-slide_container svg{
+  @apply w-8 tablet:w-10 aspect-square mr-2 tablet:mr-5 shrink-0;
+}
+
+[data-icons-swiper] .swiper-slide .swiper-slide_container p{
+  @apply tablet:max-w-[200px] text-white text-xs tablet:text-base text-left;
+}
+
+.swiper-nav-container{
+  @apply absolute z-10 top-0 bottom-0 flex items-center
+}
+
+.swiper-icons-prev, .swiper-icons-next{
+  @apply desktop:hidden w-5 fill-[#666] cursor-pointer transition duration-300
+}
+
+.swiper-icons-prev.swiper-button-disabled, .swiper-icons-next.swiper-button-disabled{
+  @apply opacity-25 !cursor-default
+}
+
+[data-categories-swiper]:not(.swiper-container-initialized) .swiper-slide{
+  @apply basis-full phablet:basis-1/2 tablet-narrow:basis-1/3
 }
 
 .top-logo{
