@@ -45,11 +45,13 @@
 
 					{if $ttcategorysliderinfo.id == 49 ||
 						$ttcategorysliderinfo.id == 11}
-						{assign var="tagline" value="TOP QUALITY" }
+						{assign var="tagline" value="Top Quality" }
 					{elseif $ttcategorysliderinfo.id == 52}
-						{assign var="tagline" value="HIGH QUALITY" }
+						{assign var="tagline" value="Highest Quality" }
+					{elseif $ttcategorysliderinfo.id == 48}
+						{assign var="tagline" value="Super durable" }
 					{elseif $ttcategorysliderinfo.id == 50}
-						{assign var="tagline" value="MANCRAFT" }
+						{assign var="tagline" value="Mancraft" }
 					{else}
 						{assign var="tagline" value="" }
 					{/if}
