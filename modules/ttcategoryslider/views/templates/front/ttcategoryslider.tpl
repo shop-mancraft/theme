@@ -83,7 +83,7 @@
 			</div>
 		</div>
 		<div class=" mt-5 tablet:mt-10 flex justify-center">
-			<a href="/{$language.iso_code}/cms/b2b-mancraft" class="block text-center text-white text-lg p-4 border border-white rounded-full hover:text-white hover:bg-main hover:border-main ">{l s='Go to B2B zone' mod='ttcategoryslider'}</a>
+			<a href="/{$language.iso_code}/cms/b2b-mancraft-client" class="block text-center text-white text-lg p-4 border border-white rounded-full hover:text-white hover:bg-main hover:border-main ">{l s='Go to B2B zone' mod='ttcategoryslider'}</a>
 		</div>
 	</div>
 </div>
