@@ -66,7 +66,7 @@
 								{/if}
 								<h3 class=" text-white text-lg tablet:text-[22px] text-left group-hover:underline">{$ttcategorysliderinfo.name}</h3>
 							</div>
-							<span class="relative z-20 rounded-full border border-solid border-white bg-transparent group-hover:bg-[#313131] group-hover:border-[#313131] transition duration-300">
+							<span class="relative z-20 rounded-full border border-solid border-white bg-transparent group-hover:bg-main group-hover:border-main transition duration-300">
 								<svg class="fill-white group-hover:fill-black w-8 tablet:w-[50px]" xmlns="http://www.w3.org/2000/svg" viewBox="-12 -11 47 47">
 									<path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
 								</svg>
