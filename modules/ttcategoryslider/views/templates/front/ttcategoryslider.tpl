@@ -43,12 +43,12 @@
 			<div class="swiper-wrapper flex flex-wrap">
 				{foreach from=$ttcategorysliderinfos item=ttcategorysliderinfo}
 
-					{if $ttcategorysliderinfo.id == 10 ||
+					{if $ttcategorysliderinfo.id == 49 ||
 						$ttcategorysliderinfo.id == 11}
 						{assign var="tagline" value="TOP QUALITY" }
-					{elseif $ttcategorysliderinfo.id == 25}
+					{elseif $ttcategorysliderinfo.id == 52}
 						{assign var="tagline" value="HIGH QUALITY" }
-					{elseif $ttcategorysliderinfo.id == 31}
+					{elseif $ttcategorysliderinfo.id == 50}
 						{assign var="tagline" value="MANCRAFT" }
 					{else}
 						{assign var="tagline" value="" }
@@ -60,7 +60,7 @@
 								{if isset($tagline) && $tagline}
 									<p class="text-main text-base text-left uppercase before:content-[''] before:bg-main before:h-0.5 before:w-4 before:inline-block before:mb-1 before:mr-2">
 										{$tagline}
-									</p>									
+									</p>
 								{/if}
 								<h3 class=" text-white text-lg tablet:text-[22px] text-left">{$ttcategorysliderinfo.name}</h3>
 							</div>
