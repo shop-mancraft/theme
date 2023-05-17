@@ -27,6 +27,7 @@
 	<div class="container relative">
 		<h3 class="h1 tt-title mb-8 min-[543px]:text-center">
 			{l s='Recommended Categories' mod='ttcategoryslider'}</h3>
+		<p class="inline-block mb-3 text-left w-full">{l s='Recommended Categories description' mod='ttcategoryslider'}</p>
 		<div class="customNavigation tablet-narrow:hidden !right-[15px]">
 			<a class="btn prev categories-swiper-prev">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 22px;margin: 3px 2px;">
@@ -43,13 +44,15 @@
 			<div class="swiper-wrapper flex flex-wrap">
 				{foreach from=$ttcategorysliderinfos item=ttcategorysliderinfo}
 
-					{if $ttcategorysliderinfo.id == 10 ||
+					{if $ttcategorysliderinfo.id == 49 ||
 						$ttcategorysliderinfo.id == 11}
-						{assign var="tagline" value="TOP QUALITY" }
-					{elseif $ttcategorysliderinfo.id == 25}
-						{assign var="tagline" value="HIGH QUALITY" }
-					{elseif $ttcategorysliderinfo.id == 31}
-						{assign var="tagline" value="MANCRAFT" }
+						{assign var="tagline" value="Top Quality" }
+					{elseif $ttcategorysliderinfo.id == 52}
+						{assign var="tagline" value="Highest Quality" }
+					{elseif $ttcategorysliderinfo.id == 48}
+						{assign var="tagline" value="Super durable" }
+					{elseif $ttcategorysliderinfo.id == 50}
+						{assign var="tagline" value="Mancraft" }
 					{else}
 						{assign var="tagline" value="" }
 					{/if}
@@ -60,18 +63,18 @@
 								{if isset($tagline) && $tagline}
 									<p class="text-main text-base text-left uppercase before:content-[''] before:bg-main before:h-0.5 before:w-4 before:inline-block before:mb-1 before:mr-2">
 										{$tagline}
-									</p>									
+									</p>
 								{/if}
-								<h3 class=" text-white text-lg tablet:text-[22px] text-left">{$ttcategorysliderinfo.name}</h3>
+								<h3 class=" text-white text-lg tablet:text-[22px] text-left group-hover:underline">{$ttcategorysliderinfo.name}</h3>
 							</div>
-							<span class="relative z-20 rounded-full border border-solid border-white bg-transparent group-hover:bg-white transition duration-300">
+							<span class="relative z-20 rounded-full border border-solid border-white bg-transparent group-hover:bg-main group-hover:border-main transition duration-300">
 								<svg class="fill-white group-hover:fill-black w-8 tablet:w-[50px]" xmlns="http://www.w3.org/2000/svg" viewBox="-12 -11 47 47">
 									<path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
 								</svg>
 							</span>
 							{if isset($ttcategorysliderinfo.cate_id) && $ttcategorysliderinfo.cate_id}
 								<div class="absolute inset-0 z-10">
-									<img class="w-full h-full object-cover" src="{$image_url}/{$ttcategorysliderinfo.cate_id.image}">
+									<img class="w-full h-full object-cover group-hover:scale-110 duration-700 transition-all" src="{$image_url}/{$ttcategorysliderinfo.cate_id.image}">
 									<div class="absolute z-10 inset-0 bg-gradient-to-t from-gray-blackish/75 to-transparent"></div>
 								</div>
 							{/if}
@@ -81,7 +84,7 @@
 			</div>
 		</div>
 		<div class=" mt-5 tablet:mt-10 flex justify-center">
-			<a href="/{$language.iso_code}/cms/b2b-mancraft" class="block text-center text-white text-lg p-4 border border-white rounded-full hover:text-white hover:bg-main hover:border-main ">{l s='Go to B2B zone' mod='ttcategoryslider'}</a>
+			<a href="/{$language.iso_code}/cms/b2b-mancraft-client" class="block text-center text-white text-lg p-4 border border-white rounded-full hover:text-white hover:bg-main hover:border-main ">{l s='Go to B2B zone' mod='ttcategoryslider'}</a>
 		</div>
 	</div>
 </div>
