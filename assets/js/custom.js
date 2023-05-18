@@ -244,22 +244,12 @@ $(document).ready(function () {
       },
       768: {
         slidesPerView: 3,
-        slidesPerGroup: 1,
-        slidesPerColumn: 1,
-        slidesPerColumnFill: 'column',
       },
       1200: {
         slidesPerView: 4,
-        slidesPerGroup: 1,
-        slidesPerColumn: 2,
-        slidesPerColumnFill: 'row',
       },
       1600: {
         slidesPerView: 5,
-        slidesPerGroup: 1,
-        slidesPerColumn: 2,
-        slidesPerColumnFill: 'row',
-        allowTouchMove: false,
       },
     },
     navigation: {
