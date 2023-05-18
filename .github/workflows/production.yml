@@ -49,15 +49,6 @@ jobs:
 
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@v4
-        with:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: "-rlgoDzvc --delete"
-          SOURCE: ${{ secrets.SOURCE }}
-          TARGET: ${{ secrets.TARGET_PROD }}
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST_PROD }}
-          REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
-          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          EXCLUDE: "/dist/, /node_modules/, /cache/, /.git/, /.github/"
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-rlgoDzvc --delete"
