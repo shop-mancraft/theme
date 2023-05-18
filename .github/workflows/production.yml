@@ -58,7 +58,7 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST_PROD }}
           REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          EXCLUDE: "/dist/, /node_modules/, /cache/, /.git/, /.github/"
+          EXCLUDE: "/node_modules/, /cache/, /.git/, /.github/"
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-rlgoDzvc --delete"
@@ -67,4 +67,4 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST_PROD }}
           REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          EXCLUDE: "/dist/, /node_modules/, /cache/, /.git/, /.github/"
+          EXCLUDE: "/node_modules/, /cache/, /.git/, /.github/"
