@@ -1,4 +1,4 @@
-name: Deploy on production
+name: Deploy on test
 
 on:
   push:
@@ -8,6 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: test
 
     steps:
       - name: Checkout code
@@ -52,12 +53,21 @@ jobs:
 
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@v4
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rlgoDzvc --delete"
+          SOURCE: ${{ secrets.SOURCE }}
+          TARGET: ${{ secrets.TARGET_PROD }}
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          EXCLUDE: "/dist/, /node_modules/, /cache/, /.git/, /.github/"
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-rlgoDzvc --delete"
           SOURCE: ${{ secrets.SOURCE }}
           TARGET: ${{ secrets.TARGET_PROD }}
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST_PROD }}
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           EXCLUDE: "/dist/, /node_modules/, /cache/, /.git/, /.github/"
