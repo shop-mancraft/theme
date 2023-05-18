@@ -23,7 +23,7 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
-<div class="overflow-hidden mb-10 tablet:mb-20">
+<div class="overflow-hidden mb-10 tablet:mb-20"> 
 	<div class="container relative">
 		<h3 class="h1 tt-title mb-8 min-[543px]:text-center">
 			{l s='Recommended Categories' mod='ttcategoryslider'}</h3>
