@@ -1,0 +1,169 @@
+#webo-categorytabs .categoryimage .category_img {
+    max-width: 100%;
+}
+#webo-categorytabs .thumbnail-container {
+  margin-top: 0;
+}
+#webo-categorytabs .tab-content .tab-pane {
+    padding: 0;
+    border: none;
+    background: none;
+}
+#webo-categorytabs .tab-content .products {
+    position: relative;
+    margin-bowebo-om: 0;
+}
+#webo-categorytabs {
+	background: none;
+	float: left;
+	margin: 20px 0 0;
+	padding: 0;
+	position: relative;
+	text-align: center;
+	width: 100%;
+}
+#webo-categorytabs .webo-category-tabs{
+	float:left;
+	width:100%;
+}
+#webo-categorytabs .customNavigation {
+    position: absolute;
+    top: 6px;
+    right: 0;
+}
+#webo-categorytabs .thumbnail-container .webo-product-desc .product-description .webo-producthover div {
+  float: left;
+}
+#webo-categorytabs .webo-product-image img {
+	border: 1px solid #e5e5e5;
+}
+#webo-categorytabs .thumbnail-container .webo-product-desc .hook-reviews {
+    float: left;
+    margin: 0 0 10px;
+    position: static;
+    width: 100%;
+}
+#webo-categorytabs .webo-product-desc {
+    float: right;
+    padding: 0;
+    text-align: left;
+}
+#webo-categorytabs .webo-producthover {
+    opacity: 0;
+    position: static;
+    transform: none;
+    transition: all 400ms ease-in-out 0s;
+    visibility: visible;
+    float: left;
+    margin: 10px 0;
+    width: 100%;
+}
+#webo-categorytabs .product-miniature .thumbnail-container:hover .webo-producthover {
+    opacity: 1;
+}
+#webo-categorytabs .webo-product-image {
+    float: left;
+    padding: 0;
+}
+#webo-categorytabs .webo-product-desc {
+    float: right;
+    padding: 0;
+    text-align: left;
+}
+@media (min-width: 1300px) and (max-width: 1599px) {
+#webo-categorytabs .categoryimage {
+    width: 21%;
+}
+#webo-categorytabs .webo-category {
+    width: 79%;
+}
+#webo-categorytabs .webo-product-desc{
+	width:66%;
+}
+#webo-categorytabs .webo-product-image {
+    width: 34%;
+}
+}
+@media (min-width: 992px) and (max-width: 1299px) {
+#webo-categorytabs .categoryimage {
+    width: 24%;
+}
+#webo-categorytabs .webo-category {
+    width: 76%;
+}
+#webo-categorytabs .webo-product-desc{
+	width:66%;
+}
+#webo-categorytabs .webo-product-image {
+    width: 34%;
+}
+
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+#webo-categorytabs .customNavigation {
+    top: 54px;
+}
+}
+@media (max-width: 991px) {
+#webo-categorytabs .categoryimage {
+    width: 20%;
+}
+#webo-categorytabs .webo-category {
+    width: 80%;
+}
+}
+@media (max-width: 767px) {
+    #index #webo-categorytabs .webo-title {
+        float: none;
+        width: 100%;
+    }
+    #webo-categorytabs .customNavigation {
+        top: 51px;
+    }
+	#webo-categorytabs .webo-producthover{
+		opacity: 1;
+		-moz-opacity: 1;
+		-khtml-opacity: 1;
+		-webkit-opacity: 1;
+		margin:5px 0;
+	}
+	#webo-categorytabs .products .product-title{
+		margin:5px 0;
+	}
+	#webo-categorytabs .thumbnail-container .webo-product-desc .hook-reviews{
+		margin:0 0 5px;
+	}
+}
+@media (max-width: 680px) {
+#webo-categorytabs .categoryimage {
+    width: 35%;
+}
+#webo-categorytabs .webo-category {
+    width: 65%;
+}
+
+}
+@media (max-width: 543px) {
+	#webo-categorytabs .categoryimage {
+		width: 100%;
+	}
+	#webo-categorytabs .webo-category {
+		width: 100%;
+	}
+    #webo-categorytabs {
+        margin: 15px auto 0;
+    }
+	#webo-categorytabs .customNavigation {
+        position: static;
+    }
+		#webo-categorytabs .tab-content .categoryimage {
+	  width: 100%;
+	  float:left;
+	}
+	#webo-categorytabs .tab-content .webo-category {
+	  width: 100%;
+	  margin:20px 0 0;
+	  float:left;
+	}
+
+}
