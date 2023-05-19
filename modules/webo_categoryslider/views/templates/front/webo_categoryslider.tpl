@@ -26,7 +26,7 @@
 <div class="overflow-hidden mb-10 tablet:mb-20 w-full">
 	<div class=" relative">
 		<h3 class="h1 webo-title mb-8 min-[543px]:text-center">
-			{l s='Recommended Categories' mod='webo_categoryslider'}</h3>
+			{l s='Maintenance & Spare parts' mod='webo_categoryslider'}</h3>
 		<div class="customNavigation tablet-narrow:hidden !right-[15px]">
 			<a class="btn prev categories-swiper-prev">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 22px;margin: 3px 2px;">
@@ -41,7 +41,7 @@
 		</div>
 		<div class="mx-[-10px] pr-[25%] phablet:pr-0" data-categories-swiper>
 			<div class="swiper-wrapper flex flex-wrap">
-				{foreach from=$webocategorysliderinfos item=webo_categorysliderinfo}
+				{foreach from=$webo_categorysliderinfos item=webo_categorysliderinfo}
 
 					{if $webo_categorysliderinfo.id == 49 ||
 						$webo_categorysliderinfo.id == 11}
