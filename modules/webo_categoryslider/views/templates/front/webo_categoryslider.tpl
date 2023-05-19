@@ -23,8 +23,8 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
-<div class="overflow-hidden mb-10 tablet:mb-20">
-	<div class="container relative">
+<div class="overflow-hidden mb-10 tablet:mb-20 w-full">
+	<div class=" relative">
 		<h3 class="h1 webo-title mb-8 min-[543px]:text-center">
 			{l s='Recommended Categories' mod='webo_categoryslider'}</h3>
 		<div class="customNavigation tablet-narrow:hidden !right-[15px]">
