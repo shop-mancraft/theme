@@ -41,7 +41,7 @@
 		</div>
 		<div class="mx-[-10px] pr-[25%] phablet:pr-0" data-categories-swiper>
 			<div class="swiper-wrapper flex flex-wrap">
-				{foreach from=$webocategorysliderinfos item=webo_categorysliderinfo}
+				{foreach from=$webo_categorysliderinfos item=webo_categorysliderinfo}
 
 					{if $webo_categorysliderinfo.id == 49 ||
 						$webo_categorysliderinfo.id == 11}
