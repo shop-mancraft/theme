@@ -1118,6 +1118,25 @@ $(document).ready(function () {
 
   })
 
+  const swiperMaintenanceCat = new Swiper('[data-maintenance-swiper]', {
+    slidesPerView: 1,
+    allowTouchMove: true,
+    breakpoints: {
+      560: {
+        slidesPerView: 2,
+        allowTouchMove: true,
+      },
+      992: {
+        slidesPerView: 3,
+        allowTouchMove: false,
+      },
+    },
+    navigation: {
+      nextEl: '.maintenance-swiper-next',
+      prevEl: '.maintenance-swiper-prev',
+    },
+
+  })
 })
 
 
