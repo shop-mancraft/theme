@@ -22,7 +22,7 @@
 *  @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-
+{debug}
 <div class="overflow-hidden mb-10 tablet:mb-20 w-full">
 	<div class=" relative">
 		<h3 class="h1 tt-title mb-8 min-[543px]:text-center">
