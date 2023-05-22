@@ -40,7 +40,7 @@
 			</a>
 		</div>
 		<div class="mx-[-10px] pr-[25%] phablet:pr-0" data-categories-swiper>
-			<div class="swiper-wrapper">
+			<div class="swiper-wrapper flex flex-wrap">
 				{foreach from=$ttcategorysliderinfos item=ttcategorysliderinfo}
 
 					{if $ttcategorysliderinfo.id == 49 ||
