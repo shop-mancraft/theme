@@ -40,7 +40,7 @@
 			</a>
 		</div>
 		<div class="mx-[-10px] pr-[25%] phablet:pr-0" data-maintenance-swiper>
-			<div class="swiper-wrapper flex flex-wrap">
+			<div class="swiper-wrapper">
 				{foreach from=$webo_categorysliderinfos item=webo_categorysliderinfo}
 
 					{if $webo_categorysliderinfo.id == 49 ||
