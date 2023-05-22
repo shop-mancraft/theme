@@ -228,7 +228,7 @@ $(document).ready(function () {
     ttnew.trigger('owl.prev')
   })
 
-  /* ------------ carousel For bestseller ------------ */
+  /* ------------- carousel For bestseller ------------- */
 
   const swiperBestseller = new Swiper('[data-bestsellers-swiper]', {
     slidesPerView: 1,
