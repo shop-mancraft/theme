@@ -28,18 +28,18 @@
 		<h3 class="h1 tt-title mb-8 min-[543px]:text-center">
 			{l s='Maintenance & Spare parts' mod='webo_categoryslider'}</h3>
 		<div class="customNavigation tablet-narrow:hidden !right-[15px]">
-			<a class="btn prev categories-swiper-prev">
+			<a class="btn prev maintenance-swiper-prev">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 22px;margin: 3px 2px;">
 				<path d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" fill="#fff"></path>
 				</svg>
 			</a>
-			<a class="btn next categories-swiper-next">
+			<a class="btn next maintenance-swiper-next">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 22px;margin: 3px 2px;">
 				<path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" fill="#fff"></path>
 				</svg>
 			</a>
 		</div>
-		<div class="mx-[-10px] pr-[25%] phablet:pr-0" data-categories-swiper>
+		<div class="mx-[-10px] pr-[25%] phablet:pr-0" data-maintenance-swiper>
 			<div class="swiper-wrapper flex flex-wrap">
 				{foreach from=$webo_categorysliderinfos item=webo_categorysliderinfo}
 
