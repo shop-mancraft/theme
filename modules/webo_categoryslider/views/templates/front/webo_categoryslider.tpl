@@ -25,7 +25,7 @@
 
 <div class="overflow-hidden mb-10 tablet:mb-20 w-full">
 	<div class=" relative">
-		<h3 class="h1 webo-title mb-8 min-[543px]:text-center">
+		<h3 class="h1 tt-title mb-8 min-[543px]:text-center">
 			{l s='Maintenance & Spare parts' mod='webo_categoryslider'}</h3>
 		<div class="customNavigation tablet-narrow:hidden !right-[15px]">
 			<a class="btn prev categories-swiper-prev">
@@ -81,9 +81,6 @@
 					</div>
 				{/foreach}
 			</div>
-		</div>
-		<div class=" mt-5 tablet:mt-10 flex justify-center">
-			<a href="/{$language.iso_code}/cms/b2b-mancraft-client" class="block text-center text-white text-lg p-4 border border-white rounded-full hover:text-white hover:bg-main hover:border-main ">{l s='Go to B2B zone' mod='webo_categoryslider'}</a>
 		</div>
 	</div>
 </div>
