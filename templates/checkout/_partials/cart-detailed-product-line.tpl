@@ -114,9 +114,9 @@
   <div class="product-line-grid-right product-line-actions col-md-5 col-xs-12">
     <div class="row">
       <div class="col-xs-4 hidden-md-up"></div>
-      <div class="col-md-10 col-xs-6">
+      <div class="col-md-12 col-xs-8">
         <div class="row">
-          <div class="col-md-6 col-xs-6 qty">
+          <div class="col-xl-4 col-md-5 col-sm-4 col-xs-12 qty">
             {if isset($product.is_gift) && $product.is_gift}
               <span class="gift-quantity">{$product.quantity}</span>
             {else}
@@ -133,7 +133,7 @@
               />
             {/if}
           </div>
-          <div class="col-md-6 col-xs-2 price">
+          <div class="col-xl-8 col-xs-12 flex justify-between">
             <span class="product-price">
               <strong>
                 {if isset($product.is_gift) && $product.is_gift}
@@ -143,29 +143,27 @@
                 {/if}
               </strong>
             </span>
+            <div class="cart-line-product-actions">
+              <a
+                  class                       = "remove-from-cart"
+                  rel                         = "nofollow"
+                  href                        = "{$product.remove_from_cart_url}"
+                  data-link-action            = "delete-from-cart"
+                  data-id-product             = "{$product.id_product|escape:'javascript'}"
+                  data-id-product-attribute   = "{$product.id_product_attribute|escape:'javascript'}"
+                  data-id-customization   	  = "{$product.id_customization|escape:'javascript'}"
+              >
+                {if !isset($product.is_gift) || !$product.is_gift}
+                <i class="material-icons float-xs-left">delete</i>
+                {/if}
+              </a>
+    
+              {block name='hook_cart_extra_product_actions'}
+                {hook h='displayCartExtraProductActions' product=$product}
+              {/block}
+    
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="col-md-2 col-xs-2 text-xs-right">
-        <div class="cart-line-product-actions">
-          <a
-              class                       = "remove-from-cart"
-              rel                         = "nofollow"
-              href                        = "{$product.remove_from_cart_url}"
-              data-link-action            = "delete-from-cart"
-              data-id-product             = "{$product.id_product|escape:'javascript'}"
-              data-id-product-attribute   = "{$product.id_product_attribute|escape:'javascript'}"
-              data-id-customization   	  = "{$product.id_customization|escape:'javascript'}"
-          >
-            {if !isset($product.is_gift) || !$product.is_gift}
-            <i class="material-icons float-xs-left">delete</i>
-            {/if}
-          </a>
-
-          {block name='hook_cart_extra_product_actions'}
-            {hook h='displayCartExtraProductActions' product=$product}
-          {/block}
-
         </div>
       </div>
     </div>
