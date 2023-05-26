@@ -133,7 +133,7 @@
               />
             {/if}
           </div>
-          <div class="col-xl-8 col-xs-12 flex justify-between">
+          <div class="col-xl-8 col-xs-12 flex justify-between flex-wrap">
             <span class="product-price">
               <strong>
                 {if isset($product.is_gift) && $product.is_gift}
