@@ -147,11 +147,9 @@
 
   <div id="payment-confirmation">
     <div class="ps-shown-by-js">
-      {if $payment_options|@count !== 1 && $module_options|@count !== 1}
         <button type="submit" {if !$selected_payment_option} disabled {/if} class="btn btn-primary center-block">
           {l s='Order with an obligation to pay' d='Shop.Theme.Checkout'}
         </button>
-      {/if}
       {if $show_final_summary}
         <article class="alert alert-danger mt-2 js-alert-payment-conditions" role="alert" data-alert="danger">
           {l
