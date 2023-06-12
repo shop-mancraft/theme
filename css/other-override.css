@@ -251,3 +251,6 @@ div.inpost-shipping-container .btn{
   @apply !pb-0 tablet:!pb-5
 }
 
+[data-paypal-source-page="product"]{
+  @apply !float-left !mr-0 !mt-2.5 ml-[89px] w-full
+}

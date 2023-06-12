@@ -26,7 +26,7 @@
 <div class="overflow-hidden mb-10 tablet:mb-20 w-full">
 	<div class=" relative">
 		<h3 class="h1 tt-title mb-8 min-[543px]:text-center">
-			{l s='Maintenance & Spare parts' mod='webo_categoryslider'}</h3>
+			{l s='Maintenance & Spare parts' d='Modules.Webocategoryslider.Webo_categoryslider'}</h3>
 		<div class="customNavigation tablet-narrow:hidden !right-[15px]">
 			<a class="btn prev maintenance-swiper-prev">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 22px;margin: 3px 2px;">
