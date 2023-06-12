@@ -255,6 +255,6 @@ div.inpost-shipping-container .btn{
   @apply !float-left !mr-0 !mt-2.5 !ml-[89px] w-full
 }
 
-[data-paypal-source-page="payment-step"]{
+[data-paypal-source-page="payment-step"] [paypal-button-container] > div.paypal-buttons{
   @apply overflow-hidden rounded-full
 }
