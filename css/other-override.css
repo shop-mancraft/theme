@@ -254,3 +254,7 @@ div.inpost-shipping-container .btn{
 [data-paypal-source-page="product"]{
   @apply !float-left !mr-0 !mt-2.5 !ml-[89px] w-full
 }
+
+[data-paypal-source-page="payment-step"]{
+  @apply overflow-hidden rounded-full
+}
