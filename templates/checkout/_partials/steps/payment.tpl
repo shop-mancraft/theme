@@ -30,7 +30,7 @@
                 name="payment-option"
                 type="radio"
                 required
-                {if $selected_payment_option == $option.id || $is_free || ($payment_options|@total eq 1 && $module_options|@total eq 1 )} checked {/if}
+                {if $selected_payment_option == $option.id || $is_free || ($module_options|@total eq 1 && $option|@total eq 1 )} checked {/if}
               >
               <span></span>
             </span>
