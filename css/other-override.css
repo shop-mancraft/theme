@@ -258,3 +258,22 @@ div.inpost-shipping-container .btn{
 [data-paypal-source-page="payment-step"] [paypal-button-container] > div.paypal-buttons{
   @apply overflow-hidden rounded-full
 }
+.pay-methods{
+  @apply flex flex-wrap
+}
+
+.pay-methods .pay-methods__item-inner {
+  @apply h-full 
+}
+
+.pay-methods__item-inner label{
+  @apply h-full m-0 p-2 tablet:p-3 justify-center items-center
+}
+
+.pay-methods__item-inner label .pay-methods__img{
+  @apply !max-h-full
+}
+
+.payMethod.payMethodEnable{
+  @apply border border-[#313131] border-solid !bg-[#313131]/20 hover:!bg-[#313131]
+}
