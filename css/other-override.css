@@ -267,6 +267,14 @@ div.inpost-shipping-container .btn{
   @apply !max-h-full
 }
 
+.payMethod{
+  @apply max-w-[calc(50%_-_6px)]
+}
+
 .payMethod.payMethodEnable{
   @apply border border-[#313131] border-solid !bg-[#313131]/20 hover:!bg-[#313131]
+}
+
+#payment-option-2-additional-information{
+  @apply flex flex-col
 }
