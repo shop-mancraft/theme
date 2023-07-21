@@ -26,7 +26,7 @@
             </div>
         {/if}
 
-        <section id="content" class="page-content page-cms">
+        <section id="content" class="page-content page-cms !float-none">
             <form action="{$payuPayAction|escape:'html'}" method="post" id="payu-card-form">
                 <input type="hidden" name="payuPay" value="1" />
                 <input type="hidden" name="payMethod" value="card" />
