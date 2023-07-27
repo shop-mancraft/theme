@@ -29,6 +29,7 @@
 		<div class="ttproduct-image">
 			{block name='product_thumbnail'}
 				{if $product.cover}
+					{hook h='displayProductListStickers' pro=$product}
 					<a href="{$product.canonical_url}" class="thumbnail product-thumbnail">
 						<img
 							class="ttproduct-img1"
@@ -64,7 +65,7 @@
 			{/block}
 			{hook h='displayTtWishListButton' product=$product}
 		</div>
-		
+
 		<div class="ttproduct-desc">
 			<div class="product-description">
 				<h5 class="cat-name">{$product.category|escape:'html':'UTF-8'}</h5>
@@ -76,13 +77,13 @@
 							<span class="h3 product-title" itemprop="name"><a href="{$product.canonical_url}">{$product.name}</a></span>
 						  {/if}
 						{/block}
-		
-				
+
+
 				{block name='product_description_short'}
 					<div class="product-desc-short" itemprop="description">{$product.description_short|strip_tags:'UTF-8'|truncate:96:'...' nofilter}</div>
 				{/block}
-		
-					
+
+
 				<div class="highlighted-informations{if !$product.main_variants} no-variants{/if} hidden-sm-down">
 				{block name='product_variants'}
 					{if $product.main_variants}
