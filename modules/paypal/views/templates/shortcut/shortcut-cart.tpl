@@ -27,25 +27,7 @@
  {extends 'module:paypal/views/templates/shortcut/shortcut-layout.tpl'}
 
  {block name='content'}
-   <style>
-     [data-container-express-checkout] {
-       margin: 10px 0;
-       display: flex;
-       justify-content: center;
-     }
-
-     .cart-grid-body [data-container-express-checkout] {
-       justify-content: flex-end;
-     }
-
-     @media (max-width: 575px) {
-       [data-container-express-checkout] {
-         justify-content: flex-start;
-       }
-     }
-   </style>
-
-   <div data-container-express-checkout data-paypal-source-page="cart" class="mt-0 float-right">
+   <div data-container-express-checkout data-paypal-source-page="cart" class="mt-0 float-right flex justify-start phablet:justify-end">
      <form data-paypal-payment-form-cart class="paypal_payment_form" action="{$action_url|escape:'htmlall':'UTF-8'}" title="{l s='Pay with PayPal' mod='paypal'}" method="post" data-ajax="false">
        <input type="hidden" name="express_checkout" value="{$PayPal_payment_type|escape:'htmlall':'UTF-8'}"/>
        <input type="hidden" name="current_shop_url" data-paypal-url-page value="" />
