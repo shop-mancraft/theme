@@ -109,7 +109,7 @@
               {/block}
             {/if}
 
-            <div class="product-actions !flex flex-column tablet:flex-row">
+            <div class="product-actions !flex flex-col tablet:flex-row">
 
             {* LOYALTY PROGRAM - > GET DATA FROM POPUP TO ADD TO CART
               {if Configuration::get('PSHOW_LP_PRODUCT_EXCHANGE')}
