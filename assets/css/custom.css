@@ -102,4 +102,11 @@
 
 .payu-method-description.payu-checkout-installment{
     margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+@media(min-width: 768px){
+    .payu-method-description.payu-checkout-installment{
+        margin-left: 0;
+    }
 }
