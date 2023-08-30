@@ -1136,6 +1136,8 @@ $(document).ready(function () {
       prevEl: ".maintenance-swiper-prev",
     },
   });
+});
 
+$(window).load(function () {
   $("#checkout #checkout-payment-step #payment-option-1").trigger("click");
 });
