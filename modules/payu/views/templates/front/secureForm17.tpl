@@ -43,7 +43,7 @@
                         {include file='module:payu/views/templates/front/conditions17.tpl'}
                     {/if}
 
-                    <p class="!hidden cart_navigation clearfix" id="cart_navigation">
+                    <p class="cart_navigation clearfix" id="cart_navigation">
                         {if !$retryPayment}
                             <a class="label" href="{$link->getPageLink('order', true, NULL, "step=3")|escape:'html':'UTF-8'}">
                                {l s='Other payment methods' mod='payu'}
