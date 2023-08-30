@@ -58,6 +58,7 @@
 
           </div>
         </div>
+        {/if}
 
         {if $option.additionalInformation}
           <div
