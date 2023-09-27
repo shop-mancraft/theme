@@ -30,6 +30,7 @@
   <div class="swiper-wrapper">
       {foreach from=$homeslider.slides item=slide name='homeslider'}
         {if $smarty.foreach.homeslider.iteration % 2 == 1}
+          {$smarty.foreach.homeslider.iteration}
           {assign var="nextSlide" value=$homeslider.slides[$smarty.foreach.homeslider.iteration + 1]}
           {if 
             isset($nextSlide) 
@@ -51,7 +52,7 @@
             </a>
             </div>
           {elseif $slide.url|replace:'http://':'' ne 'none' && $slide.url|replace:'http://':'' ne '/' && $slide.url|replace:'http://':'' ne '' && $slide.url ne 'https://' }
-              <div class="swiper-slide w-full !hidden tablet:!block" >
+              <div class="swiper-slide w-full" >
               <a class="w-full" href="{$urls.base_url}{$slide.url|replace:'http:///':''}">
                 <img 
                   class="object-cover w-full h-auto" 
