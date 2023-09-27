@@ -29,7 +29,7 @@
   <div data-banner-swiper class="swiper relative overflow-hidden" data-interval="{$homeslider.speed}" data-slides-length="{$homeslider.slides|@count}" >
   <div class="swiper-wrapper">
       {foreach from=$homeslider.slides item=slide name='homeslider'}
-        {* {if $smarty.foreach.homeslider.iteration % 2 == 1} *}
+        {if $smarty.foreach.homeslider.iteration % 2 == 1}
           {assign var="nextSlide" value=$homeslider.slides[$smarty.foreach.homeslider.iteration + 1]}
           {if 
             isset($nextSlide) 
@@ -60,7 +60,7 @@
               </a>
             </div>
           {/if} 
-        {* {/if} *}
+        {/if}
       {/foreach}
       </div>
       <div class="banner-swiper-prev carousel-control left" role="button">
