@@ -26,17 +26,19 @@
  
 {if $page.page_name == 'index'}
 {if $homeslider.slides}
-  <div data-banner-swiper class="swiper relative" data-interval="{$homeslider.speed}" >
+  <div data-banner-swiper class="swiper relative overflow-hidden" data-interval="{$homeslider.speed}" >
   <div class="swiper-wrapper">
       {foreach from=$homeslider.slides item=slide name='homeslider'}
         {if $slide.url|replace:'http://':'' ne 'none' && $slide.url|replace:'http://':'' ne '/' && $slide.url|replace:'http://':'' ne '' && $slide.url ne 'https://'}
           <div class="swiper-slide w-full {if $smarty.foreach.homeslider.iteration % 2 == 0} hidden tablet:block {else} block tablet:hidden {/if} " >
             <a class="block w-full" href="{$urls.base_url}{$slide.url|replace:'http:///':''}">
               <figure>
-              <img class="object-cover w-full h-auto" 
+              <img 
               {if $smarty.foreach.homeslider.iteration % 2 == 0}
+                class="object-cover w-full h-auto" 
                 width="1920" height="720"
               {else}
+                class="object-cover w-full h-[300px]" 
                 width="768" height="300"
               {/if} 
               src="{$slide.image_url}" alt="{$slide.legend|escape}">

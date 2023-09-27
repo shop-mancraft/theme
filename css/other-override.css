@@ -293,15 +293,15 @@ div.inpost-shipping-container .btn{
   @apply opacity-100 pointer-events-auto
 }
 [data-banner-swiper] .carousel-control .left{
-  @apply left-[100px]
+  @apply translate-x-8
 }
 [data-banner-swiper] .carousel-control .right{
-  @apply right-[100px]
+  @apply -translate-x-8
 }
 [data-banner-swiper]:hover .carousel-control .left{
-  @apply right-auto left-[70px]
+  @apply right-auto translate-x-0
 }
 [data-banner-swiper]:hover .carousel-control .right{
-  @apply left-auto right-[70px]
+  @apply left-auto translate-x-0
 }
 

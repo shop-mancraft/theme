@@ -1141,6 +1141,7 @@ $(document).ready(function () {
   if (bannerElement) {
     const swiperBanner = new Swiper(bannerElement, {
       slidesPerView: 1,
+      loopedSlides: 3,
       allowTouchMove: true,
       loop: true,
       autoplay: {
