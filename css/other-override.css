@@ -252,7 +252,7 @@ div.inpost-shipping-container .btn{
 }
 
 [data-banner-swiper] .carousel-control{
-  @apply opacity-0 pointer-events-none
+  @apply opacity-0 pointer-events-none z-10
 }
 [data-banner-swiper]:hover .carousel-control{
   @apply opacity-100 pointer-events-auto
