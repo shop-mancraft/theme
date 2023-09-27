@@ -26,6 +26,7 @@
  
 {if $page.page_name == 'index'}
 {if $homeslider.slides}
+  {debug}
   <div data-banner-swiper class="swiper relative overflow-hidden" data-interval="{$homeslider.speed}" data-slides-length="{$homeslider.slides|@count}" >
   <div class="swiper-wrapper">
       {foreach from=$homeslider.slides item=slide name='homeslider'}
