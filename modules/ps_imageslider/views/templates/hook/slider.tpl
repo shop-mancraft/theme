@@ -31,7 +31,7 @@
       {foreach from=$homeslider.slides item=slide name='homeslider'}
         {if $smarty.foreach.homeslider.iteration % 2 == 1}
           {$smarty.foreach.homeslider.iteration}
-          {assign var="nextSlide" value=$homeslider.slides[$smarty.foreach.homeslider.iteration + 1]}
+          {assign var="nextSlide" value=$homeslider.slides[$smarty.foreach.homeslider.iteration + 2]}
           {if 
             isset($nextSlide) 
             && $nextSlide.url|replace:'http://':'' ne 'none' && $nextSlide.url|replace:'http://':'' ne '/' && $nextSlide.url|replace:'http://':'' ne '' && $nextSlide.url ne 'https://'
