@@ -26,31 +26,41 @@
  
 {if $page.page_name == 'index'}
 {if $homeslider.slides}
-  <div data-banner-swiper class="swiper relative overflow-hidden" data-interval="{$homeslider.speed}" >
+  <div data-banner-swiper class="swiper relative overflow-hidden" data-interval="{$homeslider.speed}" data-slides-length="{$homeslider.slides|@count}" >
   <div class="swiper-wrapper">
       {foreach from=$homeslider.slides item=slide name='homeslider'}
-        {if $slide.url|replace:'http://':'' ne 'none' && $slide.url|replace:'http://':'' ne '/' && $slide.url|replace:'http://':'' ne '' && $slide.url ne 'https://'}
-          <div class="swiper-slide w-full {if $smarty.foreach.homeslider.iteration % 2 == 0} hidden tablet:block {else} block tablet:hidden {/if} " >
-            <a class="block w-full" href="{$urls.base_url}{$slide.url|replace:'http:///':''}">
-              <figure>
+        {if $smarty.foreach.homeslider.iteration % 2 == 0}
+          {assign var="nextSlide" value=$homeslider.slides[$smarty.foreach.homeslider.iteration + 1]}
+          {if 
+            isset($nextSlide) 
+            && $nextSlide.url|replace:'http://':'' ne 'none' && $nextSlide.url|replace:'http://':'' ne '/' && $nextSlide.url|replace:'http://':'' ne '' && $nextSlide.url ne 'https://'
+            && $slide.url|replace:'http://':'' ne 'none' && $slide.url|replace:'http://':'' ne '/' && $slide.url|replace:'http://':'' ne '' && $slide.url ne 'https://'
+          }
+            <div class="swiper-slide w-full " >
+              <a class="w-full hidden tablet:block" href="{$urls.base_url}{$slide.url|replace:'http:///':''}">
+                <img 
+                  class="object-cover w-full h-auto" 
+                  width="1920" height="720"
+                  src="{$slide.image_url}" alt="{$slide.legend|escape}">
+              </a>
+              <a class="w-full block tablet:hidden" href="{$urls.base_url}{$nextSlide.url|replace:'http:///':''}">
               <img 
-              {if $smarty.foreach.homeslider.iteration % 2 == 0}
-                class="object-cover w-full h-auto" 
-                width="1920" height="720"
-              {else}
-                class="object-cover w-full h-[300px]" 
                 width="768" height="300"
-              {/if} 
-              src="{$slide.image_url}" alt="{$slide.legend|escape}">
-                {* {if $slide.title || $slide.description}
-                  <figcaption class="!hidden caption">
-                    <h2 class="display-1 text-uppercase">{$slide.title}</h2>
-                    <div class="caption-description">{$slide.description nofilter}</div>
-                  </figcaption>
-                {/if} *}
-              </figure>
+                class="object-cover w-full h-[300px]" 
+                src="{$nextSlide.image_url}" alt="{$nextSlide.legend|escape}">
             </a>
-          </div>
+            </div>
+            {elseif $slide.url|replace:'http://':'' ne 'none' && $slide.url|replace:'http://':'' ne '/' && $slide.url|replace:'http://':'' ne '' && $slide.url ne 'https://' }
+              <div class="swiper-slide w-full " >
+              <a class="w-full hidden tablet:block" href="{$urls.base_url}{$slide.url|replace:'http:///':''}">
+                <img 
+                  class="object-cover w-full h-auto" 
+                  width="1920" height="720"
+                  src="{$slide.image_url}" alt="{$slide.legend|escape}">
+              </a>
+            </div>
+            {/if} 
+          {/if} 
         {/if}
       {/foreach}
       </div>

@@ -1141,7 +1141,7 @@ $(document).ready(function () {
   if (bannerElement) {
     const swiperBanner = new Swiper(bannerElement, {
       slidesPerView: 1,
-      loopedSlides: 6,
+      loopedSlides: bannerElement.dataset.slidesLength ? bannerElement.dataset.slidesLength : 1,
       allowTouchMove: true,
       speed: 1000,
       loop: true,
