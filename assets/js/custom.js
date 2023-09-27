@@ -1135,8 +1135,26 @@ $(document).ready(function () {
       nextEl: '.maintenance-swiper-next',
       prevEl: '.maintenance-swiper-prev',
     },
-
   })
+
+  const bannerElement = document.querySelector("[data-banner-swiper]");
+  if (bannerElement) {
+    const swiperBanner = new Swiper(bannerElement, {
+      slidesPerView: 1,
+      allowTouchMove: true,
+      loop: true,
+      autoplay: {
+        delay: bannerElement.dataset.inderval ? bannerElement.dataset.inderval : 5000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.banner-swiper-next',
+        prevEl: '.banner-swiper-prev',
+      },
+    })
+  }
+
+
 })
 
 
