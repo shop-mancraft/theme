@@ -50,7 +50,7 @@
                 src="{$nextSlide.image_url}" alt="{$nextSlide.legend|escape}">
             </a>
             </div>
-            {elseif $slide.url|replace:'http://':'' ne 'none' && $slide.url|replace:'http://':'' ne '/' && $slide.url|replace:'http://':'' ne '' && $slide.url ne 'https://' }
+          {elseif $slide.url|replace:'http://':'' ne 'none' && $slide.url|replace:'http://':'' ne '/' && $slide.url|replace:'http://':'' ne '' && $slide.url ne 'https://' }
               <div class="swiper-slide w-full " >
               <a class="w-full hidden tablet:block" href="{$urls.base_url}{$slide.url|replace:'http:///':''}">
                 <img 
@@ -59,7 +59,6 @@
                   src="{$slide.image_url}" alt="{$slide.legend|escape}">
               </a>
             </div>
-            {/if} 
           {/if} 
         {/if}
       {/foreach}
