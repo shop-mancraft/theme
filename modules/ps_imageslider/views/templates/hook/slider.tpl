@@ -51,7 +51,7 @@
             </a>
             </div>
           {elseif $slide.url|replace:'http://':'' ne 'none' && $slide.url|replace:'http://':'' ne '/' && $slide.url|replace:'http://':'' ne '' && $slide.url ne 'https://' }
-              <div class="swiper-slide w-full !hidden tablet:!block" >
+              <div class="swiper-slide w-full" >
               <a class="w-full" href="{$urls.base_url}{$slide.url|replace:'http:///':''}">
                 <img 
                   class="object-cover w-full h-auto" 
