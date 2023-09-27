@@ -40,34 +40,34 @@
                 width="768" height="300"
               {/if} 
               src="{$slide.image_url}" alt="{$slide.legend|escape}">
-                {if $slide.title || $slide.description}
-                  <figcaption class="caption">
+                {* {if $slide.title || $slide.description}
+                  <figcaption class="!hidden caption">
                     <h2 class="display-1 text-uppercase">{$slide.title}</h2>
                     <div class="caption-description">{$slide.description nofilter}</div>
                   </figcaption>
-                {/if}
+                {/if} *}
               </figure>
             </a>
           </div>
         {/if}
       {/foreach}
-      <a class="banner-swiper-prev carousel-control left" role="button">
+      </div>
+      <div class="banner-swiper-prev carousel-control z-10" role="button">
         <span class="icon-prev hidden-xs" aria-hidden="true">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
           </svg>
         </span>
         <span class="sr-only">{l s='Previous' d='Shop.Theme.Global'}</span>
-      </a>
-      <a class="banner-swiper-next carousel-control right" role="button">
+      </div>
+      <div class="banner-swiper-next carousel-control z-10" role="button">
         <span class="icon-next" aria-hidden="true">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
           </svg>
         </span>
         <span class="sr-only">{l s='Next' d='Shop.Theme.Global'}</span>
-      </a>
-  </div>
+      </div>
   </div>
 {/if}
 {/if}
