@@ -255,7 +255,7 @@ div.inpost-shipping-container .btn{
   @apply opacity-0 pointer-events-none z-10
 }
 [data-banner-swiper]:hover .carousel-control{
-  @apply opacity-100 pointer-events-auto
+  @apply tablet:opacity-100 tablet:pointer-events-auto
 }
 [data-banner-swiper] .carousel-control.left{
   @apply translate-x-8
