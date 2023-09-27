@@ -30,10 +30,16 @@
   <div class="swiper-wrapper">
       {foreach from=$homeslider.slides item=slide name='homeslider'}
         {if $slide.url|replace:'http://':'' ne 'none' && $slide.url|replace:'http://':'' ne '/' && $slide.url|replace:'http://':'' ne '' && $slide.url ne 'https://'}
-          <div class="swiper-slide w-full {cycle values="hidden tablet:block,block tablet:hidden"}" >
+          <div class="swiper-slide w-full {if $smarty.foreach.homeslider.iteration % 2 == 0} hidden tablet:block {else} block tablet:hidden {/if} " >
             <a class="block w-full" href="{$urls.base_url}{$slide.url|replace:'http:///':''}">
               <figure>
-              <img class="object-cover w-full h-auto" {cycle values="width='1920' height='720',width='768' height='300'"} src="{$slide.image_url}" alt="{$slide.legend|escape}">
+              <img class="object-cover w-full h-auto" 
+              {if $smarty.foreach.homeslider.iteration % 2 == 0}
+                width="1920" height="720"
+              {else}
+                width="768" height="300"
+              {/if} 
+              src="{$slide.image_url}" alt="{$slide.legend|escape}">
                 {if $slide.title || $slide.description}
                   <figcaption class="caption">
                     <h2 class="display-1 text-uppercase">{$slide.title}</h2>
