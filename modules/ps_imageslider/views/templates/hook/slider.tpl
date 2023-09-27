@@ -54,7 +54,7 @@
               <div class="swiper-slide w-full" >
               <a class="w-full" href="{$urls.base_url}{$slide.url|replace:'http:///':''}">
                 <img 
-                  class="object-cover w-full h-auto" 
+                  class="object-cover w-full h-[300px] tablet:h-auto" 
                   width="1920" height="720"
                   src="{$slide.image_url}" alt="{$slide.legend|escape}">
               </a>
