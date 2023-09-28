@@ -45,8 +45,8 @@
               </a>
               <a class="w-full block tablet:hidden" href="{$urls.base_url}{$nextSlide.url|replace:'http:///':''}">
               <img 
-                width="768" height="300"
-                class="object-cover w-full h-[300px]" 
+                width="768" height="375"
+                class="object-cover w-full h-[375px]" 
                 src="{$nextSlide.image_url}" alt="{$nextSlide.legend|escape}">
             </a>
             </div>
@@ -54,7 +54,7 @@
               <div class="swiper-slide w-full" >
               <a class="w-full" href="{$urls.base_url}{$slide.url|replace:'http:///':''}">
                 <img 
-                  class="object-cover w-full h-[300px] tablet:h-auto" 
+                  class="object-cover w-full h-[375px] tablet:h-auto" 
                   width="1920" height="720"
                   src="{$slide.image_url}" alt="{$slide.legend|escape}">
               </a>
