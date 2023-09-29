@@ -304,6 +304,9 @@ div.inpost-shipping-container .btn{
 [data-banner-swiper]:hover .carousel-control.right{
   @apply left-auto translate-x-0
 }
+.payment-logos {
+  gap: 20px;
+}
 
 .payment-logos svg{
   @apply bg-white rounded-[5px] w-auto h-10
