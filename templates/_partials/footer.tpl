@@ -51,7 +51,7 @@
 </div>
 <div
   class="payment-logos float-left flex items-center justify-center w-full text-white bg-black gap-5 flex-wrap container mb-5">
-
+  {literal}
   <svg width="800px" height="800px" viewBox="0 -9 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect x="0.5" y="0.5" width="57" height="39" rx="3.5" fill="white" stroke="#F3F3F3" />
     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -437,6 +437,7 @@
       fill="#10298e" />
   </svg>
 
+  {/literal}
 </div>
 <div class="w-full h-auto bottom-foote bg-white float-left py-2 phone-wide:py-4">
   <div class="container flex flex-wrap justify-between">
