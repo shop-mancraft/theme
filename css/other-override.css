@@ -279,10 +279,6 @@ div.inpost-shipping-container .btn{
   @apply flex flex-col
 }
 
-.payment-logos {
-  gap: 20px;
-}
-
 .payment-logos svg{
   @apply bg-white rounded-[5px] w-auto h-10 shrink-0
 }
