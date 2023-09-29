@@ -38,7 +38,7 @@
             && $slide.url|replace:'http://':'' ne 'none' && $slide.url|replace:'http://':'' ne '/' && $slide.url|replace:'http://':'' ne '' && $slide.url ne 'https://'
           }
             <div class="swiper-slide w-full " >
-              <a class="w-full hidden tablet:block" href="{$slide.url}">
+              <a class="w-full hidden tablet:block" href="{$urls.base_url}{$slide.url|replace:'///':'//'|replace:'http://':''|replace:'https://':''}">
                 <img
                   class="object-cover w-full h-auto"
                   width="1920" height="720"
@@ -53,7 +53,7 @@
             </div>
           {elseif $slide.url ne 'none' && $slide.url|replace:'http://':'' ne '/' && $slide.url|replace:'http://':'' ne '' && $slide.url ne 'https://' }
               <div class="swiper-slide w-full" >
-              <a class="w-full" href="{$slide.url}">
+              <a class="w-full" href="{$urls.base_url}{$slide.url|replace:'///':'//'|replace:'http://':''|replace:'https://':''}">
                 <img
                   class="object-cover w-full h-[375px] tablet:h-auto"
                   width="1920" height="720"
