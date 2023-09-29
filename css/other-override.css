@@ -251,6 +251,7 @@ div.inpost-shipping-container .btn{
   @apply !pb-0 tablet:!pb-5
 }
 
+<<<<<<< HEAD
 [data-paypal-source-page="product"]{
   @apply !float-left !mr-0 !mt-2.5 !ml-[89px] w-full
 }
@@ -258,6 +259,8 @@ div.inpost-shipping-container .btn{
 [data-paypal-source-page="payment-step"] [paypal-button-container] > div.paypal-buttons{
   @apply overflow-hidden rounded-full
 }
+=======
+>>>>>>> MCHD-17
 .pay-methods{
   @apply flex flex-wrap
 }
@@ -284,6 +287,7 @@ div.inpost-shipping-container .btn{
 
 #payment-option-2-additional-information{
   @apply flex flex-col
+<<<<<<< HEAD
 }
 
 [data-banner-swiper] .carousel-control{
@@ -305,3 +309,6 @@ div.inpost-shipping-container .btn{
   @apply left-auto translate-x-0
 }
 
+=======
+}
+>>>>>>> MCHD-17
