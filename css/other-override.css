@@ -278,3 +278,7 @@ div.inpost-shipping-container .btn{
 #payment-option-2-additional-information{
   @apply flex flex-col
 }
+
+.payment-logos svg{
+  @apply bg-white rounded-[5px] w-auto h-10
+}
