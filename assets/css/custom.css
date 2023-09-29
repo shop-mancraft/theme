@@ -7,14 +7,14 @@
     max-width: 600px;
     width: 100%;
 	z-index: 10;
-    margin-top: 40px;
+    margin-top: 40px;    
     margin-bottom: 40px;
    z-index: 1;
 }
 
 @media(min-width: 992px){
 .ambasador-text{
-   margin-top: 80px;
+   margin-top: 80px;     
 }
 }
 
@@ -76,7 +76,7 @@
 
 @media(min-width: 992px){
 .ambasador-form form{
-   margin-top: 80px;
+   margin-top: 80px;     
 }
 }
 
@@ -85,12 +85,12 @@
 
 .ambasador-form .custom-checkbox{
     border-radius: 10px;
-    line-height: 13px;
+    line-height: 13px;   
 }
 
 .ambasador-form .custom-checkbox .checkbox-checked{
     border-radius: 10px;
-    line-height: 13px;
+    line-height: 13px; 
 }
 
 .ambasador-form .custom-checkbox .checkbox-checked:before{
@@ -99,14 +99,3 @@
 }
 
 .ambasador-form label{color:#fff;}
-
-.payu-method-description.payu-checkout-installment{
-    margin-bottom: 20px;
-    margin-left: 40px;
-}
-
-@media(min-width: 768px){
-    .payu-method-description.payu-checkout-installment{
-        margin-left: 0;
-    }
-}
