@@ -47,7 +47,7 @@
 </div>
 
 <div class="container mb-5">
-  <p>Worldwide secure payments</p>
+  <p>{l s='Worldwide secure payments' d='Shop.Theme.Global'}</p>
 </div>
 <div
   class="payment-logos float-left flex items-center justify-center w-full text-white bg-black gap-5 flex-wrap container mb-5">
