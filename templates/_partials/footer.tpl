@@ -45,7 +45,7 @@
     </div>
   </div>
 </div>
-<div class="float-left flex items-center justify-center w-full text-white bg-black [&_svg]:bg-white [&_svg]:rounded-[5px] [&_svg]:mr-10px [&_svg]:w-auto [&_svg]:h-10">
+<div class="float-left flex items-center justify-center w-full text-white bg-black [&_svg]:bg-white [&_svg]:rounded-[5px] [&_svg]:mr-5 [&_svg]:w-auto [&_svg]:h-10">
 
 <svg width="800px" height="800px" viewBox="0 -9 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="0.5" y="0.5" width="57" height="39" rx="3.5" fill="white" stroke="#F3F3F3"/>
