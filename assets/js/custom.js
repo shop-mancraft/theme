@@ -1136,6 +1136,17 @@ $(document).ready(function () {
       prevEl: ".maintenance-swiper-prev",
     },
   });
+
+  const swiperPayments = new Swiper("[data-payments-swiper]", {
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+  });
+
+
 });
 
 $(window).load(function () {

@@ -284,5 +284,5 @@ div.inpost-shipping-container .btn{
 }
 
 .payment-logos svg{
-  @apply bg-white rounded-[5px] w-auto h-10
+  @apply bg-white rounded-[5px] w-auto h-10 shrink-0
 }
