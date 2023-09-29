@@ -80,13 +80,13 @@
           </section>
         {/block}
         </div>
-        <div class="col-md-7 pb-right-column">
+        <div class="col-md-7 pb-right-column">    
           {block name='page_header_container'}
             {block name='page_header'}
               <h1 class="h1 tt-producttitle" itemprop="name">{block name='page_title'}{$product.name}{/block}</h1>
             {/block}
           {/block}
-
+	
 		  	{block name='product_comment'}
 				{capture name='displayTtProductExtra'}{hook h='displayTtProductExtra'}{/capture}
 				{if $smarty.capture.displayTtProductExtra}
@@ -109,7 +109,7 @@
               {/block}
             {/if}
 
-            <div class="product-actions flex flex-col">
+            <div class="product-actions">
 
             {* LOYALTY PROGRAM - > GET DATA FROM POPUP TO ADD TO CART
               {if Configuration::get('PSHOW_LP_PRODUCT_EXCHANGE')}
@@ -134,7 +134,7 @@
 
                             <script>
 
-                              document.addEventListener("DOMContentLoaded", function(event) {
+                              document.addEventListener("DOMContentLoaded", function(event) { 
                                 jQuery(document).on('click', '.exchangeButton', function () {
                                   let button = jQuery(this);
                                   jQuery(this).addClass('disabled');
@@ -160,7 +160,7 @@
                             </script>
                           {/if}
                 *}
-
+            
 
               {block name='product_buy'}
                 <form action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
@@ -206,7 +206,7 @@
             {block name='hook_display_reassurance'}
               {hook h='displayReassurance'}
             {/block}
-
+           
         </div>
       </div>
 	  <div class="ttproductpagetab">
@@ -302,11 +302,11 @@
 						{$smarty.capture.displayTtProductTabContent nofilter}
 					{/if}
 				{/block}
-              </div>
+              </div>  
             </div>
           {/block}
 		  </div>
-
+	
     {block name='product_accessories'}
       {if $accessories}
         <section class="product-accessories clearfix">
