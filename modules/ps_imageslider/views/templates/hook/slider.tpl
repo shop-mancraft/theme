@@ -43,7 +43,7 @@
                     width="1920" height="720"
                     src="{$slide.image_url}" alt="{$slide.legend|escape}">
                 </a>
-                <a class="w-full block tablet:hidden" href="{$urls.base_url}{$nextSlide.url|replace:'///':'//'|replace:'http://':''|replace:'https://':''}">
+                <a class="w-full block tablet:hidden" href="{$nextSlide.url}">
                 <img
                   width="768" height="375"
                   class="object-cover w-full h-[375px]"
