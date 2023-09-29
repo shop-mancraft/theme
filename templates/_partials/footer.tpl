@@ -237,14 +237,6 @@
       .st0{fill:#1F3A6A;}
       .st1{fill:#5DC4E9;}
     </style>
-    <metadata>
-      <sfw xmlns="ns_sfw;">
-        <slices>
-        </slices>
-        <sliceSourceBounds bottomLeftOrigin="true" height="50" width="217.6" x="-73.1" y="13.9">
-        </sliceSourceBounds>
-      </sfw>
-    </metadata>
     <g>
       <polygon class="st0" points="26.7,11.5 23.7,11.5 23.7,12.3 26.1,12.3 32,36.7 1.4,36.7 7.3,12.3 9.7,12.3 9.7,11.5 6.7,11.5 
 		0,37.8 33.4,37.8 	">
