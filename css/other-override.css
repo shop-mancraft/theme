@@ -305,3 +305,6 @@ div.inpost-shipping-container .btn{
   @apply left-auto translate-x-0
 }
 
+.payment-logos svg{
+  @apply bg-white rounded-[5px] w-auto h-10
+}
