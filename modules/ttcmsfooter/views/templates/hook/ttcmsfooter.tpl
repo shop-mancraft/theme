@@ -30,6 +30,6 @@
 		</p>
 
 		<p class="mb-4">
-		{$cms_infos.text|regex_replace:"/(<p>|<p [^>]*>|<\\/p>)/":""}
+		{$cms_infos.text|regex_replace:"/(<p>|<p [^>]*>|<\\/p>)/":""|escape:'html':'UTF-8'}
 		</p>
 	</div>
