@@ -47,10 +47,10 @@
 </div>
 
 <div class="float-left overflow-hidden w-full">
-  <div class="container mb-5">
+  <div class="container mb-5 tablet:mb-0">
     <p class="mb-5 text-center">{l s='Worldwide secure payments' d='Shop.Theme.Global'}</p>
     <div class="swiper" data-payments-swiper>
-      <div class="swiper-wrapper payment-logos flex items-center w-full text-white desktop-wide:overflow-hidden">
+      <div class="swiper-wrapper payment-logos flex items-center w-full text-white tablet:flex-wrap tablet:justify-center">
         {literal}
           <svg class="swiper-slide" width="57" height="40" viewBox="4 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0.5" y="0.5" width="57" height="40" rx="3.5" fill="white" stroke="#F3F3F3" />

@@ -1159,14 +1159,15 @@ $(document).ready(function () {
   const swiperPayments = new Swiper("[data-payments-swiper]", {
     slidesPerView: 'auto',
     spaceBetween: 20,
+    enabled: true,
     autoplay: {
       delay: 2000,
       disableOnInteraction: false,
     },
     slidesCentered: false,
     breakpoints:{
-      1500:{
-        slidesCentered: true
+      768:{
+        enabled: false
       }
     }
   });
