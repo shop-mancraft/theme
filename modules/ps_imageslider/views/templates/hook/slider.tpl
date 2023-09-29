@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 
- 
+
  {if $page.page_name == 'index'}
   {if $homeslider.slides}
     <div data-banner-swiper class="swiper relative overflow-hidden" data-interval="{$homeslider.speed}" data-slides-length="{$homeslider.slides|@count}" >
@@ -31,35 +31,35 @@
         {foreach from=$homeslider.slides item=slide name='homeslider'}
           {if $smarty.foreach.homeslider.iteration % 2 == 1}
             {assign var="nextSlide" value=$homeslider.slides[$smarty.foreach.homeslider.iteration]}
-            {if 
-              isset($nextSlide) 
-              && $nextSlide.url|replace:'http://':'' ne 'none' && $nextSlide.url|replace:'http://':'' ne '/' && $nextSlide.url|replace:'http://':'' ne '' && $nextSlide.url ne 'https://'
-              && $slide.url|replace:'http://':'' ne 'none' && $slide.url|replace:'http://':'' ne '/' && $slide.url|replace:'http://':'' ne '' && $slide.url ne 'https://'
-            }
-              <div class="swiper-slide w-full " >
-                <a class="w-full hidden tablet:block" href="{$urls.base_url}{$slide.url|replace:'http:///':''}">
-                  <img 
-                    class="object-cover w-full h-auto" 
-                    width="1920" height="720"
-                    src="{$slide.image_url}" alt="{$slide.legend|escape}">
-                </a>
-                <a class="w-full block tablet:hidden" href="{$urls.base_url}{$nextSlide.url|replace:'http:///':''}">
-                <img 
-                  width="768" height="375"
-                  class="object-cover w-full h-[375px]" 
-                  src="{$nextSlide.image_url}" alt="{$nextSlide.legend|escape}">
+          {/if}
+          {if
+            isset($nextSlide)
+            && $nextSlide.url|replace:'http://':'' ne 'none' && $nextSlide.url|replace:'http://':'' ne '/' && $nextSlide.url|replace:'http://':'' ne '' && $nextSlide.url ne 'https://'
+            && $slide.url|replace:'http://':'' ne 'none' && $slide.url|replace:'http://':'' ne '/' && $slide.url|replace:'http://':'' ne '' && $slide.url ne 'https://'
+          }
+            <div class="swiper-slide w-full " >
+              <a class="w-full hidden tablet:block" href="{$urls.base_url}{$slide.url|replace:'///':'//'|replace:'http://':''|replace:'https://':''}">
+                <img
+                  class="object-cover w-full h-auto"
+                  width="1920" height="720"
+                  src="{$slide.image_url}" alt="{$slide.legend|escape}">
               </a>
-              </div>
-            {elseif $slide.url|replace:'http://':'' ne 'none' && $slide.url|replace:'http://':'' ne '/' && $slide.url|replace:'http://':'' ne '' && $slide.url ne 'https://' }
-                <div class="swiper-slide w-full" >
-                <a class="w-full" href="{$urls.base_url}{$slide.url|replace:'http:///':''}">
-                  <img 
-                    class="object-cover w-full h-[375px] tablet:h-auto" 
-                    width="1920" height="720"
-                    src="{$slide.image_url}" alt="{$slide.legend|escape}">
-                </a>
-              </div>
-            {/if} 
+              <a class="w-full block tablet:hidden" href="{$urls.base_url}{$nextSlide.url|replace:'///':'//'|replace:'http://':''|replace:'https://':''}">
+              <img
+                width="768" height="375"
+                class="object-cover w-full h-[375px]"
+                src="{$nextSlide.image_url}" alt="{$nextSlide.legend|escape}">
+            </a>
+            </div>
+          {elseif $slide.url ne 'none' && $slide.url|replace:'http://':'' ne '/' && $slide.url|replace:'http://':'' ne '' && $slide.url ne 'https://' }
+              <div class="swiper-slide w-full" >
+              <a class="w-full" href="{$urls.base_url}{$slide.url|replace:'///':'//'|replace:'http://':''|replace:'https://':''}">
+                <img
+                  class="object-cover w-full h-[375px] tablet:h-auto"
+                  width="1920" height="720"
+                  src="{$slide.image_url}" alt="{$slide.legend|escape}">
+              </a>
+            </div>
           {/if}
         {/foreach}
         </div>
