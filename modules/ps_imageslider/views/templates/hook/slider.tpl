@@ -46,7 +46,7 @@
                 <a class="w-full block tablet:hidden" href="{$nextSlide.url}">
                 <img
                   width="768" height="375"
-                  class="object-cover w-full h-[375px]"
+                  class="object-cover w-full h-auto"
                   src="{$nextSlide.image_url}" alt="{$nextSlide.legend|escape}">
               </a>
               </div>
@@ -54,7 +54,7 @@
                 <div class="swiper-slide w-full" >
                 <a class="w-full" href="{$slide.url}">
                   <img
-                    class="object-cover w-full h-[375px] tablet:h-auto"
+                    class="object-cover w-full h-auto"
                     width="1920" height="720"
                     src="{$slide.image_url}" alt="{$slide.legend|escape}">
                 </a>
