@@ -1144,6 +1144,7 @@ $(document).ready(function () {
       delay: 2000,
       disableOnInteraction: false,
     },
+    loop: true,
     slidesCentered: false,
   });
 
