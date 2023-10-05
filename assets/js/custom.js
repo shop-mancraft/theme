@@ -1144,6 +1144,8 @@ $(document).ready(function () {
       delay: 2000,
       disableOnInteraction: false,
     },
+    loop: true,
+    loopedSlides: 18,
     watchSlidesVisibility: true,
     centeredSlides: false,
     breakpoints:{
