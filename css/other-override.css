@@ -309,8 +309,13 @@ div.inpost-shipping-container .btn{
 }
 
 [data-payments-swiper].swiper .swiper-slide{
-  @apply opacity-0 transition-opacity
+  @apply tablet:opacity-0 transition-opacity
 }
 [data-payments-swiper].swiper .swiper-slide.swiper-slide-visible{
-  @apply opacity-100 first:!opacity-0 last:!opacity-0
+  @apply opacity-100 
+}
+
+[data-payments-swiper] .swiper-slide:not(.swiper-slide-visible ~ .swiper-slide-visible),
+[data-payments-swiper] .swiper-slide-next + .swiper-slide-visible + .swiper-slide-visible ~ .swiper-slide-visible{
+  @apply tablet:!opacity-0
 }
