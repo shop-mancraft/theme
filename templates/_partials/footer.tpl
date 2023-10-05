@@ -49,7 +49,7 @@
 <div class="float-left overflow-hidden w-full">
   <div class="container mb-5 tablet:mb-0">
     <p class="mb-5 text-center">{l s='Worldwide secure payments' d='Shop.Theme.Global'}</p>
-    <div class="swiper tablet:overflow-hidden tablet:max-w-3xl tablet:mx-auto" data-payments-swiper>
+    <div class="swiper tablet:overflow-hidden tablet:max-w-[800px] tablet:mx-auto" data-payments-swiper>
       <div class="swiper-wrapper payment-logos flex items-center w-full text-white">
         {literal}
           <div class="swiper-slide w-auto">
@@ -202,7 +202,7 @@
           <div class="swiper-slide w-auto">
             <svg class="p-1" version="1.1" id="Original" xmlns:x="ns_extend;" xmlns:i="ns_ai;" xmlns:graph="ns_graphs;"
               xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              viewBox="0 0 217.6 50" style="enable-background:new 0 0 217.6 50;" xml:space="preserve">
+              viewBox="0 0 217.6 50" style="enable-background:new 0 0 217.6 50;" xml:space="preserve" style="width:90px">
               <style type="text/css">
                 .st0{fill:#1F3A6A;}
                 .st1{fill:#5DC4E9;}
@@ -408,7 +408,7 @@
           </div>
 
           <div class="swiper-slide w-auto">
-            <svg class="p-1" height="685" viewBox="-.28266667 -10.16017133 891.07166667 253.68217133" width="2500"
+            <svg class="p-1" height="1085" viewBox="-.28266667 -10.16017133 891.07166667 253.68217133" width="2500"
               xmlns="http://www.w3.org/2000/svg">
               <path
                 d="m197.703 77.694h-60.973q0-15.005-3.52-20.137-5.44-7.583-30.029-7.587-23.875 0-31.615 4.369-7.722 4.39-7.726 19.079 0 13.294 6.854 17.5 4.918 2.977 13 3.5l12.294.867q39.534 2.616 49.373 3.682 31.263 3.151 45.324 16.621 11.061 10.511 13.176 27.469a191.207 191.207 0 0 1 1.229 22.929q0 29.412-5.612 43.056-10.177 25.043-45.765 31.671-14.915 2.8-45.607 2.806-51.221 0-71.374-6.117-24.73-7.506-32.621-30.4-4.4-12.752-4.381-42.473h60.967v5.069q0 15.861 9.108 20.4a35.743 35.743 0 0 0 15.239 3.316h22.418q17.155 0 21.885-1.762 8.41-3.3 11.042-10.657a40.749 40.749 0 0 0 1.4-11.724q0-16.076-11.724-19.58-4.4-1.384-40.784-3.845-29.231-2.087-40.6-4.03-29.941-5.6-39.9-23.072-8.761-14.857-8.751-44.943 0-22.894 4.73-36.712t15.246-20.986q15.429-11.019 39.439-12.939 19.993-1.742 44.354-1.757 38.379 0 54.7 4.392 39.8 10.692 39.8 59.9 0 4.035-.594 12.1m268.101 165.823v-243.5h122.1q25.12 0 38.307 4.1 30.122 9.433 40.454 38.641 5.343 15.332 5.347 46.154 0 37.05-5.89 53.254-11.748 32.051-48.294 36.87-4.292.723-36.545 1.252l-10.875.362h-39.069v62.867zm65.539-119.35h40.858q19.43-.7 23.666-3.019c3.872-2.129 6.474-6.4 7.768-12.791q1.245-6.379 1.243-18.991 0-15.45-2.477-22.919-3.534-10.483-16.941-12.786-2.657-.348-12.712-.357h-41.4zm280.56 77.268h-87.623l-11.775 42.082h-67.8l73.166-243.5h98.857l74.059 243.5h-66.38zm-13.013-47.434-30.71-105.553-29.8 105.553z"
