@@ -1144,12 +1144,13 @@ $(document).ready(function () {
       delay: 2000,
       disableOnInteraction: false,
     },
-    watchSlidesProgress: true,
     loop: true,
-    slidesCentered: false,
+    watchSlidesVisibility: true,
+    centeredSlides: false,
     breakpoints:{
       768: {
-        slidesCentered: true
+        centeredSlides: true,
+        watchSlidesVisibility: true
       }
     }
   });
