@@ -1144,8 +1144,14 @@ $(document).ready(function () {
       delay: 2000,
       disableOnInteraction: false,
     },
+    watchSlidesProgress: true,
     loop: true,
     slidesCentered: false,
+    breakpoints:{
+      768: {
+        slidesCentered: true
+      }
+    }
   });
 
   const bannerElement = document.querySelector("[data-banner-swiper]");
