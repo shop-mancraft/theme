@@ -1145,7 +1145,6 @@ $(document).ready(function () {
       disableOnInteraction: false,
     },
     slidesCentered: false,
-    watchOverflow: true,
   });
 
   const bannerElement = document.querySelector("[data-banner-swiper]");
