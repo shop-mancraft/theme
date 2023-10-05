@@ -300,3 +300,10 @@ div.inpost-shipping-container .btn{
 [data-banner-swiper]:hover .carousel-control.right{
   @apply left-auto translate-x-0
 }
+
+[data-payments-swiper].swiper .swiper-slide{
+  @apply opacity-0 transition-opacity
+}
+[data-payments-swiper].swiper .swiper-slide.swiper-slide-visible{
+  @apply opacity-100 first:!opacity-0 last:!opacity-0
+}
