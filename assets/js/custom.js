@@ -1140,17 +1140,12 @@ $(document).ready(function () {
   const swiperPayments = new Swiper("[data-payments-swiper]", {
     slidesPerView: "auto",
     spaceBetween: 20,
-    enabled: true,
     autoplay: {
       delay: 2000,
       disableOnInteraction: false,
     },
     slidesCentered: false,
-    breakpoints: {
-      768: {
-        enabled: false,
-      },
-    },
+    watchOverflow: true,
   });
 
   const bannerElement = document.querySelector("[data-banner-swiper]");
