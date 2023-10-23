@@ -7672,7 +7672,7 @@ border-radius: 50%;
     font-weight: 400;
     font-size: 13px;
     line-height: 18px;
-    left: 10px;
+    right: 10px;
     position: absolute;
     top: 10px !important;
     vertical-align: top;
@@ -9228,7 +9228,8 @@ border-radius: 50%;
 }
 li.product-flag {
     display: block;
-	left: 20px;
+	left: auto !important;
+    right: 20px;
 	position: absolute;
 	top: 47px;
 	z-index: 1;
