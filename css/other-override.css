@@ -319,3 +319,7 @@ div.inpost-shipping-container .btn{
 [data-payments-swiper] .swiper-slide-next + .swiper-slide-visible + .swiper-slide-visible ~ .swiper-slide-visible{
   @apply tablet:!opacity-0
 }
+
+.stickers-box-list .img-sticker img {
+  @apply !border-none !border-0 !bg-transparent
+}
