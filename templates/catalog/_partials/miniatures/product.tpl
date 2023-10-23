@@ -63,7 +63,6 @@
 			{block name='product_reviews'}
 				{hook h='displayProductListReviews' product=$product}
 			{/block}
-			{hook h='displayTtWishListButton' product=$product}
 		</div>
 
 		<div class="ttproduct-desc">
@@ -125,6 +124,7 @@
 					</a>
 				</div>
 			{/block}
+			{hook h='displayTtWishListButton' product=$product}
 			</div>
 			</div>
 		</div>
