@@ -751,7 +751,7 @@ a.tthometab-title:hover {
 .crossselling-product .thumbnail-container .wishlist .btn:hover::after,
 .category-products .thumbnail-container .wishlist .btn:hover::after,
 .view-product .thumbnail-container .wishlist .btn:hover::after {
-  color: #a8d727;
+  color: #fff;
 }
 
 .products

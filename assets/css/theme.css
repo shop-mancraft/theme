@@ -7062,25 +7062,6 @@ border-radius: 50%;
 	line-height:35px;
 
 }
-#products .thumbnail-container .wishlist,
-.products .thumbnail-container .wishlist,
-.featured-products .thumbnail-container .wishlist, 
-.ttfeatured-products .thumbnail-container .wishlist,
-.product-accessories .thumbnail-container .wishlist, 
-.ttbestseller-products .thumbnail-container .wishlist,
-.ttnew-products .thumbnail-container .wishlist, 
-.crossselling-product .thumbnail-container .wishlist,
- .category-products .thumbnail-container .wishlist, 
- .view-product .thumbnail-container .wishlist {
-    position: absolute;
-    right: 5px;
-    top: -36px;
-    transition: all 400ms ease-in-out;
-    -webkit-transition: all 400ms ease-in-out 0s;
-    -moz-transition: all 400ms ease-in-out 0s;
-    -o-transition: all 400ms ease-in-out 0s;
-    -ms-transition: all 400ms ease-in-out 0s;
-}
 #products .thumbnail-container:hover .wishlist,
 .products .thumbnail-container:hover .wishlist, 
 .featured-products .thumbnail-container:hover .wishlist, 
@@ -7247,8 +7228,6 @@ border-radius: 50%;
 }
 
 @media (max-width: 767px){
-#products .thumbnail-container .wishlist,
-.products .thumbnail-container .wishlist,
 .featured-products .thumbnail-container .wishlist, 
 .ttfeatured-products .thumbnail-container .wishlist,
 .product-accessories .thumbnail-container .wishlist, 
