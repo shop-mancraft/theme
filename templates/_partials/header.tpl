@@ -31,7 +31,7 @@
 
 {block name='header_nav'}
   <nav class="header-nav">
-		<div class="w-full bg-white float-left border-0 border-t-[3px] tablet-narrow:border-t-[5px] border-main">
+		<div class="hidden tablet-narrow:block w-full bg-white float-left border-0 border-t-[3px] tablet-narrow:border-t-[5px] border-main">
 			<div class="container">
 				{hook h='displayNav1'}
 			</div>
