@@ -52,7 +52,7 @@
           {hook h='displayTopColumn'}
           
           <div
-            class="container relative overflow-hidden w-full py-2 tablet:py-5 border-b border-solid border-gray-normal mb-10 tablet:mb-20"
+            class="container relative overflow-hidden w-full py-2 tablet:py-5 border-b border-solid border-gray-normal mb-5 tablet:mb-10"
             data-icons-swiper>
             <div class="swiper-wrapper">
               <div class="swiper-slide">
