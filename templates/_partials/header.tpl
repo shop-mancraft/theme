@@ -54,44 +54,50 @@
 				 {if $page.page_name == 'index'}
 					</h1>
 				 {/if}
-				</div>				
-				{hook h='displayNav2'}
+				</div>
+				{if $page.page_name != 'checkout'}
+					{hook h='displayNav2'}
+				{/if}		
 			</div>
 		</div>
   </nav>
 {/block}
 
-<div class="full-header">
-	<div class="container">
-		<div class="position-static flex">
-			{hook h='displayTop'}
-		</div>
-		{hook h='displayNavFullWidth'}
- 	 </div>
-</div>
+{if $page.page_name != 'checkout'}
+	<div class="full-header">
+		<div class="container">
+			<div class="position-static flex">
+				{hook h='displayTop'}
+			</div>
+			{hook h='displayNavFullWidth'}
+		  </div>
+	</div>
+{/if}	
 
 {block name='header_top'}
 	<div class="header-top">
-		<div class="container">
-			<div class="hidden-md-up text-sm-center mobile">
-					<div id="mobile_menu" class="flex">
-						<div class="float-xs-left" id="menu-icon">
-							<i class="material-icons">menu</i>
+		{if $page.page_name != 'checkout'}
+			<div class="container">
+				<div class="hidden-md-up text-sm-center mobile">
+						<div id="mobile_menu" class="flex">
+							<div class="float-xs-left" id="menu-icon">
+								<i class="material-icons">menu</i>
+							</div>
+							<div class="float-xs-right order-10" id="_mobile_cart"></div>
+							<div class="float-xs-right order-5" id="_mobile_user_info"></div>
+							<div class="float-xs-right flex flex-no-wrap tablet-wide:flex-wrap flex-auto">
+								{hook h='displayNav1' mod='ps_currencyselector'}
+								{hook h='displayNav1' mod='ps_languageselector'}
+							</div>
 						</div>
-						<div class="float-xs-right order-10" id="_mobile_cart"></div>
-						<div class="float-xs-right order-5" id="_mobile_user_info"></div>
-						<div class="float-xs-right flex flex-no-wrap tablet-wide:flex-wrap flex-auto">
-							{hook h='displayNav1' mod='ps_currencyselector'}
-							{hook h='displayNav1' mod='ps_languageselector'}
-						</div>
-					</div>
+						<div class="clearfix"></div>
+					 </div>
 					<div class="clearfix"></div>
-				 </div>
-				<div class="clearfix"></div>
-				<div id="mobile_top_menu_wrapper" class="row hidden-md-up" style="display:none;">
-					<div class="js-top-menu mobile" id="_mobile_top_menu"></div>
-					
-			  </div>
-		</div>
+					<div id="mobile_top_menu_wrapper" class="row hidden-md-up" style="display:none;">
+						<div class="js-top-menu mobile" id="_mobile_top_menu"></div>
+						
+				  </div>
+			</div>
+		{/if}	
 	</div>
 {/block}
