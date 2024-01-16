@@ -315,9 +315,7 @@ div.inpost-shipping-container .btn {
   @apply mt-[14px] block h-px w-[122px] bg-main content-[''];
 }
 
-.descriptions-container p,
-.descriptions-container span,
-.descriptions-container li {
+.descriptions-container * {
   @apply text-white;
 }
 
@@ -341,9 +339,9 @@ div.inpost-shipping-container .btn {
 }
 
 .descriptions-container dl.data-sheet dt {
-  @apply border-b border-b-gray-normal py-2.5 pl-2.5 tablet:py-5 tablet:pl-5;
+  @apply w-[120px] border-b border-b-gray-normal py-2.5 px-2.5 text-main tablet:w-[170px] tablet:py-5 tablet:px-5;
 }
 
 .descriptions-container dl.data-sheet dd {
-  @apply border-b border-b-gray-normal py-2.5 pr-2.5 tablet:py-5 tablet:pr-5;
+  @apply w-[calc(100%_-_120px)] border-b border-b-gray-normal py-2.5 pr-2.5 text-white tablet:w-[calc(100%_-_170px)] tablet:py-5 tablet:pr-5;
 }
