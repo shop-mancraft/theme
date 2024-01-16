@@ -220,7 +220,6 @@
                  </div>
 
                  {block name='product_details'}
-                    <h3 class="tab-title">{l s='Product Details' d='Shop.Theme.Catalog'}</h3>
                    {include file='catalog/_partials/product-details.tpl'}
                  {/block}
 
