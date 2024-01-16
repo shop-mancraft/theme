@@ -55,6 +55,7 @@
 
   <section id="main" itemscope itemtype="https://schema.org/Product">
     <meta itemprop="url" content="{$product.url}">
+    <div>
       <div class="col-md-5 pb-left-column">
         {block name='page_content_container'}
           <section class="page-content" id="content">
@@ -209,14 +210,12 @@
 
         </div>
       </div>
-	  <div class="">
-	    {block name='product_tabs'}
-                 <div class="tab-pane" id="description">
+	  <div class="descriptions-container">
+          {block name='product_tabs'}
+                 <div class="mb-10 tablet:mb-[50px] " id="description">
                    {block name='product_description'}
-                     <div class="product-description">
-                      <h3 class="tab-title">{l s='Description' d='Shop.Theme.Catalog'}</h3>
+                      <h2 class="description-title">{l s='Description' d='Shop.Theme.Catalog'}</h2>
                       {$product.description nofilter}
-                     </div>
                    {/block}
                  </div>
 
@@ -227,8 +226,8 @@
 
                  {block name='product_attachments'}
                    {if $product.attachments}
-                    <div class="tab-pane" id="attachments">
-                      <h3 class="tab-title">{l s='Attachments' d='Shop.Theme.Catalog'}</h3>
+                    <div class="mb-10 tablet:mb-[50px] " id="attachments">
+                      <h2 class="description-title">{l s='Attachments' d='Shop.Theme.Catalog'}</h2>
                        <section class="product-attachments">
                          <h3 class="h5 text-uppercase">{l s='Download' d='Shop.Theme.Actions'}</h3>
                          {foreach from=$product.attachments item=attachment}
@@ -246,8 +245,8 @@
                  {/block}
 
                  {foreach from=$product.extraContent item=extra key=extraKey}
-                 <div class="tab-pane" id="extra-{$extraKey}" {foreach $extra.attr as $key => $val} {$key}="{$val}"{/foreach}>
-                    <h3 class="tab-title">{$extra.title}</h3>
+                 <div class="mb-10 tablet:mb-[50px] " id="extra-{$extraKey}" {foreach $extra.attr as $key => $val} {$key}="{$val}"{/foreach}>
+                    <h2 class="description-title">{$extra.title}</h2>
                     {$extra.content nofilter}
                   </div>
                  {/foreach}
@@ -265,6 +264,7 @@
                 {/block}
           {/block}
 		  </div>
+    </div>
 
     {block name='product_accessories'}
       {if $accessories}

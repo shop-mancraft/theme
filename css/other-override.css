@@ -313,3 +313,11 @@ div.inpost-shipping-container .btn {
 .gm_omniprice {
   @apply rounded-md border border-main  bg-black p-3;
 }
+
+.descriptions-container .description-title {
+  @apply text-xl text-white tablet:text-2xl;
+}
+
+.descriptions-container .description-title:after {
+  @apply mt-[14px] block h-px w-[122px] bg-main content-[''];
+}
