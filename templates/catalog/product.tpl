@@ -55,8 +55,8 @@
 
   <section id="main" itemscope itemtype="https://schema.org/Product">
     <meta itemprop="url" content="{$product.url}">
-    <div class="tablet:mb-[50px]">
-      <div class="col-md-5 pb-left-column">
+    <div class="product-layout">
+      <div class="w-full pb-left-column">
         {block name='page_content_container'}
           <section class="page-content" id="content">
             {block name='page_content'}
@@ -81,7 +81,7 @@
           </section>
         {/block}
       </div>
-      <div class="col-md-7 pb-right-column">
+      <div class="w-full tablet:pl-8 desktop:pl-16 tablet:sticky tablet:top-10 desktop:top-24 pb-right-column">
         {block name='page_header_container'}
           {block name='page_header'}
             <h1 class="h1 tt-producttitle" itemprop="name">{block name='page_title'}{$product.name}{/block}</h1>

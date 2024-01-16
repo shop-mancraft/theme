@@ -314,6 +314,11 @@ div.inpost-shipping-container .btn {
   @apply rounded-md border border-main  bg-black p-3;
 }
 
+.product-layout {
+  grid-template-columns: 65% 35%;
+  @apply tablet:mb-[50px] tablet:grid;
+}
+
 .descriptions-container .description-title {
   @apply mb-[50px] text-xl text-white tablet:text-2xl;
 }
