@@ -40,14 +40,14 @@
   <meta property="product:price:amount" content="{$product.price_amount}">
   <meta property="product:price:currency" content="{$currency.iso_code}">
   {if $product.show_price}
-		<meta property="product:pretax_price:amount" content="{$product.price_tax_exc}">
-		<meta property="product:pretax_price:currency" content="{$currency.iso_code}">
-		<meta property="product:price:amount" content="{$product.price_amount}">
-		<meta property="product:price:currency" content="{$currency.iso_code}">
+    <meta property="product:pretax_price:amount" content="{$product.price_tax_exc}">
+    <meta property="product:pretax_price:currency" content="{$currency.iso_code}">
+    <meta property="product:price:amount" content="{$product.price_amount}">
+    <meta property="product:price:currency" content="{$currency.iso_code}">
   {/if}
   {if isset($product.weight) && ($product.weight != 0)}
-  <meta property="product:weight:value" content="{$product.weight}">
-  <meta property="product:weight:units" content="{$product.weight_unit}">
+    <meta property="product:weight:value" content="{$product.weight}">
+    <meta property="product:weight:units" content="{$product.weight_unit}">
   {/if}
 {/block}
 
@@ -55,12 +55,12 @@
 
   <section id="main" itemscope itemtype="https://schema.org/Product">
     <meta itemprop="url" content="{$product.url}">
-    <div>
+    <div class="tablet:mb-[50px]">
       <div class="col-md-5 pb-left-column">
         {block name='page_content_container'}
           <section class="page-content" id="content">
             {block name='page_content'}
-			<!-- @todo: use include file='catalog/_partials/product-flags.tpl'} -->
+              <!-- @todo: use include file='catalog/_partials/product-flags.tpl'} -->
               {block name='product_flags'}
                 <ul class="product-flags">
                   {foreach from=$product.flags item=flag}
@@ -80,37 +80,38 @@
             {/block}
           </section>
         {/block}
-        </div>
-        <div class="col-md-7 pb-right-column">
-          {block name='page_header_container'}
-            {block name='page_header'}
-              <h1 class="h1 tt-producttitle" itemprop="name">{block name='page_title'}{$product.name}{/block}</h1>
-            {/block}
+      </div>
+      <div class="col-md-7 pb-right-column">
+        {block name='page_header_container'}
+          {block name='page_header'}
+            <h1 class="h1 tt-producttitle" itemprop="name">{block name='page_title'}{$product.name}{/block}</h1>
+          {/block}
+        {/block}
+
+        {block name='product_comment'}
+          {capture name='displayTtProductExtra'}{hook h='displayTtProductExtra'}{/capture}
+          {if $smarty.capture.displayTtProductExtra}
+            {$smarty.capture.displayTtProductExtra nofilter}
+          {/if}
+        {/block}
+
+        {block name='product_prices'}
+          {include file='catalog/_partials/product-prices.tpl'}
+        {/block}
+
+        <div class="product-information">
+          {block name='product_description_short'}
+            <div id="product-description-short-{$product.id}" itemprop="description">{$product.description_short nofilter}
+            </div>
           {/block}
 
-		  	{block name='product_comment'}
-				{capture name='displayTtProductExtra'}{hook h='displayTtProductExtra'}{/capture}
-				{if $smarty.capture.displayTtProductExtra}
-				{$smarty.capture.displayTtProductExtra nofilter}
-				{/if}
-			{/block}
-
-          {block name='product_prices'}
-            {include file='catalog/_partials/product-prices.tpl'}
-          {/block}
-
-          <div class="product-information">
-            {block name='product_description_short'}
-              <div id="product-description-short-{$product.id}" itemprop="description">{$product.description_short nofilter}</div>
+          {if $product.is_customizable && count($product.customizations.fields)}
+            {block name='product_customization'}
+              {include file="catalog/_partials/product-customization.tpl" customizations=$product.customizations}
             {/block}
+          {/if}
 
-            {if $product.is_customizable && count($product.customizations.fields)}
-              {block name='product_customization'}
-                {include file="catalog/_partials/product-customization.tpl" customizations=$product.customizations}
-              {/block}
-            {/if}
-
-            <div class="product-actions flex flex-col">
+          <div class="product-actions flex flex-col">
 
             {* LOYALTY PROGRAM - > GET DATA FROM POPUP TO ADD TO CART
               {if Configuration::get('PSHOW_LP_PRODUCT_EXCHANGE')}
@@ -163,134 +164,140 @@
                 *}
 
 
-              {block name='product_buy'}
-                <form action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
-                  <input type="hidden" name="token" value="{$static_token}">
-                  <input type="hidden" name="id_product" value="{$product.id}" id="product_page_product_id">
-                  <input type="hidden" name="id_customization" value="{$product.id_customization}" id="product_customization_id">
+            {block name='product_buy'}
+              <form action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
+                <input type="hidden" name="token" value="{$static_token}">
+                <input type="hidden" name="id_product" value="{$product.id}" id="product_page_product_id">
+                <input type="hidden" name="id_customization" value="{$product.id_customization}"
+                  id="product_customization_id">
 
-                  {block name='product_variants'}
-                    {include file='catalog/_partials/product-variants.tpl'}
-                  {/block}
+                {block name='product_variants'}
+                  {include file='catalog/_partials/product-variants.tpl'}
+                {/block}
 
-                  {block name='product_pack'}
-                    {if $packItems}
-                      <section class="product-pack">
-                        <h3 class="h4">{l s='This pack contains' d='Shop.Theme.Catalog'}</h3>
-                        {foreach from=$packItems item="product_pack"}
-                          {block name='product_miniature'}
-                            {include file='catalog/_partials/miniatures/pack-product.tpl' product=$product_pack}
-                          {/block}
-                        {/foreach}
+                {block name='product_pack'}
+                  {if $packItems}
+                    <section class="product-pack">
+                      <h3 class="h4">{l s='This pack contains' d='Shop.Theme.Catalog'}</h3>
+                      {foreach from=$packItems item="product_pack"}
+                        {block name='product_miniature'}
+                          {include file='catalog/_partials/miniatures/pack-product.tpl' product=$product_pack}
+                        {/block}
+                      {/foreach}
                     </section>
-                    {/if}
-                  {/block}
+                  {/if}
+                {/block}
 
-                  {block name='product_discounts'}
-                    {include file='catalog/_partials/product-discounts.tpl'}
-                  {/block}
+                {block name='product_discounts'}
+                  {include file='catalog/_partials/product-discounts.tpl'}
+                {/block}
 
-                  {block name='product_add_to_cart'}
-                    {include file='catalog/_partials/product-add-to-cart.tpl'}
-                  {/block}
+                {block name='product_add_to_cart'}
+                  {include file='catalog/_partials/product-add-to-cart.tpl'}
+                {/block}
 
-                  {block name='product_additional_info'}
-                        {include file='catalog/_partials/product-additional-info.tpl'}
-                  {/block}
-                  {* Input to refresh product HTML removed, block kept for compatibility with themes *}
-					        {block name='product_refresh'}{/block}
+                {block name='product_additional_info'}
+                  {include file='catalog/_partials/product-additional-info.tpl'}
+                {/block}
+                {* Input to refresh product HTML removed, block kept for compatibility with themes *}
+                {block name='product_refresh'}{/block}
 
-                </form>
-              {/block}
-            </div>
-
-            {block name='hook_display_reassurance'}
-              {hook h='displayReassurance'}
+              </form>
             {/block}
+          </div>
+
+          {block name='hook_display_reassurance'}
+            {hook h='displayReassurance'}
+          {/block}
 
         </div>
       </div>
-	  <div class="descriptions-container">
-          {block name='product_tabs'}
-                 <div class="mb-10 tablet:mb-[50px] " id="description">
-                   {block name='product_description'}
-                      <h2 class="description-title">{l s='Description' d='Shop.Theme.Catalog'}</h2>
-                      {$product.description nofilter}
-                   {/block}
-                 </div>
-
-                 {block name='product_details'}
-                   {include file='catalog/_partials/product-details.tpl'}
-                 {/block}
-
-                 {block name='product_attachments'}
-                   {if $product.attachments}
-                    <div class="mb-10 tablet:mb-[50px] " id="attachments">
-                      <h2 class="description-title">{l s='Attachments' d='Shop.Theme.Catalog'}</h2>
-                       <section class="product-attachments">
-                         <h3 class="h5 text-uppercase">{l s='Download' d='Shop.Theme.Actions'}</h3>
-                         {foreach from=$product.attachments item=attachment}
-                           <div class="attachment">
-                             <h4><a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">{$attachment.name}</a></h4>
-                             <p>{$attachment.description}</p
-                             ><a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">
-                               {l s='Download' d='Shop.Theme.Actions'} ({$attachment.file_size_formatted})
-                             </a>
-                           </div>
-                         {/foreach}
-                       </section>
-                     </div>
-                   {/if}
-                 {/block}
-
-                 {foreach from=$product.extraContent item=extra key=extraKey}
-                 <div class="mb-10 tablet:mb-[50px] " id="extra-{$extraKey}" {foreach $extra.attr as $key => $val} {$key}="{$val}"{/foreach}>
-                    <h2 class="description-title">{$extra.title}</h2>
-                    {$extra.content nofilter}
-                  </div>
-                 {/foreach}
-                 {block name='product_comment_tab'}
-                 {capture name='displayTtProductTab'}{hook h='displayTtProductTab'}{/capture}
-                   {if $smarty.capture.displayTtProductTab}
-                   {$smarty.capture.displayTtProductTab nofilter}
-                 {/if}
-               {/block}
-                {block name='product_comment_tab_content'}
-                  {capture name='displayTtProductTabContent'}{hook h='displayTtProductTabContent'}{/capture}
-                  {if $smarty.capture.displayTtProductTabContent}
-                    {$smarty.capture.displayTtProductTabContent nofilter}
-                  {/if}
-                {/block}
+      <div class="descriptions-container">
+        {block name='product_tabs'}
+          {block name='product_description'}
+            {if $product.description}
+              <div class="mb-10 tablet:mb-[50px] " id="description">
+                <h2 class="description-title">{l s='Description' d='Shop.Theme.Catalog'}</h2>
+                {$product.description nofilter}
+              </div>
+            {/if}
           {/block}
-		  </div>
+
+          {block name='product_details'}
+            {include file='catalog/_partials/product-details.tpl'}
+          {/block}
+
+          {block name='product_attachments'}
+            {if $product.attachments}
+              <div class="mb-10 tablet:mb-[50px] " id="attachments">
+                <h2 class="description-title">{l s='Attachments' d='Shop.Theme.Catalog'}</h2>
+                <section class="product-attachments">
+                  <h3 class="h5 text-uppercase">{l s='Download' d='Shop.Theme.Actions'}</h3>
+                  {foreach from=$product.attachments item=attachment}
+                    <div class="attachment">
+                      <h4><a
+                          href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">{$attachment.name}</a>
+                      </h4>
+                      <p>{$attachment.description}</p><a
+                        href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">
+                        {l s='Download' d='Shop.Theme.Actions'} ({$attachment.file_size_formatted})
+                      </a>
+                    </div>
+                  {/foreach}
+                </section>
+              </div>
+            {/if}
+          {/block}
+
+          {foreach from=$product.extraContent item=extra key=extraKey}
+            <div class="mb-10 tablet:mb-[50px] " id="extra-{$extraKey}" {foreach $extra.attr as $key => $val} {$key}="{$val}"
+              {/foreach}>
+              <h2 class="description-title">{$extra.title}</h2>
+              {$extra.content nofilter}
+            </div>
+          {/foreach}
+          {block name='product_comment_tab'}
+            {capture name='displayTtProductTab'}{hook h='displayTtProductTab'}{/capture}
+            {if $smarty.capture.displayTtProductTab}
+              {$smarty.capture.displayTtProductTab nofilter}
+            {/if}
+          {/block}
+          {block name='product_comment_tab_content'}
+            {capture name='displayTtProductTabContent'}{hook h='displayTtProductTabContent'}{/capture}
+            {if $smarty.capture.displayTtProductTabContent}
+              {$smarty.capture.displayTtProductTabContent nofilter}
+            {/if}
+          {/block}
+        {/block}
+      </div>
     </div>
 
     {block name='product_accessories'}
       {if $accessories}
         <section class="product-accessories clearfix">
-			{assign var="tt_cnt" value="1"}
-			{assign var="tt_total" value="0"}
-			{foreach from=$accessories item="product_accessory"}
-				{$tt_total = $tt_total+1}
-			{/foreach}
-		<div class="tt-titletab">
-          <h3 class="tt-title">{l s='You might also like' d='Shop.Theme.Catalog'}</h3>
-		</div>
-		{if $tt_total > 5}
-			<div class="customNavigation">
-				<a class="btn prev accessories_prev">{l s='Prev' d='Modules.accessories.Shop'}</a>
-				<a class="btn next accessories_next">{l s='Next' d='Modules.accessories.Shop'}</a>
-			</div>
-  		  {/if}
-		  <div class="row">
-          <div class="products">
-            {foreach from=$accessories item="product_accessory"}
-              {block name='product_miniature'}
-                {include file='catalog/_partials/miniatures/product.tpl' product=$product_accessory}
-              {/block}
-            {/foreach}
+          {assign var="tt_cnt" value="1"}
+          {assign var="tt_total" value="0"}
+          {foreach from=$accessories item="product_accessory"}
+            {$tt_total = $tt_total+1}
+          {/foreach}
+          <div class="tt-titletab">
+            <h3 class="tt-title">{l s='You might also like' d='Shop.Theme.Catalog'}</h3>
           </div>
-		  </div>
+          {if $tt_total > 5}
+            <div class="customNavigation">
+              <a class="btn prev accessories_prev">{l s='Prev' d='Modules.accessories.Shop'}</a>
+              <a class="btn next accessories_next">{l s='Next' d='Modules.accessories.Shop'}</a>
+            </div>
+          {/if}
+          <div class="row">
+            <div class="products">
+              {foreach from=$accessories item="product_accessory"}
+                {block name='product_miniature'}
+                  {include file='catalog/_partials/miniatures/product.tpl' product=$product_accessory}
+                {/block}
+              {/foreach}
+            </div>
+          </div>
         </section>
       {/if}
     {/block}
@@ -311,7 +318,9 @@
       </footer>
     {/block}
   </section>
-<style>.product-description img{
-	float:none!important;
-}</style>
+  <style>
+    .product-description img {
+      float: none !important;
+    }
+  </style>
 {/block}
