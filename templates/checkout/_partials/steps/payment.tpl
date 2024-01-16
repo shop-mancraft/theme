@@ -19,7 +19,7 @@
   <div class="payment-options {if $is_free}hidden-xs-up{/if}">
     {foreach from=$payment_options item="module_options"}
       {foreach from=$module_options item="option"}
-        {if !$option.logo|strstr:"/modules/payu/img/logo-payu.svg"}
+
         <div>
           <div id="{$option.id}-container" class="payment-option clearfix">
             {* This is the way an option should be selected when Javascript is enabled *}
@@ -58,7 +58,7 @@
 
           </div>
         </div>
-        {/if}
+
 
         {if $option.additionalInformation}
           <div

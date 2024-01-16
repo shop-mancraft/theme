@@ -209,72 +209,26 @@
 
         </div>
       </div>
-	  <div class="ttproductpagetab">
+	  <div class="">
 	    {block name='product_tabs'}
-              <div class="tabs">
-                <ul class="nav nav-tabs" role="tablist">
-                  {if $product.description}
-                    <li class="nav-item">
-                       <a
-                         class="nav-link{if $product.description} active{/if}"
-                         data-toggle="tab"
-                         href="#description"
-                         role="tab"
-                         aria-controls="description"
-                         {if $product.description} aria-selected="true"{/if}><h3 class="tab-title">{l s='Description' d='Shop.Theme.Catalog'}</h3></a>
-                    </li>
-                  {/if}
-                  <li class="nav-item">
-                    <a
-                      class="nav-link{if !$product.description} active{/if}"
-                      data-toggle="tab"
-                      href="#product-details"
-                      role="tab"
-                      aria-controls="product-details"
-                      {if !$product.description} aria-selected="true"{/if}><h3 class="tab-title">{l s='Product Details' d='Shop.Theme.Catalog'}</h3></a>
-                  </li>
-                  {if $product.attachments}
-                    <li class="nav-item">
-                      <a
-                        class="nav-link"
-                        data-toggle="tab"
-                        href="#attachments"
-                        role="tab"
-                        aria-controls="attachments"><h3 class="tab-title">{l s='Attachments' d='Shop.Theme.Catalog'}</h3></a>
-                    </li>
-                  {/if}
-                  {foreach from=$product.extraContent item=extra key=extraKey}
-                    <li class="nav-item">
-                      <a
-                        class="nav-link"
-                        data-toggle="tab"
-                        href="#extra-{$extraKey}"
-                        role="tab"
-                        aria-controls="extra-{$extraKey}"><h3 class="tab-title">{$extra.title}</h3></a>
-                    </li>
-                  {/foreach}
-				{block name='product_comment_tab'}
-					{capture name='displayTtProductTab'}{hook h='displayTtProductTab'}{/capture}
-						{if $smarty.capture.displayTtProductTab}
-						{$smarty.capture.displayTtProductTab nofilter}
-					{/if}
-				{/block}
-                </ul>
-
-                <div class="tab-content" id="tab-content">
-                 <div class="tab-pane fade in{if $product.description} active{/if}" id="description" role="tabpanel">
+                 <div class="tab-pane" id="description">
                    {block name='product_description'}
-                     <div class="product-description">{$product.description nofilter}</div>
+                     <div class="product-description">
+                      <h3 class="tab-title">{l s='Description' d='Shop.Theme.Catalog'}</h3>
+                      {$product.description nofilter}
+                     </div>
                    {/block}
                  </div>
 
                  {block name='product_details'}
+                    <h3 class="tab-title">{l s='Product Details' d='Shop.Theme.Catalog'}</h3>
                    {include file='catalog/_partials/product-details.tpl'}
                  {/block}
 
                  {block name='product_attachments'}
                    {if $product.attachments}
-                    <div class="tab-pane fade in" id="attachments" role="tabpanel">
+                    <div class="tab-pane" id="attachments">
+                      <h3 class="tab-title">{l s='Attachments' d='Shop.Theme.Catalog'}</h3>
                        <section class="product-attachments">
                          <h3 class="h5 text-uppercase">{l s='Download' d='Shop.Theme.Actions'}</h3>
                          {foreach from=$product.attachments item=attachment}
@@ -292,18 +246,23 @@
                  {/block}
 
                  {foreach from=$product.extraContent item=extra key=extraKey}
-                 <div class="tab-pane fade in {$extra.attr.class}" id="extra-{$extraKey}" role="tabpanel" {foreach $extra.attr as $key => $val} {$key}="{$val}"{/foreach}>
-                   {$extra.content nofilter}
-                 </div>
+                 <div class="tab-pane" id="extra-{$extraKey}" {foreach $extra.attr as $key => $val} {$key}="{$val}"{/foreach}>
+                    <h3 class="tab-title">{$extra.title}</h3>
+                    {$extra.content nofilter}
+                  </div>
                  {/foreach}
-				 {block name='product_comment_tab_content'}
-					{capture name='displayTtProductTabContent'}{hook h='displayTtProductTabContent'}{/capture}
-					{if $smarty.capture.displayTtProductTabContent}
-						{$smarty.capture.displayTtProductTabContent nofilter}
-					{/if}
-				{/block}
-              </div>
-            </div>
+                 {block name='product_comment_tab'}
+                 {capture name='displayTtProductTab'}{hook h='displayTtProductTab'}{/capture}
+                   {if $smarty.capture.displayTtProductTab}
+                   {$smarty.capture.displayTtProductTab nofilter}
+                 {/if}
+               {/block}
+                {block name='product_comment_tab_content'}
+                  {capture name='displayTtProductTabContent'}{hook h='displayTtProductTabContent'}{/capture}
+                  {if $smarty.capture.displayTtProductTabContent}
+                    {$smarty.capture.displayTtProductTabContent nofilter}
+                  {/if}
+                {/block}
           {/block}
 		  </div>
 
