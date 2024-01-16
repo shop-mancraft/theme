@@ -1,8 +1,5 @@
-<div class="tab-pane fade{if !$product.description} in active{/if}"
-     id="product-details"
-     data-product="{$product.embedded_attributes|json_encode}"
-     role="tabpanel"
-  >
+<div class="mb-10 tablet:mb-[50px]" id="product-details">
+  <h2 class="description-title">{l s='Product Details' d='Shop.Theme.Catalog'}</h2>
   {block name='product_reference'}
     {if isset($product_manufacturer->id)}
       <div class="product-manufacturer">
