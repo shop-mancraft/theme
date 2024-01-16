@@ -308,9 +308,42 @@ div.inpost-shipping-container .btn {
 }
 
 .descriptions-container .description-title {
-  @apply text-xl text-white tablet:text-2xl;
+  @apply mb-[50px] text-xl text-white tablet:text-2xl;
 }
 
-.descriptions-container .description-title:after {
+.descriptions-container .description-title::after {
   @apply mt-[14px] block h-px w-[122px] bg-main content-[''];
+}
+
+.descriptions-container p,
+.descriptions-container span,
+.descriptions-container li {
+  @apply text-white;
+}
+
+.descriptions-container #description p,
+.descriptions-container #description span,
+.descriptions-container #description li {
+  @apply text-base;
+}
+
+.descriptions-container #product-details p,
+.descriptions-container #product-details span,
+.descriptions-container #product-details li {
+  @apply text-sm tablet:text-base;
+}
+
+.descriptions-container dl.data-sheet {
+  @apply flex flex-wrap rounded-[10px] border border-gray-normal;
+}
+.descriptions-container dl.data-sheet :last-of-type {
+  @apply !border-b-0;
+}
+
+.descriptions-container dl.data-sheet dt {
+  @apply border-b border-b-gray-normal py-2.5 pl-2.5 tablet:py-5 tablet:pl-5;
+}
+
+.descriptions-container dl.data-sheet dd {
+  @apply border-b border-b-gray-normal py-2.5 pr-2.5 tablet:py-5 tablet:pr-5;
 }

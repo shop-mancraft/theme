@@ -15,12 +15,12 @@
         {/if}
       </div>
     {/if}
-    {if isset($product.reference_to_display) && $product.reference_to_display neq ''}
+    {* {if isset($product.reference_to_display) && $product.reference_to_display neq ''}
       <div class="product-reference">
         <label class="label">{l s='Reference' d='Shop.Theme.Catalog'} </label>
         <span itemprop="sku">{$product.reference_to_display}</span>
       </div>
-    {/if}
+    {/if} *}
   {/block}
 
   {block name='product_quantities'}
@@ -50,11 +50,10 @@
   {block name='product_features'}
     {if $product.grouped_features}
       <section class="product-features">
-        <p class="h6">{l s='Data sheet' d='Shop.Theme.Catalog'}</p>
         <dl class="data-sheet">
           {foreach from=$product.grouped_features item=feature}
-            <dt class="name">{$feature.name}</dt>
-            <dd class="value">{$feature.value|escape:'htmlall'|nl2br nofilter}</dd>
+            <dt>{$feature.name}</dt>
+            <dd>{$feature.value|escape:'htmlall'|nl2br nofilter}</dd>
           {/foreach}
         </dl>
       </section>
