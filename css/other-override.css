@@ -344,9 +344,9 @@ div.inpost-shipping-container .btn {
 }
 
 .descriptions-container dl.data-sheet dt {
-  @apply w-[120px] border-b border-b-gray-normal py-2.5 px-2.5 text-main tablet:w-[170px] tablet:py-5 tablet:px-5;
+  @apply flex w-[120px] items-center border-b border-b-gray-normal py-2.5 px-2.5 text-main tablet:w-[170px] tablet:py-5 tablet:px-5;
 }
 
 .descriptions-container dl.data-sheet dd {
-  @apply w-[calc(100%_-_120px)] border-b border-b-gray-normal py-2.5 pr-2.5 text-white tablet:w-[calc(100%_-_170px)] tablet:py-5 tablet:pr-5;
+  @apply flex w-[calc(100%_-_120px)] items-center border-b border-b-gray-normal py-2.5 pr-2.5 text-white tablet:w-[calc(100%_-_170px)] tablet:py-5 tablet:pr-5;
 }
