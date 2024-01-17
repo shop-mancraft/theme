@@ -1039,6 +1039,13 @@ $(document).ready(function () {
     const swiperProductImg = new Swiper(productImagesElement, {
       slidesPerView: 1,
       allowTouchMove: true,
+      pagination: true,
+      enabled: true,
+      breakpoints: {
+        768: {
+          enabled: false,
+        },
+      },
     });
   }
 });
