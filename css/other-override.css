@@ -350,3 +350,7 @@ div.inpost-shipping-container .btn {
 .descriptions-container dl.data-sheet dd {
   @apply flex w-[calc(100%_-_120px)] items-center border-b border-b-gray-normal py-2.5 pr-2.5 text-white tablet:w-[calc(100%_-_170px)] tablet:py-5 tablet:pr-5;
 }
+
+[data-paypal-source-page="product"] {
+  @apply !w-auto;
+}

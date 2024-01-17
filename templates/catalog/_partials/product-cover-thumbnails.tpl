@@ -22,30 +22,40 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="images-container">
+<div class="images-container overflow-hidden row tablet:!mx-0">
   {* {block name='product_cover'}
-        <div class="product-cover">
+            <div class="product-cover">
+
+
 
 
     {if $product.cover}
 
 
+
+
       {hook h='displayProductStickers'}
-                <img class="js-qv-product-cover" src="{$product.default_image.bySize.medium_default.url}"
-                  alt="{$product.default_image.legend}" title="{$product.default_image.legend}" style="width:100%;"
-                  itemprop="image">
-                <div class="layer hidden-sm-down" data-toggle="modal" data-target="#product-modal">
-                  <i class="material-icons zoom-in">&#xE8FF;</i>
-                </div>
+                        <img class="js-qv-product-cover" src="{$product.default_image.bySize.medium_default.url}"
+                          alt="{$product.default_image.legend}" title="{$product.default_image.legend}" style="width:100%;"
+                          itemprop="image">
+                        <div class="layer hidden-sm-down" data-toggle="modal" data-target="#product-modal">
+                          <i class="material-icons zoom-in">&#xE8FF;</i>
+                        </div>
+
+
 
 
     {else}
-                <img class="js-qv-product-cover" src="{$urls.no_picture_image.bySize.home_default.url}" style="width:100%;"
-                  itemprop="image">
+                        <img class="js-qv-product-cover" src="{$urls.no_picture_image.bySize.home_default.url}" style="width:100%;"
+                          itemprop="image">
+
+
 
 
     {/if}
-        </div>
+            </div>
+
+
 
 
   {/block} *}
@@ -57,7 +67,7 @@
         {foreach from=$product.images item=image}
           <div class="swiper-slide">
             <img class="w-full" data-image-large-src="{$image.bySize.large_default.url}"
-              src="{$image.bySize.medium_default.url}" alt="{$image.legend}" title="{$image.legend}">
+              src="{$image.bySize.home_default.url}" alt="{$image.legend}" title="{$image.legend}">
           </div>
         {/foreach}
       </div>
