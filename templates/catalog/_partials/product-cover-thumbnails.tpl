@@ -24,31 +24,36 @@
  *}
 <div class="images-container">
   {* {block name='product_cover'}
-      <div class="product-cover">
+        <div class="product-cover">
+
 
     {if $product.cover}
 
+
       {hook h='displayProductStickers'}
-            <img class="js-qv-product-cover" src="{$product.default_image.bySize.medium_default.url}"
-              alt="{$product.default_image.legend}" title="{$product.default_image.legend}" style="width:100%;"
-              itemprop="image">
-            <div class="layer hidden-sm-down" data-toggle="modal" data-target="#product-modal">
-              <i class="material-icons zoom-in">&#xE8FF;</i>
-            </div>
+                <img class="js-qv-product-cover" src="{$product.default_image.bySize.medium_default.url}"
+                  alt="{$product.default_image.legend}" title="{$product.default_image.legend}" style="width:100%;"
+                  itemprop="image">
+                <div class="layer hidden-sm-down" data-toggle="modal" data-target="#product-modal">
+                  <i class="material-icons zoom-in">&#xE8FF;</i>
+                </div>
+
 
     {else}
-            <img class="js-qv-product-cover" src="{$urls.no_picture_image.bySize.home_default.url}" style="width:100%;"
-              itemprop="image">
+                <img class="js-qv-product-cover" src="{$urls.no_picture_image.bySize.home_default.url}" style="width:100%;"
+                  itemprop="image">
+
 
     {/if}
-      </div>
+        </div>
+
 
   {/block} *}
 
 
   {block name='product_images'}
     <div class="swiper" data-product-img-swiper>
-      <div id="tt-jqzoom" class="swiper-wrapper">
+      <div class="swiper-wrapper">
         {foreach from=$product.images item=image}
           <div class="swiper-slide">
             <img class="w-full" data-image-large-src="{$image.bySize.large_default.url}"
