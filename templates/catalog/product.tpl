@@ -56,9 +56,9 @@
   <section id="main" itemscope itemtype="https://schema.org/Product">
     <meta itemprop="url" content="{$product.url}">
     <div class="product-layout">
-      <div class="w-full pb-left-column">
+      <div class="w-full tablet:mb-10 pb-left-column">
         {block name='page_content_container'}
-          <section class="page-content" id="content">
+          <section class="page-content !float-none" id="content">
             {block name='page_content'}
               <!-- @todo: use include file='catalog/_partials/product-flags.tpl'} -->
               {block name='product_flags'}

@@ -24,7 +24,10 @@
  *}
 <div class="images-container overflow-hidden row tablet:!mx-0">
   {* {block name='product_cover'}
-                      <div class="product-cover">
+                            <div class="product-cover">
+
+
+
 
 
 
@@ -44,13 +47,19 @@
 
 
 
+
+
+
       {hook h='displayProductStickers'}
-                                            <img class="js-qv-product-cover" src="{$product.default_image.bySize.medium_default.url}"
-                                              alt="{$product.default_image.legend}" title="{$product.default_image.legend}" style="width:100%;"
-                                              itemprop="image">
-                                            <div class="layer hidden-sm-down" data-toggle="modal" data-target="#product-modal">
-                                              <i class="material-icons zoom-in">&#xE8FF;</i>
-                                            </div>
+                                                        <img class="js-qv-product-cover" src="{$product.default_image.bySize.medium_default.url}"
+                                                          alt="{$product.default_image.legend}" title="{$product.default_image.legend}" style="width:100%;"
+                                                          itemprop="image">
+                                                        <div class="layer hidden-sm-down" data-toggle="modal" data-target="#product-modal">
+                                                          <i class="material-icons zoom-in">&#xE8FF;</i>
+                                                        </div>
+
+
+
 
 
 
@@ -61,8 +70,11 @@
 
 
     {else}
-                                            <img class="js-qv-product-cover" src="{$urls.no_picture_image.bySize.home_default.url}" style="width:100%;"
-                                              itemprop="image">
+                                                        <img class="js-qv-product-cover" src="{$urls.no_picture_image.bySize.home_default.url}" style="width:100%;"
+                                                          itemprop="image">
+
+
+
 
 
 
@@ -73,7 +85,10 @@
 
 
     {/if}
-                      </div>
+                            </div>
+
+
+
 
 
 
@@ -88,7 +103,7 @@
 
   {block name='product_images'}
     <div class="swiper" data-product-img-swiper data-gallery-expanded="true">
-      <div class="swiper-wrapper tablet:!flex tablet:!transform-none tablet:gap-2.5">
+      <div class="swiper-wrapper">
         {foreach from=$product.images item=image}
           <div class="swiper-slide tablet:!w-[calc(50%_-_5px)] tablet:rounded-[5px] tablet:overflow-hidden">
             <img class="w-full" data-image-large-src="{$image.bySize.large_default.url}"
@@ -96,7 +111,7 @@
           </div>
         {/foreach}
       </div>
-      <div class="swiper-pagination tablet:!hidden"></div>
+      <div class="swiper-pagination tablet:!hidden !text-left"></div>
       {if $product.images|@count > 4}
         <div class="hidden tablet:block mt-9">
           <button class="text-base text-white border-b-2 hover:border-main hover:text-main transition duration-200 pb-4"
