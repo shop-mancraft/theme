@@ -8523,13 +8523,6 @@ border-radius: 50%;
 	float:left;
 	width:100%;
 }
-@media (min-width: 544px) and (max-width: 767px) {
-    #product #content {
-        float: none;
-        text-align: center;
-		width:80%;
-    }
-}
 .product-price {
 	color: #222222;
 	display: inline-block;
