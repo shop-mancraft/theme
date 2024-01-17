@@ -361,3 +361,16 @@ div.inpost-shipping-container .btn {
 [data-paypal-source-page="product"] {
   @apply !w-auto;
 }
+
+[data-product-img-swiper][data-gallery-expanded="true"] .swiper-slide:nth-child(4) ~ * {
+  @apply !hidden;
+}
+
+[data-gallery-expanded="true"] .text-expanded,
+[data-gallery-expanded="false"] .text-collapse {
+  @apply hidden;
+}
+[data-gallery-expanded="false"] .text-expanded,
+[data-gallery-expanded="true"] .text-collapse {
+  @apply block;
+}

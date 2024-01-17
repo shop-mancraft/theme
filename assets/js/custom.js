@@ -1039,7 +1039,10 @@ $(document).ready(function () {
     const swiperProductImg = new Swiper(productImagesElement, {
       slidesPerView: 1,
       allowTouchMove: true,
-      pagination: true,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "bullets",
+      },
       enabled: true,
       breakpoints: {
         768: {
@@ -1047,6 +1050,14 @@ $(document).ready(function () {
         },
       },
     });
+
+    const galleryToggleBtn = document.querySelector("[data-toggle-expand]");
+
+    if (galleryToggleBtn) {
+      galleryToggleBtn.addEventListener("click", () => {
+        productImagesElement.dataset.desktopCollapsed = productImagesElement.dataset.desktopCollapsed === "false";
+      });
+    }
   }
 });
 
