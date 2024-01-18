@@ -39,8 +39,7 @@
        </svg>
      </button>
    </div>
-   <div class="swiper !height-[calc(100%_-_148px)] tablet:!height-[calc(100%_-_188px)] flex-1"
-     data-product-modal-swiper>
+   <div class="swiper !h-[calc(100%_-_148px)] tablet:!h-[calc(100%_-_188px)] flex-1" data-product-modal-swiper>
      <div class="swiper-wrapper">
        {foreach from=$product.images item=image}
          <div class="swiper-slide flex items-center justify-center py-5 tablet:p-5 tablet:p-10 desktop:px-20 bg-black/50">
