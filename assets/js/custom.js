@@ -1086,7 +1086,7 @@ $(document).ready(function () {
         on: {
           slideChange: function () {
             if (modalCountEl) {
-              modalCountEl.innerText = this.activeIndex + "/" + modalCountEl.dataset.slidesCount;
+              modalCountEl.innerText = this.activeIndex + 1 + "/" + modalCountEl.dataset.slidesCount;
             }
           },
         },
