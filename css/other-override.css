@@ -419,9 +419,14 @@ div.inpost-shipping-container .btn {
   @apply absolute inset-0 border-2 border-main !opacity-100;
 }
 
-[data-product-img-swiper]:hover [data-modal-slider-next],
-[data-product-img-swiper]:hover [data-modal-slider-prev] {
+[data-product-modal-swiper]:hover [data-modal-slider-next],
+[data-product-modal-swiper]:hover [data-modal-slider-prev] {
   @apply opacity-100;
+}
+
+[data-product-modal-swiper]:hover [data-modal-slider-next].swiper-button-disabled,
+[data-product-modal-swiper]:hover [data-modal-slider-prev].swiper-button-disabled {
+  @apply pointer-events-none !opacity-20;
 }
 
 [data-modal-slider-next],
