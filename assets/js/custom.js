@@ -1082,6 +1082,10 @@ $(document).ready(function () {
         thumbs: {
           swiper: swiperModalThumbnails,
         },
+        keyboard: {
+          enabled: true,
+          onlyInViewport: true,
+        },
         allowTouchMove: true,
         on: {
           slideChange: function () {
