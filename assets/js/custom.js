@@ -1065,6 +1065,7 @@ $(document).ready(function () {
   if (productModalSliderEl) {
     const swiperProductModal = new Swiper(productImagesElement, {
       slidesPerView: 1,
+      spaceBetween: 50,
       autoplay: {
         delay: 5000,
       },
@@ -1077,6 +1078,18 @@ $(document).ready(function () {
     const swiperModalThumbnails = new Swiper(productImagesElement, {
       slidesPerView: "auto",
       allowTouchMove: true,
+    });
+  }
+
+  const productModalEl = document.querySelector("[data-product-modal]");
+  if (productModalEl) {
+    productModalSliderEl.querySelectorAll(".swiper-slide").forEach((image) => {
+      image.addEventListener("click", () => {
+        productModalEl.classList.add("active");
+      });
+    });
+    document.querySelector("[data-modal-close]").addEventListener("click", () => {
+      productModalEl.classList.remove("active");
     });
   }
 });

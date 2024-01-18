@@ -25,21 +25,20 @@
 
  {assign var=imagesCount value=$product.images|count}
 
- <div class="opacity-0 pointer-events-none hidden flex flex-col fixed inset-0 bg-black/25 overflow-hidden"
-   data-product-modal>
-   <div class="flex justify-between grow-0">
-     <span class="p-1" data-slides-count><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+ <div data-product-modal>
+   <div class="flex justify-between grow-0 p-5">
+     <span class="p-2" data-slides-count><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
          <path
            d="M12 10.6L6.6 5.2 5.2 6.6l5.4 5.4-5.4 5.4 1.4 1.4 5.4-5.4 5.4 5.4 1.4-1.4-5.4-5.4 5.4-5.4-1.4-1.4-5.4 5.4z">
          </path>
        </svg></span>
-     <button data-modal-close> </button>
+     <button class="p-2" data-modal-close> </button>
    </div>
-   <div class="swiper py-5" data-product-modal-swiper>
+   <div class="swiper flex-1 py-5" data-product-modal-swiper>
      <div class="swiper-wrapper">
        {foreach from=$product.images item=image}
-         <div class="swiper-slide px-5 tablet:px-10 desktop:px-20">
-           <img class="object-contain" loading="lazy" src="{$image.bySize.large_default.url}}" alt="{$image.legend}"
+         <div class="swiper-slide px-5 tablet:px-10 desktop:px-20 bg-black/50">
+           <img class="object-contain" loading="lazy" src="{$image.bySize.large_default.url}" alt="{$image.legend}"
              title="{$image.legend}" itemprop="image">
          </div>
        {/foreach}
@@ -49,7 +48,7 @@
      <div class="swiper-wrapper">
        {foreach from=$product.images item=image}
          <div class="swiper-slide pr-2">
-           <img class="object-contain" loading="lazy" src="{$image.bySize.cart_default.url}}" alt="{$image.legend}"
+           <img class="object-contain" loading="lazy" src="{$image.bySize.cart_default.url}" alt="{$image.legend}"
              title="{$image.legend}">
          </div>
        {/foreach}
