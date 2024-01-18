@@ -1084,7 +1084,7 @@ $(document).ready(function () {
         },
         allowTouchMove: true,
         on: {
-          slideChange: () => {
+          slideChange: function () {
             if (modalCountEl) {
               modalCountEl.innerText = this.activeIndex + "/" + modalCountEl.dataset.slidesCount;
             }
