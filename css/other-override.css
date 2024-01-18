@@ -385,11 +385,11 @@ div.inpost-shipping-container .btn {
   }
 }
 
-[data-desktop-collapsed="true"] .text-expanded,
+[data-desktop-collapsed="true"] .text-expand,
 [data-desktop-collapsed="false"] .text-collapse {
-  @apply hidden;
-}
-[data-desktop-collapsed="false"] .text-expanded,
-[data-desktop-collapsed="true"] .text-collapse {
   @apply block;
+}
+[data-desktop-collapsed="false"] .text-expand,
+[data-desktop-collapsed="true"] .text-collapse {
+  @apply hidden;
 }
