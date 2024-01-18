@@ -22,44 +22,37 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="modal fade js-product-images-modal" id="product-modal">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-	<div class="modal-header">
-       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-         <span aria-hidden="true">&times;</span>
-       </button>
+
+ {assign var=imagesCount value=$product.images|count}
+
+ <div class="opacity-0 pointer-events-none hidden flex flex-col fixed inset-0 bg-black/25 overflow-hidden"
+   data-product-modal>
+   <div class="flex justify-between grow-0">
+     <span class="p-1" data-slides-count><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+         <path
+           d="M12 10.6L6.6 5.2 5.2 6.6l5.4 5.4-5.4 5.4 1.4 1.4 5.4-5.4 5.4 5.4 1.4-1.4-5.4-5.4 5.4-5.4-1.4-1.4-5.4 5.4z">
+         </path>
+       </svg></span>
+     <button data-modal-close> </button>
+   </div>
+   <div class="swiper py-5" data-product-modal-swiper>
+     <div class="swiper-wrapper">
+       {foreach from=$product.images item=image}
+         <div class="swiper-slide px-5 tablet:px-10 desktop:px-20">
+           <img class="object-contain" loading="lazy" src="{$image.bySize.large_default.url}}" alt="{$image.legend}"
+             title="{$image.legend}" itemprop="image">
+         </div>
+       {/foreach}
      </div>
-      <div class="modal-body">
-        {assign var=imagesCount value=$product.images|count}
-        <figure>
-          <img class="js-modal-product-cover product-cover-modal" width="{$product.cover.large.width}" src="{$product.cover.large.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" itemprop="image">
-          <figcaption class="image-caption">
-          {block name='product_description_short'}
-            <div id="product-description-short" itemprop="description">{$product.description_short nofilter}</div>
-          {/block}
-        </figcaption>
-        </figure>
-        <aside id="thumbnails" class="thumbnails js-thumbnails text-sm-center">
-          {block name='product_images'}
-            <div class="js-modal-mask mask {if $imagesCount <= 5} nomargin {/if}">
-              <ul class="product-images js-modal-product-images">
-                {foreach from=$product.images item=image}
-                  <li class="thumb-container">
-                    <img data-image-large-src="{$image.large.url}" class="thumb js-modal-thumb" src="{$image.medium.url}" alt="{$image.legend}" title="{$image.legend}" width="{$image.medium.width}" itemprop="image">
-                  </li>
-                {/foreach}
-              </ul>
-            </div>
-          {/block}
-          {if $imagesCount > 5}
-            <div class="arrows js-modal-arrows">
-              <i class="material-icons arrow-up js-modal-arrow-up">&#xE5C7;</i>
-              <i class="material-icons arrow-down js-modal-arrow-down">&#xE5C5;</i>
-            </div>
-          {/if}
-        </aside>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+   </div>
+   <div class="swiper grow-0 h-12 tablet:h-[100px] p-2 overflow-hidden" data-modal-thumbnails-swiper>
+     <div class="swiper-wrapper">
+       {foreach from=$product.images item=image}
+         <div class="swiper-slide pr-2">
+           <img class="object-contain" loading="lazy" src="{$image.bySize.cart_default.url}}" alt="{$image.legend}"
+             title="{$image.legend}">
+         </div>
+       {/foreach}
+     </div>
+   </div>
+</div>
