@@ -395,9 +395,13 @@ div.inpost-shipping-container .btn {
 }
 
 [data-product-modal] {
-  @apply pointer-events-none fixed inset-0 z-50 flex flex-col overflow-hidden bg-black/30 opacity-0 transition duration-500;
+  @apply pointer-events-none fixed inset-0 z-50 flex flex-col overflow-hidden bg-black/40 opacity-0 transition duration-500;
 }
 
 [data-product-modal].active {
   @apply !pointer-events-auto !opacity-100;
+}
+
+[data-modal-thumbnails-swiper] .swiper-slide-thumb-active::before {
+  @apply absolute inset-0 border-2 border-main !opacity-100;
 }

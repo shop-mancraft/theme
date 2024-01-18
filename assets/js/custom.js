@@ -1075,6 +1075,8 @@ $(document).ready(function () {
         spaceBetween: 50,
         autoplay: {
           delay: 5000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
         },
         thumbs: {
           swiper: swiperModalThumbnails,
@@ -1084,9 +1086,10 @@ $(document).ready(function () {
 
       const productModalEl = document.querySelector("[data-product-modal]");
       if (productModalEl) {
-        productModalSliderEl.querySelectorAll(".swiper-slide").forEach((image) => {
+        productImagesElement.querySelectorAll(".swiper-slide").forEach((image, index) => {
           image.addEventListener("click", () => {
             productModalEl.classList.add("active");
+            swiperProductModal.slideTo(index, 0);
           });
         });
         document.querySelector("[data-modal-close]").addEventListener("click", () => {

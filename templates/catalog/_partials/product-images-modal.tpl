@@ -26,12 +26,13 @@
  {assign var=imagesCount value=$product.images|count}
 
  <div data-product-modal>
-   <div class="flex justify-between grow-0 bg-black/50">
-     <span class="p-5 w-10" data-slides-count>
+   <div class="flex justify-between items-start grow-0 bg-black/50">
+     <span class="p-5 text-white text-base tablet:text-lg" data-slides-count>
        1/{$imagesCount}
      </span>
-     <button class="p-2" data-modal-close>
-       <svg class="w-10 fill-white bg-gray-normal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+     <button class="group" data-modal-close>
+       <svg class="w-10 fill-white group-hover:fill-gray-light transition duration-200 bg-gray-normal"
+         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
          <path
            d="M12 10.6L6.6 5.2 5.2 6.6l5.4 5.4-5.4 5.4 1.4 1.4 5.4-5.4 5.4 5.4 1.4-1.4-5.4-5.4 5.4-5.4-1.4-1.4-5.4 5.4z">
          </path>
@@ -41,17 +42,18 @@
    <div class="swiper flex-1" data-product-modal-swiper>
      <div class="swiper-wrapper">
        {foreach from=$product.images item=image}
-         <div class="swiper-slide p-5 tablet:p-10 desktop:px-20 bg-black/50">
-           <img class="object-contain mx-auto" loading="lazy" src="{$image.bySize.large_default.url}"
-             alt="{$image.legend}" title="{$image.legend}" itemprop="image">
+         <div class="swiper-slide flex items-center justify-center py-5 tablet:p-5 tablet:p-10 desktop:px-20 bg-black/50">
+           <img class="object-contain" loading="lazy" src="{$image.bySize.large_default.url}" alt="{$image.legend}"
+             title="{$image.legend}" itemprop="image">
          </div>
        {/foreach}
      </div>
    </div>
-   <div class="swiper grow-0 h-12 tablet:h-[100px] p-2 overflow-hidden" data-modal-thumbnails-swiper>
+   <div class="swiper grow-0 h-20 tablet:h-[100px] p-2 overflow-hidden" data-modal-thumbnails-swiper>
      <div class="swiper-wrapper">
        {foreach from=$product.images item=image}
-         <div class="swiper-slide !w-auto pr-2">
+         <div
+           class="swiper-slide !w-auto mr-2 relative cursor-pointer before:opacity-0 before:transition before:duration-200">
            <img class="h-full object-cover" loading="lazy" src="{$image.bySize.cart_default.url}" alt="{$image.legend}"
              title="{$image.legend}">
          </div>
