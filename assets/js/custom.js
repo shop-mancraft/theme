@@ -1061,24 +1061,27 @@ $(document).ready(function () {
     }
   }
 
-  const productModalSliderEl = document.querySelector("[data-product-modal-swiper]");
-  if (productModalSliderEl) {
-    const swiperProductModal = new Swiper(productImagesElement, {
-      slidesPerView: 1,
-      spaceBetween: 50,
-      autoplay: {
-        delay: 5000,
-      },
-      allowTouchMove: true,
-    });
-  }
-
   const productThumbnailSliderEl = document.querySelector("[data-modal-thumbnails-swiper]");
   if (productThumbnailSliderEl) {
     const swiperModalThumbnails = new Swiper(productImagesElement, {
       slidesPerView: "auto",
       allowTouchMove: true,
     });
+
+    const productModalSliderEl = document.querySelector("[data-product-modal-swiper]");
+    if (productModalSliderEl) {
+      const swiperProductModal = new Swiper(productModalSliderEl, {
+        slidesPerView: 1,
+        spaceBetween: 50,
+        autoplay: {
+          delay: 5000,
+        },
+        thumbs: {
+          swiper: swiperModalThumbnails,
+        },
+        allowTouchMove: true,
+      });
+    }
   }
 
   const productModalEl = document.querySelector("[data-product-modal]");

@@ -395,7 +395,7 @@ div.inpost-shipping-container .btn {
 }
 
 [data-product-modal] {
-  @apply pointer-events-none fixed inset-0 flex flex-col overflow-hidden bg-black/30 opacity-0 transition duration-500;
+  @apply pointer-events-none fixed inset-0 z-50 flex flex-col overflow-hidden bg-black/30 opacity-0 transition duration-500;
 }
 
 [data-product-modal].active {
