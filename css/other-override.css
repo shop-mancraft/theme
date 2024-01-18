@@ -371,10 +371,6 @@ div.inpost-shipping-container .btn {
     @apply absolute left-0 top-[calc(50%_-_15px) ];
 }
 
-.descriptions-container ul li {
-  @apply;
-}
-
 [data-paypal-source-page="product"] {
   @apply !w-auto;
 }
