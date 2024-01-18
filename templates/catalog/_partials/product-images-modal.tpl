@@ -49,12 +49,14 @@
        {/foreach}
      </div>
      <div class="right-5" data-modal-slider-next>
-       <svg class="fill-white w-[50px]" xmlns="http://www.w3.org/2000/svg" viewBox="-12 -11 47 47">
+       <svg class="fill-white w-[50px] transition duration-200" xmlns="http://www.w3.org/2000/svg"
+         viewBox="-12 -11 47 47">
          <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
        </svg>
      </div>
      <div class="left-5" data-modal-slider-prev>
-       <svg class="fill-white w-[50px] rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="-12 -11 47 47">
+       <svg class="fill-white w-[50px] rotate-180 transition duration-200" xmlns="http://www.w3.org/2000/svg"
+         viewBox="-12 -11 47 47">
          <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
        </svg>
      </div>

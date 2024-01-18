@@ -412,6 +412,11 @@ div.inpost-shipping-container .btn {
   @apply absolute inset-0 border-2 border-main !opacity-100;
 }
 
+[data-product-img-swiper]:hover [data-modal-slider-next],
+[data-product-img-swiper]:hover [data-modal-slider-prev] {
+  @apply opacity-100;
+}
+
 [data-modal-slider-next],
 [data-modal-slider-prev] {
   @apply absolute top-[calc(50%_-_16px)] z-20 hidden rounded-full border border-solid border-white bg-transparent opacity-0 transition duration-300 hover:border-main hover:bg-main tablet:top-[calc(50%_-_25px)] tablet:block;
