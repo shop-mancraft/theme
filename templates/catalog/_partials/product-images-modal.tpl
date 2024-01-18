@@ -26,20 +26,23 @@
  {assign var=imagesCount value=$product.images|count}
 
  <div data-product-modal>
-   <div class="flex justify-between grow-0 p-5">
-     <span class="p-2" data-slides-count><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+   <div class="flex justify-between grow-0 bg-black/50">
+     <span class="p-5 w-10" data-slides-count>
+     </span>
+     <button class="p-2" data-modal-close>
+       <svg class="w-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
          <path
            d="M12 10.6L6.6 5.2 5.2 6.6l5.4 5.4-5.4 5.4 1.4 1.4 5.4-5.4 5.4 5.4 1.4-1.4-5.4-5.4 5.4-5.4-1.4-1.4-5.4 5.4z">
          </path>
-       </svg></span>
-     <button class="p-2" data-modal-close> </button>
+       </svg>
+     </button>
    </div>
-   <div class="swiper flex-1 py-5" data-product-modal-swiper>
+   <div class="swiper flex-1" data-product-modal-swiper>
      <div class="swiper-wrapper">
        {foreach from=$product.images item=image}
-         <div class="swiper-slide px-5 tablet:px-10 desktop:px-20 bg-black/50">
-           <img class="object-contain" loading="lazy" src="{$image.bySize.large_default.url}" alt="{$image.legend}"
-             title="{$image.legend}" itemprop="image">
+         <div class="swiper-slide p-5 tablet:p-10 desktop:px-20 bg-black/50">
+           <img class="object-contain mx-auto" loading="lazy" src="{$image.bySize.large_default.url}"
+             alt="{$image.legend}" title="{$image.legend}" itemprop="image">
          </div>
        {/foreach}
      </div>
@@ -47,8 +50,8 @@
    <div class="swiper grow-0 h-12 tablet:h-[100px] p-2 overflow-hidden" data-modal-thumbnails-swiper>
      <div class="swiper-wrapper">
        {foreach from=$product.images item=image}
-         <div class="swiper-slide pr-2">
-           <img class="object-contain" loading="lazy" src="{$image.bySize.cart_default.url}" alt="{$image.legend}"
+         <div class="swiper-slide !w-auto pr-2">
+           <img class="h-full object-cover" loading="lazy" src="{$image.bySize.cart_default.url}" alt="{$image.legend}"
              title="{$image.legend}">
          </div>
        {/foreach}
