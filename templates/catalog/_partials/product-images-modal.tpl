@@ -28,9 +28,10 @@
  <div data-product-modal>
    <div class="flex justify-between grow-0 bg-black/50">
      <span class="p-5 w-10" data-slides-count>
+       1/{$imagesCount}
      </span>
      <button class="p-2" data-modal-close>
-       <svg class="w-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+       <svg class="w-10 fill-white bg-gray-normal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
          <path
            d="M12 10.6L6.6 5.2 5.2 6.6l5.4 5.4-5.4 5.4 1.4 1.4 5.4-5.4 5.4 5.4 1.4-1.4-5.4-5.4 5.4-5.4-1.4-1.4-5.4 5.4z">
          </path>
