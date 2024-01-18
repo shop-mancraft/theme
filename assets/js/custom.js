@@ -1104,11 +1104,13 @@ $(document).ready(function () {
       if (productModalEl) {
         productImagesElement.querySelectorAll(".swiper-slide").forEach((image, index) => {
           image.addEventListener("click", () => {
+            document.body.classList.add("overflow-hidden");
             productModalEl.classList.add("active");
             swiperProductModal.slideTo(index, 0);
           });
         });
         document.querySelector("[data-modal-close]").addEventListener("click", () => {
+          document.body.classList.remove("overflow-hidden");
           productModalEl.classList.remove("active");
         });
       }
