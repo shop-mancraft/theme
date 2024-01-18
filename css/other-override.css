@@ -359,11 +359,11 @@ div.inpost-shipping-container .btn {
 }
 
 .descriptions-container ul {
-  @apply my-5;
+  @apply mt-5;
 }
 
 .descriptions-container ul li {
-  @apply relative mb-2.5 pl-10 text-base;
+  @apply relative mb-5 pl-10 text-base;
 }
 
 .descriptions-container ul li::before {
@@ -417,4 +417,14 @@ div.inpost-shipping-container .btn {
 
 [data-modal-thumbnails-swiper] .swiper-slide-thumb-active::before {
   @apply absolute inset-0 border-2 border-main !opacity-100;
+}
+
+[data-modal-slider-next],
+[data-modal-slider-prev] {
+  @apply absolute top-[calc(50%_-_16px)] z-20 hidden rounded-full border border-solid border-white bg-transparent opacity-0 transition duration-300 hover:border-main hover:bg-main tablet:top-[calc(50%_-_25px)] tablet:block;
+}
+
+[data-modal-slider-next]:hover svg,
+[data-modal-slider-prev]:hover svg {
+  @apply fill-black;
 }

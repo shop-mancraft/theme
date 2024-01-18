@@ -1082,6 +1082,10 @@ $(document).ready(function () {
         thumbs: {
           swiper: swiperModalThumbnails,
         },
+        navigation: {
+          nextEl: "[data-modal-slider-next]",
+          prevEl: "[data-modal-slider-prev]",
+        },
         keyboard: {
           enabled: true,
           onlyInViewport: true,

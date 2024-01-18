@@ -39,7 +39,7 @@
        </svg>
      </button>
    </div>
-   <div class="swiper !h-[calc(100%_-_148px)] tablet:!h-[calc(100%_-_188px)] flex-1" data-product-modal-swiper>
+   <div class="group swiper !h-[calc(100%_-_148px)] tablet:!h-[calc(100%_-_188px)] flex-1" data-product-modal-swiper>
      <div class="swiper-wrapper">
        {foreach from=$product.images item=image}
          <div class="swiper-slide flex items-center justify-center py-5 tablet:p-5 tablet:p-10 desktop:px-20 bg-black/50">
@@ -47,6 +47,16 @@
              title="{$image.legend}" itemprop="image">
          </div>
        {/foreach}
+     </div>
+     <div class="right-5" data-modal-slider-next>
+       <svg class="fill-white w-[50px]" xmlns="http://www.w3.org/2000/svg" viewBox="-12 -11 47 47">
+         <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+       </svg>
+     </div>
+     <div class="left-5" data-modal-slider-prev>
+       <svg class="fill-white w-[50px] rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="-12 -11 47 47">
+         <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+       </svg>
      </div>
    </div>
    <div class="swiper grow-0 h-20 tablet:h-[120px] p-2 overflow-hidden" data-modal-thumbnails-swiper>
