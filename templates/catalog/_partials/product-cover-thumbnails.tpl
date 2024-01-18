@@ -24,20 +24,25 @@
  *}
 <div class="images-container overflow-hidden row tablet:!mx-0">
   {* {block name='product_cover'}
-    <div class="product-cover">
-      {if $product.cover}
-        {hook h='displayProductStickers'}
-        <img class="js-qv-product-cover" src="{$product.default_image.bySize.medium_default.url}"
-          alt="{$product.default_image.legend}" title="{$product.default_image.legend}" style="width:100%;"
-          itemprop="image">
-        <div class="layer hidden-sm-down" data-toggle="modal" data-target="#product-modal">
-          <i class="material-icons zoom-in">&#xE8FF;</i>
-        </div>
-      {else}
-        <img class="js-qv-product-cover" src="{$urls.no_picture_image.bySize.home_default.url}" style="width:100%;"
-          itemprop="image">
-      {/if}
-    </div>
+      <div class="product-cover">
+
+    {if $product.cover}
+
+      {hook h='displayProductStickers'}
+            <img class="js-qv-product-cover" src="{$product.default_image.bySize.medium_default.url}"
+              alt="{$product.default_image.legend}" title="{$product.default_image.legend}" style="width:100%;"
+              itemprop="image">
+            <div class="layer hidden-sm-down" data-toggle="modal" data-target="#product-modal">
+              <i class="material-icons zoom-in">&#xE8FF;</i>
+            </div>
+
+    {else}
+            <img class="js-qv-product-cover" src="{$urls.no_picture_image.bySize.home_default.url}" style="width:100%;"
+              itemprop="image">
+
+    {/if}
+      </div>
+
   {/block} *}
 
 
@@ -45,7 +50,7 @@
     <div class="swiper" data-product-img-swiper data-desktop-collapsed="true">
       <div class="swiper-wrapper">
         {foreach from=$product.images item=image}
-          <div class="swiper-slide tablet:!w-[calc(50%_-_5px)] tablet:rounded-[5px] tablet:overflow-hidden">
+          <div class="swiper-slide tablet:!w-[calc(50%_-_5px)] tablet:rounded-[5px] tablet:overflow-hidden cursor-pointer">
             <img class="w-full" data-image-large-src="{$image.bySize.large_default.url}"
               src="{$image.bySize.home_default.url}" alt="{$image.legend}" title="{$image.legend}">
           </div>
