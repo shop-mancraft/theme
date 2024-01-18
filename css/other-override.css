@@ -352,7 +352,7 @@ div.inpost-shipping-container .btn {
 }
 
 .descriptions-container ul {
-  @apply relative my-5 pl-10 text-base;
+  @apply my-5;
 }
 
 .descriptions-container ul li {
@@ -360,8 +360,8 @@ div.inpost-shipping-container .btn {
 }
 
 .descriptions-container ul li::before {
-  content: url('data:image/svg+xml,<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Group"><path id="Vector" d="M14 26.5C20.9036 26.5 26.5 20.9036 26.5 14C26.5 7.09644 20.9036 1.5 14 1.5C7.09644 1.5 1.5 7.09644 1.5 14C1.5 20.9036 7.09644 26.5 14 26.5Z" stroke="%23A8D727" stroke-width="1.5"/><path id="Vector_2" d="M9.625 14.625L12.125 17.125L18.375 10.875" stroke="%23A8D727" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g></svg>')
-    @apply absolute left-0 top-[calc(50%_-_15px) ];
+  content: url('data:image/svg+xml,<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Group"><path id="Vector" d="M14 26.5C20.9036 26.5 26.5 20.9036 26.5 14C26.5 7.09644 20.9036 1.5 14 1.5C7.09644 1.5 1.5 7.09644 1.5 14C1.5 20.9036 7.09644 26.5 14 26.5Z" stroke="%23A8D727" stroke-width="1.5"/><path id="Vector_2" d="M9.625 14.625L12.125 17.125L18.375 10.875" stroke="%23A8D727" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g></svg>');
+  @apply absolute left-0 top-[calc(50%_-_15px)];
 }
 
 [data-paypal-source-page="product"] {
