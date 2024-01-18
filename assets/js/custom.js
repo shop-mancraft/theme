@@ -1069,6 +1069,7 @@ $(document).ready(function () {
     });
 
     const productModalSliderEl = document.querySelector("[data-product-modal-swiper]");
+    const modalCountEl = document.querySelector("[data-slides-count]");
     if (productModalSliderEl) {
       const swiperProductModal = new Swiper(productModalSliderEl, {
         slidesPerView: 1,
@@ -1082,6 +1083,13 @@ $(document).ready(function () {
           swiper: swiperModalThumbnails,
         },
         allowTouchMove: true,
+        on: {
+          slideChange: () => {
+            if (modalCountEl) {
+              modalCountEl.innerText = this.activeIndex + "/" + modalCountEl.dataset.slidesCount;
+            }
+          },
+        },
       });
 
       const productModalEl = document.querySelector("[data-product-modal]");

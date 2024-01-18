@@ -27,7 +27,7 @@
 
  <div data-product-modal>
    <div class="flex justify-between items-start grow-0 bg-black/50">
-     <span class="p-5 text-white text-base tablet:text-lg" data-slides-count>
+     <span class="p-5 text-white text-base tablet:text-lg" data-slides-count="{$imagesCount}">
        1/{$imagesCount}
      </span>
      <button class="group" data-modal-close>
@@ -39,7 +39,8 @@
        </svg>
      </button>
    </div>
-   <div class="swiper flex-1" data-product-modal-swiper>
+   <div class="swiper !height-[calc(100%_-_148px)] tablet:!height-[calc(100%_-_188px)] flex-1"
+     data-product-modal-swiper>
      <div class="swiper-wrapper">
        {foreach from=$product.images item=image}
          <div class="swiper-slide flex items-center justify-center py-5 tablet:p-5 tablet:p-10 desktop:px-20 bg-black/50">
@@ -49,7 +50,7 @@
        {/foreach}
      </div>
    </div>
-   <div class="swiper grow-0 h-20 tablet:h-[100px] p-2 overflow-hidden" data-modal-thumbnails-swiper>
+   <div class="swiper grow-0 h-20 tablet:h-[120px] p-2 overflow-hidden" data-modal-thumbnails-swiper>
      <div class="swiper-wrapper">
        {foreach from=$product.images item=image}
          <div
