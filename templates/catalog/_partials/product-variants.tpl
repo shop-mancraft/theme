@@ -43,19 +43,23 @@
                   <input class="input-color" type="radio" data-product-attribute="{$id_attribute_group}"
                     name="group[{$id_attribute_group}]" value="{$id_attribute}" {if $group_attribute.selected} checked="checked"
                     {/if}>
-                  <span {if $group_attribute.html_color_code && !$group_attribute.texture}class="color"
-                    style="background-color: {$group_attribute.html_color_code}" {/if}
-                    {if $group_attribute.texture}class="color texture" style="background-image: url({$group_attribute.texture})"
-                    {/if}><span class="sr-only">{$group_attribute.name}</span></span>
+                  <span {if $group_attribute.html_color_code && !$group_attribute.texture} class="color"
+                      style="background-color: {$group_attribute.html_color_code}" {/if} {if $group_attribute.texture}
+                    class="color texture" style="background-image: url({$group_attribute.texture})" {/if}>
+                    {if $group_attribute.html_color_code && !$group_attribute.texture}
+                      {foreach from=$combinations key=id_combination item=combination}
+                        {if $combination['attributes_values'][$id_attribute_group] == $group_attribute.name}
+                          <img
+                            src="{$link->getImageLink($product->link_rewrite, $product->$combination['id_image'], 'small_default')|escape:'htmlall':'UTF-8'}">
+                          {break}
+                        {/if}
+                      {/foreach}
+                    {/if}
+                    <span class="sr-only">{$group_attribute.name}</span>
+                  </span>
                 </label>
-                {foreach from=$combinations key=id_combination item=combination}
-                  {if $combination['attributes_values'][$id_attribute_group] == $group_attribute.name}
-                    {$combination['id_image']}
-                  {/if}
-                {/foreach}
               </li>
             {/foreach}
-            {debug}
           </ul>
         {elseif $group.group_type == 'radio'}
           <ul id="group_{$id_attribute_group}">
