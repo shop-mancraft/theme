@@ -49,9 +49,7 @@
                     {/if}><span class="sr-only">{$group_attribute.name}</span></span>
                 </label>
                 {foreach from=$combinations key=id_combination item=combination}
-                  {$combination['attributes_values']}
-                  {$combination['attributes_values'][$group_attribute.name]}
-                  {if $combination['attributes_values'][$group_attribute.name] == $id_attribute}
+                  {if $combination['attributes_values'][$id_attribute_group] == $group_attribute.name}
                     {$combination['id_image']}
                   {/if}
                 {/foreach}
