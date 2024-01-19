@@ -1034,6 +1034,17 @@ $(document).ready(function () {
     });
   }
 
+  initProductSwipers();
+  if (prestashop) {
+    prestashop.on("updatedProduct", initProductSwipers);
+  }
+});
+
+$(window).load(function () {
+  $("#checkout #checkout-payment-step #payment-option-1").trigger("click");
+});
+
+function initProductSwipers() {
   const productImagesElement = document.querySelector("[data-product-img-swiper]");
   if (productImagesElement) {
     new Swiper(productImagesElement, {
@@ -1057,17 +1068,6 @@ $(document).ready(function () {
     });
   }
 
-  initProductSwipers();
-  if (prestashop) {
-    prestashop.on("updatedProduct", initProductSwipers);
-  }
-});
-
-$(window).load(function () {
-  $("#checkout #checkout-payment-step #payment-option-1").trigger("click");
-});
-
-function initProductSwipers() {
   const productThumbnailSliderEl = document.querySelector("[data-modal-thumbnails-swiper]");
   if (productThumbnailSliderEl) {
     const swiperModalThumbnails = new Swiper(productThumbnailSliderEl, {
@@ -1108,7 +1108,7 @@ function initProductSwipers() {
       });
 
       const productModalEl = document.querySelector("[data-product-modal]");
-      if (productModalEl) {
+      if (productModalEl && productImagesElement) {
         productImagesElement.querySelectorAll(".swiper-slide").forEach((image, index) => {
           image.addEventListener("click", () => {
             document.body.classList.add("overflow-hidden");
