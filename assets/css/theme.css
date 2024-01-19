@@ -8704,10 +8704,6 @@ border-radius: 50%;
 	font-weight: 500;
 	line-height: 28px;
 }
-.product-prices div {
-   float: left;
-	margin: 0;
-}
 .product-prices .tax-shipping-delivery-label {
     color: #111;
 	float: left;
