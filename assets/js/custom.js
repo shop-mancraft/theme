@@ -1045,7 +1045,10 @@ $(document).ready(function () {
         type: "bullets",
         clickable: true,
       },
-      enabled: true,
+      navigation: {
+        nextEl: "[data-product-img-next]",
+        prevEl: "[data-product-img-prev]",
+      },
       breakpoints: {
         768: {
           spaceBetween: 20,

@@ -400,21 +400,29 @@ div.inpost-shipping-container .btn {
 }
 
 [data-product-modal-swiper]:hover [data-modal-slider-next],
-[data-product-modal-swiper]:hover [data-modal-slider-prev] {
+[data-product-modal-swiper]:hover [data-modal-slider-prev],
+[data-product-img-swiper]:hover [data-product-img-next],
+[data-product-img-swiper]:hover [data-product-img-prev] {
   @apply opacity-100;
 }
 
 [data-product-modal-swiper]:hover [data-modal-slider-next].swiper-button-disabled,
-[data-product-modal-swiper]:hover [data-modal-slider-prev].swiper-button-disabled {
+[data-product-modal-swiper]:hover [data-modal-slider-prev].swiper-button-disabled,
+[data-product-img-swiper]:hover [data-product-img-next].swiper-button-disabled,
+[data-product-img-swiper]:hover [data-product-img-prev].swiper-button-disabled {
   @apply pointer-events-none !opacity-20;
 }
 
 [data-modal-slider-next],
-[data-modal-slider-prev] {
+[data-modal-slider-prev],
+[data-product-img-next],
+[data-product-img-prev] {
   @apply absolute top-[calc(50%_-_16px)] z-20 hidden rounded-full border border-solid border-white bg-transparent opacity-0 transition duration-300 hover:border-main hover:bg-main tablet:top-[calc(50%_-_25px)] tablet:block;
 }
 
 [data-modal-slider-next]:hover svg,
-[data-modal-slider-prev]:hover svg {
+[data-modal-slider-prev]:hover svg,
+[data-product-img-next]:hover svg,
+[data-product-img-prev]:hover svg {
   @apply fill-black;
 }
