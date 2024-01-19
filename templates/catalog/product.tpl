@@ -94,35 +94,6 @@
           {/block}
         {/block}
 
-        <div class="flex divide-x didive-[#64635D] space-x-2">
-          {block name='product_reference'}
-            {if isset($product.reference_to_display) && $product.reference_to_display neq ''}
-              <div class="product-reference">
-                <label class="label">{l s='SKU:' d='Shop.Theme.Catalog'} </label>
-                <span itemprop="sku">{$product.reference_to_display}</span>
-              </div>
-            {/if}
-          {/block}
-          {block name='product_availability'}
-            <span id="product-availability">
-              {if $product.show_availability && $product.availability_message}
-                <span class="mr-1 w-3 h-3 rounded-full" style="background-color: 
-                  {if $product.availability == 'available'}
-                    #7CFC00
-                  {elseif $product.availability == 'last_remaining_items'}
-                    #FF9A52
-                  {else}
-                    #FF0000
-                  {/if}
-
-                  ;">
-                </span>
-                {$product.availability_message}
-              {/if}
-            </span>
-          {/block}
-        </div>
-
         {block name='product_comment'}
           {capture name='displayTtProductExtra'}{hook h='displayTtProductExtra'}{/capture}
           {if $smarty.capture.displayTtProductExtra}
