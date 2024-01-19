@@ -1051,14 +1051,6 @@ $(document).ready(function () {
         },
       },
     });
-
-    const galleryToggleBtn = document.querySelector("[data-toggle-expand]");
-
-    if (galleryToggleBtn) {
-      galleryToggleBtn.addEventListener("click", () => {
-        productImagesElement.dataset.desktopCollapsed = productImagesElement.dataset.desktopCollapsed === "false";
-      });
-    }
   }
 
   const productThumbnailSliderEl = document.querySelector("[data-modal-thumbnails-swiper]");

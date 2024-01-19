@@ -73,7 +73,6 @@
       </span>
     {/block}
 	{hook h='displayTtCompareButton' product=$product}
-	{hook h='displayTtWishlistButton' product=$product}
     {block name='product_minimal_quantity'}
       <p class="product-minimal-quantity">
         {if $product.minimal_quantity > 1}

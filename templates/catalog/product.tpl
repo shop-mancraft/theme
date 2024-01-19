@@ -56,9 +56,9 @@
   <section id="main" itemscope itemtype="https://schema.org/Product">
     <meta itemprop="url" content="{$product.url}">
     <div class="product-layout">
-      <div class="w-full tablet:mb-10 pb-left-column">
+      <div class="w-full pb-left-column">
         {block name='page_content_container'}
-          <section class="page-content !float-none" id="content">
+          <section class="page-content" id="content">
             {block name='page_content'}
               <!-- @todo: use include file='catalog/_partials/product-flags.tpl'} -->
               {block name='product_flags'}
@@ -81,10 +81,15 @@
           </section>
         {/block}
       </div>
-      <div class="w-full tablet:pl-8 desktop:pl-16 tablet:sticky tablet:top-10 desktop:top-24 pb-right-column">
+      <div
+        class="w-full tablet:pl-8 desktop:pl-[60px] tablet:sticky tablet:top-10 desktop:top-24 mt-2.5 desktop:mt-[30px] ">
         {block name='page_header_container'}
           {block name='page_header'}
-            <h1 class="h1 tt-producttitle" itemprop="name">{block name='page_title'}{$product.name}{/block}</h1>
+            <div class="flex justify-between">
+              <h1 class="text-xl tablet:text-2xl text-white" itemprop="name">{block name='page_title'}{$product.name}{/block}
+              </h1>
+              {hook h='displayTtWishlistButton' product=$product}
+            </div>
           {/block}
         {/block}
 
