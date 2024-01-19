@@ -372,6 +372,14 @@ div.inpost-shipping-container .btn {
   @apply mb-0 tablet:mb-5;
 }
 
+#product .product-layout .wishlist button {
+  @apply !block;
+}
+
+#product .product-layout .wishlist a {
+  @apply !hidden;
+}
+
 [data-product-img-swiper] .swiper-pagination .swiper-pagination-bullet {
   @apply !ml-0 !mr-1 h-0.5 w-5 rounded-full bg-[#828282] opacity-50 !transition-all tablet:h-[3px] tablet:w-[30px];
 }
