@@ -244,7 +244,7 @@
 @media (min-width: 992px) {
   .tt-menu-horizontal.tt-menu-horizontal .main-menu::before,
   .tt-menu-horizontal.tt-menu-horizontal .main-menu::after {
-    content: '';
+    content: "";
     width: 0;
     height: 0;
     left: 23px;
@@ -458,27 +458,9 @@ a.tthometab-title:hover {
 .ttfeatured-products .product-title a,
 .crossselling-product .product-title a,
 .category-products .product-title a,
-.ttbestseller-products
-  .products
-  .product-miniature
-  .thumbnail-container
-  .product-description
-  .product-title
-  a,
-.ttnew-products
-  .products
-  .product-miniature
-  .thumbnail-container
-  .product-description
-  .product-title
-  a,
-.ttspecial-products
-  .products
-  .product-miniature
-  .thumbnail-container
-  .product-description
-  .product-title
-  a,
+.ttbestseller-products .products .product-miniature .thumbnail-container .product-description .product-title a,
+.ttnew-products .products .product-miniature .thumbnail-container .product-description .product-title a,
+.ttspecial-products .products .product-miniature .thumbnail-container .product-description .product-title a,
 .view-product .product-title a,
 #product_comparison .product-miniature .product-description .product-title > a {
   color: #999;
@@ -491,33 +473,11 @@ a.tthometab-title:hover {
 .ttfeatured-products .product-title a:hover,
 .crossselling-product .product-title a:hover,
 .category-products .product-title a:hover,
-.ttbestseller-products
-  .products
-  .product-miniature
-  .thumbnail-container
-  .product-description
-  .product-title
-  a:hover,
-.ttnew-products
-  .products
-  .product-miniature
-  .thumbnail-container
-  .product-description
-  .product-title
-  a:hover,
-.ttspecial-products
-  .products
-  .product-miniature
-  .thumbnail-container
-  .product-description
-  .product-title
-  a:hover,
+.ttbestseller-products .products .product-miniature .thumbnail-container .product-description .product-title a:hover,
+.ttnew-products .products .product-miniature .thumbnail-container .product-description .product-title a:hover,
+.ttspecial-products .products .product-miniature .thumbnail-container .product-description .product-title a:hover,
 .view-product .product-title a:hover,
-#product_comparison
-  .product-miniature
-  .product-description
-  .product-title
-  > a:hover {
+#product_comparison .product-miniature .product-description .product-title > a:hover {
   color: #fff;
 }
 
@@ -528,24 +488,9 @@ a.tthometab-title:hover {
 .ttfeatured-products .product-price-and-shipping,
 .crossselling-product .product-price-and-shipping,
 .category-products .product-price-and-shipping,
-.ttbestseller-products
-  .products
-  .product-miniature
-  .thumbnail-container
-  .product-description
-  .product-price-and-shipping,
-.ttnew-products
-  .products
-  .product-miniature
-  .thumbnail-container
-  .product-description
-  .product-price-and-shipping,
-.ttspecial-products
-  .products
-  .product-miniature
-  .thumbnail-container
-  .product-description
-  .product-price-and-shipping,
+.ttbestseller-products .products .product-miniature .thumbnail-container .product-description .product-price-and-shipping,
+.ttnew-products .products .product-miniature .thumbnail-container .product-description .product-price-and-shipping,
+.ttspecial-products .products .product-miniature .thumbnail-container .product-description .product-price-and-shipping,
 .view-product .product-price-and-shipping,
 #product_comparison .product-miniature .product-price-and-shipping {
   color: #fff;
@@ -574,80 +519,21 @@ a.tthometab-title:hover {
   border: 0;
 }
 
-#products
-  .thumbnail-container
-  .ttproducthover
-  div.tt-button-container
-  .btn.ajax_add_to_cart_button
-  span,
-.products
-  .thumbnail-container
-  .ttproducthover
-  div.tt-button-container
-  .btn.ajax_add_to_cart_button
-  span,
-.featured-products
-  .thumbnail-container
-  .ttproducthover
-  div.tt-button-container
-  .btn.ajax_add_to_cart_button
-  span,
-.product-accessories
-  .thumbnail-container
-  .ttproducthover
-  div.tt-button-container
-  .btn.ajax_add_to_cart_button
-  span,
-.ttfeatured-products
-  .thumbnail-container
-  .ttproducthover
-  div.tt-button-container
-  .btn.ajax_add_to_cart_button
-  span,
-.crossselling-product
-  .thumbnail-container
-  .ttproducthover
-  div.tt-button-container
-  .btn.ajax_add_to_cart_button
-  span,
-.ttbestseller-products
-  .thumbnail-container
-  .ttproducthover
-  div.tt-button-container
-  .btn.ajax_add_to_cart_button
-  span,
-.ttnew-products
-  .thumbnail-container
-  .ttproducthover
-  div.tt-button-container
-  .btn.ajax_add_to_cart_button
-  span,
-.ttspecial-products
-  .thumbnail-container
-  .ttproducthover
-  div.tt-button-container
-  .btna.ajax_add_to_cart_button
-  span,
-.category-products
-  .thumbnail-container
-  .ttproducthover
-  div.tt-button-container
-  .btn.ajax_add_to_cart_button
-  span,
-.view-product
-  .thumbnail-container
-  .ttproducthover
-  div.tt-button-container
-  .btn.ajax_add_to_cart_button
-  span {
+#products .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button span,
+.products .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button span,
+.featured-products .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button span,
+.product-accessories .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button span,
+.ttfeatured-products .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button span,
+.crossselling-product .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button span,
+.ttbestseller-products .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button span,
+.ttnew-products .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button span,
+.ttspecial-products .thumbnail-container .ttproducthover div.tt-button-container .btna.ajax_add_to_cart_button span,
+.category-products .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button span,
+.view-product .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button span {
   display: none;
 }
 
-#products
-  .thumbnail-container
-  .ttproducthover
-  div.tt-button-container
-  .btn.ajax_add_to_cart_button::before {
+#products .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button::before {
   left: 13px;
 }
 
@@ -666,57 +552,25 @@ a.tthometab-title:hover {
 }
 
 @media (min-width: 1600px) {
-  #products
-    .thumbnail-container
-    .ttproducthover
-    div.tt-button-container
-    .btn.ajax_add_to_cart_button,
-  .products
-    .thumbnail-container
-    .ttproducthover
-    div.tt-button-container
-    .btn.ajax_add_to_cart_button {
+  #products .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button,
+  .products .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button {
     background: #a8d727;
   }
 
-  #products
-    .thumbnail-container
-    .ttproducthover
-    div.tt-button-container
-    .btn.ajax_add_to_cart_button:hover,
-  .products
-    .thumbnail-container
-    .ttproducthover
-    div.tt-button-container
-    .btn.ajax_add_to_cart_button:hover {
+  #products .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button:hover,
+  .products .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button:hover {
     background: #000;
   }
 }
 
 @media (max-width: 1630px) {
-  #products
-    .thumbnail-container
-    .ttproducthover
-    div.tt-button-container
-    .btn.ajax_add_to_cart_button,
-  .products
-    .thumbnail-container
-    .ttproducthover
-    div.tt-button-container
-    .btn.ajax_add_to_cart_button {
+  #products .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button,
+  .products .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button {
     background: #a8d727;
   }
 
-  #products
-    .thumbnail-container
-    .ttproducthover
-    div.tt-button-container
-    .btn.ajax_add_to_cart_button:hover,
-  .products
-    .thumbnail-container
-    .ttproducthover
-    div.tt-button-container
-    .btn.ajax_add_to_cart_button:hover {
+  #products .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button:hover,
+  .products .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button:hover {
     background: #000;
   }
 }
@@ -754,16 +608,8 @@ a.tthometab-title:hover {
   color: #fff;
 }
 
-.products
-  .thumbnail-container
-  .ttproducthover
-  div.tt-button-container
-  .btn.ajax_add_to_cart_button::before,
-.ttfeatured-products
-  .thumbnail-container
-  .ttproducthover
-  div.tt-button-container
-  .btn.ajax_add_to_cart_button::before {
+.products .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button::before,
+.ttfeatured-products .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button::before {
   left: 4px;
 }
 
@@ -771,16 +617,8 @@ a.tthometab-title:hover {
   color: #a8d727;
 }
 
-.products
-  .thumbnail-container
-  .ttproducthover
-  div.tt-button-container
-  .btn.ajax_add_to_cart_button,
-.ttfeatured-products
-  .thumbnail-container
-  .ttproducthover
-  div.tt-button-container
-  .btn.ajax_add_to_cart_button {
+.products .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button,
+.ttfeatured-products .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button {
   background: #a8d727;
   color: #fff;
   padding: 17px;
@@ -819,31 +657,15 @@ a.tthometab-title:hover {
   opacity: 1;
 }
 
-.ttspecial-products
-  .products
-  .product-miniature
-  .thumbnail-container
-  .product-description
-  .product-title
-  a {
+.ttspecial-products .products .product-miniature .thumbnail-container .product-description .product-title a {
   color: #fff;
 }
 
-.ttspecial-products
-  .products
-  .product-miniature
-  .thumbnail-container
-  .product-description
-  .product-title
-  a:hover {
+.ttspecial-products .products .product-miniature .thumbnail-container .product-description .product-title a:hover {
   color: #a8d727;
 }
 
-.ttspecial-products
-  .product-grid
-  .thumbnail-container
-  .tt-button-container
-  .button.ajax_add_to_cart_button.add-to-cart.btn-default {
+.ttspecial-products .product-grid .thumbnail-container .tt-button-container .button.ajax_add_to_cart_button.add-to-cart.btn-default {
   background: #a8d727;
   color: #fff;
 }
@@ -854,17 +676,8 @@ a.tthometab-title:hover {
     text-align: center;
   }
 
-  .ttspecial-products
-    .products
-    .product-miniature
-    .thumbnail-container
-    .product-description
-    .product-price-and-shipping,
-  .products
-    .product-grid
-    .thumbnail-container:hover
-    .ttproduct-desc
-    .ttproducthover {
+  .ttspecial-products .products .product-miniature .thumbnail-container .product-description .product-price-and-shipping,
+  .products .product-grid .thumbnail-container:hover .ttproduct-desc .ttproducthover {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -913,51 +726,23 @@ a.tthometab-title:hover {
   }
 }
 
-#smartblog_block
-  .sdsblog-box-content
-  #smartblog-carousel
-  .item
-  .blog_post
-  .blog_content
-  .blog_inner
-  .sds_post_title
-  a {
+#smartblog_block .sdsblog-box-content #smartblog-carousel .item .blog_post .blog_content .blog_inner .sds_post_title a {
   color: #fff;
 }
 
-#smartblog_block
-  .sdsblog-box-content
-  #smartblog-carousel
-  .item
-  .blog_post
-  .blog_content
-  .blog_inner
-  .sds_post_title
-  a:hover {
+#smartblog_block .sdsblog-box-content #smartblog-carousel .item .blog_post .blog_content .blog_inner .sds_post_title a:hover {
   color: #a8d727;
   transition: all 300ms;
 }
 
-#smartblog-carousel
-  .item
-  .blog_post
-  .blog_content
-  .blog_inner
-  .read_more
-  .readmore {
+#smartblog-carousel .item .blog_post .blog_content .blog_inner .read_more .readmore {
   color: #fff;
   text-indent: 7px;
   padding-right: 8px;
   padding-top: 8px;
 }
 
-#smartblog-carousel
-  .item
-  .blog_post
-  .blog_content
-  .blog_inner
-  .read_more
-  .readmore::after {
+#smartblog-carousel .item .blog_post .blog_content .blog_inner .read_more .readmore::after {
   margin-left: 5px;
 }
 
@@ -1221,29 +1006,13 @@ a.tthometab-title:hover {
   border-radius: 0;
 }
 
-#left-column
-  .products
-  .product-miniature
-  .thumbnail-container
-  .ttproduct-image
-  a
-  img,
-#right-column
-  .products
-  .product-miniature
-  .thumbnail-container
-  .ttproduct-image
-  a
-  img {
+#left-column .products .product-miniature .thumbnail-container .ttproduct-image a img,
+#right-column .products .product-miniature .thumbnail-container .ttproduct-image a img {
   border: 0;
 }
 
 #left-column .products .product-miniature .thumbnail-container .ttproduct-image,
-#right-column
-  .products
-  .product-miniature
-  .thumbnail-container
-  .ttproduct-image {
+#right-column .products .product-miniature .thumbnail-container .ttproduct-image {
   border: 0;
 }
 
@@ -1414,25 +1183,6 @@ button.close,
   }
 }
 
-.product-prices {
-  display: flex;
-  align-items: flex-end;
-  margin-bottom: 10px;
-}
-
-#product .pb-right-column .product-prices {
-  margin: 0 0 10px;
-}
-
-.product-prices .tax-shipping-delivery-label {
-  color: #fff;
-  float: left;
-  width: auto;
-  margin: 0 0 5px 10px;
-  font-size: 12px;
-  line-height: 1;
-}
-
 .page-product .product-variants > .product-variants-item select {
   min-width: 200px;
 }
@@ -1447,14 +1197,8 @@ button.close,
   appearance: textfield;
 }
 
-.page-product
-  .product-add-to-cart
-  .product-quantity
-  #quantity_wanted::-webkit-outer-spin-button,
-.page-product
-  .product-add-to-cart
-  .product-quantity
-  #quantity_wanted::-webkit-inner-spin-button {
+.page-product .product-add-to-cart .product-quantity #quantity_wanted::-webkit-outer-spin-button,
+.page-product .product-add-to-cart .product-quantity #quantity_wanted::-webkit-inner-spin-button {
   appearance: none;
 }
 
@@ -1484,11 +1228,7 @@ button.close,
   color: #a8d727;
 }
 
-.page-product
-  .product-actions
-  .product-add-to-cart
-  .compare
-  .add_to_compare::before {
+.page-product .product-actions .product-add-to-cart .compare .add_to_compare::before {
   margin-right: 5px;
 }
 
@@ -1669,26 +1409,22 @@ body#checkout section.checkout-step.-reachable.-complete h1 .done {
   font-size: 17px;
 }
 
-body#checkout .custom-checkbox input[type='checkbox'],
-.custom-checkbox input[type='checkbox'],
+body#checkout .custom-checkbox input[type="checkbox"],
+.custom-checkbox input[type="checkbox"],
 body#checkout .custom-checkbox,
-.custom-checkbox input[type='checkbox'] + span,
+.custom-checkbox input[type="checkbox"] + span,
 .custom-checkbox {
   border-radius: 5px;
 }
 
 body#checkout .custom-checkbox:checked span,
 .custom-checkbox:checked span,
-body#checkout
-  .custom-checkbox
-  input[type='checkbox']:checked
-  + span
-  .checkbox-checked,
-.custom-checkbox input[type='checkbox']:checked + span .checkbox-checked,
-body#checkout .custom-radio input[type='radio']:checked + span,
-.custom-radio input[type='radio']:checked + span,
-body#checkout .custom-checkbox input[type='checkbox']:checked + span,
-.custom-checkbox input[type='checkbox']:checked + span {
+body#checkout .custom-checkbox input[type="checkbox"]:checked + span .checkbox-checked,
+.custom-checkbox input[type="checkbox"]:checked + span .checkbox-checked,
+body#checkout .custom-radio input[type="radio"]:checked + span,
+.custom-radio input[type="radio"]:checked + span,
+body#checkout .custom-checkbox input[type="checkbox"]:checked + span,
+.custom-checkbox input[type="checkbox"]:checked + span {
   background-color: #a8d727;
 }
 
@@ -1701,11 +1437,7 @@ body#checkout #wrapper #checkout-personal-information-step .nav {
   margin-bottom: 25px;
 }
 
-body#checkout
-  section.checkout-step
-  #checkout-guest-form
-  .custom-checkbox
-  label {
+body#checkout section.checkout-step #checkout-guest-form .custom-checkbox label {
   font-size: 12px;
 }
 
@@ -1739,8 +1471,8 @@ body#checkout section.checkout-step .payment-options label {
   text-align: left;
 }
 
-.payment-option img[src*='payu_logo_small.png'],
-.payment-option img[src*='payu_cards.png'] {
+.payment-option img[src*="payu_logo_small.png"],
+.payment-option img[src*="payu_cards.png"] {
   margin-top: -3px;
   margin-left: 11px;
 }
@@ -2254,9 +1986,7 @@ body#checkout section.checkout-step .delivery-option:first-child {
   }
 }
 
-#module-pshowloyaltyprogram-exchange
-  #js-product-list
-  .product-miniature.product-grid {
+#module-pshowloyaltyprogram-exchange #js-product-list .product-miniature.product-grid {
   margin: 0 0 20px;
   z-index: 1;
 }
@@ -2282,21 +2012,11 @@ body#checkout section.checkout-step .delivery-option:first-child {
 }
 
 @media (max-width: 768px) {
-  #smartblog_block
-    .sdsblog-box-content
-    #smartblog-carousel
-    .item
-    .blog_post
-    .blog_content {
+  #smartblog_block .sdsblog-box-content #smartblog-carousel .item .blog_post .blog_content {
     text-align: center;
   }
 
-  #smartblog_block
-    .sdsblog-box-content
-    #smartblog-carousel
-    .item
-    .blog_post
-    .read_more {
+  #smartblog_block .sdsblog-box-content #smartblog-carousel .item .blog_post .read_more {
     align-items: center;
     display: flex;
     flex-direction: column;
