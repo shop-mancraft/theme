@@ -1038,6 +1038,7 @@ $(document).ready(function () {
   if (productImagesElement) {
     new Swiper(productImagesElement, {
       slidesPerView: 1,
+      spaceBetween: 0,
       allowTouchMove: true,
       pagination: {
         el: ".swiper-pagination",
@@ -1047,7 +1048,7 @@ $(document).ready(function () {
       enabled: true,
       breakpoints: {
         768: {
-          enabled: false,
+          spaceBetween: 20,
         },
       },
     });
