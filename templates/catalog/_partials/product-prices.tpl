@@ -59,6 +59,14 @@
         <div class="product-discount">
           {hook h='displayProductPriceBlock' product=$product type="old_price"}
           <span class="regular-price">{$product.regular_price}</span>
+          {if $product.discount_type === 'percentage'}
+            <span
+              class="discount discount-percentage">{l s='Save %percentage%' d='Shop.Theme.Catalog' sprintf=['%percentage%' => $product.discount_percentage_absolute]}</span>
+          {else}
+            <span class="discount discount-amount">
+              {l s='Save %amount%' d='Shop.Theme.Catalog' sprintf=['%amount%' => $product.discount_to_display]}
+            </span>
+          {/if}
         </div>
       {/if}
     {/block}
@@ -69,19 +77,31 @@
         <link itemprop="availability" href="{$product.seo_availability}" />
         <meta itemprop="priceCurrency" content="{$currency.iso_code}">
 
-        <div class="current-price">
-          <span itemprop="price" content="{$product.price_amount}">{$product.price}</span>
+        <div class="current-price flex items-end mb-5">
+          <span itemprop="price" class="!text-3xl !text-main" content="{$product.price_amount}">{$product.price}</span>
 
-          {if $product.has_discount}
-            {if $product.discount_type === 'percentage'}
-              <span
-                class="discount discount-percentage">{l s='Save %percentage%' d='Shop.Theme.Catalog' sprintf=['%percentage%' => $product.discount_percentage_absolute]}</span>
-            {else}
-              <span class="discount discount-amount">
-                {l s='Save %amount%' d='Shop.Theme.Catalog' sprintf=['%amount%' => $product.discount_to_display]}
-              </span>
+          <div class="tax-shipping-delivery-label ml-2.5 !text-[#64635D] !text-sm">
+            {if !$configuration.taxes_enabled}
+              {l s='No tax' d='Shop.Theme.Catalog'}
+            {elseif $configuration.display_taxes_label}
+              {$product.labels.tax_long}
             {/if}
-          {/if}
+            {hook h='displayProductPriceBlock' product=$product type="price"}
+            {hook h='displayProductPriceBlock' product=$product type="after_price"}
+            {if $product.additional_delivery_times == 1}
+              {if $product.delivery_information}
+                <span class="delivery-information">{$product.delivery_information}</span>
+              {/if}
+            {elseif $product.additional_delivery_times == 2}
+              {if $product.quantity > 0}
+                <span class="delivery-information">{$product.delivery_in_stock}</span>
+                {* Out of stock message should not be displayed if customer can't order the product. *}
+              {elseif $product.quantity <= 0 && $product.add_to_cart_url}
+                <span class="delivery-information">{$product.delivery_out_stock}</span>
+              {/if}
+            {/if}
+          </div>
+
         </div>
 
         {block name='product_unit_price'}
@@ -121,26 +141,5 @@
 
     {hook h='displayProductPriceBlock' product=$product type="weight" hook_origin='product_sheet'}
 
-    <div class="tax-shipping-delivery-label">
-      {if !$configuration.taxes_enabled}
-        {l s='No tax' d='Shop.Theme.Catalog'}
-      {elseif $configuration.display_taxes_label}
-        {$product.labels.tax_long}
-      {/if}
-      {hook h='displayProductPriceBlock' product=$product type="price"}
-      {hook h='displayProductPriceBlock' product=$product type="after_price"}
-      {if $product.additional_delivery_times == 1}
-        {if $product.delivery_information}
-          <span class="delivery-information">{$product.delivery_information}</span>
-        {/if}
-      {elseif $product.additional_delivery_times == 2}
-        {if $product.quantity > 0}
-          <span class="delivery-information">{$product.delivery_in_stock}</span>
-          {* Out of stock message should not be displayed if customer can't order the product. *}
-        {elseif $product.quantity <= 0 && $product.add_to_cart_url}
-          <span class="delivery-information">{$product.delivery_out_stock}</span>
-        {/if}
-      {/if}
-    </div>
   </div>
 {/if}

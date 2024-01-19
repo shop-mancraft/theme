@@ -8694,8 +8694,6 @@ border-radius: 50%;
     border: 0.3125rem #ebebeb solid;
 }
 .product-prices {
-    float: left;
-	line-height: 28px;
 	margin-bottom: 0;
 	width: auto;
 }
@@ -8703,13 +8701,6 @@ border-radius: 50%;
 	font-size: 20px;
 	font-weight: 500;
 	line-height: 28px;
-}
-.product-prices .tax-shipping-delivery-label {
-    color: #111;
-	float: left;
-	font-size: 14px;
-	margin: 10px 0 0;
-	width: 100%;
 }
 .product-prices .tax-shipping-delivery-label .delivery-information{
     padding:0 0 0 2px

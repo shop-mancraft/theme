@@ -1183,19 +1183,6 @@ button.close,
   }
 }
 
-#product .pb-right-column .product-prices {
-  margin: 0 0 10px;
-}
-
-.product-prices .tax-shipping-delivery-label {
-  color: #fff;
-  float: left;
-  width: auto;
-  margin: 0 0 5px 10px;
-  font-size: 12px;
-  line-height: 1;
-}
-
 .page-product .product-variants > .product-variants-item select {
   min-width: 200px;
 }
