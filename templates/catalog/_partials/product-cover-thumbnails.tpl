@@ -41,7 +41,7 @@
   {/block} *}
 
   {block name='product_images'}
-    <div class="swiper group tablet:rounded-[5px] tablet:overflow-hidden" data-product-img-swiper>
+    <div class="swiper relative group tablet:rounded-[5px] tablet:overflow-hidden" data-product-img-swiper>
       <div class="swiper-wrapper">
         {foreach from=$product.images item=image}
           <div class="swiper-slide tablet:rounded-[5px] overflow-hidden cursor-pointer">
@@ -51,7 +51,7 @@
         {/foreach}
       </div>
       <div
-        class="swiper-pagination !text-left tablet:!left-5 tablet:!bottom-4 desktop:!left-[30px] desktop:!bottom-7 !w-auto !right-1">
+        class="swiper-pagination !text-left tablet:!left-5 tablet:!bottom-4 desktop:!left-[30px] desktop:!bottom-7 !w-auto right-1 tablet:right-[70px] desktop:right-20">
       </div>
       <div
         class="hidden tablet:block absolute z-10 bottom-5 right-5 desktop:bottom-[30px] desktop:right-[30px] pointer-events-none">
