@@ -396,7 +396,7 @@ div.inpost-shipping-container .btn {
 }
 
 .product-information .description-link {
-  @apply hover:text-[87ac20] mb-5 text-sm text-main underline;
+  @apply mb-5 text-sm text-main underline hover:text-[#87ac20];
 }
 
 [data-product-img-swiper] .swiper-pagination .swiper-pagination-bullet {
