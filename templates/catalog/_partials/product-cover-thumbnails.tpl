@@ -24,20 +24,25 @@
  *}
 <div class="images-container overflow-hidden row tablet:!mx-0 tablet:mb-10 desktop:mb-[60px]">
   {* {block name='product_cover'}
-    <div class="product-cover">
-      {if $product.cover}
-        {hook h='displayProductStickers'}
-        <img class="js-qv-product-cover" src="{$product.default_image.bySize.medium_default.url}"
-          alt="{$product.default_image.legend}" title="{$product.default_image.legend}" style="width:100%;"
-          itemprop="image">
-        <div class="layer hidden-sm-down" data-toggle="modal" data-target="#product-modal">
-          <i class="material-icons zoom-in">&#xE8FF;</i>
-        </div>
-      {else}
-        <img class="js-qv-product-cover" src="{$urls.no_picture_image.bySize.home_default.url}" style="width:100%;"
-          itemprop="image">
-      {/if}
-    </div>
+      <div class="product-cover">
+
+    {if $product.cover}
+
+      {hook h='displayProductStickers'}
+            <img class="js-qv-product-cover" src="{$product.default_image.bySize.medium_default.url}"
+              alt="{$product.default_image.legend}" title="{$product.default_image.legend}" style="width:100%;"
+              itemprop="image">
+            <div class="layer hidden-sm-down" data-toggle="modal" data-target="#product-modal">
+              <i class="material-icons zoom-in">&#xE8FF;</i>
+            </div>
+
+    {else}
+            <img class="js-qv-product-cover" src="{$urls.no_picture_image.bySize.home_default.url}" style="width:100%;"
+              itemprop="image">
+
+    {/if}
+      </div>
+
   {/block} *}
 
   {block name='product_images'}
@@ -51,10 +56,10 @@
         {/foreach}
       </div>
       <div class="right-5" data-product-img-next>
-       <svg class="fill-white w-[50px] transition duration-200" xmlns="http://www.w3.org/2000/svg"
-         viewBox="-12 -11 47 47">
-         <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-       </svg>
+        <svg class="fill-white w-[50px] transition duration-200" xmlns="http://www.w3.org/2000/svg"
+          viewBox="-12 -11 47 47">
+          <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+        </svg>
       </div>
       <div class="left-5" data-product-img-prev>
         <svg class="fill-white w-[50px] rotate-180 transition duration-200" xmlns="http://www.w3.org/2000/svg"
@@ -65,8 +70,7 @@
       <div
         class="swiper-pagination !text-left !left-[15px] tablet:!left-5 tablet:!bottom-4 desktop:!left-[30px] desktop:!bottom-7 !w-auto right-1 tablet:right-[70px] desktop:right-20">
       </div>
-      <div
-        class="hidden tablet:block absolute z-10 bottom-5 right-5 desktop:bottom-[30px] desktop:right-[30px] pointer-events-none">
+      <div class="image-zoom-icon">
         <svg class="stroke-[#828282] group-hover:stroke-main transition duration-200" xmlns="http://www.w3.org/2000/svg"
           width="50" height="50" viewBox="0 0 50 50" fill="none">
           <path opacity="0.5"

@@ -391,14 +391,6 @@ div.inpost-shipping-container .btn {
   @apply text-sm text-white;
 }
 
-.quickview .description-link {
-  @apply hidden;
-}
-
-.product-information .description-link {
-  @apply mb-5 text-sm text-main underline hover:text-[#87ac20];
-}
-
 [data-product-img-swiper] .swiper-pagination .swiper-pagination-bullet {
   @apply !ml-0 !mr-1 h-0.5 w-5 rounded-full bg-[#828282] opacity-50 !transition-all tablet:h-[3px] tablet:w-[30px];
 }
@@ -445,4 +437,16 @@ div.inpost-shipping-container .btn {
 [data-product-img-next]:hover svg,
 [data-product-img-prev]:hover svg {
   @apply fill-black;
+}
+
+.quickview [data-product-img-swiper] .swiper-slide {
+  @apply !cursor-auto;
+}
+
+.quickview .image-zoom-icon {
+  @apply !hidden;
+}
+
+[data-product-img-swiper] .image-zoom-icon {
+  @apply pointer-events-none absolute bottom-5 right-5 z-10 hidden tablet:block desktop:bottom-[30px] desktop:right-[30px];
 }

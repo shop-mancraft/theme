@@ -111,7 +111,8 @@
               <div id="product-description-short-{$product.id}" class="product-description-short mb-3" itemprop="description">
                 {$product.description_short nofilter}
               </div>
-              <a href="#description" class="description-link">{l s='Show details' d='Shop.Theme.Catalog'}</a>
+              <a href="#description"
+                class="mb-5 block text-sm text-main underline hover:text-[#87ac20]">{l s='Show details' d='Shop.Theme.Catalog'}</a>
             {/if}
           {/block}
 
