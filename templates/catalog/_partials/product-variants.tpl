@@ -48,14 +48,14 @@
                     {if $group_attribute.texture}class="color texture" style="background-image: url({$group_attribute.texture})"
                     {/if}><span class="sr-only">{$group_attribute.name}</span></span>
                 </label>
+                {foreach from=$combinations key=id_combination item=combination}
+                  {if $combination['attributes_values'][$id_attribute_group] == $id_attribute}
+                    {$combination['id_image']}
+                  {/if}
+                {/foreach}
               </li>
             {/foreach}
             {debug}
-            {foreach from=$combinations key=id_combination item=combination}
-              {if $combination['attributes_values'][$id_attribute_group] == $id_attribute}
-                {$combination['id_image']}
-              {/if}
-            {/foreach}
           </ul>
         {elseif $group.group_type == 'radio'}
           <ul id="group_{$id_attribute_group}">
