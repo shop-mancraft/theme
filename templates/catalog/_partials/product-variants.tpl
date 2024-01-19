@@ -40,18 +40,18 @@
             {foreach from=$group.attributes key=id_attribute item=group_attribute}
               <li class="float-xs-left input-container">
                 <label>
-                  <input class="peer" type="radio" data-product-attribute="{$id_attribute_group}"
+                  <input class="peer hidden" type="radio" data-product-attribute="{$id_attribute_group}"
                     name="group[{$id_attribute_group}]" value="{$id_attribute}" {if $group_attribute.selected} checked="checked"
                     {/if}>
                   <span
-                    class="border border-[#4F4F4F] rounded-[5px] overflow-hidden peer-checked:!border-main hover:border-[#87ac20] w-[72px] h-[54px] desktop:w-20 desktop:h-[60px] transition duration-200 "
+                    class="block border border-[#4F4F4F] rounded-[5px] overflow-hidden peer-checked:!border-main hover:border-[#87ac20] w-[72px] h-[54px] desktop:w-20 desktop:h-[60px] transition duration-200 "
                     {if $group_attribute.html_color_code && !$group_attribute.texture}
                       style="background-color: {$group_attribute.html_color_code}" {/if} {if $group_attribute.texture}
                     style="background-image: url({$group_attribute.texture})" {/if}>
                     {if $group_attribute.html_color_code && !$group_attribute.texture}
                       {foreach from=$combinations key=id_combination item=combination}
                         {if $combination['attributes_values'][$id_attribute_group] == $group_attribute.name && $combination['id_image'] > -1}
-                          <img class="w-full h-full object-cover"
+                          <img class="w-full h-full object-cover bg-black"
                             src="{$link->getImageLink($product->link_rewrite, $combination['id_image'], 'small_default')|escape:'htmlall':'UTF-8'}">
                           {break}
                         {/if}
