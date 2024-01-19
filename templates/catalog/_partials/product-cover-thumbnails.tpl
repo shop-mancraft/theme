@@ -22,46 +22,26 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="images-container overflow-hidden row tablet:!mx-0">
+<div class="images-container overflow-hidden row tablet:!mx-0 tablet:mb-10 desktop:mb-[60px]">
   {* {block name='product_cover'}
-            <div class="product-cover">
-
-
-
-
-    {if $product.cover}
-
-
-
-
-      {hook h='displayProductStickers'}
-                        <img class="js-qv-product-cover" src="{$product.default_image.bySize.medium_default.url}"
-                          alt="{$product.default_image.legend}" title="{$product.default_image.legend}" style="width:100%;"
-                          itemprop="image">
-                        <div class="layer hidden-sm-down" data-toggle="modal" data-target="#product-modal">
-                          <i class="material-icons zoom-in">&#xE8FF;</i>
-                        </div>
-
-
-
-
-    {else}
-                        <img class="js-qv-product-cover" src="{$urls.no_picture_image.bySize.home_default.url}" style="width:100%;"
-                          itemprop="image">
-
-
-
-
-    {/if}
-            </div>
-
-
-
-
+    <div class="product-cover">
+      {if $product.cover}
+        {hook h='displayProductStickers'}
+        <img class="js-qv-product-cover" src="{$product.default_image.bySize.medium_default.url}"
+          alt="{$product.default_image.legend}" title="{$product.default_image.legend}" style="width:100%;"
+          itemprop="image">
+        <div class="layer hidden-sm-down" data-toggle="modal" data-target="#product-modal">
+          <i class="material-icons zoom-in">&#xE8FF;</i>
+        </div>
+      {else}
+        <img class="js-qv-product-cover" src="{$urls.no_picture_image.bySize.home_default.url}" style="width:100%;"
+          itemprop="image">
+      {/if}
+    </div>
   {/block} *}
 
   {block name='product_images'}
-    <div class="swiper group" data-product-img-swiper>
+    <div class="swiper group tablet:rounded-[5px] tablet:overflow-hidden" data-product-img-swiper>
       <div class="swiper-wrapper">
         {foreach from=$product.images item=image}
           <div class="swiper-slide tablet:rounded-[5px] overflow-hidden cursor-pointer">

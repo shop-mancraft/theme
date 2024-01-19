@@ -82,7 +82,7 @@
         {/block}
       </div>
       <div
-        class="w-full tablet:pl-8 desktop:pl-[60px] tablet:sticky tablet:top-10 desktop:top-24 mt-2.5 desktop:mt-[30px] ">
+        class="w-full tablet:pl-8 desktop:pl-[60px] tablet:sticky tablet:top-10 desktop-wide:top-20 mt-2.5 desktop:mt-[30px] ">
         {block name='page_header_container'}
           {block name='page_header'}
             <div class="w-full flex justify-between">
