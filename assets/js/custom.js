@@ -1057,6 +1057,17 @@ $(document).ready(function () {
     });
   }
 
+  initProductSwipers();
+  if (prestashop) {
+    prestashop.on("updatedProduct", initProductSwipers);
+  }
+});
+
+$(window).load(function () {
+  $("#checkout #checkout-payment-step #payment-option-1").trigger("click");
+});
+
+function initProductSwipers() {
   const productThumbnailSliderEl = document.querySelector("[data-modal-thumbnails-swiper]");
   if (productThumbnailSliderEl) {
     const swiperModalThumbnails = new Swiper(productThumbnailSliderEl, {
@@ -1112,8 +1123,4 @@ $(document).ready(function () {
       }
     }
   }
-});
-
-$(window).load(function () {
-  $("#checkout #checkout-payment-step #payment-option-1").trigger("click");
-});
+}
