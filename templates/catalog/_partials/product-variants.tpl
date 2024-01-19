@@ -50,7 +50,7 @@
                       {foreach from=$combinations key=id_combination item=combination}
                         {if $combination['attributes_values'][$id_attribute_group] == $group_attribute.name}
                           <img
-                            src="{$link->getImageLink($product->link_rewrite, $product->$combination['id_image'], 'small_default')|escape:'htmlall':'UTF-8'}">
+                            src="{$link->getImageLink($product->link_rewrite, $combination['id_image'], 'small_default')|escape:'htmlall':'UTF-8'}">
                           {break}
                         {/if}
                       {/foreach}
