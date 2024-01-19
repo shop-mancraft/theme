@@ -111,7 +111,7 @@
               <div id="product-description-short-{$product.id}" class="product-description-short mb-3" itemprop="description">
                 {$product.description_short nofilter}
               </div>
-              <a href="#description"
+              <a href="#descriptions"
                 class="mb-5 block text-sm text-main underline hover:text-[#87ac20]">{l s='Show details' d='Shop.Theme.Catalog'}</a>
             {/if}
           {/block}
@@ -225,7 +225,7 @@
 
         </div>
       </div>
-      <div class="descriptions-container">
+      <div id="descriptions" class="descriptions-container">
         {block name='product_tabs'}
           {block name='product_description'}
             {if $product.description}
