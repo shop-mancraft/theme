@@ -50,8 +50,8 @@
                 </label>
                 {foreach from=$combinations key=id_combination item=combination}
                   {$combination['attributes_values']}
-                  {$combination['attributes_values'][$id_attribute_group]}
-                  {if $combination['attributes_values'][$id_attribute_group] == $id_attribute}
+                  {$combination['attributes_values'][$group_attribute.name]}
+                  {if $combination['attributes_values'][$group_attribute.name] == $id_attribute}
                     {$combination['id_image']}
                   {/if}
                 {/foreach}
