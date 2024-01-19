@@ -50,8 +50,8 @@
                     style="background-image: url({$group_attribute.texture})" {/if}>
                     {if $group_attribute.html_color_code && !$group_attribute.texture}
                       {foreach from=$combinations key=id_combination item=combination}
-                        {if $combination['attributes_values'][$id_attribute_group] == $group_attribute.name}
-                          <img
+                        {if $combination['attributes_values'][$id_attribute_group] == $group_attribute.name && $combination['id_image'] > -1}
+                          <img class="w-full h-full object-cover"
                             src="{$link->getImageLink($product->link_rewrite, $combination['id_image'], 'small_default')|escape:'htmlall':'UTF-8'}">
                           {break}
                         {/if}
