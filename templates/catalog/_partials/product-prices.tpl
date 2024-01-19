@@ -24,17 +24,17 @@
  *}
 {if $product.show_price}
   <div class="product-prices">
-    <div class="flex items-center mb-5 divide-x">
+    <div class="flex items-center mb-5">
       {block name='product_reference'}
         {if isset($product.reference_to_display) && $product.reference_to_display neq ''}
-          <div class="product-reference pr-2 shrink-0 ">
+          <div class="product-reference pr-2 mr-2 border-r border-[#64635D] shrink-0 ">
             <label class="!text-[#64635D]">{l s='SKU:' d='Shop.Theme.Catalog'} </label>
             <span itemprop="sku" class="!text-[#64635D]">{$product.reference_to_display}</span>
           </div>
         {/if}
       {/block}
       {block name='product_availability'}
-        <div id="product-availability" class="border-[#64635D] pl-2 flex items-center">
+        <div id="product-availability" class=" flex items-center">
           {if $product.show_availability && $product.availability_message}
             <span class="mr-1 w-3 h-3 rounded-full block shrink-0" style="background-color: 
               {if $product.availability == 'available'}
@@ -78,7 +78,7 @@
         <meta itemprop="priceCurrency" content="{$currency.iso_code}">
 
         <div class="current-price flex items-end mb-5 font-normal">
-          <span itemprop="price" class="!text-3xl !text-main font-normal"
+          <span itemprop="price" class="leading-none text-3xl !text-main font-normal"
             content="{$product.price_amount}">{$product.price}</span>
 
           <div class="tax-shipping-delivery-label ml-2.5 !text-[#64635D] !text-sm">

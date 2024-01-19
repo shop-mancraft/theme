@@ -107,9 +107,15 @@
 
         <div class="product-information">
           {block name='product_description_short'}
-            <div id="product-description-short-{$product.id}" itemprop="description">{$product.description_short nofilter}
-            </div>
+            {if $product.description_short}
+              <div id="product-description-short-{$product.id}" class="product-description-short mb-3" itemprop="description">
+                {$product.description_short nofilter}
+              </div>
+              <a href="#description" class="description-link">{l s='Show details' d='Shop.Theme.Catalog'}</a>
+            {/if}
           {/block}
+
+          <hr class="mb-5 border-gray-normal">
 
           {if $product.is_customizable && count($product.customizations.fields)}
             {block name='product_customization'}
