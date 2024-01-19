@@ -85,8 +85,9 @@
         class="w-full tablet:pl-8 desktop:pl-[60px] tablet:sticky tablet:top-10 desktop:top-24 mt-2.5 desktop:mt-[30px] ">
         {block name='page_header_container'}
           {block name='page_header'}
-            <div class="flex justify-between">
-              <h1 class="text-xl tablet:text-2xl text-white" itemprop="name">{block name='page_title'}{$product.name}{/block}
+            <div class="w-full flex justify-between">
+              <h1 class="text-xl tablet:text-2xl text-white pr-2.5 tablet-narrow:pr-5" itemprop="name">
+                {block name='page_title'}{$product.name}{/block}
               </h1>
               {hook h='displayTtWishlistButton' product=$product}
             </div>

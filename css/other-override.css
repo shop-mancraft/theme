@@ -309,7 +309,7 @@ div.inpost-shipping-container .btn {
 
 .product-layout {
   grid-template-columns: 60% 40%;
-  @apply tablet:mb-[50px] tablet:grid;
+  @apply flex flex-col tablet:mb-[50px] tablet:grid;
 }
 
 .descriptions-container .description-title {
@@ -378,13 +378,6 @@ div.inpost-shipping-container .btn {
 
 [data-product-img-swiper] .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   @apply ml-0 mr-1 h-[3px] w-[35px] bg-main opacity-100 tablet:h-1 tablet:w-[45px];
-}
-
-@media (min-width: 768px) {
-  [data-product-img-swiper] .swiper-wrapper {
-    gap: 10px;
-    @apply !flex !transform-none !flex-wrap;
-  }
 }
 
 [data-product-modal] {
