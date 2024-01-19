@@ -50,12 +50,24 @@
           </div>
         {/foreach}
       </div>
+      <div class="right-5" data-product-img-next>
+       <svg class="fill-white w-[50px] transition duration-200" xmlns="http://www.w3.org/2000/svg"
+         viewBox="-12 -11 47 47">
+         <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+       </svg>
+      </div>
+      <div class="left-5" data-product-img-prev>
+        <svg class="fill-white w-[50px] rotate-180 transition duration-200" xmlns="http://www.w3.org/2000/svg"
+          viewBox="-12 -11 47 47">
+          <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+        </svg>
+      </div>
       <div
         class="swiper-pagination !text-left tablet:!left-5 tablet:!bottom-4 desktop:!left-[30px] desktop:!bottom-7 !w-auto right-1 tablet:right-[70px] desktop:right-20">
       </div>
       <div
         class="hidden tablet:block absolute z-10 bottom-5 right-5 desktop:bottom-[30px] desktop:right-[30px] pointer-events-none">
-        <svg class="stroke-[#828282] group-hover:stroke-white transition duration-200" xmlns="http://www.w3.org/2000/svg"
+        <svg class="stroke-[#828282] group-hover:stroke-main transition duration-200" xmlns="http://www.w3.org/2000/svg"
           width="50" height="50" viewBox="0 0 50 50" fill="none">
           <path opacity="0.5"
             d="M43.7504 43.7499L34.7025 34.702M34.7025 34.702C36.2502 33.1543 37.4779 31.317 38.3155 29.2948C39.1531 27.2727 39.5842 25.1054 39.5842 22.9166C39.5842 20.7279 39.1531 18.5605 38.3155 16.5384C37.4779 14.5162 36.2502 12.6789 34.7025 11.1312C33.1548 9.58351 31.3175 8.35582 29.2953 7.51822C27.2732 6.68062 25.1058 6.24951 22.9171 6.24951C20.7283 6.24951 18.561 6.68062 16.5389 7.51822C14.5167 8.35582 12.6794 9.58351 11.1317 11.1312C8.00599 14.2569 6.25 18.4962 6.25 22.9166C6.25 27.337 8.00599 31.5763 11.1317 34.702C14.2574 37.8277 18.4967 39.5837 22.9171 39.5837C27.3375 39.5837 31.5768 37.8277 34.7025 34.702ZM22.9171 16.6666V29.1666M16.6671 22.9166H29.1671"
