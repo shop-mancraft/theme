@@ -484,6 +484,10 @@ div.inpost-shipping-container .btn {
   @apply fixed bottom-0 left-0 right-0 z-[999] bg-gray-normal px-5 py-2.5 tablet:static tablet:bg-black tablet:p-0;
 }
 
-.produxt-add-fixed {
+.product-add-fixed {
   @apply flex w-full items-center;
+}
+
+.blockreassurance_product svg {
+  @apply !stroke-white;
 }
