@@ -460,8 +460,8 @@ div.inpost-shipping-container .btn {
   @apply z-[9999];
 }
 
-.product-add-to-cart .qty .btn-touchspin {
-  @apply !bg-transparent;
+.product-quantity .input-group-btn-vertical .btn {
+  @apply !border-0 !bg-transparent;
 }
 
 .product-quantity .input-group-btn-vertical .btn i {

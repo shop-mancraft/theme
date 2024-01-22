@@ -1,4 +1,4 @@
-<div class="py-2 bg-gray-normal rounded-[10px] px-5 text-sm flex items-center justify-center">
+<div class="mb-5 py-2 bg-gray-normal rounded-[10px] px-5 text-sm flex items-center justify-center">
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="34" viewBox="0 0 32 34" fill="none"
         class="mr-4 tablet:mr-3 shrink-0">
         <path
@@ -10,6 +10,9 @@
         <path d="M16 16.3334V33.0001M1 9.66675H31V16.3334H1V9.66675Z" stroke="#A8D727" stroke-width="1.5"
             stroke-linecap="round" stroke-linejoin="round" />
     </svg>
-    <span class="desc">{l s='You can get ' mod='pshowloyaltyprogram'}<span
-            class="!no-underline bg-main/25 py-1 px-2 mx-2 rounded-[5px] text-main">+{$points} {l s='pkt' mod='pshowloyaltyprogram'}</span>{l s='in the loyalty program' mod='pshowloyaltyprogram'}</span>
+    <div class="max-w-[180px] tablet:max-w-none">
+        <span class="underline">{l s='You can get ' mod='pshowloyaltyprogram'}</span>
+        <span class="!no-underline bg-main/25 py-1 px-2 mx-2 rounded-[5px] text-main">+{$points} {l s='pts' mod='pshowloyaltyprogram'}</span>
+        <span class="underline">{l s='in the loyalty program' mod='pshowloyaltyprogram'}</span>
+    </div>
 </div>
