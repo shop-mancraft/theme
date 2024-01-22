@@ -457,13 +457,21 @@ div.inpost-shipping-container .btn {
 }
 
 .product-add-to-cart .qty .btn-touchspin {
-  @apply !bg-none;
+  @apply !bg-black;
 }
 
-.product-add-to-cart .qty .btn-touchspin i {
-  @apply text-[#64635D];
+.product-quantity .input-group-btn-vertical .btn i {
+  @apply !left-0 text-[#64635D];
 }
 
-.product-add-to-cart .qty .btn-touchspin:hover i {
+.product-quantity .input-group-btn-vertical .btn:hover i {
   @apply !text-white;
+}
+
+.product-quantity .input-group-btn-vertical .btn i.touchspin-up {
+  @apply !top-[6px];
+}
+
+.product-quantity .input-group-btn-vertical .btn i.touchspin-down {
+  @apply !top-[-2px];
 }
