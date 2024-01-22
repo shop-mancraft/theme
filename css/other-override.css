@@ -455,6 +455,22 @@ div.inpost-shipping-container .btn {
   @apply !rounded-b-none !border-main;
 }
 
-[aria-expanded="true"].variant-select-toggle > svg {
+[aria-expanded="true"].variant-select-toggle ~ svg {
   @apply rotate-180;
+}
+
+#variants [aria-expanded="true"].collapsing {
+  @apply z-[9999];
+}
+
+.product-add-to-cart .qty .btn-touchspin {
+  @apply !bg-none;
+}
+
+.product-add-to-cart .qty .btn-touchspin i {
+  @apply text-[#64635D];
+}
+
+.product-add-to-cart .qty .btn-touchspin:hover i {
+  @apply !text-white;
 }

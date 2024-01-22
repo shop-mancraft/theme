@@ -38,7 +38,7 @@
                 {$group_attribute.name} {/if}
               {/foreach}
             </a>
-            <svg class="absolute right-5 top-[25px] transition duration-300" xmlns="http://www.w3.org/2000/svg" width="8" height="6"
+            <svg class="absolute right-5 top-[23px] transition duration-300" xmlns="http://www.w3.org/2000/svg" width="8" height="6"
               viewBox="0 0 8 6" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M7.01317 0.882095L4.0003 3.90137L0.987427 0.882094C0.761021 0.656489 0.394609 0.656489 0.169804 0.882094C-0.0566015 1.1085 -0.0566016 1.47571 0.169804 1.70212L3.57869 5.119C3.69469 5.235 3.8475 5.2902 4.0003 5.287C4.1523 5.2902 4.30511 5.235 4.42111 5.119L7.8308 1.70212C8.0564 1.47571 8.0564 1.1085 7.8308 0.882095C7.60439 0.656489 7.23878 0.656489 7.01317 0.882095Z"

@@ -24,19 +24,18 @@
  *}
 <div class="product-add-to-cart">
   {if !$configuration.is_catalog}
-    <span class="control-label">{l s='Quantity' d='Shop.Theme.Catalog'}</span>
 
     {block name='product_quantity'}
       <div class="product-quantity clearfix">
-        <div class="qty">
-          <input type="number" name="qty" id="quantity_wanted" value="{$product.quantity_wanted}" class="input-group"
-            min="{$product.minimal_quantity}" aria-label="{l s='Quantity' d='Shop.Theme.Actions'}">
+        <div class="qty border border-[#64635D] rounded-[10px] overflow-hidden">
+          <input type="number" name="qty" id="quantity_wanted" value="{$product.quantity_wanted}"
+            class="input-group text-base !border-none !rounded-none !w-9 !pr-0" min="{$product.minimal_quantity}"
+            aria-label="{l s='Quantity' d='Shop.Theme.Actions'}">
         </div>
 
         <div class="add">
           <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"
             {if !$product.add_to_cart_url} disabled {/if}>
-            <i class="material-icons shopping-cart">&#xE547;</i>
             {l s='Add to cart' d='Shop.Theme.Actions'}
           </button>
         </div>
@@ -50,10 +49,10 @@
       <p class="product-minimal-quantity">
         {if $product.minimal_quantity > 1}
           {l
-                s='The minimum purchase order quantity for the product is %quantity%.'
-                d='Shop.Theme.Checkout'
-                sprintf=['%quantity%' => $product.minimal_quantity]
-                }
+            s='The minimum purchase order quantity for the product is %quantity%.'
+            d='Shop.Theme.Checkout'
+            sprintf=['%quantity%' => $product.minimal_quantity]
+          }
         {/if}
       </p>
     {/block}
