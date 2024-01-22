@@ -29,83 +29,103 @@
         <span class="control-label !text-base text-[#BDBDBD] !mb-2">{$group.name}</span>
         {if $group.group_type == 'select'}
 
-          <div id="group_{$id_attribute_group}"
-            class="relative w-full text-base whitespace-nowrap text-ellipsis pl-6 py-4 pr-10">
-            <span> {foreach from=$group.attributes key=id_attribute item=group_attribute}
-                {if $group_attribute.selected}
-                {$group_attribute.name} {/if}
-              {/foreach}</span>
+          <div id="group_{$id_attribute_group}" class="relative w-full">
             <svg class="absolute right-5 top-[18px] " xmlns="http://www.w3.org/2000/svg" width="8" height="6"
               viewBox="0 0 8 6" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M7.01317 0.882095L4.0003 3.90137L0.987427 0.882094C0.761021 0.656489 0.394609 0.656489 0.169804 0.882094C-0.0566015 1.1085 -0.0566016 1.47571 0.169804 1.70212L3.57869 5.119C3.69469 5.235 3.8475 5.2902 4.0003 5.287C4.1523 5.2902 4.30511 5.235 4.42111 5.119L7.8308 1.70212C8.0564 1.47571 8.0564 1.1085 7.8308 0.882095C7.60439 0.656489 7.23878 0.656489 7.01317 0.882095Z"
                 fill="#E0E0E0" />
             </svg>
-            <ul class="">
+            <div class="">
+              <a data-toggle="collapse" href="#collapse-{$id_attribute_group}" role="button" aria-expanded="false"
+                aria-controls="collapse-{$id_attribute_group}"
+                class="w-full text-base text-white whitespace-nowrap text-ellipsis pl-6 py-4 pr-10">
+                {foreach from=$group.attributes key=id_attribute item=group_attribute}
+                  {if $group_attribute.selected}
+                  {$group_attribute.name} {/if}
+                {/foreach}
+              </a>
+              <ul class="collapse border-[#4F4F4F] rounded-[5px] overflow-hidden" id="collapse-{$id_attribute_group}"
+                data-parent="#group_{$id_attribute_group}">
+                {foreach from=$group.attributes key=id_attribute item=group_attribute}
+                  <li>
+                    <label>
+                      <input class="hidden peer" type="radio" data-product-attribute="{$id_attribute_group}"
+                        name="group[{$id_attribute_group}]" value="{$id_attribute}" {if $group_attribute.selected}
+                        checked="checked" {/if}>
+                      <span
+                        class="w-full text-white block pl-6 py-4 hover:bg-gray-normal peer-checked:bg-gray-normal">{$group_attribute.name}</span>
+                    </label>
+                  </li>
+                {/foreach}
+              </ul>
+            </div>
+          </div>
+
+          {* <select class="form-control form-control-select" id="group_{$id_attribute_group}"
+                                                    data-product-attribute="{$id_attribute_group}" name="group[{$id_attribute_group}]">
+                                                    {foreach from=$group.attributes key=id_attribute item=group_attribute}
+                                                                <option value="{$id_attribute}" title="{$group_attribute.name}" 
+
+
+
+
+              {if $group_attribute.selected} selected="selected"
+
+
+
+
+              {/if}>{$group_attribute.name}</option>
+
+
+
+
+            {/foreach}
+                                                  </select> *}
+
+          {elseif $group.group_type == 'color'}
+            <ul id="group_{$id_attribute_group}">
               {foreach from=$group.attributes key=id_attribute item=group_attribute}
-                <li>
+                <li class="float-xs-left input-container mb-2.5">
+                  <label>
+                    <input class="peer hidden" type="radio" data-product-attribute="{$id_attribute_group}"
+                      name="group[{$id_attribute_group}]" value="{$id_attribute}" {if $group_attribute.selected} checked="checked"
+                      {/if}>
+                    <span
+                      class="block border border-[#4F4F4F] rounded-[5px] overflow-hidden peer-checked:!border-main hover:border-[#87ac20] w-[72px] h-[54px] desktop:w-20 desktop:h-[60px] transition duration-200 cursor-pointer "
+                      {if $group_attribute.html_color_code && !$group_attribute.texture}
+                        style="background-color: {$group_attribute.html_color_code}" {/if} {if $group_attribute.texture}
+                      style="background-image: url({$group_attribute.texture})" {/if}>
+                      {if $group_attribute.html_color_code && !$group_attribute.texture}
+                        {foreach from=$combinations key=id_combination item=combination}
+                          {if $combination['attributes_values'][$id_attribute_group] == $group_attribute.name && $combination['id_image'] > -1}
+                            <img class="w-full h-full object-cover bg-black"
+                              src="{$link->getImageLink($product->link_rewrite, $combination['id_image'], 'small_default')|escape:'htmlall':'UTF-8'}">
+                            {break}
+                          {/if}
+                        {/foreach}
+                      {/if}
+                      <span class="sr-only">{$group_attribute.name}</span>
+                    </span>
+                  </label>
+                </li>
+              {/foreach}
+            </ul>
+          {elseif $group.group_type == 'radio'}
+            <ul id="group_{$id_attribute_group}">
+              {foreach from=$group.attributes key=id_attribute item=group_attribute}
+                <li class="input-container float-xs-left">
                   <label>
                     <input class="input-radio" type="radio" data-product-attribute="{$id_attribute_group}"
-                      name="group[{$id_attribute_group}]" value="{$id_attribute}" {if $group_attribute.selected}
-                      checked="checked" {/if}>
+                      name="group[{$id_attribute_group}]" value="{$id_attribute}" {if $group_attribute.selected} checked="checked"
+                      {/if}>
                     <span class="radio-label">{$group_attribute.name}</span>
                   </label>
                 </li>
               {/foreach}
             </ul>
-          </div>
-
-          {* <select class="form-control form-control-select" id="group_{$id_attribute_group}"
-            data-product-attribute="{$id_attribute_group}" name="group[{$id_attribute_group}]">
-            {foreach from=$group.attributes key=id_attribute item=group_attribute}
-              <option value="{$id_attribute}" title="{$group_attribute.name}" {if $group_attribute.selected} selected="selected"
-                {/if}>{$group_attribute.name}</option>
-            {/foreach}
-          </select> *}
-
-        {elseif $group.group_type == 'color'}
-          <ul id="group_{$id_attribute_group}">
-            {foreach from=$group.attributes key=id_attribute item=group_attribute}
-              <li class="float-xs-left input-container mb-2.5">
-                <label>
-                  <input class="peer hidden" type="radio" data-product-attribute="{$id_attribute_group}"
-                    name="group[{$id_attribute_group}]" value="{$id_attribute}" {if $group_attribute.selected} checked="checked"
-                    {/if}>
-                  <span
-                    class="block border border-[#4F4F4F] rounded-[5px] overflow-hidden peer-checked:!border-main hover:border-[#87ac20] w-[72px] h-[54px] desktop:w-20 desktop:h-[60px] transition duration-200 cursor-pointer "
-                    {if $group_attribute.html_color_code && !$group_attribute.texture}
-                      style="background-color: {$group_attribute.html_color_code}" {/if} {if $group_attribute.texture}
-                    style="background-image: url({$group_attribute.texture})" {/if}>
-                    {if $group_attribute.html_color_code && !$group_attribute.texture}
-                      {foreach from=$combinations key=id_combination item=combination}
-                        {if $combination['attributes_values'][$id_attribute_group] == $group_attribute.name && $combination['id_image'] > -1}
-                          <img class="w-full h-full object-cover bg-black"
-                            src="{$link->getImageLink($product->link_rewrite, $combination['id_image'], 'small_default')|escape:'htmlall':'UTF-8'}">
-                          {break}
-                        {/if}
-                      {/foreach}
-                    {/if}
-                    <span class="sr-only">{$group_attribute.name}</span>
-                  </span>
-                </label>
-              </li>
-            {/foreach}
-          </ul>
-        {elseif $group.group_type == 'radio'}
-          <ul id="group_{$id_attribute_group}">
-            {foreach from=$group.attributes key=id_attribute item=group_attribute}
-              <li class="input-container float-xs-left">
-                <label>
-                  <input class="input-radio" type="radio" data-product-attribute="{$id_attribute_group}"
-                    name="group[{$id_attribute_group}]" value="{$id_attribute}" {if $group_attribute.selected} checked="checked"
-                    {/if}>
-                  <span class="radio-label">{$group_attribute.name}</span>
-                </label>
-              </li>
-            {/foreach}
-          </ul>
-        {/if}
-      </div>
-    {/if}
-  {/foreach}
-</div>
+          {/if}
+        </div>
+      {/if}
+    {/foreach}
+  </div>
