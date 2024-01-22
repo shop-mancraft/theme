@@ -487,3 +487,11 @@ div.inpost-shipping-container .btn {
 .product-add-fixed {
   @apply flex w-full items-center;
 }
+
+#product #smartsupp-widget-container [data-testid="widgetButtonFrame"] {
+  @apply !bottom-20 tablet:!bottom-6;
+}
+
+#product .go-to-top {
+  @apply !mb-36 tablet:!mb-24;
+}
