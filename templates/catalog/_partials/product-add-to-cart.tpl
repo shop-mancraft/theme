@@ -28,11 +28,11 @@
     {block name='product_quantity'}
       <div class="product-quantity clearfix">
         <div
-          class="w-full flex items-center bg-black fixed bottom-0 left-0 right-0 z-[999] tablet:static px-5 py-2.5 tablet:p-0">
+          class="w-full flex items-center bg-gray-normal tablet:bg-black fixed bottom-0 left-0 right-0 z-[999] tablet:static px-5 py-2.5 tablet:p-0">
           <div class="shrink-0 qty border border-[#64635D] rounded-[10px] overflow-hidden">
             <input type="number" name="qty" id="quantity_wanted" value="{$product.quantity_wanted}"
-              class="input-group text-base !border-none !rounded-none !w-9 !min-w-0 !pr-0" min="{$product.minimal_quantity}"
-              aria-label="{l s='Quantity' d='Shop.Theme.Actions'}">
+              class="input-group text-base !bg-transparent !border-none !rounded-none !w-9 !min-w-0 !pr-0"
+              min="{$product.minimal_quantity}" aria-label="{l s='Quantity' d='Shop.Theme.Actions'}">
           </div>
 
           <div class="add !w-full">
@@ -52,10 +52,10 @@
       <p class="product-minimal-quantity">
         {if $product.minimal_quantity > 1}
           {l
-                  s='The minimum purchase order quantity for the product is %quantity%.'
-                  d='Shop.Theme.Checkout'
-                  sprintf=['%quantity%' => $product.minimal_quantity]
-                }
+                        s='The minimum purchase order quantity for the product is %quantity%.'
+                        d='Shop.Theme.Checkout'
+                        sprintf=['%quantity%' => $product.minimal_quantity]
+                      }
         {/if}
       </p>
     {/block}

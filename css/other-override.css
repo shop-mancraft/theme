@@ -372,7 +372,11 @@ div.inpost-shipping-container .btn {
 }
 
 [data-paypal-source-page="product"] {
-  @apply !ml-0 !w-auto desktop:!ml-[69px];
+  @apply !ml-0 !w-full !pl-0 desktop:!pl-[69px];
+}
+
+[paypal-button-container] {
+  @apply !w-full;
 }
 
 #product nav.breadcrumb {
@@ -464,7 +468,7 @@ div.inpost-shipping-container .btn {
 }
 
 .product-add-to-cart .qty .btn-touchspin {
-  @apply !bg-black;
+  @apply !bg-transparent;
 }
 
 .product-quantity .input-group-btn-vertical .btn i {
