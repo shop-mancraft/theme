@@ -11,8 +11,8 @@
             stroke-linecap="round" stroke-linejoin="round" />
     </svg>
     <div class="max-w-[180px] tablet:max-w-none">
-        <span class="underline">{l s='You can get ' mod='pshowloyaltyprogram'}</span>
+        <span class="underline text-white">{l s='You can get ' mod='pshowloyaltyprogram'}</span>
         <span class="!no-underline bg-main/25 py-1 px-2 mx-2 rounded-[5px] text-main">+{$points} {l s='pts' mod='pshowloyaltyprogram'}</span>
-        <span class="underline">{l s='in the loyalty program' mod='pshowloyaltyprogram'}</span>
+        <span class="underline text-white">{l s='in the loyalty program' mod='pshowloyaltyprogram'}</span>
     </div>
 </div>

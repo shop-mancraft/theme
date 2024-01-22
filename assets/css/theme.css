@@ -9747,10 +9747,7 @@ li.product-flag.on-sale {
     display: none;
 }
 .quickview .images-container {
-    position: static;
-    z-index: 1;
-    float: left;
-    width: 100%;
+    margin-bottom: 10px;
 }
 .quickview .images-container .ttproduct-images > li.thumb-container > .thumb {
     width: 4.9375rem;

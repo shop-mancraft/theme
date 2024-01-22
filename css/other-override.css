@@ -479,3 +479,11 @@ div.inpost-shipping-container .btn {
 .product-quantity .input-group-btn-vertical .btn i.touchspin-down {
   @apply !top-[-2px];
 }
+
+#product .product-add-fixed {
+  @apply fixed bottom-0 left-0 right-0 z-[999] bg-gray-normal px-5 py-2.5 tablet:static tablet:bg-black tablet:p-0;
+}
+
+.produxt-add-fixed {
+  @apply flex w-full items-center;
+}
