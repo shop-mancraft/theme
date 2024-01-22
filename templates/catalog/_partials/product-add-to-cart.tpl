@@ -27,17 +27,19 @@
 
     {block name='product_quantity'}
       <div class="product-quantity clearfix">
-        <div class="qty border border-[#64635D] rounded-[10px] overflow-hidden">
-          <input type="number" name="qty" id="quantity_wanted" value="{$product.quantity_wanted}"
-            class="input-group text-base !border-none !rounded-none !w-9 !pr-0" min="{$product.minimal_quantity}"
-            aria-label="{l s='Quantity' d='Shop.Theme.Actions'}">
-        </div>
+        <div class="w-full flex">
+          <div class="shrink-0 qty border border-[#64635D] rounded-[10px] overflow-hidden">
+            <input type="number" name="qty" id="quantity_wanted" value="{$product.quantity_wanted}"
+              class="input-group text-base !border-none !rounded-none w-9 !min-w-0 !pr-0" min="{$product.minimal_quantity}"
+              aria-label="{l s='Quantity' d='Shop.Theme.Actions'}">
+          </div>
 
-        <div class="add">
-          <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit"
-            {if !$product.add_to_cart_url} disabled {/if}>
-            {l s='Add to cart' d='Shop.Theme.Actions'}
-          </button>
+          <div class="add w-full">
+            <button class="btn btn-primary add-to-cart w-full" data-button-action="add-to-cart" type="submit"
+              {if !$product.add_to_cart_url} disabled {/if}>
+              {l s='Add to cart' d='Shop.Theme.Actions'}
+            </button>
+          </div>
         </div>
 
         {hook h='displayProductActions' product=$product}
@@ -49,10 +51,10 @@
       <p class="product-minimal-quantity">
         {if $product.minimal_quantity > 1}
           {l
-            s='The minimum purchase order quantity for the product is %quantity%.'
-            d='Shop.Theme.Checkout'
-            sprintf=['%quantity%' => $product.minimal_quantity]
-          }
+                        s='The minimum purchase order quantity for the product is %quantity%.'
+                        d='Shop.Theme.Checkout'
+                        sprintf=['%quantity%' => $product.minimal_quantity]
+                      }
         {/if}
       </p>
     {/block}
