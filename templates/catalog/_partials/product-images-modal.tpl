@@ -25,7 +25,7 @@
 
  {assign var=imagesCount value=$product.images|count}
 
- <div data-product-modal>
+ <div data-product-modal class="js-product-images-modal">
    <div class="flex justify-between items-start grow-0 bg-black/50">
      <span class="p-5 text-white text-base tablet:text-lg" data-slides-count="{$imagesCount}">
        1/{$imagesCount}
