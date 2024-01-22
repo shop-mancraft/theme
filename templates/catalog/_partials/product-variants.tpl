@@ -44,7 +44,7 @@
                     name="group[{$id_attribute_group}]" value="{$id_attribute}" {if $group_attribute.selected} checked="checked"
                     {/if}>
                   <span
-                    class="block border border-[#4F4F4F] rounded-[5px] overflow-hidden peer-checked:!border-main hover:border-[#87ac20] w-[72px] h-[54px] desktop:w-20 desktop:h-[60px] transition duration-200 "
+                    class="block border border-[#4F4F4F] rounded-[5px] overflow-hidden peer-checked:!border-main hover:border-[#87ac20] w-[72px] h-[54px] desktop:w-20 desktop:h-[60px] transition duration-200 cursor-pointer "
                     {if $group_attribute.html_color_code && !$group_attribute.texture}
                       style="background-color: {$group_attribute.html_color_code}" {/if} {if $group_attribute.texture}
                     style="background-image: url({$group_attribute.texture})" {/if}>
