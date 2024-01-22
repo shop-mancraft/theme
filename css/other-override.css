@@ -372,7 +372,7 @@ div.inpost-shipping-container .btn {
 }
 
 [data-paypal-source-page="product"] {
-  @apply !w-auto;
+  @apply !ml-0 !w-auto desktop:!ml-[69px];
 }
 
 #product nav.breadcrumb {
