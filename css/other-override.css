@@ -454,3 +454,7 @@ div.inpost-shipping-container .btn {
 [aria-expanded="true"].variant-select-toggle {
   @apply !rounded-b-none !border-main;
 }
+
+[aria-expanded="true"].variant-select-toggle > svg {
+  @apply rotate-180;
+}
