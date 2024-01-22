@@ -443,3 +443,7 @@ div.inpost-shipping-container .btn {
 [data-product-img-swiper] .image-zoom-icon {
   @apply pointer-events-none absolute bottom-5 right-5 z-10 hidden tablet:block desktop:bottom-[30px] desktop:right-[30px];
 }
+
+[aria-expanded="true"].variant-select-toggle {
+  @apply !rounded-b-none !border-main transition-all;
+}
