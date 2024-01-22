@@ -461,7 +461,7 @@ div.inpost-shipping-container .btn {
 }
 
 .product-add-to-cart .qty .btn-touchspin {
-  @apply !bg-black;
+  @apply !bg-transparent;
 }
 
 .product-quantity .input-group-btn-vertical .btn i {
