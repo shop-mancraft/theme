@@ -22,19 +22,47 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="product-variants">
+<div class="product-variants" id="variants">
   {foreach from=$groups key=id_attribute_group item=group}
     {if !empty($group.attributes)}
       <div class="clearfix product-variants-item">
-        <span class="control-label">{$group.name}</span>
+        <span class="control-label !text-base text-[#BDBDBD] !mb-2">{$group.name}</span>
         {if $group.group_type == 'select'}
-          <select class="form-control form-control-select" id="group_{$id_attribute_group}"
+
+          <div id="group_{$id_attribute_group}"
+            class="relative w-full text-base whitespace-nowrap text-ellipsis pl-6 py-4 pr-10">
+            <span> {foreach from=$group.attributes key=id_attribute item=group_attribute}
+                {if $group_attribute.selected}
+                {$group_attribute.name} {/if}
+              {/foreach}</span>
+            <svg class="absolute right-5 top-[18px] " xmlns="http://www.w3.org/2000/svg" width="8" height="6"
+              viewBox="0 0 8 6" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M7.01317 0.882095L4.0003 3.90137L0.987427 0.882094C0.761021 0.656489 0.394609 0.656489 0.169804 0.882094C-0.0566015 1.1085 -0.0566016 1.47571 0.169804 1.70212L3.57869 5.119C3.69469 5.235 3.8475 5.2902 4.0003 5.287C4.1523 5.2902 4.30511 5.235 4.42111 5.119L7.8308 1.70212C8.0564 1.47571 8.0564 1.1085 7.8308 0.882095C7.60439 0.656489 7.23878 0.656489 7.01317 0.882095Z"
+                fill="#E0E0E0" />
+            </svg>
+            <ul class="">
+              {foreach from=$group.attributes key=id_attribute item=group_attribute}
+                <li>
+                  <label>
+                    <input class="input-radio" type="radio" data-product-attribute="{$id_attribute_group}"
+                      name="group[{$id_attribute_group}]" value="{$id_attribute}" {if $group_attribute.selected}
+                      checked="checked" {/if}>
+                    <span class="radio-label">{$group_attribute.name}</span>
+                  </label>
+                </li>
+              {/foreach}
+            </ul>
+          </div>
+
+          {* <select class="form-control form-control-select" id="group_{$id_attribute_group}"
             data-product-attribute="{$id_attribute_group}" name="group[{$id_attribute_group}]">
             {foreach from=$group.attributes key=id_attribute item=group_attribute}
               <option value="{$id_attribute}" title="{$group_attribute.name}" {if $group_attribute.selected} selected="selected"
                 {/if}>{$group_attribute.name}</option>
             {/foreach}
-          </select>
+          </select> *}
+
         {elseif $group.group_type == 'color'}
           <ul id="group_{$id_attribute_group}">
             {foreach from=$group.attributes key=id_attribute item=group_attribute}
