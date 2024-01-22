@@ -1038,6 +1038,8 @@ $(document).ready(function () {
   if (prestashop) {
     prestashop.on("updatedProduct", initProductSwipers);
   }
+
+  document.querySelector("body#product").addEventListener("click", () => $("#variants .collapse").collapse("hide"));
 });
 
 $(window).load(function () {
