@@ -445,5 +445,5 @@ div.inpost-shipping-container .btn {
 }
 
 [aria-expanded="true"].variant-select-toggle {
-  @apply !rounded-b-none !border-main transition-all;
+  @apply !rounded-b-none !border-main;
 }

@@ -30,9 +30,9 @@
         {if $group.group_type == 'select'}
 
           <div id="group_{$id_attribute_group}" class="relative w-full">
-            <a data-toggle="collapse variant-select-toggle border border-[#4F4F4F] rounded-[5px]" href="#collapse-{$id_attribute_group}" role="button" aria-expanded="false"
+            <a data-toggle="collapse" href="#collapse-{$id_attribute_group}" role="button" aria-expanded="false"
               aria-controls="collapse-{$id_attribute_group}"
-              class="float-left w-full block hover:!text-white text-base text-white whitespace-nowrap text-ellipsis pl-6 py-4 pr-10">
+              class="transition-all float-left w-full variant-select-toggle border border-[#4F4F4F] rounded-[5px] block hover:!text-white text-base text-white whitespace-nowrap text-ellipsis pl-6 py-4 pr-10">
               {foreach from=$group.attributes key=id_attribute item=group_attribute}
                 {if $group_attribute.selected}
                 {$group_attribute.name} {/if}
@@ -45,7 +45,7 @@
                 fill="#E0E0E0" />
             </svg>
             <ul
-              class="collapse absolute left-0 right-0 top-full z-50 float-left w-full border border-[#4F4F4F] rounded-[5px] !rounded-t-none overflow-hidden"
+              class="collapse absolute left-0 right-0 top-full z-[999] float-left w-full border border-[#4F4F4F] rounded-[5px] !rounded-t-none overflow-hidden"
               id="collapse-{$id_attribute_group}" data-parent="#group_{$id_attribute_group}">
               {foreach from=$group.attributes key=id_attribute item=group_attribute}
                 <li class="!mr-0">
@@ -54,7 +54,7 @@
                       name="group[{$id_attribute_group}]" value="{$id_attribute}" {if $group_attribute.selected}
                       checked="checked" {/if}>
                     <span
-                      class="w-full text-left cursor-pointer text-white block px-6 py-4 hover:bg-gray-normal peer-checked:bg-gray-normal">{$group_attribute.name}</span>
+                      class="w-full text-left cursor-pointer text-white block px-6 py-4 bg-gray-blackish hover:bg-gray-normal peer-checked:bg-gray-normal transition">{$group_attribute.name}</span>
                   </label>
                 </li>
               {/foreach}
