@@ -17,7 +17,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
  *}
 
-<div class="blockreassurance_product">
+<div class="blockreassurance_product !mt-0">
     {foreach from=$blocks item=$block key=$key}
         <div>
             <span class="item-product">
@@ -36,9 +36,10 @@
                 <p style="color:{$textColor};">{$block['description'] nofilter}</p>
             {/if}
             {if $block['type_link'] !== $LINK_TYPE_NONE && !empty($block['link'])}
-                <a href="{$block['link']}" class="ml-auto pl-2.5 text-main underline hover:text-[#87ac20] transition">{l s='Show details' mod='blockreassurance'}</a>
+                <a href="{$block['link']}"
+                    class="ml-auto pl-2.5 text-main !underline hover:text-[#87ac20] transition">{l s='Show details' mod='blockreassurance'}</a>
             {/if}
-    </div>
-{/foreach}
-<div class="clearfix"></div>
+        </div>
+    {/foreach}
+    <div class="clearfix"></div>
 </div>
