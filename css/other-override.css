@@ -487,7 +487,3 @@ div.inpost-shipping-container .btn {
 .product-add-fixed {
   @apply flex w-full items-center;
 }
-
-.blockreassurance_product svg {
-  @apply !stroke-white;
-}
