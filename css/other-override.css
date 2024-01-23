@@ -311,7 +311,7 @@ div.inpost-shipping-container .btn {
   @apply hidden;
 }
 .gm_omniprice {
-  @apply rounded-md border border-main  bg-black p-3;
+  @apply mb-4 rounded-md border  border-main bg-black p-3;
 }
 
 .product-layout {
