@@ -27,7 +27,7 @@
 
  <div data-product-modal class="js-product-images-modal">
    <div class="flex justify-between items-start grow-0 bg-black/50">
-     <span class="p-5 text-white text-base tablet:text-lg" data-slides-count="{$imagesCount}">
+     <span class="p-5 pb-0 text-white text-base tablet:text-lg" data-slides-count="{$imagesCount}">
        1/{$imagesCount}
      </span>
      <button class="group" data-modal-close>
@@ -39,12 +39,14 @@
        </svg>
      </button>
    </div>
-   <div class="group swiper !h-[calc(100%_-_148px)] tablet:!h-[calc(100%_-_188px)] flex-1" data-product-modal-swiper>
+   <div class="group swiper !h-[calc(100%_-_168px)] tablet:!h-[calc(100%_-_148px)] flex-1" data-product-modal-swiper>
      <div class="swiper-wrapper">
        {foreach from=$product.images item=image}
-         <div class="swiper-slide flex items-center justify-center py-5 tablet:p-5 tablet:p-10 desktop:px-20 bg-black/50">
-           <img class="object-contain max-h-full" loading="lazy" src="{$image.bySize.large_default.url}"
-             alt="{$image.legend}" title="{$image.legend}" itemprop="image">
+         <div class="swiper-slide flex items-center justify-center pb-5 tablet:px-5 desktop:px-10 bg-black/50">
+           <div class="swiper-zoom-container w-full h-full">
+             <img class="object-contain max-h-full" loading="lazy" src="{$image.bySize.large_default.url}"
+               alt="{$image.legend}" title="{$image.legend}" itemprop="image">
+           </div>
          </div>
        {/foreach}
      </div>
@@ -61,7 +63,7 @@
        </svg>
      </div>
    </div>
-   <div class="swiper grow-0 h-20 tablet:h-[120px] p-2 overflow-hidden" data-modal-thumbnails-swiper>
+   <div class="swiper grow-0 h-20 tablet:h-[100px] p-2 overflow-hidden" data-modal-thumbnails-swiper>
      <div class="swiper-wrapper">
        {foreach from=$product.images item=image}
          <div

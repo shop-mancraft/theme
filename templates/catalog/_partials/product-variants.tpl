@@ -32,7 +32,7 @@
           <div id="group_{$id_attribute_group}" class="select-collapsible relative w-full float-left">
             <a data-toggle="collapse" href="#collapse-{$id_attribute_group}" role="button" aria-expanded="false"
               aria-controls="collapse-{$id_attribute_group}"
-              class="transition-all float-left w-full variant-select-toggle border border-[#4F4F4F] rounded-[5px] block hover:!text-white text-base text-white whitespace-nowrap text-ellipsis overflow-hidden pl-6 py-3 pr-10">
+              class="transition-all float-left w-full variant-select-toggle border border-[#4F4F4F] hover:border-main hover:bg-gray-normal rounded-[5px] block hover:!text-white text-base text-white whitespace-nowrap text-ellipsis overflow-hidden pl-6 py-3 pr-10">
               {foreach from=$group.attributes key=id_attribute item=group_attribute}
                 {if $group_attribute.selected}
                 {$group_attribute.name} {/if}
@@ -62,15 +62,18 @@
           </div>
 
           {* <select class="form-control form-control-select" id="group_{$id_attribute_group}"
-                    data-product-attribute="{$id_attribute_group}" name="group[{$id_attribute_group}]">
-                    {foreach from=$group.attributes key=id_attribute item=group_attribute}
-                        <option value="{$id_attribute}" title="{$group_attribute.name}" 
+                            data-product-attribute="{$id_attribute_group}" name="group[{$id_attribute_group}]">
+                            {foreach from=$group.attributes key=id_attribute item=group_attribute}
+                                  <option value="{$id_attribute}" title="{$group_attribute.name}" 
+
               {if $group_attribute.selected} selected="selected"
+
 
               {/if}>{$group_attribute.name}</option>
 
+
             {/foreach}
-                  </select> *}
+                          </select> *}
 
           {elseif $group.group_type == 'color'}
             <ul id="group_{$id_attribute_group}">
