@@ -8628,7 +8628,7 @@ border-radius: 50%;
 .product-actions .add-to-cart:active,
 .product-actions .add-to-cart:focus,
 .product-actions .add-to-cart:hover {
-    background:#111;
+    background: #87ac20;
     color: #fff;
 }
 .product-actions .btn-primary:disabled.add-to-cart:active,

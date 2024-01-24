@@ -315,7 +315,7 @@ div.inpost-shipping-container .btn {
 }
 
 .product-layout {
-  grid-template-columns: 60% 40%;
+  grid-template-columns: min(60%, 906px) auto;
   @apply flex flex-col tablet:mb-[50px] tablet:grid;
 }
 
