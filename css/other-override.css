@@ -334,7 +334,7 @@ div.inpost-shipping-container .btn {
 .descriptions-container #description p,
 .descriptions-container #description span,
 .descriptions-container #description li {
-  @apply text-base;
+  @apply !text-base;
 }
 
 .descriptions-container #product-details p,
