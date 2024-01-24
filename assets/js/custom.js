@@ -1088,6 +1088,7 @@ function initProductSwipers() {
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         },
+        zoom: true,
         thumbs: {
           swiper: swiperModalThumbnails,
         },

@@ -44,7 +44,7 @@
        {foreach from=$product.images item=image}
          <div class="swiper-slide flex items-center justify-center pb-5 tablet:px-5 desktop:px-10 bg-black/50">
            <div class="swiper-zoom-container w-full h-full">
-             <img class="object-contain max-h-full" loading="lazy" src="{$image.bySize.large_default.url}"
+             <img class="object-contain max-h-full h-full" loading="lazy" src="{$image.bySize.large_default.url}"
                alt="{$image.legend}" title="{$image.legend}" itemprop="image">
            </div>
          </div>
