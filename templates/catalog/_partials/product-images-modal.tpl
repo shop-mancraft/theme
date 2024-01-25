@@ -39,7 +39,8 @@
        </svg>
      </button>
    </div>
-   <div class="group swiper z-50 !h-[calc(100%_-_148px)] flex-1" data-product-modal-swiper>
+   <div class="group swiper z-50 !h-[calc(100%_-_168px)] tablet:!h-[calc(100%_-_148px)] flex-1"
+     data-product-modal-swiper>
      <div class="swiper-wrapper">
        {foreach from=$product.images item=image}
          <div class="swiper-slide flex items-center justify-center pb-5 tablet:px-5 desktop:px-10">
@@ -63,8 +64,8 @@
        </svg>
      </div>
    </div>
-   <div class="grow-0 px-5 flex items-center justify-center h-5 tablet:hidden text-white text-xs">
-     <svg class="h-full mr-2 shrink-0 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="2 2 20 20">
+   <div class="grow-0 px-5 flex items-center justify-center h-10 pb-5 tablet:hidden text-white text-xs">
+     <svg class="h-5 mr-2 shrink-0 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="2 2 20 20">
        <path
          d="M12.356 4.507A1.5 1.5 0 0 0 11 6l-.001 7.292-1.645-1.646a1.914 1.914 0 1 0-2.708 2.708l4.793 4.793C12.765 20.472 13.892 21 15.5 21a4.5 4.5 0 0 0 4.5-4.5V12a1.5 1.5 0 0 0-1.5-1.5l-.144.007c-.143.013-.28.047-.41.097l-.006-.025A1.5 1.5 0 0 0 16.5 9.5l-.144.007c-.143.013-.28.047-.41.097l-.006-.025A1.5 1.5 0 0 0 14.5 8.5l-.144.007c-.096.009-.188.027-.277.053L14 8.586V6a1.5 1.5 0 0 0-1.5-1.5l-.144.007zm.144.993a.5.5 0 0 1 .5.5v5l.008.09a.5.5 0 0 0 .984 0L14 11v-1a.5.5 0 0 1 .992-.09L15 10v2l.008.09a.5.5 0 0 0 .984 0L16 12v-1a.5.5 0 0 1 .992-.09L17 11v2l.008.09a.5.5 0 0 0 .984 0L18 13v-1a.5.5 0 1 1 1 0v4.5a3.5 3.5 0 0 1-3.5 3.5c-1.325 0-2.206-.413-3.354-1.56l-4.792-4.794a.914.914 0 1 1 1.292-1.292l2.5 2.5A.5.5 0 0 0 12 14.5V6a.5.5 0 0 1 .5-.5zM8.5 4a.5.5 0 0 1 .492.41L9 4.5v2a.5.5 0 0 1-.992.09L8 6.5v-.794L4.706 9H5.5a.5.5 0 0 1 .492.41L6 9.5a.5.5 0 0 1-.41.492L5.5 10h-2a.5.5 0 0 1-.492-.41L3 9.5v-2a.5.5 0 0 1 .992-.09L4 7.5v.792L7.292 5H6.5a.5.5 0 0 1-.492-.41L6 4.5a.5.5 0 0 1 .41-.492L6.5 4h2z">
        </path>
