@@ -10,9 +10,11 @@
         <path d="M16 16.3334V33.0001M1 9.66675H31V16.3334H1V9.66675Z" stroke="#A8D727" stroke-width="1.5"
             stroke-linecap="round" stroke-linejoin="round" />
     </svg>
-    <div class="max-w-[180px] tablet:max-w-none text-left">
-        <span class="underline text-white">{l s='You can get ' mod='pshowloyaltyprogram'}</span>
-        <span class="!no-underline whitespace-nowrap bg-main/25 py-1 px-2 mx-1 tablet:mx-2 rounded-[5px] text-main">+{$points} {l s='pts' mod='pshowloyaltyprogram'}</span>
-        <span class="underline text-white">{l s='in the loyalty program' mod='pshowloyaltyprogram'}</span>
+    <div class="text-left">
+        <span class="underline text-white">{l s='Collect ' mod='pshowloyaltyprogram'}</span>
+        <span class="!no-underline whitespace-nowrap bg-main/25 py-1 px-2 mx-1 rounded-[5px] text-main">+{$points}
+            {l s='pts' mod='pshowloyaltyprogram'}</span>
+        <span
+            class="underline text-white block tablet:inline ">{l s='in the loyalty program' mod='pshowloyaltyprogram'}</span>
     </div>
 </div>
