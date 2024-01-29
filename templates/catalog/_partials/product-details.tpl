@@ -93,12 +93,12 @@
     {/if}
   {/block}
 
-  <div class="mb-10 tablet:mb-[50px]">
+  <div class="mb-10 tablet:mb-[50px] bg-gray-normal p-5 rounded-[10px]">
     {foreach from=$product.grouped_features item=feature}
       {if $feature.id_feature == $ASSEMBLY_LINK_FEATURE_ID}
-        <h2 class="description-title">{$feature.name}</h2>
+        <h2 class="mb-5 text-xl text-white tablet:text-2xl">{$feature.name}</h2>
         <a href="{$feature.value|escape:'htmlall'|nl2br nofilter}"
-          class="group flex items-center text-white text-lg p-4 py-3 border border-white rounded-full hover:text-white hover:bg-main hover:border-main">
+          class="group inline-block text-white text-lg px-5 py-3 border border-white rounded-full hover:text-white hover:bg-main hover:border-main">
           {l s='Read more' d='Shop.Theme.Catalog'}
         </a>
       {/if}
