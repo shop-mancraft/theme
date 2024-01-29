@@ -57,7 +57,7 @@
         <section class="product-features">
           <dl class="data-sheet">
             {foreach from=$product.grouped_features item=feature}
-              {if $feature.id != $ASSEMBLY_LINK_FEATURE_ID}
+              {if $feature.id_feature != $ASSEMBLY_LINK_FEATURE_ID}
                 <dt>{$feature.name}</dt>
                 <dd>{$feature.value|escape:'htmlall'|nl2br nofilter}</dd>
               {/if}
@@ -95,7 +95,7 @@
 
   <div class="mb-10 tablet:mb-[50px]">
     {foreach from=$product.grouped_features item=feature}
-      {if $feature.id == $ASSEMBLY_LINK_FEATURE_ID}
+      {if $feature.id_feature == $ASSEMBLY_LINK_FEATURE_ID}
         <h2 class="description-title">{$feature.name}</h2>
         <a href="{$feature.value|escape:'htmlall'|nl2br nofilter}"
           class="group flex items-center text-white text-lg p-4 py-3 border border-white rounded-full hover:text-white hover:bg-main hover:border-main">
