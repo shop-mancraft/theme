@@ -1,3 +1,5 @@
+{assign var='ASSEMBLY_LINK_FEATURE_ID' value=18}
+
 <div id="product-details">
   {block name='product_reference'}
     {if isset($product_manufacturer->id)}
@@ -55,8 +57,10 @@
         <section class="product-features">
           <dl class="data-sheet">
             {foreach from=$product.grouped_features item=feature}
-              <dt>{$feature.name}</dt>
-              <dd>{$feature.value|escape:'htmlall'|nl2br nofilter}</dd>
+              {if $feature.id != $ASSEMBLY_LINK_FEATURE_ID}
+                <dt>{$feature.name}</dt>
+                <dd>{$feature.value|escape:'htmlall'|nl2br nofilter}</dd>
+              {/if}
             {/foreach}
           </dl>
         </section>
@@ -88,4 +92,17 @@
       </div>
     {/if}
   {/block}
+
+  <div class="mb-10 tablet:mb-[50px]">
+    {foreach from=$product.grouped_features item=feature}
+      {if $feature.id == $ASSEMBLY_LINK_FEATURE_ID}
+        <h2 class="description-title">{$feature.name}</h2>
+        <a href="{$feature.value|escape:'htmlall'|nl2br nofilter}"
+          class="group flex items-center text-white text-lg p-4 py-3 border border-white rounded-full hover:text-white hover:bg-main hover:border-main">
+          {l s='Read more' d='Shop.Theme.Catalog'}
+        </a>
+      {/if}
+    {/foreach}
+  </div>
+
 </div>
