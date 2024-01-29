@@ -52,6 +52,7 @@
 
   {block name='product_features'}
     {if $product.grouped_features}
+      {debug}
       <div class="mb-10 tablet:mb-[50px]">
         <h2 class="description-title">{l s='Product Details' d='Shop.Theme.Catalog'}</h2>
         <section class="product-features">
