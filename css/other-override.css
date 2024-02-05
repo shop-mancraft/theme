@@ -363,7 +363,7 @@ div.inpost-shipping-container .btn {
 }
 
 .descriptions-container ul {
-  @apply mt-5;
+  @apply mt-5 !list-none;
 }
 
 .descriptions-container ul li {
