@@ -22,24 +22,25 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
- {assign var="current_page" value=$urls.current_url|regex_replace:"/\?.*/":" "|replace:$urls.base_url:''}
- {assign var="cart_page" value=$urls.pages.cart|regex_replace:"/\?.*/":" "|replace:$urls.base_url:''}
+{assign var="current_page" value=$urls.current_url|regex_replace:"/\?.*/":" "|replace:$urls.base_url:''}
+{assign var="cart_page" value=$urls.pages.cart|regex_replace:"/\?.*/":" "|replace:$urls.base_url:''}
 
 <nav data-depth="{$breadcrumb.count}" class="breadcrumb hidden-sm-down">
   {if !(strpos($current_page,$cart_page) === 0 or strpos($current_page,$cart_page)>0)}
-  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
-    {block name='breadcrumb'}
-      {foreach from=$breadcrumb.links item=path name=breadcrumb}
-        {block name='breadcrumb_item'}
-          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-            <a itemprop="item" href="{$path.url}">
-              <span itemprop="name">{$path.title}</span>
-            </a>
-            <meta itemprop="position" content="{$smarty.foreach.breadcrumb.iteration}">
-          </li>
-        {/block}
-      {/foreach}
-    {/block}
-  </ol>
+    <ol itemscope itemtype="http://schema.org/BreadcrumbList"
+      class="whitespace-nowrap overflow-auto scrollbar-none !pl-2.5">
+      {block name='breadcrumb'}
+        {foreach from=$breadcrumb.links item=path name=breadcrumb}
+          {block name='breadcrumb_item'}
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a itemprop="item" href="{$path.url}">
+                <span itemprop="name">{$path.title}</span>
+              </a>
+              <meta itemprop="position" content="{$smarty.foreach.breadcrumb.iteration}">
+            </li>
+          {/block}
+        {/foreach}
+      {/block}
+    </ol>
   {/if}
 </nav>

@@ -499,3 +499,8 @@ div.inpost-shipping-container .btn {
 #product .go-to-top {
   @apply !mb-36 tablet:!mb-24;
 }
+
+.scrollbar-none {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
