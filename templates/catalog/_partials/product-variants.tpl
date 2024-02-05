@@ -45,8 +45,8 @@
                 fill="#E0E0E0" />
             </svg>
             <div id="collapse-{$id_attribute_group}"
-              class="collapse absolute left-0 right-0 top-full z-[120] w-full border border-[#4F4F4F] rounded-[5px] !rounded-t-none">
-              <ul class="float-left overflow-auto scrollbar-custom max-h-[400px] bg-black">
+              class="collapse absolute left-0 right-0 top-full z-[120] w-full border border-[#4F4F4F] rounded-[5px] !rounded-t-none overflow-hidden">
+              <ul class="float-left w-full overflow-auto scrollbar-custom max-h-[400px] bg-black">
                 {foreach from=$group.attributes key=id_attribute item=group_attribute}
                   <li class="!mr-0">
                     <label>
