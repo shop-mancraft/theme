@@ -37,7 +37,7 @@
             {/if}
             {if $block['type_link'] !== $LINK_TYPE_NONE && !empty($block['link'])}
                 <a href="{$block['link']}"
-                    class="ml-auto pl-2.5 text-main !underline hover:text-[#87ac20] transition">{l s='Show details' mod='blockreassurance'}</a>
+                    class="ml-auto pl-2.5 text-main !underline hover:text-[#87ac20] transition">{l s='Show details' d='Modules.Blockreassurance.Displayblockproduct'}</a>
             {/if}
         </div>
     {/foreach}
