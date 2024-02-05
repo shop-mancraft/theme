@@ -44,9 +44,9 @@
                 d="M7.01317 0.882095L4.0003 3.90137L0.987427 0.882094C0.761021 0.656489 0.394609 0.656489 0.169804 0.882094C-0.0566015 1.1085 -0.0566016 1.47571 0.169804 1.70212L3.57869 5.119C3.69469 5.235 3.8475 5.2902 4.0003 5.287C4.1523 5.2902 4.30511 5.235 4.42111 5.119L7.8308 1.70212C8.0564 1.47571 8.0564 1.1085 7.8308 0.882095C7.60439 0.656489 7.23878 0.656489 7.01317 0.882095Z"
                 fill="#E0E0E0" />
             </svg>
-            <div
+            <div id="collapse-{$id_attribute_group}"
               class="collapse absolute left-0 right-0 top-full z-50 w-full border border-[#4F4F4F] rounded-[5px] !rounded-t-none">
-              <ul class="float-left overflow-auto scrollbar-custom max-h-[400px]" id="collapse-{$id_attribute_group}">
+              <ul class="float-left overflow-auto scrollbar-custom max-h-[400px]">
                 {foreach from=$group.attributes key=id_attribute item=group_attribute}
                   <li class="!mr-0">
                     <label>
