@@ -468,7 +468,7 @@ div.inpost-shipping-container .btn {
 }
 
 #variants [aria-expanded="true"].collapsing {
-  @apply z-[9999];
+  @apply z-[130];
 }
 
 .product-quantity .input-group-btn-vertical .btn {
