@@ -504,3 +504,24 @@ div.inpost-shipping-container .btn {
   -ms-overflow-style: none !important;
   scrollbar-width: none !important;
 }
+
+.scrollbar-custom::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: #a8d727;
+  border-radius: 8px;
+  border: 2px solid #000000;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .scrollbar-custom {
+    scrollbar-width: thin;
+    scrollbar-color: #000000 #a8d727;
+  }
+}
