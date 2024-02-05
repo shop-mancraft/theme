@@ -337,6 +337,10 @@ div.inpost-shipping-container .btn {
   @apply !text-base;
 }
 
+.descriptions-container #description iframe {
+  @apply !max-w-full;
+}
+
 .descriptions-container #description a {
   @apply !text-base hover:!text-main;
 }
