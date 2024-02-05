@@ -11,10 +11,10 @@
             stroke-linecap="round" stroke-linejoin="round" />
     </svg>
     <div class="text-left">
-        <span class="underline text-white">{l s='Collect ' mod='pshowloyaltyprogram'}</span>
+        <span class="underline text-white">{l s='Collect ' mod='Modules.Pshowloyaltyprogram.Product-page'}</span>
         <span class="!no-underline whitespace-nowrap bg-main/25 py-1 px-2 mx-1 rounded-[5px] text-main">+{$points}
-            {l s='pts' mod='pshowloyaltyprogram'}</span>
+            {l s='pts' mod='Modules.Pshowloyaltyprogram.Product-page'}</span>
         <span
-            class="underline text-white block tablet:inline ">{l s='in the loyalty program' mod='pshowloyaltyprogram'}</span>
+            class="underline text-white block tablet:inline ">{l s='in the loyalty program' mod='Modules.Pshowloyaltyprogram.Product-page'}</span>
     </div>
 </div>
