@@ -71,7 +71,7 @@
   {* if product have specific references, a table will be added to product details section *}
   {block name='product_specific_references'}
     {if !empty($product.specific_references)}
-      <section class="product-features">
+      <section class="product-features mb-10 tablet:mb-[50px]">
         <p class="h6">{l s='Specific References' d='Shop.Theme.Catalog'}</p>
         <dl class="data-sheet">
           {foreach from=$product.specific_references item=reference key=key}
@@ -85,7 +85,7 @@
 
   {block name='product_condition'}
     {if $product.condition}
-      <div class="product-condition">
+      <div class="product-condition mb-10 tablet:mb-[50px]">
         <label class="label">{l s='Condition' d='Shop.Theme.Catalog'} </label>
         <link itemprop="itemCondition" href="{$product.condition.schema_url}" />
         <span>{$product.condition.label}</span>
