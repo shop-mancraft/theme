@@ -27,7 +27,7 @@
     {if !empty($group.attributes)}
       <div class="clearfix product-variants-item">
         <span class="control-label !text-base text-[#BDBDBD] !mb-2">{$group.name}</span>
-        {if $group.group_type == 'select'}
+        {if $group.group_type == 'select' || $group.group_type == 'radio'}
 
           <div id="group_{$id_attribute_group}" class="select-collapsible relative w-full float-left">
             <a data-toggle="collapse" href="#collapse-{$id_attribute_group}" role="button" aria-expanded="false"
@@ -90,21 +90,7 @@
               </li>
             {/foreach}
           </ul>
-        {elseif $group.group_type == 'radio'}
-          <ul id="group_{$id_attribute_group}">
-            {foreach from=$group.attributes key=id_attribute item=group_attribute}
-              <li class="input-container float-xs-left">
-                <label>
-                  <input class="input-radio" type="radio" data-product-attribute="{$id_attribute_group}"
-                    name="group[{$id_attribute_group}]" value="{$id_attribute}" {if $group_attribute.selected} checked="checked"
-                    {/if}>
-                  <span class="radio-label">{$group_attribute.name}</span>
-                </label>
-              </li>
-            {/foreach}
-          </ul>
-        {/if}
-      </div>
-    {/if}
-  {/foreach}
-</div>
+        </div>
+      {/if}
+    {/foreach}
+  </div>
