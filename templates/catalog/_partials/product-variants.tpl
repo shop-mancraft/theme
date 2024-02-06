@@ -90,6 +90,8 @@
               </li>
             {/foreach}
           </ul>
+          {elseif $group.group_type == 'radio'}
+          {/if}
         </div>
       {/if}
     {/foreach}
