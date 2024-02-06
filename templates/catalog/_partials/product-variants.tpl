@@ -27,7 +27,7 @@
     {if !empty($group.attributes)}
       <div class="clearfix product-variants-item">
         <span class="control-label !text-base text-[#BDBDBD] !mb-2">{$group.name}</span>
-        {if $group.group_type == 'select' || $group.group_type == 'radio'}
+        {if $group.group_type == 'select'}
 
           <div id="group_{$id_attribute_group}" class="select-collapsible relative w-full float-left">
             <a data-toggle="collapse" href="#collapse-{$id_attribute_group}" role="button" aria-expanded="false"
@@ -90,9 +90,41 @@
               </li>
             {/foreach}
           </ul>
-          {elseif $group.group_type == 'radio'}
-          {/if}
-        </div>
-      {/if}
-    {/foreach}
-  </div>
+        {elseif $group.group_type == 'radio'}
+          <div id="group_{$id_attribute_group}" class="select-collapsible relative w-full float-left">
+            <a data-toggle="collapse" href="#collapse-{$id_attribute_group}" role="button" aria-expanded="false"
+              aria-controls="collapse-{$id_attribute_group}"
+              class="transition-all float-left w-full variant-select-toggle border border-[#4F4F4F] hover:border-main hover:bg-gray-normal rounded-[5px] block hover:!text-white text-base text-white whitespace-nowrap text-ellipsis overflow-hidden pl-6 py-3 pr-10">
+              {foreach from=$group.attributes key=id_attribute item=group_attribute}
+                {if $group_attribute.selected}
+                {$group_attribute.name} {/if}
+              {/foreach}
+            </a>
+            <svg class="absolute right-5 top-[23px] transition duration-300" xmlns="http://www.w3.org/2000/svg" width="8"
+              height="6" viewBox="0 0 8 6" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M7.01317 0.882095L4.0003 3.90137L0.987427 0.882094C0.761021 0.656489 0.394609 0.656489 0.169804 0.882094C-0.0566015 1.1085 -0.0566016 1.47571 0.169804 1.70212L3.57869 5.119C3.69469 5.235 3.8475 5.2902 4.0003 5.287C4.1523 5.2902 4.30511 5.235 4.42111 5.119L7.8308 1.70212C8.0564 1.47571 8.0564 1.1085 7.8308 0.882095C7.60439 0.656489 7.23878 0.656489 7.01317 0.882095Z"
+                fill="#E0E0E0" />
+            </svg>
+            <div id="collapse-{$id_attribute_group}"
+              class="collapse absolute left-0 right-0 top-full z-[120] w-full border border-[#4F4F4F] rounded-[5px] !rounded-t-none overflow-hidden">
+              <ul class="float-left w-full overflow-auto scrollbar-custom max-h-[400px] bg-black">
+                {foreach from=$group.attributes key=id_attribute item=group_attribute}
+                  <li class="!mr-0">
+                    <label>
+                      <input class="hidden peer" type="radio" data-product-attribute="{$id_attribute_group}"
+                        name="group[{$id_attribute_group}]" value="{$id_attribute}" {if $group_attribute.selected}
+                        checked="checked" {/if}>
+                      <span
+                        class="w-full text-left cursor-pointer text-white block px-6 py-3 bg-black hover:bg-gray-normal peer-checked:bg-gray-normal transition">{$group_attribute.name}</span>
+                    </label>
+                  </li>
+                {/foreach}
+              </ul>
+            </div>
+          </div>
+        {/if}
+      </div>
+    {/if}
+  {/foreach}
+</div>
