@@ -433,7 +433,6 @@ img {
 		z-index: 2;
 	}
 	.title-menu-mobile span {
-		color: #111;
 		cursor: pointer;
 		float: right;
 		font: 600 16px/24px "Poppins", Helvetica, sans-serif;
@@ -723,7 +722,6 @@ img {
 	}
 	.tt-menu-horizontal ul li.level-1:hover {} .tt-menu-horizontal ul li.level-1:hover > a {} 
 	.title-menu-mobile span {
-		color: #ffffff;
 		display: block;
 		float: right; 
 		font-size: 18px;
