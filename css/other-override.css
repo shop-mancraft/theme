@@ -235,13 +235,6 @@ div.inpost-shipping-container .btn {
   @apply !pb-0 tablet:!pb-5;
 }
 
-[data-paypal-source-page="product"] {
-  @apply !float-left !mr-0 !mt-2.5 !ml-[89px] w-full;
-}
-
-[data-paypal-source-page="payment-step"] [paypal-button-container] > div.paypal-buttons {
-  @apply overflow-hidden rounded-full;
-}
 .pay-methods {
   @apply flex flex-wrap;
 }
@@ -315,7 +308,7 @@ div.inpost-shipping-container .btn {
 }
 
 .product-layout {
-  grid-template-columns: min(50%, 906px) 40%;
+  grid-template-columns: min(60%, 906px) 40%;
   @apply flex flex-col tablet:mb-[50px] tablet:grid;
 }
 
