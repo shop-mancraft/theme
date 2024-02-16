@@ -535,5 +535,5 @@ div.inpost-shipping-container .btn {
 }
 
 .title-menu-mobile.active{
-  @apply shadow-xl shadow-main/40
+  @apply tablet-narrow:shadow-lg tablet-narrow:shadow-main/30
 }
