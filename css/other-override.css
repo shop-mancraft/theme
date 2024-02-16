@@ -529,11 +529,3 @@ div.inpost-shipping-container .btn {
     scrollbar-color: #000000 #a8d727;
   }
 }
-
-.title-menu-mobile.active{
-  @apply shadow-none hover:tablet-narrow:shadow-[0_6px_17px_3px_rgb(0_0_0/0.1)] hover:tablet-narrow:shadow-main/30
-}
-
-.title-menu-mobile{
-  @apply tablet-narrow:shadow-[0_6px_17px_3px_rgb(0_0_0/0.1)] tablet-narrow:shadow-main/30 transition-all duration-200
-}
