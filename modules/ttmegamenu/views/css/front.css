@@ -441,7 +441,6 @@ img {
 		z-index: 2;
 	}
 	.title-menu-mobile span {
-		color: #111;
 		cursor: pointer;
 		float: left;
 		font-weight: 600;
@@ -735,7 +734,6 @@ img {
 	}
 	.tt-menu-horizontal ul li.level-1:hover {} .tt-menu-horizontal ul li.level-1:hover > a {} 
 	.title-menu-mobile span {
-		color: #ffffff;
 		display: block;
 		float: left; 
 		font-size: 18px;
