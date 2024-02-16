@@ -534,10 +534,10 @@ div.inpost-shipping-container .btn {
   }
 }
 
-.title-menu-mobile{
-  @apply shadow-none transition-all duration-200
+.title-menu-mobile.active{
+  @apply shadow-none hover:tablet-narrow:shadow-lg hover:tablet-narrow:shadow-main/30
 }
 
-.title-menu-mobile.active{
-  @apply tablet-narrow:shadow-lg tablet-narrow:shadow-main/30
+.title-menu-mobile{
+  @apply tablet-narrow:shadow-lg tablet-narrow:shadow-main/30 transition-all duration-200
 }
