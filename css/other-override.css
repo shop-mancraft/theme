@@ -535,9 +535,9 @@ div.inpost-shipping-container .btn {
 }
 
 .title-menu-mobile.active{
-  @apply shadow-none hover:tablet-narrow:shadow-lg hover:tablet-narrow:shadow-main/30
+  @apply shadow-none hover:tablet-narrow:shadow-[0_6px_17px_3px_rgb(0_0_0/0.1)] hover:tablet-narrow:shadow-main/30
 }
 
 .title-menu-mobile{
-  @apply shadow-[0_6px_17px_3px_rgb(0_0_0/0.1)] tablet-narrow:shadow-lg tablet-narrow:shadow-main/30 transition-all duration-200
+  @apply tablet-narrow:shadow-[0_6px_17px_3px_rgb(0_0_0/0.1)] tablet-narrow:shadow-main/30 transition-all duration-200
 }
