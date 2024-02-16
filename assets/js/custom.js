@@ -900,14 +900,6 @@ $(document).ready(function () {
   bindGrid();
 });
 
-/* ------------ End Grid List JS --------------*/
-
-$(document).ready(function () {
-  if ($(window).width() > 768 && $("#index").length > 0) {
-    $(".title-menu-mobile").click();
-  }
-});
-
 /* ------------ ICON on some product --------------*/
 
 $(document).ready(function () {
