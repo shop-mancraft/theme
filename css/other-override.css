@@ -533,3 +533,11 @@ div.inpost-shipping-container .btn {
     scrollbar-color: #000000 #a8d727;
   }
 }
+
+.title-menu-mobile{
+  @apply shadow-none transition-all duration-200
+}
+
+.title-menu-mobile.active{
+  @apply shadow-xl shadow-main/40
+}
