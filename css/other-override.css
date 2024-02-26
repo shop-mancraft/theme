@@ -508,6 +508,10 @@ div.inpost-shipping-container .btn {
   @apply !mb-36 tablet:!mb-24;
 }
 
+.reviews-header{
+  @apply flex flex-col phone-wide:flex-row phone-wide:justify-between phone-wide:items-end
+}
+
 .scrollbar-none {
   -ms-overflow-style: none !important;
   scrollbar-width: none !important;
