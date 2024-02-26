@@ -297,6 +297,10 @@ div.inpost-shipping-container .btn {
   @apply tablet:!opacity-0;
 }
 
+.stickers-box-list{
+  @apply pointer-events-none
+}
+
 .stickers-box-list .img-sticker img {
   @apply !border-0 !border-none !bg-transparent;
 }
