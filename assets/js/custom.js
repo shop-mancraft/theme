@@ -1032,11 +1032,44 @@ $(document).ready(function () {
   }
 
   document.querySelector("body").addEventListener("click", () => $("#variants .collapse").collapse("hide"));
+
+  document.querySelectorAll('#checkout input[type="text"]').forEach(input => {
+    input.addEventListener('beforeinput',(e)=>{
+      if (isForeignChar(e.data)) e.preventDefault()
+    })
+  })
+
+  initCheckoutInputTests()
+
+  if (prestashop) {
+    prestashop.on('changedCheckoutStep',initCheckoutInputTests)
+  }
+
 });
 
 $(window).load(function () {
   $("#checkout #checkout-payment-step #payment-option-1").trigger("click");
 });
+
+function initCheckoutInputTests() {
+  document.querySelectorAll('#checkout input[type="text"]').forEach(input => {
+    input.addEventListener('beforeinput',(e)=>{
+      if (isForeignChar(e.data)) e.preventDefault()
+    })
+  })  
+}
+
+function isForeignChar(char) {
+  var rforeign = /[^\u0000-\u024F\u1E00-\u1EFF\u2C60-\u2C7F\uA720-\uA7FF]/g;
+  const alertText = typeof alertCharText == 'string' ? alertCharText : "This is non-Latin Characters"
+
+  if (rforeign.test(char)) {
+    alert(alertText);
+    return true
+  } 
+  return false    
+  
+}
 
 function initProductSwipers() {
   const productImagesElement = document.querySelector("[data-product-img-swiper]");
