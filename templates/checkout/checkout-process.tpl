@@ -22,10 +22,9 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-
-{strip}
-  {addJsDefL name=alertCharText}{l s='Due to the correct generation of courier labels, please use only Latin characters in the address data.' d='Custom' js=1}{/addJsDefL}
-{/strip}
+<script class="!hidden">
+  const alertCharText = "{l s='Due to the correct generation of courier labels, please use only Latin characters in the address data.' d='Custom'}"
+</script>
 {foreach from=$steps item="step" key="index"}
   {render identifier  =  $step.identifier
           position    =  ($index + 1)
