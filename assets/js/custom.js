@@ -1041,10 +1041,6 @@ $(document).ready(function () {
 
   initCheckoutInputTests()
 
-  if (prestashop) {
-    prestashop.on('changedCheckoutStep',initCheckoutInputTests)
-  }
-
 });
 
 $(window).load(function () {
@@ -1061,7 +1057,7 @@ function initCheckoutInputTests() {
 
 function isForeignChar(char) {
   var rforeign = /[^\u0000-\u024F\u1E00-\u1EFF\u2C60-\u2C7F\uA720-\uA7FF]/g;
-  const alertText = typeof alertCharText == 'string' ? alertCharText : "This is non-Latin Characters"
+  const alertText = typeof alertCharText == 'string' ? alertCharText : "This is non-Latin Character"
 
   if (rforeign.test(char)) {
     alert(alertText);
