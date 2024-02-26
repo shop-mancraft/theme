@@ -285,6 +285,13 @@
       </div>
     </div>
 
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core="" defer="defer"></script>
+    <div class="reviews-header">
+      <h3 class="h1 mb-8 tt-title">{l s='Shop reviews' d='Custom'}</h3>
+      <div class="elfsight-app-9aa5fcc0-9ac3-4129-b4d3-826cf93cb3f2" data-elfsight-app-lazy=""></div>
+      </div>
+    <div class="elfsight-app-07ae0b38-18c3-457b-9f78-726efdfec8ab" data-elfsight-app-lazy=""></div>
+
     {block name='product_accessories'}
       {if $accessories}
         <section class="product-accessories clearfix">
