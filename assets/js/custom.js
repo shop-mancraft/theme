@@ -1033,12 +1033,6 @@ $(document).ready(function () {
 
   document.querySelector("body").addEventListener("click", () => $("#variants .collapse").collapse("hide"));
 
-  document.querySelectorAll('#checkout input[type="text"]').forEach(input => {
-    input.addEventListener('beforeinput',(e)=>{
-      if (isForeignChar(e.data)) e.preventDefault()
-    })
-  })
-
   initCheckoutInputTests()
 
 });
