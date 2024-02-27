@@ -1040,8 +1040,8 @@ $(document).ready(function () {
 $(window).load(function () {
   $("#checkout #checkout-payment-step #payment-option-1").trigger("click");
 
-  // const elfBranding = document.querySelectorAll('a[href$="free-widget"]')
-  // elfBranding.forEach(item => item.remove())
+  const elfBranding = document.querySelectorAll('a[href$="free-widget"]')
+  elfBranding.forEach(item => item.remove())
 
 });
 
