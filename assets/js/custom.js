@@ -1045,14 +1045,13 @@ $(window).load(async function () {
 function hideElements(selector) {
   const observer = new MutationObserver(mutations => {
     if (document.querySelector(selector)) {
-        document.querySelector(selector).style.display = 'none';
+        document.querySelectorAll(selector).forEach(el=> el.style.display = 'none')
     }
   });
 
   observer.observe(document.body, {
     childList: true,
     subtree: true,
-    attributes: true
   });
 }
 
