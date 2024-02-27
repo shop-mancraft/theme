@@ -1034,7 +1034,9 @@ $(document).ready(function () {
   document.querySelector("body").addEventListener("click", () => $("#variants .collapse").collapse("hide"));
 
   initCheckoutInputTests()
-  hideElements('a[href$="free-widget"]')
+
+  const reviewsContainer = document.getElementById('reviews_block')
+  hideElements(reviewsContainer,'a[href$="free-widget"]')
 
 });
 
@@ -1042,17 +1044,19 @@ $(window).load(async function () {
   $("#checkout #checkout-payment-step #payment-option-1").trigger("click");
 });
 
-function hideElements(selector) {
-  const observer = new MutationObserver(mutations => {
-    if (document.querySelector(selector)) {
-        document.querySelectorAll(selector).forEach(el=> el.style.display = 'none')
-    }
-  });
-
-  observer.observe(document.body, {
-    childList: true,
-    subtree: true,
-  });
+function hideElements(target,selector) {
+  if (target && selector) {
+    const observer = new MutationObserver(mutations => {
+      if (document.querySelector(selector)) {
+          document.querySelectorAll(selector).forEach(el=> el.style.display = 'none')
+      }
+    });
+  
+    observer.observe(target, {
+      childList: true,
+      subtree: true,
+    });
+  }
 }
 
 function initCheckoutInputTests() {

@@ -285,12 +285,14 @@
       </div>
     </div>
 
-    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core="" defer="defer" async></script>
-    <div class="reviews-header">
-      <h3 class="h1 mb-8 phone-wide:mb-0 tt-title">{l s='Shop reviews' d='Custom'}</h3>
-      <div class="elfsight-app-9aa5fcc0-9ac3-4129-b4d3-826cf93cb3f2"></div>
-      </div>
-    <div class="elfsight-app-07ae0b38-18c3-457b-9f78-726efdfec8ab"></div>
+    <div id="reviews_block">
+      <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core="" defer="defer" async></script>
+      <div class="reviews-header">
+        <h3 class="h1 mb-8 phone-wide:mb-0 tt-title">{l s='Shop reviews' d='Custom'}</h3>
+        <div class="elfsight-app-9aa5fcc0-9ac3-4129-b4d3-826cf93cb3f2"></div>
+        </div>
+      <div class="elfsight-app-07ae0b38-18c3-457b-9f78-726efdfec8ab"></div>
+    </div>
 
     {block name='product_accessories'}
       {if $accessories}
