@@ -1034,43 +1034,31 @@ $(document).ready(function () {
   document.querySelector("body").addEventListener("click", () => $("#variants .collapse").collapse("hide"));
 
   initCheckoutInputTests()
+  removeElements('a[href$="free-widget"]')
 
 });
 
 $(window).load(async function () {
   $("#checkout #checkout-payment-step #payment-option-1").trigger("click");
-
-  // setTimeout(() => {
-  //   const elfBranding = document.querySelectorAll('a[href$="free-widget"]')
-  //   elfBranding.forEach(item => item.style.display = 'none')
-  // }, 1000);
-
-  const elm = await waitForElm('a[href$="free-widget"]');
-  // elm.style.display = 'none'
-  elm.remove()
-
 });
 
-function waitForElm(selector) {
-  return new Promise(resolve => {
-      if (document.querySelector(selector)) {
-          return resolve(document.querySelector(selector));
-      }
+function removeElements(selector) {
+  const observer = new MutationObserver(mutations => {
+    if (document.querySelector(selector)) {
+        document.querySelector(selector).remove();
+    }
+  });
 
-      const observer = new MutationObserver(mutations => {
-          if (document.querySelector(selector)) {
-              // observer.disconnect();
-              resolve(document.querySelector(selector));
-          }
-      });
-
-      // If you get "parameter 1 is not of type 'Node'" error, see https://stackoverflow.com/a/77855838/492336
-      observer.observe(document.body, {
-          childList: true,
-          subtree: true
-      });
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
   });
 }
+
+observer.observe(document.body, {
+  childList: true,
+  subtree: true
+});
 
 function initCheckoutInputTests() {
   document.querySelectorAll('#checkout input[type="text"]').forEach(input => {
