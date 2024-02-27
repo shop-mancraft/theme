@@ -1046,7 +1046,8 @@ $(window).load(async function () {
   // }, 1000);
 
   const elm = await waitForElm('a[href$="free-widget"]');
-  elm.style.display = 'none'
+  // elm.style.display = 'none'
+  elm.remove()
 
 });
 
@@ -1058,7 +1059,7 @@ function waitForElm(selector) {
 
       const observer = new MutationObserver(mutations => {
           if (document.querySelector(selector)) {
-              observer.disconnect();
+              // observer.disconnect();
               resolve(document.querySelector(selector));
           }
       });
