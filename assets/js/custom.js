@@ -1034,7 +1034,7 @@ $(document).ready(function () {
   document.querySelector("body").addEventListener("click", () => $("#variants .collapse").collapse("hide"));
 
   initCheckoutInputTests()
-  removeElements('a[href$="free-widget"]')
+  hideElements('a[href$="free-widget"]')
 
 });
 
@@ -1042,16 +1042,17 @@ $(window).load(async function () {
   $("#checkout #checkout-payment-step #payment-option-1").trigger("click");
 });
 
-function removeElements(selector) {
+function hideElements(selector) {
   const observer = new MutationObserver(mutations => {
     if (document.querySelector(selector)) {
-        document.querySelector(selector).remove();
+        document.querySelector(selector).style.display = 'none';
     }
   });
 
   observer.observe(document.body, {
     childList: true,
-    subtree: true
+    subtree: true,
+    attributes: true
   });
 }
 
