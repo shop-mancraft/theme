@@ -1055,11 +1055,6 @@ function removeElements(selector) {
   });
 }
 
-observer.observe(document.body, {
-  childList: true,
-  subtree: true
-});
-
 function initCheckoutInputTests() {
   document.querySelectorAll('#checkout input[type="text"]').forEach(input => {
     input.addEventListener('beforeinput',(e)=>{
