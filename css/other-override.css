@@ -513,15 +513,19 @@ div.inpost-shipping-container .btn {
 }
 
 .reviews-header .eapps-widget{
-  @apply mr-[200px]
+  @apply mr-[185px] tablet:mr-[200px]
+}
+
+.reviews-header .es-badge-container{
+  @apply !px-2.5 tablet:!px-4
 }
 
 .es-header-container{
-  @apply absolute right-0 bottom-[calc(100%_+_40px)] w-[180px] !pb-2.5 !pt-5 !px-4 !bg-white
+  @apply absolute right-0 bottom-[calc(100%_+_40px)] w-[175px] !pb-2.5 !pt-5 !px-2.5 tablet:!px-4 !bg-white
 }
 
 .es-header-title-text{
-  @apply !text-xs
+  @apply !text-xs !text-[#111]
 }
 
 .es-rating-value {
