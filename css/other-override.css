@@ -509,7 +509,7 @@ div.inpost-shipping-container .btn {
 }
 
 .reviews-header{
-  @apply flex flex-col tablet:flex-row tablet:justify-between tablet:items-end
+  @apply flex flex-col tablet:flex-row tablet:justify-between items-end
 }
 
 .reviews-header .eapps-widget{
