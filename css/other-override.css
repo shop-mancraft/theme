@@ -512,7 +512,7 @@ div.inpost-shipping-container .btn {
   @apply flex flex-col tablet:flex-row tablet:justify-between items-end
 }
 
-.reviews-header .eapps-widget{
+.reviews-header .es-main-container{
   @apply mr-[185px] tablet:mr-[200px]
 }
 
