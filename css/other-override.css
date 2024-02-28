@@ -517,19 +517,19 @@ div.inpost-shipping-container .btn {
 }
 
 .es-header-container{
-  @apply absolute right-0 bottom-[calc(100%_+_40px)] w-[180px] pb-2.5 pt-5 px-4 bg-white
+  @apply absolute right-0 bottom-[calc(100%_+_40px)] w-[180px] !pb-2.5 !pt-5 !px-4 !bg-white
 }
 
 .es-header-title-text{
-  @apply text-xs
+  @apply !text-xs
 }
 
 .es-rating-value {
-  @apply text-[#111]
+  @apply !text-[#111]
 }
 
 .es-header-total-reviews-container{
-  @apply text-[#11111180] underline
+  @apply !text-[#11111180] underline
 }
 
 .es-header-total-reviews-container{
