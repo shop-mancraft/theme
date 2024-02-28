@@ -509,7 +509,31 @@ div.inpost-shipping-container .btn {
 }
 
 .reviews-header{
-  @apply flex flex-col phone-wide:flex-row phone-wide:justify-between phone-wide:items-end
+  @apply flex flex-col tablet:flex-row tablet:justify-between tablet:items-end
+}
+
+.reviews-header .eapps-widget{
+  @apply mr-[200px]
+}
+
+.reviews-header .es-header-container{
+  @apply absolute right-0 bottom-[calc(100%_+_40px)] w-[180px] pb-2.5 pt-5 px-4 bg-white
+}
+
+.reviews-header .es-header-title-text{
+  @apply text-xs
+}
+
+.reviews-header .es-rating-value {
+  @apply text-[#111]
+}
+
+.reviews-header .es-header-total-reviews-container{
+  @apply text-[#11111180] underline
+}
+
+.reviews-header .es-header-total-reviews-container{
+  @apply !text-[10px]
 }
 
 .scrollbar-none {
