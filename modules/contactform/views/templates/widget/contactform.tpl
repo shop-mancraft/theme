@@ -113,7 +113,7 @@
 
         <div class="form-group row">
           <label class="col-md-3 form-control-label"></label>
-          <div class="col-md-9 gdpr flex items-start text-left">   
+          <div class="col-md-9 gdpr flex items-start text-left">
             <input type="checkbox" id="agreement" required>
             <label for="agreement" class="text-left pl-4">{l s='I consent (start)' d='Custom'} <a onclick="handleReadMore(this);" href="javascript:void(0)">{l s='I consent (... more)' d='Custom'}</a><span id="agreement-more" style="display: none;"> {l s='I consent (end)' d='Custom'}</span></label>
           </div>
@@ -137,6 +137,7 @@
         </style>
         <input type="text" name="url" value=""/>
         <input type="hidden" name="token" value="{$token}" />
+        {widget name='pixel_cloudflare_turnstile'}
         <input class="btn btn-primary" type="submit" name="submitMessage" value="{l s='Send' d='Shop.Theme.Actions'}">
       </footer>
     {/if}
