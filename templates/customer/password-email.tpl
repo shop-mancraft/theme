@@ -62,7 +62,7 @@
         </button>
       </div>
     </section>
-
+    {widget name='pixel_cloudflare_turnstile'}
   </form>
 {/block}
 
