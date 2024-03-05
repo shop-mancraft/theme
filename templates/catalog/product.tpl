@@ -292,9 +292,8 @@
           <h3 class="!w-full phablet:!w-auto h1 mb-8 phone-wide:mb-0 tt-title">{l s='Shop reviews' d='Custom'}</h3>
           <p class="float-left mb-5 mt-5 tablet:mb-0 text-left">{l s='Read our customer reviews! Discover why Mancraft Airsoft is the top choice for airsoft enthusiasts. Explore positive feedback highlighting our quality, professionalism, and excellent customer service. Join us today!' d='Custom'}</p>
         </div>
-        <div class="elfsight-app-9aa5fcc0-9ac3-4129-b4d3-826cf93cb3f2"></div>
-        </div>
-      <div class="elfsight-app-07ae0b38-18c3-457b-9f78-726efdfec8ab"></div>
+      </div>
+      <div class="elfsight-app-5ca55949-da7a-4ec7-a19b-429631bc0c08" data-elfsight-app-lazy=""></div>
     </div>
 
     {block name='product_accessories'}
