@@ -508,6 +508,10 @@ div.inpost-shipping-container .btn {
   @apply !mb-36 tablet:!mb-24;
 }
 
+#reviews_block{
+  @apply overflow-hidden
+}
+
 .reviews-header{
   @apply flex flex-col tablet:flex-row tablet:justify-between items-end
 }
