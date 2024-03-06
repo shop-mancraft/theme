@@ -324,6 +324,10 @@ div.inpost-shipping-container .btn {
   @apply mt-[14px] block h-px w-[122px] bg-main content-[''];
 }
 
+.descriptions-container{
+  @apply overflow-hidden
+}
+
 .descriptions-container * {
   @apply text-white;
 }
@@ -339,7 +343,7 @@ div.inpost-shipping-container .btn {
 }
 
 .descriptions-container #description a {
-  @apply !text-base hover:!text-main;
+  @apply !text-base hover:!text-main break-all;
 }
 
 .descriptions-container #product-details p,

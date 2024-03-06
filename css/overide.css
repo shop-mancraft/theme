@@ -2034,3 +2034,8 @@ body#checkout section.checkout-step .delivery-option:first-child {
     white-space: normal;
   }
 }
+@media (min-width: 768px) {
+.contact-form .pxd-cloudflare-turnstile{
+  float: right;
+}
+}
