@@ -44,6 +44,7 @@
   {/if}
   {if $page.page_name != 'product'}
     <meta property="og:image" content="{$urls.img_url}Mancraft_Featured_image.png">
+    <meta name="twitter:image" content="{$urls.img_url}Mancraft_Featured_image.png">
   {/if}
    {block name='head_hreflang'}
       {foreach from=$urls.alternative_langs item=pageUrl key=code}

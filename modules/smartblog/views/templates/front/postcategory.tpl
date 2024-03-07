@@ -27,6 +27,7 @@
 {block name='head_seo'}
     <title> {if $title_category != ''}{$title_category}{else}{l s='All Blog News' mod='smartblog'}{/if}</title>
     <meta property="og:image" content="{$urls.img_url}Mancraft_Featured_image.png">
+    <meta name="twitter:image" content="{$urls.img_url}Mancraft_Featured_image.png">
 {/block}
 
 {block name='content'}

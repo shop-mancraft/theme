@@ -35,6 +35,7 @@
   <meta property="og:site_name" content="{$shop.name}">
   <meta property="og:description" content="{$page.meta.description}">
   <meta property="og:image" content="{if $product.images[0]} {$product.images[0].large.url} {else} {$product.cover.large.url}{/if}">
+  <meta name="twitter:image" content="{if $product.images[0]} {$product.images[0].large.url} {else} {$product.cover.large.url}{/if}">
   <meta property="product:pretax_price:amount" content="{$product.price_tax_exc}">
   <meta property="product:pretax_price:currency" content="{$currency.iso_code}">
   <meta property="product:price:amount" content="{$product.price_amount}">
