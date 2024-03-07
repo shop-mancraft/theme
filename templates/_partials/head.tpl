@@ -42,6 +42,10 @@
   {if $page.canonical}
     <link rel="canonical" href="{$page.canonical}">
   {/if}
+  {if $page.page_name != 'product'}
+    {debug}
+    <meta property="og:image" content="/assets/img/Mancraft_Featured_image.png">
+  {/if}
    {block name='head_hreflang'}
       {foreach from=$urls.alternative_langs item=pageUrl key=code}
             <link rel="alternate" href="{$pageUrl}" hreflang="{$code}">
