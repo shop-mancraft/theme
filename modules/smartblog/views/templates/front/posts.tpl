@@ -27,6 +27,7 @@
 {block name='head_seo'}
     <title>{$meta_title}</title>
     <meta property="og:image" content="{$urls.img_url}Mancraft_Featured_image.png">
+    <meta name="twitter:image" content="{$urls.img_url}Mancraft_Featured_image.png">
 {/block}
 
 {block name='content'}
