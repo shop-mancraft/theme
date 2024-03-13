@@ -285,7 +285,7 @@
       </div>
     </div>
 
-    <div id="reviews_block">
+    {* <div id="reviews_block">
       <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core="" defer="defer" async></script>
       <div class="reviews-header">
         <div class="tablet:pr-5">
@@ -294,7 +294,7 @@
         </div>
       </div>
       <div class="elfsight-app-5ca55949-da7a-4ec7-a19b-429631bc0c08" data-elfsight-app-lazy=""></div>
-    </div>
+    </div> *}
 
     {block name='product_accessories'}
       {if $accessories}
