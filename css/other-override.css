@@ -505,11 +505,11 @@ div.inpost-shipping-container .btn {
 }
 
 #product #smartsupp-widget-container [data-testid="widgetButtonFrame"] {
-  @apply !bottom-20 tablet:!bottom-40;
+  @apply !bottom-40 tablet:!bottom-6;
 }
 
 #product .go-to-top {
-  @apply !mb-36 tablet:!mb-56;
+  @apply !mb-56 tablet:!mb-24;
 }
 
 #reviews_block{
