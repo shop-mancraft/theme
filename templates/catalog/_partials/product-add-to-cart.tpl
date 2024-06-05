@@ -26,8 +26,8 @@
   {if !$configuration.is_catalog}
 
     {block name='product_quantity'}
-      <div class="product-quantity clearfix">
-        <div class="product-add-fixed">
+      <div class="product-quantity clearfix product-add-fixed !mb-0">
+        <div class="flex items-start">
           <div class="shrink-0 qty border border-[#64635D] rounded-[10px] overflow-hidden">
             <input type="number" name="qty" id="quantity_wanted" value="{$product.quantity_wanted}"
               class="input-group !text-base !text-white !bg-transparent !border-none !rounded-none !w-9 !min-w-0 !pr-0"
