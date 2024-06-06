@@ -381,7 +381,7 @@ div.inpost-shipping-container .btn {
 }
 
 [data-paypal-source-page="product"] {
-  @apply !ml-0 !w-full !pl-0 desktop:!pl-[69px];
+  @apply !ml-0 !w-full !pl-[67px] desktop:!pl-[69px];
 }
 
 [paypal-button-container] {
