@@ -28,14 +28,14 @@
     {block name='product_quantity'}
       <div class="product-quantity clearfix product-add-fixed !mb-0 desktop:!mb-[10px]">
         <div class="flex items-start w-full">
-          <div class="shrink-0 qty border border-[#64635D] rounded-[10px] overflow-hidden">
+          <div class="shrink-0 qty border border-[#64635D] rounded-[10px] overflow-hidden h-[44px] desktop:h-auto">
             <input type="number" name="qty" id="quantity_wanted" value="{$product.quantity_wanted}"
               class="input-group !text-base !text-white !bg-transparent !border-none !rounded-none !w-9 !min-w-0 !pr-0"
               min="{$product.minimal_quantity}" aria-label="{l s='Quantity' d='Shop.Theme.Actions'}">
           </div>
 
           <div class="add !w-full">
-            <button class="btn btn-primary add-to-cart w-full !text-xl !h-auto !py-2.5 tablet:!py-[14px]"
+            <button class="btn btn-primary add-to-cart w-full !text-xl !h-auto !py-2.5 tablet:!py-[8px]"
               data-button-action="add-to-cart" type="submit" {if !$product.add_to_cart_url} disabled {/if}>
               {l s='Add to cart' d='Shop.Theme.Actions'}
             </button>
