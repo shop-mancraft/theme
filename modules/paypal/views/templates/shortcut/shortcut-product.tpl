@@ -37,7 +37,7 @@
      }
    </style>
   <div class="clearfix"></div>
-   <div data-container-express-checkout data-paypal-source-page="product" class="mt-3 float-left !hidden pl-[37px]">
+   <div data-container-express-checkout data-paypal-source-page="product" class="mt-3 float-left pl-[37px]">
      <form data-paypal-payment-form-cart class="paypal_payment_form" action="{$action_url|escape:'htmlall':'UTF-8'}" title="{l s='Pay with PayPal' mod='paypal'}" method="post" data-ajax="false">
        <input
                type="hidden"
