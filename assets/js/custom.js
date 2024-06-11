@@ -1146,19 +1146,17 @@ function initProductSwipers() {
 /* ----------- PayPal Express Fix ----------- */
 
 if($('#checkout').length === 1){
-  //Hidden all other options & There is PayPal Express payment
-  if($('.js-payment-option-form:not(.ps-hidden)').length === 0){
-    let paypalExpressNode = $('.js-payment-option-form form').filter(function() {
-      return this.action.includes('short_cut');
-    });
 
+  let paypalExpressNode = $('.js-payment-option-form form').filter(function() {
+    return this.action.includes('short_cut');
+  });
+
+  //Hidden all other options & There is PayPal Express payment
+  if($('.js-payment-option-form:not(.ps-hidden)').length === 0 && paypalExpressNode.length === 1){
     $('#payment-confirmation button').on('click', function(){
       paypalExpressNode.find('button').click()
     });
-  }
 
-  //Hidden all other options & There is PayPal Express payment
-  if($('.js-payment-option-form:not(.ps-hidden)').length === 0){
     // Disable stripe integration
     stripe_payment_elements_enabled = 0;
     $('.stripe-payment-form').remove();
