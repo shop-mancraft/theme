@@ -1046,7 +1046,7 @@ function initCheckoutInputTests() {
     input.addEventListener('beforeinput',(e)=>{
       if (isForeignChar(e.data)) e.preventDefault()
     })
-  })  
+  })
 }
 
 function isForeignChar(char) {
@@ -1056,9 +1056,9 @@ function isForeignChar(char) {
   if (rforeign.test(char)) {
     alert(alertText);
     return true
-  } 
-  return false    
-  
+  }
+  return false
+
 }
 
 function initProductSwipers() {
@@ -1142,3 +1142,15 @@ function initProductSwipers() {
     }
   }
 }
+
+/* ----------- PayPal Express Fix ----------- */
+
+if($('#checkout').length === 1){
+  //Hidden all other options & There is PayPal Express payment
+  if($('.js-payment-option-form:not(.ps-hidden)').length === 0){
+    // Disable stripe integration
+    stripe_payment_elements_enabled = 0;
+  }
+}
+
+/* ----------- PayPal Express Fix ----------- */
