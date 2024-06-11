@@ -1159,6 +1159,9 @@ if($('#checkout').length === 1){
 
     // Disable stripe integration
     stripe_payment_elements_enabled = 0;
+    $('.ps-shown-by-js[data-module-name="stripe_official"]')[0].checked = false;
+    $('input[data-module-name="express_checkout_schortcut"]')[0].checked = 'checked';
+
     $('.stripe-payment-form').remove();
   }
 }
