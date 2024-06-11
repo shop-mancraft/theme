@@ -1161,6 +1161,7 @@ if($('#checkout').length === 1){
   if($('.js-payment-option-form:not(.ps-hidden)').length === 0){
     // Disable stripe integration
     stripe_payment_elements_enabled = 0;
+    $('.stripe-payment-form').remove();
   }
 }
 
