@@ -20,7 +20,7 @@
     {assign var='is_paypal_express' value=false}
     {foreach from=$payment_options item="module_options"}
       {foreach from=$module_options item="option"}
-        {if $option.module_name == 'express_checkout_schortcut'}
+        {if $option.module_name == 'express_checkout_schortcut' && $option.id === $selected_payment_option}
           {assign var=is_paypal_express_enabled value=true}
         {/if}
       {/foreach}
