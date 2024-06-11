@@ -35,9 +35,11 @@
   {else}
     {$smarty.block.parent}
   {/if}
+
 {/block}
 
 {block "form_buttons"}
+  {widget name='pixel_cloudflare_turnstile'}
     <button
       class="continue btn btn-primary float-xs-right"
       name="continue"

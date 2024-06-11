@@ -25,6 +25,7 @@
 {extends file='customer/_partials/login-form.tpl'}
 
 {block name='form_buttons'}
+  {widget name='pixel_cloudflare_turnstile'}
   <button
     class="continue btn btn-primary"
     name="continue"
