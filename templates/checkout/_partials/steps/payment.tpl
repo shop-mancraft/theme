@@ -17,15 +17,19 @@
     <p>{l s='No payment needed for this order' d='Shop.Theme.Checkout'}</p>
   {/if}
   <div class="payment-options {if $is_free}hidden-xs-up{/if}">
-    {assign var='is_paypal_express' value=false}
+    {assign var=is_paypal_express_enabled value=0}
     {foreach from=$payment_options item="module_options"}
       {foreach from=$module_options item="option"}
         {if $option.module_name == 'express_checkout_schortcut'}
-          {assign var=is_paypal_express_enabled value=true}
+          {$is_paypal_express_enabled=1}
         {/if}
       {/foreach}
+	  {/foreach}
+
+    {foreach from=$payment_options item="module_options"}
       {foreach from=$module_options item="option"}
-        {if $is_paypal_express_enabled && $option.module_name !== 'stripe_official'}
+        {if $option.module_name == 'stripe_official' && $is_paypal_express_enabled}
+	    {else}
         <div>
           <div id="{$option.id}-container" class="payment-option clearfix">
             {* This is the way an option should be selected when Javascript is enabled *}
