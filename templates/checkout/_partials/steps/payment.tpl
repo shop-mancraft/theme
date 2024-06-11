@@ -17,9 +17,15 @@
     <p>{l s='No payment needed for this order' d='Shop.Theme.Checkout'}</p>
   {/if}
   <div class="payment-options {if $is_free}hidden-xs-up{/if}">
+    {assign var='is_paypal_express' value=false}
     {foreach from=$payment_options item="module_options"}
       {foreach from=$module_options item="option"}
-
+        {if $option.module_name == 'express_checkout_schortcut'}
+          {assign var=is_paypal_express_enabled value=true}
+        {/if}
+      {/foreach}
+      {foreach from=$module_options item="option"}
+        {if $is_paypal_express_enabled && $option.module_name !== 'stripe_official'}
         <div>
           <div id="{$option.id}-container" class="payment-option clearfix">
             {* This is the way an option should be selected when Javascript is enabled *}
@@ -31,7 +37,7 @@
                 name="payment-option"
                 type="radio"
                 required
-                {if $selected_payment_option == $option.id || $is_free || ($payment_options|@count == 1 && $module_options|@count == 1 )} checked {/if}
+                {if $selected_payment_option == $option.id || $is_free} checked {/if}
               >
               <span></span>
             </span>
@@ -84,6 +90,7 @@
             </form>
           {/if}
         </div>
+        {/if}
       {/foreach}
     {foreachelse}
       <p class="alert alert-danger">{l s='Unfortunately, there are no payment method available.' d='Shop.Theme.Checkout'}</p>
@@ -152,9 +159,9 @@
 
   <div id="payment-confirmation">
     <div class="ps-shown-by-js">
-        <button type="submit" {if !$selected_payment_option} disabled {/if} class="btn btn-primary center-block">
-          {l s='Order with an obligation to pay' d='Shop.Theme.Checkout'}
-        </button>
+      <button type="submit" {if !$selected_payment_option} disabled {/if} class="btn btn-primary center-block">
+        {l s='Order with an obligation to pay' d='Shop.Theme.Checkout'}
+      </button>
       {if $show_final_summary}
         <article class="alert alert-danger mt-2 js-alert-payment-conditions" role="alert" data-alert="danger">
           {l
