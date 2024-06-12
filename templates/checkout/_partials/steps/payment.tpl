@@ -22,6 +22,13 @@
       {foreach from=$module_options item="option"}
         {if $option.module_name == 'express_checkout_schortcut'}
           {$is_paypal_express_enabled=1}
+
+          <style>
+            .payment-options > div:not(.ps-hidden),
+            .payment-options > div:not(.ps-hidden) div {
+                display: block !important;
+            }
+          </style>
         {/if}
       {/foreach}
 	{/foreach}
