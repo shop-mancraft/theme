@@ -105,7 +105,7 @@
 
         </thead>
         <tbody id="fmm_table_body">
-        {assign var="customer_group_reduction" value=Group::getReduction(null)}
+        {assign var="customer_group_reduction" value=Group::getReductionByIdGroup($customer.id_default_group)}
           {foreach from=$all_products item=product name=product}
             <tr>
                 <td class="all" ><a href="{$product.link|escape:'htmlall':'UTF-8'}"> <img src="{$product.cover_image_url|escape:'htmlall':'UTF-8'}" data-default-image="{$product.cover_image_url|escape:'htmlall':'UTF-8'}"></a> </td>
