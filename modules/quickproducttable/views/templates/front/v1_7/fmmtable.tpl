@@ -165,7 +165,10 @@
                     </div>
                 </td>
                 <td class="desktop	">
-                    -{$customer_group_reduction}%
+
+                {math assign="group_reduction" result=$result equation='x*100' x=GroupReduction::getValueForProduct($product.id_product,$customer.id_default_group)}
+                -{$group_reduction}%
+
                 </td>
                 <td class="desktop	">
                     <div class="">
