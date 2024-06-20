@@ -143,10 +143,25 @@
                 </td>
                 <td class="min-tablet-p">
                     <div class="price">
-                        {assign var="result" value=0}
-                        {math assign="result" result=$result equation='x+x*y/100' x=$product.price y=$customer_group_reduction}
-                        <span class="line-through text-red-600 mr-3">{Tools::displayPrice($result)}</span>
-                        <span id="price_{$product.id_product|escape:'htmlall':'UTF-8'}">{Tools::displayPrice($product['price_tax_exc'])}</span>
+
+
+ {assign var="result" value=0}
+ {if Group::getPriceDisplayMethod($customer.id_default_group)}
+
+                          {math assign="result" result=$result equation='x+x*y/100' x=$product['price_tax_exc'] y=$customer_group_reduction}
+                         <span class="line-through text-red-600 mr-3">{Tools::displayPrice($result)}</span>
+                         <span id="price_{$product.id_product|escape:'htmlall':'UTF-8'}">{Tools::displayPrice($product['price_tax_exc'])}</span>
+
+ {else}
+
+                          {math assign="result" result=$result equation='x+x*y/100' x=$product['price'] y=$customer_group_reduction}
+                         <span class="line-through text-red-600 mr-3">{Tools::displayPrice($result)}</span>
+                         <span id="price_{$product.id_product|escape:'htmlall':'UTF-8'}">{Tools::displayPrice($product['price'])}</span>
+
+
+ {/if}
+
+
                     </div>
                 </td>
                 <td class="desktop	">
