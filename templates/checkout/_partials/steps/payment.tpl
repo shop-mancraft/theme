@@ -22,10 +22,16 @@
       {foreach from=$module_options item="option"}
         {if $option.module_name == 'express_checkout_schortcut'}
           {$is_paypal_express_enabled=1}
+
+          <style>
+            .payment-options > div:not(.ps-hidden),
+            .payment-options > div:not(.ps-hidden) div {
+                display: block !important;
+            }
+          </style>
         {/if}
       {/foreach}
-	  {/foreach}
-
+	{/foreach}
     {foreach from=$payment_options item="module_options"}
       {foreach from=$module_options item="option"}
         {if $option.module_name == 'stripe_official' && $is_paypal_express_enabled}

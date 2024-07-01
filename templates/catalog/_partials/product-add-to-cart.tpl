@@ -35,7 +35,7 @@
           </div>
 
           <div class="add !w-full">
-            <button class="btn btn-primary add-to-cart w-full !text-xl !h-auto !py-2.5 tablet:!py-[8px]"
+            <button class="btn btn-primary add-to-cart w-full !text-xl !h-auto !py-[8px]"
               data-button-action="add-to-cart" type="submit" {if !$product.add_to_cart_url} disabled {/if}>
               {l s='Add to cart' d='Shop.Theme.Actions'}
             </button>

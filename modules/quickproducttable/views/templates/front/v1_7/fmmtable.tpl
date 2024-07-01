@@ -37,7 +37,7 @@
 <div class="bg-gray-normal  mb-10 rounded-lg col-lg-10">
     <div class="col-lg-1 col-xs-12 top_buttons">
         <p class=" py-2 ">{l s='Filters:' d='Modules.Quickproducttable.Fmmtable'}</p>
-        
+
     </div>
     {if $new_enable == 1}
     <div class="col-lg-2 col-xs-12 top_buttons" >
@@ -101,11 +101,11 @@
             </th>
         </tr>
 
-        
+
 
         </thead>
         <tbody id="fmm_table_body">
-        {assign var="customer_group_reduction" value=Group::getReduction(null)}
+        {assign var="customer_group_reduction" value=Group::getReductionByIdGroup($customer.id_default_group)}
           {foreach from=$all_products item=product name=product}
             <tr>
                 <td class="all" ><a href="{$product.link|escape:'htmlall':'UTF-8'}"> <img src="{$product.cover_image_url|escape:'htmlall':'UTF-8'}" data-default-image="{$product.cover_image_url|escape:'htmlall':'UTF-8'}"></a> </td>
@@ -122,15 +122,15 @@
                         <span class="flex flex-col w-full">
 
                         <span >{$options.name|escape:'htmlall':'UTF-8'}</span>
-                        
+
                         <select id="select_fmm" onchange="changeAttr({$product.id_product|escape:'htmlall':'UTF-8'}, {$smarty.foreach.options.total})" class="fmm_option_{$product.id_product|escape:'htmlall':'UTF-8'}_{$smarty.foreach.options.iteration}">
                             {foreach from=$options.values item=values name=values}
 
                                 <option value="{$values.id|escape:'htmlall':'UTF-8'}">{$values.value|escape:'htmlall':'UTF-8'}</option>
 
                             {/foreach}
-                        </select> 
-                    </span> 
+                        </select>
+                    </span>
                     {/foreach}
                     </div>
                 </td>
@@ -143,12 +143,32 @@
                 </td>
                 <td class="min-tablet-p">
                     <div class="price">
-                        <span class="line-through text-red-600 mr-3">{Tools::displayPrice(Product::getPriceStatic($product['id_product'], true, null, 2, null, false, true, 1, true, null, null, null, $nothing, true, false, null))}</span>
-                        <span id="price_{$product.id_product|escape:'htmlall':'UTF-8'}">{Tools::displayPrice($product.price)}</span> 
+
+
+ {assign var="result" value=0}
+ {if Group::getPriceDisplayMethod($customer.id_default_group)}
+
+                          {math assign="result" result=$result equation='x+x*y/100' x=$product['price_tax_exc'] y=$customer_group_reduction}
+                         <span class="line-through text-red-600 mr-3">{Tools::displayPrice($result)}</span>
+                         <span id="price_{$product.id_product|escape:'htmlall':'UTF-8'}">{Tools::displayPrice($product['price_tax_exc'])}</span>
+
+ {else}
+
+                          {math assign="result" result=$result equation='x+x*y/100' x=$product['price'] y=$customer_group_reduction}
+                         <span class="line-through text-red-600 mr-3">{Tools::displayPrice($result)}</span>
+                         <span id="price_{$product.id_product|escape:'htmlall':'UTF-8'}">{Tools::displayPrice($product['price'])}</span>
+
+
+ {/if}
+
+
                     </div>
                 </td>
                 <td class="desktop	">
-                    -{$customer_group_reduction}%
+
+                {math assign="group_reduction" result=$result equation='x*100' x=GroupReduction::getValueForProduct($product.id_product,$customer.id_default_group)}
+                -{$group_reduction}%
+
                 </td>
                 <td class="desktop	">
                     <div class="">
@@ -166,7 +186,7 @@
                         <input type="checkbox"  id="{$product.id_product|escape:'htmlall':'UTF-8'}_{$group_count|escape:'htmlall':'UTF-8'}" name="fmm_check" class="fmm_check top-0 z-10" value="{$product.id_product|escape:'htmlall':'UTF-8'}">
                         <span><i class="material-icons rtl-no-flip checkbox-checked"></i></span>
                     </span>
-    
+
                 </td>
             </tr>
             {/foreach}
@@ -208,7 +228,7 @@
     {if $ajax_load}
         {literal}
     <script type="text/javascript">
-                
+
                 $('#loader').on('inview', function(event, isInView) {
 
                     if (isInView) {
@@ -233,14 +253,14 @@
                                     var new_page = parseInt(old_page, 10) + parseInt(b, 10);
                                     $('#fmm_table').DataTable().rows.add($(response).filter('tr')).draw()
                                     $('#page_no').val(new_page);
-                                } else {                               
+                                } else {
                                    $("#loader").hide();
                                 }
                             }
                         });
                     }
                 });
-           
+
 
     </script>
     <style type="text/css">
