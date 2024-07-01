@@ -164,7 +164,7 @@
         border: none;
         border-radius: 10px;
         background: #A8D727;
-        font-family: 'Goldman', 'Tahoma', 'sans-serif';
+        font-family: 'Bai Jamjuree', 'Tahoma', 'sans-serif';
         font-weight: lighter;
         font-size: 15px;
         color: #fff;
@@ -185,7 +185,7 @@
     }
 
     .popup_main-btns-more a{
-        font-family: 'Goldman', 'Tahoma', 'sans-serif';
+        font-family: 'Bai Jamjuree', 'Tahoma', 'sans-serif';
         font-weight: lighter;
         font-size: 15px;
         line-height: 18px;

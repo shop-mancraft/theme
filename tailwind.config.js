@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     fontFamily: {
       'fallback': ['Tahoma', 'sans-serif'],
-      'sans': ['Goldman', 'Tahoma', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', "Helvetica Neue", 'Arial', "Noto Sans", 'sans-serif', "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
+      'sans': ['Bai Jamjuree', 'Tahoma', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', "Helvetica Neue", 'Arial', "Noto Sans", 'sans-serif', "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
     },
     screens: {
       'phone': '320px',
