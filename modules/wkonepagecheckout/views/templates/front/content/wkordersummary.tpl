@@ -15,7 +15,7 @@
 *  @license   LICENSE.txt
 *}
 <div id="wk-order-summary-ajax" class="clearfix">
-	<article class="mb-5 p-5 bg-white rounded-[5px] clearfix">
+	<article class="mb-5 p-5 bg-gray-normal rounded-[5px] clearfix">
 		<h4 class="w-max mx-auto font-normal mb-5 tablet:text-2xl text-main-dark text-xl font-main">{l s='Order Summary' mod='wkonepagecheckout'}</h4>
 		<div class="text-sm text-main-dark">
 			<ul class="wk-cart-items clearfix">
