@@ -26,7 +26,7 @@
                 </a>
                 <div class="collapse" id="collapseVoucher">
 
-                    <div class="border-gray-normal border-solid border flex rounded-full pl-4 bg-white tablet:max-w-[350px]">
+                    <div class="border-[#64635D] border-solid border flex rounded-full pl-4 bg-white tablet:max-w-[350px]">
                         <input placeholder="{l s='Promo code' mod='wkonepagecheckout'}" type="text" name="wk-voucher"
                             id="wk-voucher" class="promo-input w-full bg-transparent border-0 py-3 outline-none font-body focus:ring-0 text-[12px] tablet:text-sm">
                         <button id="addVoucher" class="bg-main-dark hover:bg-main-hover cursor-pointer overflow-hidden transition border-0 rounded-full text-white px-8 uppercase whitespace-nowrap font-body">
@@ -116,7 +116,7 @@
 
                 {if Configuration::get('PS_TAX')}
 
-                    <div class="wk-box border-0 border-t border-solid border-gray-normal pt-3">
+                    <div class="wk-box border-0 border-t border-solid border-[#64635D] pt-3">
                         <div class="wk-product-info col-md-8 col-sm-6 col-xs-6 text-main-dark text-sm">
                             <span class="text-lg">
                                 {l s='Total (tax incl.)' mod='wkonepagecheckout'}
@@ -129,7 +129,7 @@
                         </div>
                     </div>
                 {else}
-                    <div class="wk-box border-0 border-t border-solid border-gray-normal pt-3">
+                    <div class="wk-box border-0 border-t border-solid border-[#64635D] pt-3">
                         <div class="wk-product-info col-md-8 col-sm-6 col-xs-6 text-main-dark text-sm">
                             <span>
                                 {l s='Total' mod='wkonepagecheckout'}
