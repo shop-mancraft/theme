@@ -107,7 +107,7 @@
                 <div class="form-group">
                     <span>
 						<label class="text-xs text-gray-dark">
-							<input type="checkbox" value="1" name="wk-create-account" id="wk-create-account" class="mr-2 bg-gray-normal border-2 border-[#64635D] border-solid checked:bg-main-dark checked:focus:bg-main-dark checked:hover:bg-main-dark focus:ring-0 focus:ring-transparent form-checkbox opacity-100 outline-none rounded transition">
+							<input type="checkbox" value="1" name="wk-create-account" id="wk-create-account" class="mr-2 bg-gray-normal border-2 border-[#64635D] border-solid checked:bg-main checked:focus:bg-main checked:hover:bg-main  focus:ring-0 focus:ring-transparent form-checkbox w-4 h-4 rounded-[5px] opacity-100 outline-none rounded transition">
 							{l s='I also want to create account' mod='wkonepagecheckout'}
 						</label>
 					</span>
