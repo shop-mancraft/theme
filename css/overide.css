@@ -1496,8 +1496,9 @@ body#checkout .condition-label .js-terms a {
   text-decoration: underline;
 }
 
-body#checkout #wrapper .alert-danger {
-  color: #f00;
+body#checkout #wrapper .alert-danger span,
+body#checkout #wrapper .alert-danger i {
+    color: #f00;
 }
 
 #checkout-addresses-step form > p {
