@@ -27,7 +27,7 @@
 						{if $fieldName == 'company'}
 
 							<div id="company" class="w-full">
-							  <a class="block border-b text-main-dark w-full mb-2 tablet:mb-5 hover:text-main transition text-sm collapsed font-body [&:not(.collapsed)_.shrinkable]:scale-y-0 inline-block !border-0" data-toggle="collapse" href="#collapseCompany" role="button" aria-expanded="false" aria-controls="collapseCompany">
+							  <a class="block border-b text-main-dark w-full mx-5 mb-2 tablet:mb-5 hover:text-main transition text-sm collapsed font-body [&:not(.collapsed)_.shrinkable]:scale-y-0 inline-block !border-0" data-toggle="collapse" href="#collapseCompany" role="button" aria-expanded="false" aria-controls="collapseCompany">
 							  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill="#a8d727" d="M0 5h12v1H0z"></path><path class="shrinkable transition duration-300" fill="#a8d727" d="M5 0v12H6V0z" class=""></path></svg>
 								{l s='Add tax identification number and company name' d='Shop.Theme.Checkout'}
 							  </a>
@@ -42,7 +42,7 @@
 								id="{$field.delivery_field_name}"
 								value="{if isset($delivery_address)}{$delivery_address->{$field.db_fieldname}}{/if}"
 								placeholder="{$field.label}{if $field.required} *{/if}"
-								class="form-control wkvalidatefield border-gray-normal border-solid border rounded-full bg-white h-[50px] tablet:h-10">
+								class="form-control wkvalidatefield border-[#64635D] border-solid border rounded-full bg-white h-[50px] tablet:h-10">
 							<i class="material-icons wk-check-icon wkhide icon_{$field.delivery_field_name}">&#xE876;</i>
 							<i class="material-icons wk-error-icon wkhide error_{$field.delivery_field_name}">&#xE001;</i>
 							<span class="help-block wk-error {$field.delivery_field_name}"></span>
@@ -57,7 +57,7 @@
 					{elseif $fieldName == 'country'}
 						<div class="form-group w-full">
 							<select data-required="1" data-attr="delivery" name="wk_delivery_address_country"
-								class="form-control wk_address_country label-control required text-sm font-normal border-solid bg-white border border-gray-normal focus:border-gray-3000 focus:ring-0 font-body font-medium form-control-select form-select js-country pl-4 rounded-full w-full h-[50px] tablet:h-10">
+								class="form-control wk_address_country label-control required text-sm font-normal border-solid bg-white border border-[#64635D] focus:border-gray-3000 focus:ring-0 font-body font-medium form-control-select form-select js-country pl-4 rounded-full w-full h-[50px] tablet:h-10">
 								{if isset($countries)}
 									{foreach $countries as $country}
 										<option {if isset($updateCountry)}

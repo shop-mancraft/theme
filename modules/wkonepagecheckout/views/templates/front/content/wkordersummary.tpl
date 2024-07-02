@@ -21,7 +21,7 @@
 			<ul class="wk-cart-items clearfix">
 				{if isset($cart.products)}
 					{foreach $cart.products as $product}
-						<li class="clearfix flex py-3 border-0 border-b first:border-t border-solid border-gray-normal ">
+						<li class="clearfix flex py-3 border-0 border-b first:border-t border-solid border-[#64635D] ">
 
 							<div class="product-line-grid-left shrink-0 basis-1/5 tablet:basis-[15%] tablet-wide:basis-[12%]">
 								<div class="pr-2.5 tablet:pr-5 wk-product-img wk-left product-cover w-full">
