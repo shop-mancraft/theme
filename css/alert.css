@@ -35,7 +35,7 @@
   border-color: #a8d727;
   float: left;
   width: 100%;
-  color: #a8d727;
+  color: #a8d727 !important;
 }
 
 #contact .alert.alert-success > ul {
@@ -47,13 +47,13 @@
 }
 
 .alert-success .alert-link {
-  color: #a8d727;
+  color: #a8d727 !important;
 }
 
 .alert-info {
   background-color: #d9edf7;
   border-color: #bcdff1;
-  color: #31708f;
+  color: #31708f !important;
 }
 
 .alert-info hr {
@@ -67,7 +67,7 @@
 .alert-warning {
   background-color: rgb(255 154 82 / 0.3);
   border-color: #ff312b;
-  color: #ff312b;
+  color: #ff312b !important;
   float: left;
   width: 100%;
 }
@@ -79,7 +79,7 @@
 .alert-danger {
   background-color: #f2dede;
   border-color: #ff312b;
-  color: #ff312b;
+  color: #ff312b !important;
   float: left;
   width: 100%;
 }
@@ -89,12 +89,12 @@
 }
 
 .alert-danger .alert-link {
-  color: #ff312b;
+  color: #ff312b !important;
   text-decoration: underline;
 }
 
 .alert-warning .material-icons {
-  color: #ff312b;
+  color: #ff312b !important;
   font-size: 2rem;
   margin-right: 0.625rem;
   padding-top: 0.3125rem;
