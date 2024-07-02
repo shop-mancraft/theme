@@ -84,7 +84,7 @@
 										<input data-id-product-attribute="{$product.id_product_attribute}"
 											data-id-product="{$product.id_product}"
 											value="{if isset($product.cart_quantity)}{$product.cart_quantity}{/if}"
-											class="-mr-5 border border-gray-2000 border-solid float-left focus:ring-0 font-normal h-[50px] pl-1 pr-5 py-3 rounded-md text-center text-lg w-[75px] form-control wk-qty" type="text" name="wk-cart-qty" min="1"
+											class="-mr-5 border border-[#64635D] border-solid bg-black float-left focus:ring-0 font-normal h-[44px] pl-1 pr-5 py-3 rounded-md text-center text-lg w-[75px] form-control wk-qty" type="text" name="wk-cart-qty" min="1"
 											data-id-customization="{if isset($product.id_customization)}{$product.id_customization}{else}0{/if}" />
 										<span class="flex flex-col relative z-10">
 											<button type="button" class="bg-gray-2000 block bootstrap-touchspin-up border-0 cursor-pointer h-[25px] hover:bg-gray-300 relative rounded-tr-md transition w-5 wk-qty-up">
