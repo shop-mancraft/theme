@@ -91,7 +91,7 @@
     {/if}
     <div id="payment-confirmation">
         <div class="ps-shown-by-js">
-            <button type="submit" class="max-w-[290px] bg-main border-0 cursor-pointer font-body font-normal h-full disable:!opacity-50 disabled:cursor-not-allowed hover:disabled:bg-main hover:bg-[#87ac20] block mx-auto overflow-hidden phone-wide:text-base px-6 py-3 relative rounded-[5px] tablet:text-xl text-base text-center text-white transition uppercase duration-200">
+            <button type="submit" class="max-w-[290px] bg-main border-0 cursor-pointer font-body font-normal h-full disabled:!opacity-50 disabled:cursor-not-allowed hover:disabled:bg-main hover:bg-[#87ac20] block mx-auto overflow-hidden phone-wide:text-base px-6 py-3 relative rounded-[5px] tablet:text-xl text-base text-center text-white transition uppercase duration-200">
                 {l s='Place Order' mod='wkonepagecheckout'}
             </button>
         </div>
