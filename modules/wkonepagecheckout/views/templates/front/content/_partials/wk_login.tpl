@@ -14,7 +14,7 @@
 *  @copyright since 2010 Webkul
 *  @license   LICENSE.txt
 *}
-<div class="modal fade" id="wk_login_pop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+{* <div class="modal fade" id="wk_login_pop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -54,4 +54,32 @@
 			</form>
 		</div>
 	</div>
-</div>
+</div> *}
+
+<form method="POST" action="{url entity='module' name='wkonepagecheckout' controller='wkcheckout'}" id="wk-login-form" name="wk-login-form">
+	<div class="alert alert-danger wk-login-error wkhide"></div>
+		<div class="form-group">
+			<div class="input-group">
+				<input type="text" class="form-control" name="wk-login-email" id="wk-login-email" placeholder="{l s='Email' mod='wkonepagecheckout'}">
+				<label class="input-group-addon wk-icon">
+					<i class="material-icons">&#xE851;</i>
+				</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="input-group">
+				<input type="password" class="form-control" name="wk-login-password" id="wk-login-password" placeholder="{l s='Password' mod='wkonepagecheckout'}">
+				<label for="uPassword" class="input-group-addon wk-icon toggle-pwd-field">
+					<i class="material-icons">visibility</i>
+				</label>
+			</div>
+		</div>
+	<img class="wk-loader wkhide" src="{$wk_opc_modules_dir}img/p_loading.gif" width="25">
+	<button class="btn btn-primary" id="wk-submit-login">
+		{l s='Login' mod='wkonepagecheckout'}
+	</button>
+	<div class="wkforgot">
+		<a href="{$urls.pages.password}" class="forget">{l s='Forgot your password?' mod='wkonepagecheckout'}</a>
+	</div>
+</form>
