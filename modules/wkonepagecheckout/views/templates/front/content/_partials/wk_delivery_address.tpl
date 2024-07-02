@@ -27,7 +27,7 @@
 						{if $fieldName == 'company'}
 
 							<div id="company" class="w-full">
-							  <a class="block border-b text-main-dark w-full mx-5 mb-2 tablet:mb-5 hover:text-main transition text-sm collapsed font-body [&:not(.collapsed)_.shrinkable]:scale-y-0 inline-block !border-0" data-toggle="collapse" href="#collapseCompany" role="button" aria-expanded="false" aria-controls="collapseCompany">
+							  <a class="block border-b text-main-dark w-full mx-5 mb-2 tablet:mb-5 hover:text-main transition text-sm collapsed font-body collapsible inline-block !border-0" data-toggle="collapse" href="#collapseCompany" role="button" aria-expanded="false" aria-controls="collapseCompany">
 							  <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill="#a8d727" d="M0 5h12v1H0z"></path><path class="shrinkable transition duration-300" fill="#a8d727" d="M5 0v12H6V0z" class=""></path></svg>
 								{l s='Add tax identification number and company name' d='Shop.Theme.Checkout'}
 							  </a>
@@ -92,7 +92,7 @@
 							{hook h='displayGDPRConsent' mod='psgdpr' id_module=$id_module}
 						{/if}
 
-						<button type="submit" class="btn bg-main py-3 px-4 border-2 uppercase border-main-dark hover:bg-['#87ac20'] text-white rounded-full border-solid transition font-body text-xs font-normal wk-save-address">
+						<button type="submit" class="btn bg-main py-3 px-5 border-2 uppercase  hover:bg-[#87ac20] text-white rounded-full  transition font-body text-xs font-normal wk-save-address">
 							{l s='Save' mod='wkonepagecheckout'}
 						</button>
 						<div class="wkhide wk_text-light wkbotton" id="wk-msg-new-delivery"></div>
