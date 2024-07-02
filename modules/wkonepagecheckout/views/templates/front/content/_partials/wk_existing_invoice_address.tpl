@@ -48,7 +48,7 @@
                     <a class="edit-address font-body font-normal hover:!text-main mr-5 tablet:text-sm text-xs transition uppercase" id="wk-invoice-address-edit" href="javascript:void(0);">
                         {l s='Edit' mod='wkonepagecheckout'}
                     </a>
-                    <a class="delete-address inline-block border-2 hover:border-main border-solid font-body font-normal hover:!text-main px-6 py-3 rounded-full text-sm transition uppercase whitespace-nowrap" id="wk-invoice-address-delete" href="javascript:void(0);" >
+                    <a class="delete-address inline-block border-2 hover:border-main border-solid font-body font-normal hover:!text-main px-5 py-2 rounded-[5px] text-sm transition uppercase whitespace-nowrap" id="wk-invoice-address-delete" href="javascript:void(0);" >
                         {l s='Delete' mod='wkonepagecheckout'}
                     </a>
                 </footer>
