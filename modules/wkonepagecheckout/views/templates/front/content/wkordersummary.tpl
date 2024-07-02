@@ -109,7 +109,7 @@
 											data-quantity="{$product.cart_quantity}"
 											data-id-customization="{if isset($product.id_customization)}{$product.id_customization}{else}0{/if}"
 											class="remove-from-cart float-right">
-											<i class="material-icons font-light text-2xl relative flex justify-center items-center text-gray-3000 tablet:text-main-dark hover:text-main transition"></i>
+											<i class="material-icons font-light text-2xl relative flex justify-center items-center text-[#64635D] hover:!text-main transition"></i>
 										</a>
 										{hook h='displayWkCartExtraProductActions' product=$product}
 										{if Module::isEnabled('wkstripepayment')}

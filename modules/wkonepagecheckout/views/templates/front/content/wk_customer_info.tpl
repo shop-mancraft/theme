@@ -187,6 +187,7 @@
 
         {if !$customer.is_logged || $customer.is_guest}
             <a href="javascript:void(0)" class="block underline text-main-dark hover:text-main mx-auto mb-8 text-sm transition duration-200 w-max leo-quicklogin" data-enable-sociallogin="enable" data-type="popup" data-layout="login">{l s='Already registered?' mod='wkonepagecheckout'}</a>
+            <button class="btn btn-primary wkbtn-login">{l s='Login' mod='wkonepagecheckout'}</button>
         {/if}
 
         {block name='wk-customer-address'}
