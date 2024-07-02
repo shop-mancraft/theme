@@ -53,7 +53,7 @@
 .alert-info {
   background-color: #d9edf7;
   border-color: #bcdff1;
-  color: #31708f !important;
+  color: #31708f;
 }
 
 .alert-info hr {
