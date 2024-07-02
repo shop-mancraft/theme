@@ -588,15 +588,7 @@ a#fbLink:hover {
 }
 
 .border-success {
-    border-color: #468847 !important;
-}
-
-.border-success:focus {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 6px #7aba7b
-}
-
-.border-error:focus {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 6px #d59392
+    border-color: #87ac20 !important;
 }
 
 .wk-separator {
