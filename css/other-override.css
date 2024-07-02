@@ -577,3 +577,7 @@ div.inpost-shipping-container .btn {
 .condition-label a{
   @apply !text-main
 }
+
+.js-inpost-shipping-customer-form-save-button:hover{
+  @apply !bg-[#87ac20]
+}
