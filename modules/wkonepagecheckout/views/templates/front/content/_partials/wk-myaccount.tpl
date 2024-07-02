@@ -30,7 +30,7 @@
 		</div>
 		<div class="form-group {if $customer.addresses|count == 0}hidden{/if}">
 			<label class="cursor-pointer text-xs align-middle">
-				<input type="checkbox" name="wk-different-invoice" value="1" class="mr-2 bg-black border border-[#64635D] border-solid checked:bg-main checked:focus:bg-main checked:hover:bg-main checked:border-main focus:ring-0 focus:ring-transparent form-checkbox w-4 h-4 rounded-[5px] appearance-none  opacity-100 outline-none rounded transition" {if Configuration::get('WK_CHECKOUT_DELIVERY_AS_INVOICE')  && $cart.id_address_delivery == $cart.id_address_invoice}checked="checked"{/if}>
+				<input type="checkbox" name="wk-different-invoice" value="1" class="mr-2 border-2 border-[#64635D] border-solid checked:bg-main checked:focus:bg-main checked:hover:bg-main checked:border-main focus:ring-0 focus:ring-transparent form-checkbox w-4 h-4 rounded-[5px] appearance-none  opacity-100 outline-none rounded transition" {if Configuration::get('WK_CHECKOUT_DELIVERY_AS_INVOICE')  && $cart.id_address_delivery == $cart.id_address_invoice}checked="checked"{/if}>
 				{l s='Use this address for invoice too' d='Shop.Theme.Checkout'}
 			</label>
 		</div>

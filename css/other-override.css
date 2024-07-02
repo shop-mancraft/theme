@@ -573,3 +573,7 @@ div.inpost-shipping-container .btn {
 #paypal-buttons{
   @apply mx-auto
 }
+
+.condition-label a{
+  @apply !text-main
+}

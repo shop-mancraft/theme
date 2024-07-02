@@ -27,7 +27,7 @@
                         <p style="word-break: break-word;">{$customer.email}</p>
                     </div>
                     <div class="col-md-5 col-sm-6 col-xs-6 wk-log-btn">
-                        <a href="{$logout}" class="py-3 px-4 border-2 text-main-dark uppercase border-main-dark hover:bg-main-dark hover:text-white rounded-full border-solid  transition font-body text-xs font-normal logout">{l s='Logout' mod='wkonepagecheckout'}</a>
+                        <a href="{$logout}" class="py-3 px-4 border-2 text-main-dark uppercase hover:!border-main hover:!text-main rounded-full border-solid  transition font-body text-xs font-normal logout">{l s='Logout' mod='wkonepagecheckout'}</a>
                     </div>
                 {/if}
             </div>
