@@ -1399,7 +1399,7 @@ body#checkout #wrapper * {
 body#checkout #wrapper .form-control,
 body#checkout section.checkout-step #delivery textarea,
 body#checkout #wrapper select.form-control option {
-  color: #000;
+  color: #fff;
   background-position: calc(100% - 10px) 10px;
 }
 
