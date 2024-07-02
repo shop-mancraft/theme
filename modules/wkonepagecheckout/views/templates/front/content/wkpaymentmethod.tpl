@@ -41,7 +41,7 @@
 														{else}
 															{if Configuration::get('WK_CHECKOUT_DEFAULT_PAYMENT') == $option.module_name || $is_free}checked="checked"{/if}
 														{/if}
-															class="ps-shown-by-js {if $option.binary} binary {/if} relative after:absolute after:left-[2px] after:top-[2.5px] after:content-[''] after:h-[8px]  after:transition after:w-[8px] appearance-none after:rounded-full rounded-full border-2 border-[#64635D] border-solid hover:after:bg-main checked:after:!bg-main checked:bg-white checked:border-main checked:focus:bg-white checked:focus:border-mainchecked:focus:ring-transparent checked:focus:shadow-none checked:hover:bg-white checked:hover:border-main checked:ring-0 checked:ring-transparent cursor-pointer focus:ring-0 focus:ring-offset-0 focus:ring-transparent h-4 outline-none ring-transparent transition transition-all w-4" 
+															class="ps-shown-by-js {if $option.binary} binary {/if} relative after:absolute after:left-[2px] after:top-[2.5px] after:content-[''] after:h-[8px]  after:transition after:w-[8px] appearance-none after:rounded-full rounded-full border-2 border-[#64635D] border-solid hover:after:bg-main checked:after:!bg-main checked:bg-transparent checked:border-main checked:focus:bg-transparent checked:focus:border-main checked:focus:ring-transparent checked:focus:shadow-none checked:hover:bg-transparent checked:hover:border-main checked:ring-0 checked:ring-transparent cursor-pointer focus:ring-0 focus:ring-offset-0 focus:ring-transparent h-4 outline-none ring-transparent transition transition-all w-4" 
 																id="{$option.id}"
 																data-module-name="{$option.module_name}" name="payment-option" type="radio" required>
 															<span></span>

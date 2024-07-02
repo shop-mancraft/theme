@@ -78,11 +78,11 @@
                                 required
                                 type="checkbox"
                                 value="1"
-                                class="ps-shown-by-js wk-condition-check form-checkbox w-4 h-4 rounded-[5px] appearance-none   cursor-pointer bg-black border-2 border-[#64635D] border-solid checked:bg-main checked:focus:bg-main checked:hover:bg-main  focus:ring-0 focus:ring-transparent form-checkbox w-4 h-4 rounded-[5px] appearance-none  opacity-100 outline-none rounded transition">
+                                class="ps-shown-by-js wk-condition-check form-checkbox w-4 h-4 rounded-[5px] appearance-none   cursor-pointer bg-black border-2 border-[#64635D] border-solid checked:border-main checked:bg-main checked:focus:bg-main checked:hover:bg-main  focus:ring-0 focus:ring-transparent form-checkbox w-4 h-4 rounded-[5px] appearance-none  opacity-100 outline-none rounded transition">
                         </span>
                     </div>
                     <div>
-                        <label class="cursor-pointer block pl-3 js-terms text-xs text-gray-dark text-left mb-3" for="conditions_to_approve[{$condition_name}]">{$condition nofilter}</label>
+                        <label class="cursor-pointer block pl-3 js-terms text-xs text-gray-dark text-left mb-3 [&_a]:!text-main" for="conditions_to_approve[{$condition_name}]">{$condition nofilter}</label>
                     </div>
                 </li>
             {/foreach}
