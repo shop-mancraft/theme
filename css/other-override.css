@@ -569,3 +569,7 @@ div.inpost-shipping-container .btn {
 .js-inpost-shipping-customer-form-save-button{
   @apply ml-auto block !rounded-[5px] w-fit
 }
+
+#paypal-buttons{
+  @apply mx-auto
+}
