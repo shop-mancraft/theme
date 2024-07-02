@@ -18,12 +18,12 @@
     <div class="form-group clearfix wk-align-center">
         <label class="mb-0 h-5">
             <span>
-                <input type="radio" name="wk-invoice-address" id="wk-invoice-address-1" value="1" checked="checked" class="relative after:absolute after:left-[2px] after:top-[2.5px] after:content-[''] after:h-[8px]  after:transition after:w-[8px] appearance-none after:rounded-full rounded-full border-2 border-gray-3000 border-solid hover:after:bg-main-dark/20 checked:after:!bg-main-dark checked:bg-white checked:border-main-dark checked:focus:bg-white checked:focus:border-main-dark checked:focus:ring-transparent checked:focus:shadow-none checked:hover:bg-white checked:hover:border-main-dark checked:ring-0 checked:ring-transparent cursor-pointer focus:ring-0 focus:ring-offset-0 focus:ring-transparent h-4 outline-none ring-transparent transition transition-all w-4">
+                <input type="radio" name="wk-invoice-address" id="wk-invoice-address-1" value="1" checked="checked" class="relative after:absolute after:left-[2px] after:top-[2.5px] after:content-[''] after:h-[8px]  after:transition after:w-[8px] appearance-none after:rounded-full rounded-full border-2 border-[#64635D] border-solid hover:after:bg-main checked:after:!bg-main checked:bg-white checked:border-main checked:focus:bg-white checked:focus:border-mainchecked:focus:ring-transparent checked:focus:shadow-none checked:hover:bg-white checked:hover:border-main checked:ring-0 checked:ring-transparent cursor-pointer focus:ring-0 focus:ring-offset-0 focus:ring-transparent h-4 outline-none ring-transparent transition transition-all w-4">
                 <span></span>
             </span>
         </label>
         <div class="w-full pl-2.5 desktop-presta:pl-[15px]">
-            <select class="form-control text-sm bg-white border border-solid border-[#64635D] focus:border-gray-3000 focus:ring-0 font-body font-medium form-control-select form-select js-country pl-4 rounded-full w-full h-[50px] tablet:h-10" id="wk-existing-invoice-address">
+            <select class="form-control text-sm !bg-black border border-solid border-[#64635D] focus:border-[#64635D] focus:ring-0 font-body font-medium form-control-select form-select js-country pl-4 rounded-[5px] w-full h-[50px] tablet:h-10" id="wk-existing-invoice-address">
                 {foreach $customer.addresses as $addr}
                     <option {if isset($cart.id_address_delivery)} 
                         {if $cart.id_address_invoice == $addr.id}selected="selected"
@@ -41,7 +41,7 @@
     <div class="form-group clearfix !mb-0">
         <label class="float-left w-5 !mb-0"></label>
         <div class="w-full pl-[26px] desktop-presta:pl-[31px]">
-            <address class="wk-diff-address wk-invoice-address-card text-sm rounded-lg border border-solid border-[#64635D]">
+            <address class="wk-diff-address not-italic wk-invoice-address-card text-sm rounded-[5px] !bg-black border border-solid border-[#64635D]">
                 {$customer.addresses.{$cart.id_address_invoice}.formatted nofilter}
                 <hr class="border-0 mb-5 tablet:mb-10">
                 <footer style="text-align: right;margin:0 0.3125rem;">
@@ -61,7 +61,7 @@
     <div class="form-group clearfix wk-align-center">
         <label class="mb-0 h-5">
             <span>
-                <input type="radio" name="wk-invoice-address" id="wk-invoice-address-2" value="2" class="relative after:absolute after:left-[2px] after:top-[2.5px] after:content-[''] after:h-[8px]  after:transition after:w-[8px] appearance-none after:rounded-full rounded-full border-2 border-gray-3000 border-solid hover:after:bg-main-dark/20 checked:after:!bg-main-dark checked:bg-white checked:border-main-dark checked:focus:bg-white checked:focus:border-main-dark checked:focus:ring-transparent checked:focus:shadow-none checked:hover:bg-white checked:hover:border-main-dark checked:ring-0 checked:ring-transparent cursor-pointer focus:ring-0 focus:ring-offset-0 focus:ring-transparent h-4 outline-none ring-transparent transition transition-all w-4">
+                <input type="radio" name="wk-invoice-address" id="wk-invoice-address-2" value="2" class="relative after:absolute after:left-[2px] after:top-[2.5px] after:content-[''] after:h-[8px]  after:transition after:w-[8px] appearance-none after:rounded-full rounded-full border-2 border-[#64635D] border-solid hover:after:bg-main checked:after:!bg-main checked:bg-white checked:border-main checked:focus:bg-white checked:focus:border-mainchecked:focus:ring-transparent checked:focus:shadow-none checked:hover:bg-white checked:hover:border-main checked:ring-0 checked:ring-transparent cursor-pointer focus:ring-0 focus:ring-offset-0 focus:ring-transparent h-4 outline-none ring-transparent transition transition-all w-4">
                 <span></span>
             </span>
         </label>

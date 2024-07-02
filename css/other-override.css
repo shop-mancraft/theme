@@ -549,3 +549,7 @@ div.inpost-shipping-container .btn {
 .collapsible:not(.collapsed) .shrinkable{
   @apply scale-y-0
 }
+
+.paypal-mark-container{
+  @apply !hidden
+}

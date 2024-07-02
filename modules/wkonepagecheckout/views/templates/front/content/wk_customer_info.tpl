@@ -107,7 +107,7 @@
                 <div class="form-group">
                     <span>
 						<label class="text-xs text-gray-dark">
-							<input type="checkbox" value="1" name="wk-create-account" id="wk-create-account" class="mr-2 bg-gray-normal border-2 border-gray-3000 border-solid checked:bg-main-dark checked:focus:bg-main-dark checked:hover:bg-main-dark focus:ring-0 focus:ring-transparent form-checkbox opacity-100 outline-none rounded transition">
+							<input type="checkbox" value="1" name="wk-create-account" id="wk-create-account" class="mr-2 bg-gray-normal border-2 border-[#64635D] border-solid checked:bg-main-dark checked:focus:bg-main-dark checked:hover:bg-main-dark focus:ring-0 focus:ring-transparent form-checkbox opacity-100 outline-none rounded transition">
 							{l s='I also want to create account' mod='wkonepagecheckout'}
 						</label>
 					</span>
@@ -128,7 +128,7 @@
                     <label class="label-control">{l s='Date of birth' mod='wkonepagecheckout'}</label>
                     <div class="row">
                         <div class="col-md-4 col-xs-12 pad-right-0">
-                            <select name="wk_day" id="wk_day" class="form-control bg-gray-normal border border-solid border-[#64635D] focus:border-gray-3000 focus:ring-0 font-body font-medium form-control-select form-select js-country pl-4 rounded-full w-full">
+                            <select name="wk_day" id="wk_day" class="form-control bg-gray-normal border border-solid border-[#64635D] focus:border-[#64635D] focus:ring-0 font-body font-medium form-control-select form-select js-country pl-4 rounded-full w-full">
                                 <option value="0">{l s='Day' mod='wkonepagecheckout'}</option>
                                 {for $day=1 to 31}
                                     <option value="{$day}" {if isset($birthdate[2]) && ($birthdate[2] == $day)}selected{/if}>{$day}
@@ -137,7 +137,7 @@
                             </select>
                         </div>
                         <div class="col-md-4 col-xs-12 pad-right-0">
-                            <select name="wk_month" id="wk_month" class="form-control bg-gray-normal border border-solid border-[#64635D] focus:border-gray-3000 focus:ring-0 font-body font-medium form-control-select form-select js-country pl-4 rounded-full w-full">
+                            <select name="wk_month" id="wk_month" class="form-control bg-gray-normal border border-solid border-[#64635D] focus:border-[#64635D] focus:ring-0 font-body font-medium form-control-select form-select js-country pl-4 rounded-full w-full">
                                 <option value="0">{l s='Month' mod='wkonepagecheckout'}</option>
                                 {for $month=1 to 12}
                                     <option value="{$month}" {if isset($birthdate[1]) && ($birthdate[1] == $month)}selected{/if}>
@@ -146,7 +146,7 @@
                             </select>
                         </div>
                         <div class="col-md-4 col-xs-12 pad-right-0">
-                            <select name="wk_year" id="wk_year" class="form-control bg-gray-normal border border-solid border-[#64635D] focus:border-gray-3000 focus:ring-0 font-body font-medium form-control-select form-select js-country pl-4 rounded-full w-full">
+                            <select name="wk_year" id="wk_year" class="form-control bg-gray-normal border border-solid border-[#64635D] focus:border-[#64635D] focus:ring-0 font-body font-medium form-control-select form-select js-country pl-4 rounded-full w-full">
                                 <option value="0">{l s='Year' mod='wkonepagecheckout'}</option>
                                 {for $year=date(Y)-100 to date(Y)}
                                     <option value="{$year}" {if isset($birthdate[0]) && ($birthdate[0] == $year)}selected{/if}>

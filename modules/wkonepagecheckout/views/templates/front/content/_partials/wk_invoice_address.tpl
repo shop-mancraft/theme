@@ -80,7 +80,7 @@
 						<select
 							data-attr="invoice"
 							name="wk_invoice_address_country"
-							class="form-control wk_address_country text-sm font-normal border-solid bg-white border border-[#64635D] focus:border-gray-3000 focus:ring-0 font-body font-medium form-control-select form-select js-country pl-4 rounded-full w-full h-[50px] tablet:h-10">
+							class="form-control wk_address_country text-sm font-normal border-solid !bg-black border border-[#64635D] focus:border-[#64635D] focus:ring-0 font-body font-medium form-control-select form-select js-country pl-4 rounded-[5px] w-full h-[50px] tablet:h-10">
 							{if isset($countries)}
 								{foreach $countries as $country}
 									<option
