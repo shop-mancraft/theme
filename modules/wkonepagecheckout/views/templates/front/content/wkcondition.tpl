@@ -78,7 +78,7 @@
                                 required
                                 type="checkbox"
                                 value="1"
-                                class="ps-shown-by-js wk-condition-check form-checkbox  cursor-pointer bg-white border-2 border-[#64635D] border-solid checked:bg-main-dark checked:focus:bg-main-dark checked:hover:bg-main-dark focus:ring-0 focus:ring-transparent form-checkbox opacity-100 outline-none rounded transition">
+                                class="ps-shown-by-js wk-condition-check form-checkbox w-4 h-4 rounded-[5px]  cursor-pointer bg-white border-2 border-[#64635D] border-solid checked:bg-main checked:focus:bg-main checked:hover:bg-main  focus:ring-0 focus:ring-transparent form-checkbox w-4 h-4 rounded-[5px] opacity-100 outline-none rounded transition">
                         </span>
                     </div>
                     <div>
