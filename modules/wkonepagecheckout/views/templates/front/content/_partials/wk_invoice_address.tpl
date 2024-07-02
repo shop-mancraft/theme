@@ -23,7 +23,7 @@
 
 			{if 'company'|array_key_exists:$addressFormFields && 'vat_number'|array_key_exists:$addressFormFields}
 				{foreach from=$addressFormFields item=field key=fieldName}
-					{if $field}
+					{if in_array($fieldName, ['company','vat_number']) && $field}
 					
 						{if $fieldName == 'company'}
 							<div id="company" class="w-full">

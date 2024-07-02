@@ -24,7 +24,7 @@
 
 					{if 'company'|array_key_exists:$addressFormFields && 'vat_number'|array_key_exists:$addressFormFields}
 						{foreach from=$addressFormFields item=field key=fieldName}
-							{if $field}
+							{if in_array($fieldName, ['company','vat_number']) && $field}
 							
 								{if $fieldName == 'company'}
 									<div id="company" class="w-full">
@@ -104,14 +104,14 @@
 						{/if}
 					{/foreach}
 
-					<div class="form-group w-full" style="text-align: right;">
+					<div class="form-group w-full mt-5" style="text-align: right;">
 						{if Module::isEnabled('wkgdpr')}
 							{hook h='displayGDPRConsent' mod='wkgdpr' id_module=$id_module}
 						{else}
 							{hook h='displayGDPRConsent' mod='psgdpr' id_module=$id_module}
 						{/if}
 
-						<button type="submit" class="btn bg-main py-3 px-5 border-2 uppercase  hover:bg-[#87ac20] text-white rounded-full  transition font-body text-xs font-normal wk-save-address">
+						<button type="submit" class="btn bg-main py-3 px-8 border-2 uppercase  hover:bg-[#87ac20] text-white rounded-full  transition font-body font-normal wk-save-address">
 							{l s='Save' mod='wkonepagecheckout'}
 						</button>
 						<div class="wkhide wk_text-light wkbotton" id="wk-msg-new-delivery"></div>

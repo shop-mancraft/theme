@@ -1168,10 +1168,6 @@ button.close,
     border-radius: 4px;
   }
 
-  .product-cover img {
-    position: absolute;
-  }
-
   img.js-qv-product-cover:hover {
     max-width: none;
     width: 200% !important;
