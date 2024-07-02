@@ -27,12 +27,12 @@
 					
 						{if $fieldName == 'company'}
 							<div id="company" class="w-full">
-								<a class="block border-b text-main-dark w-full mb-2 tablet:mb-5 hover:text-main transition text-sm collapsed font-body collapsible inline-block !border-0" data-toggle="collapse" href="#collapseCompany" role="button" aria-expanded="false" aria-controls="collapseCompany">
+								<a class="block border-b text-main-dark w-full mb-2 tablet:mb-5 hover:text-main transition text-sm collapsed font-body collapsible inline-block !border-0" data-toggle="collapse" href="#collapseCompanyInvoice" role="button" aria-expanded="false" aria-controls="collapseCompanyInvoice">
 								<svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill="#a8d727" d="M0 5h12v1H0z"></path><path class="shrinkable transition duration-300" fill="#a8d727" d="M5 0v12H6V0z" class=""></path></svg>
 								{l s='Add tax identification number and company name' d='Shop.Theme.Checkout'}
 								</a>
 
-								<div class="collapse" id="collapseCompany">
+								<div class="collapse" id="collapseCompanyInvoice">
 						{/if}
 									<div class="form-group w-[calc(50%_-_5px)] input-{$fieldName}">
 										<input maxlength="{$field.maxlength}" {if $field.required}data-required="1"
