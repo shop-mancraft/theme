@@ -69,9 +69,9 @@
         <form id="conditions-to-approve" method="GET">
             <ul>
             {foreach from=$conditions_to_approve item="condition" key="condition_name"}
-                <li>
-                    <div class="float-xs-left">
-                        <span class="custom-checkbox">
+                <li class="flex">
+                    <div class="float-xs-left shrink-0">
+                        <span>
                             <input
                                 id="conditions_to_approve[{$condition_name}]"
                                 name="conditions_to_approve[{$condition_name}]"
@@ -82,7 +82,7 @@
                         </span>
                     </div>
                     <div>
-                        <label class="cursor-pointer block ml-6 js-terms text-xs text-gray-dark mb-3" for="conditions_to_approve[{$condition_name}]">{$condition nofilter}</label>
+                        <label class="cursor-pointer block pl-3 js-terms text-xs text-gray-dark text-left mb-3" for="conditions_to_approve[{$condition_name}]">{$condition nofilter}</label>
                     </div>
                 </li>
             {/foreach}
