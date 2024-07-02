@@ -64,7 +64,7 @@ select option,
 .dropdown select option,
 .product-variants > .product-variants-item select option {
   color: #000;
-  @apply font-fallback ita;
+  @apply font-fallback;
 }
 
 select.form-control:not([size]):not([multiple]) {
