@@ -186,8 +186,7 @@
         </div>
 
         {if !$customer.is_logged || $customer.is_guest}
-            <a href="javascript:void(0)" class="block underline text-main-dark hover:text-main mx-auto mb-8 text-sm transition duration-200 w-max leo-quicklogin" data-enable-sociallogin="enable" data-type="popup" data-layout="login">{l s='Already registered?' mod='wkonepagecheckout'}</a>
-                <!-- Login pop up tpl in case customer is not login -->
+            <a href="javascript:void(0)" class="block underline text-main-dark hover:text-main mx-auto mb-8 text-sm transition duration-200 w-max wkbtn-login" >{l s='Already registered?' mod='wkonepagecheckout'}</a>
             {block name='wk-login'}
                 {include file='module:wkonepagecheckout/views/templates/front/content/_partials/wk_login.tpl'}
             {/block}
