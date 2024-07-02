@@ -19,7 +19,7 @@
     <div class="form-group clearfix wk-align-center">
         <label class="mb-0 h-5">
             <span>
-                <input type="radio" name="wk-delivery-address" id="wk-delivery-address-1" value="1" checked="checked" class="relative after:absolute after:left-[2px] after:top-[2.5px] after:content-[''] after:h-[8px]  after:transition after:w-[8px] appearance-none after:rounded-full rounded-full border-2 border-[#64635D] border-solid hover:after:bg-main checked:after:!bg-main checked:bg-transparent checked:border-main checked:focus:bg-transparent checked:focus:border-main checked:focus:ring-transparent checked:focus:shadow-none checked:hover:bg-white checked:hover:border-main checked:ring-0 checked:ring-transparent cursor-pointer focus:ring-0 focus:ring-offset-0 focus:ring-transparent h-4 outline-none ring-transparent transition transition-all w-4">
+                <input type="radio" name="wk-delivery-address" id="wk-delivery-address-1" value="1" checked="checked" class="relative after:absolute after:left-[2px] after:top-[2.5px] after:content-[''] after:h-[8px]  after:transition after:w-[8px] appearance-none after:rounded-full rounded-full border-2 border-[#64635D] border-solid hover:after:bg-main checked:after:!bg-main checked:bg-transparent checked:border-main checked:focus:bg-transparent checked:focus:border-main checked:focus:ring-transparent checked:focus:shadow-none checked:hover:bg-transparent checked:hover:border-main checked:ring-0 checked:ring-transparent cursor-pointer focus:ring-0 focus:ring-offset-0 focus:ring-transparent h-4 outline-none ring-transparent transition transition-all w-4">
                 <span></span>
             </span>
         </label>
@@ -62,7 +62,7 @@
     <div class="form-group clearfix wk-align-center">
         <label class="mb-0 h-5">
             <span>
-                <input type="radio" name="wk-delivery-address" id="wk-delivery-address-2" value="2" data-attr="delivery" class="relative after:absolute after:left-[2px] after:top-[2.5px] after:content-[''] after:h-[8px]  after:transition after:w-[8px] appearance-none after:rounded-full rounded-full border-2 border-[#64635D] border-solid hover:after:bg-main checked:after:!bg-main checked:bg-transparent checked:border-main checked:focus:bg-transparent checked:focus:border-main checked:focus:ring-transparent checked:focus:shadow-none checked:hover:bg-white checked:hover:border-main checked:ring-0 checked:ring-transparent cursor-pointer focus:ring-0 focus:ring-offset-0 focus:ring-transparent h-4 outline-none ring-transparent transition transition-all w-4">
+                <input type="radio" name="wk-delivery-address" id="wk-delivery-address-2" value="2" data-attr="delivery" class="relative after:absolute after:left-[2px] after:top-[2.5px] after:content-[''] after:h-[8px]  after:transition after:w-[8px] appearance-none after:rounded-full rounded-full border-2 border-[#64635D] border-solid hover:after:bg-main checked:after:!bg-main checked:bg-transparent checked:border-main checked:focus:bg-transparent checked:focus:border-main checked:focus:ring-transparent checked:focus:shadow-none checked:hover:bg-transparent checked:hover:border-main checked:ring-0 checked:ring-transparent cursor-pointer focus:ring-0 focus:ring-offset-0 focus:ring-transparent h-4 outline-none ring-transparent transition transition-all w-4">
                 <span></span>
             </span>
         </label>
