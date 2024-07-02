@@ -69,7 +69,7 @@
         <form id="conditions-to-approve" method="GET">
             <ul>
             {foreach from=$conditions_to_approve item="condition" key="condition_name"}
-                <li class="flex">
+                <li class="flex mb-1">
                     <div class="float-xs-left shrink-0">
                         <span>
                             <input
@@ -82,7 +82,7 @@
                         </span>
                     </div>
                     <div>
-                        <label class="cursor-pointer block pl-3 js-terms text-xs text-gray-dark text-left mb-3 condition-label" for="conditions_to_approve[{$condition_name}]">{$condition nofilter}</label>
+                        <label class="cursor-pointer block pl-3 !m-0 js-terms text-xs text-gray-dark text-left mb-3 condition-label" for="conditions_to_approve[{$condition_name}]">{$condition nofilter}</label>
                     </div>
                 </li>
             {/foreach}
