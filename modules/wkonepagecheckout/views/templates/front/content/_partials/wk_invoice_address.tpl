@@ -17,22 +17,47 @@
 <div id="wk-invoice-address-form">
 	{if isset($addressFormFields)}
 	<div class="wk-invoice-address-form wk_div_container">
-		<form class="wk-address-form flex flex-wrap" method="POST" action="#" id="wk-invoice-form" data-type="invoice">
+		<form class="wk-address-form flex flex-wrap justify-between" method="POST" action="#" id="wk-invoice-form" data-type="invoice">
 			<input type="hidden" name="data-type" value="invoice" id="invoice">
 			<input type="hidden" name="id-new-invoice-address" value="{if isset($delivery_address)}{$delivery_address->id}{/if}" id="id-new-invoice-address">
 
-			{foreach from=$addressFormFields item=field key=fieldName}
-				{if !in_array($fieldName, ['country', 'state', 'alias']) && $field}
-					{if $fieldName == 'company'}
+			{if 'company'|array_key_exists:$addressFormFields && 'vat_number'|array_key_exists:$addressFormFields}
+				{foreach from=$addressFormFields item=field key=fieldName}
+					{if $field}
+					
+						{if $fieldName == 'company'}
+							<div id="company" class="w-full">
+								<a class="block border-b text-main-dark w-full mx-5 mb-2 tablet:mb-5 hover:text-main transition text-sm collapsed font-body collapsible inline-block !border-0" data-toggle="collapse" href="#collapseCompany" role="button" aria-expanded="false" aria-controls="collapseCompany">
+								<svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill="#a8d727" d="M0 5h12v1H0z"></path><path class="shrinkable transition duration-300" fill="#a8d727" d="M5 0v12H6V0z" class=""></path></svg>
+								{l s='Add tax identification number and company name' d='Shop.Theme.Checkout'}
+								</a>
 
-						<div id="company" class="w-full">
-						  <a class="block border-b text-main-dark w-full mb-2 tablet:mb-5 hover:text-main transition text-sm collapsed font-body collapsible inline-block !border-0" data-toggle="collapse" href="#collapseCompanyInv" role="button" aria-expanded="false" aria-controls="collapseCompanyInv">
-						  <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill="#a8d727" d="M0 5h12v1H0z"></path><path class="shrinkable transition duration-300" fill="#a8d727" d="M5 0v12H6V0z" class=""></path></svg>
-							{l s='Add tax identification number and company name' d='Shop.Theme.Checkout'}
-						  </a>
-						  <div class="collapse" id="collapseCompanyInv">
-
+								<div class="collapse" id="collapseCompany">
+						{/if}
+									<div class="form-group w-[calc(50%_-_5px)] input-{$fieldName}">
+										<input maxlength="{$field.maxlength}" {if $field.required}data-required="1"
+										{else}data-required="0"
+											{/if} data-validate="{$field.validate}" type="text" name="{$field.delivery_field_name}"
+											id="{$field.delivery_field_name}"
+											value="{if isset($delivery_address)}{$delivery_address->{$field.db_fieldname}}{/if}"
+											placeholder="{$field.label}{if $field.required} *{/if}"
+											class="form-control wkvalidatefield border-[#64635D] border-solid border rounded-[5px] !bg-black h-[50px] tablet:h-10">
+										<i class="material-icons wk-check-icon wkhide icon_{$field.delivery_field_name}">&#xE876;</i>
+										<i class="material-icons wk-error-icon wkhide error_{$field.delivery_field_name}">&#xE001;</i>
+										<span class="help-block wk-error {$field.delivery_field_name}"></span>
+									</div>
+						{if $fieldName == 'vat_number' }
+								</div>
+							</div>
+						{/if}
 					{/if}
+					
+				{/foreach}
+			{/if}
+
+
+			{foreach from=$addressFormFields item=field key=fieldName}
+				{if !in_array($fieldName, ['country', 'state', 'alias','company','vat_number']) && $field}
 
 				<div class="form-group w-1/2 {if $fieldName == 'company' || $fieldName == 'vat_number' }float-left{/if} input-{$fieldName}">
 						<input
@@ -49,12 +74,6 @@
 						<i class="material-icons wk-error-icon wkhide error_{$field.invoice_field_name}">&#xE001;</i>
 						<span class="help-block wk-error {$field.invoice_field_name}"></span>
 					</div>
-
-					{if $fieldName == 'vat_number' }
-						</div>
-					  </div>
-
-					{/if}
 
 				{elseif $fieldName == 'country'}
 					<div class="form-group w-full">
