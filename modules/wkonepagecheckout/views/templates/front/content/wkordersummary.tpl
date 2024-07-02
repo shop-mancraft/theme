@@ -80,14 +80,14 @@
 										<input data-id-product-attribute="{$product.id_product_attribute}"
 											data-id-product="{$product.id_product}"
 											value="{if isset($product.cart_quantity)}{$product.cart_quantity}{/if}"
-											class="-mr-5 !border !border-[#64635D] !border-solid !bg-black float-left focus:ring-0 font-normal h-[44px] pl-1 pr-5 py-3 rounded-md text-center text-lg w-[75px] !text-white form-control wk-qty" type="text" name="wk-cart-qty" min="1"
+											class="-mr-5 !border !border-[#64635D] !border-solid !bg-black float-left focus:border- focus:ring-0 font-normal h-[44px] pl-1 pr-5 py-3 rounded-md text-center text-lg w-[75px] !text-white form-control wk-qty" type="text" name="wk-cart-qty" min="1"
 											data-id-customization="{if isset($product.id_customization)}{$product.id_customization}{else}0{/if}" />
 										<span class="flex flex-col relative z-10 input-group-btn-vertical">
 											<button type="button" class="!bg-transparent block bootstrap-touchspin-up border-0 cursor-pointer h-[22px] relative rounded-tr-md transition w-5 wk-qty-up">
-												<i class="material-icons touchspin-up  absolute w-full -top-px !text-xl !left-0 text-[#64635D] hover:text-white"></i>
+												<i class="material-icons touchspin-up  absolute w-full !-top-px !text-xl !left-0 !text-[#64635D] hover:!text-white transition"></i>
 											</button>
 											<button type="button" class="!bg-transparent block bootstrap-touchspin-down border-0 cursor-pointer h-[22px] relative rounded-br-md transition w-5 wk-qty-down">
-												<i class="material-icons touchspin-down  absolute w-full -top-px !text-xl !left-0 text-[#64635D] hover:text-white"></i>
+												<i class="material-icons touchspin-down  absolute w-full !-top-px !text-xl !left-0 !text-[#64635D] hover:!text-white transition"></i>
 											</button>
 										</span>
 									</div>
