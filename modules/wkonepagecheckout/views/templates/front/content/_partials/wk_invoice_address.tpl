@@ -115,7 +115,7 @@
 				{else}
 					{hook h='displayGDPRConsent' mod='psgdpr' id_module=$id_module}
 				{/if}
-				<button type="submit" class="bg-main py-3 px-5 border-2 uppercase  hover:bg-[#87ac20] text-white rounded-full  transition font-body text-xs font-normal wk-save-address">
+				<button type="submit" class="bg-main py-3 px-5 border-2 uppercase  hover:bg-[#87ac20] text-white !rounded-[5px] border-0 transition font-body text-xs font-normal wk-save-address">
 					{l s='Save' mod='wkonepagecheckout'}
 				</button>
 				<div class="wkhide wk_text-light wkbotton" id="wk-msg-new-invoice"></div>
