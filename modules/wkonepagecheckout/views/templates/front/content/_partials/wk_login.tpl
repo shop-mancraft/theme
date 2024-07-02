@@ -26,15 +26,15 @@
 					<div class="alert alert-danger wk-login-error wkhide"></div>
 						<div class="form-group">
 							<div class="input-group">
-								<input type="text" class="form-control border border-[#4F4F4F] hover:!border-main focus:!border-main rounded-[5px] block text-base !bg-black !text-white px-5 py-3 transition duration-200" name="wk-login-email" id="wk-login-email" placeholder="{l s='Email' mod='wkonepagecheckout'}">
+								<input type="text" class="form-control border !border-[#4F4F4F] hover:!border-main focus:!border-main rounded-[5px] block text-base !bg-black !text-white px-5 py-3 transition duration-200" name="wk-login-email" id="wk-login-email" placeholder="{l s='Email' mod='wkonepagecheckout'}">
 							</div>
 						</div>
 
 						<div class="form-group">
 							<div class="input-group relative">
-								<input type="password" class="form-control border border-[#4F4F4F] hover:!border-main focus:!border-main rounded-[5px] block text-base !bg-black !text-white pl-5 pr-10 py-3 transition duration-200" name="wk-login-password" id="wk-login-password" placeholder="{l s='Password' mod='wkonepagecheckout'}">
-								<label for="uPassword" class="group input-group-addon wk-icon toggle-pwd-field !bg-transparent !p-0 relative top-0 right-0 bottom-0 w-10">
-									<i class="material-icons !text-gray-normal group-hover:!text-main transition ">visibility</i>
+								<input type="password" class="form-control border !border-[#4F4F4F] hover:!border-main focus:!border-main !rounded-[5px] block text-base !bg-black !text-white pl-5 pr-10 py-3 transition duration-200" name="wk-login-password" id="wk-login-password" placeholder="{l s='Password' mod='wkonepagecheckout'}">
+								<label for="uPassword" class="group input-group-addon wk-icon toggle-pwd-field absolute !flex items-center justify-center !bg-transparent !p-0 relative top-0 right-0 bottom-0 w-10">
+									<i class="material-icons !text-[#64635D] group-hover:!text-main transition ">visibility</i>
 								</label>
 							</div>
 
@@ -42,7 +42,7 @@
 				</div>
 				<div class="modal-footer !border-t-gray-normal">
 					<img class="wk-loader wkhide" src="{$wk_opc_modules_dir}img/p_loading.gif" width="25">
-					<button class="btn btn-primary" id="wk-submit-login">
+					<button class="btn btn-primary hover:bg-[#87ac20]" id="wk-submit-login">
 						{l s='Login' mod='wkonepagecheckout'}
 					</button>
 					<div class="wkforgot">
