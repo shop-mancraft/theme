@@ -98,7 +98,7 @@
             {/if}
             <div class="form-group !mb-2">
                 <input value="{if isset($wkguest)}{$wkguest->email}{/if}" maxlength="128" type="text" name="wk-email"
-                    id="wk-email" placeholder="{l s='Email' mod='wkonepagecheckout'}"  class="form-control text-sm border-[#64635D] border-solid border rounded-full bg-gray-normal h-[50px] tablet:h-10">
+                    id="wk-email" placeholder="{l s='Email' mod='wkonepagecheckout'}"  class="form-control text-sm border-[#64635D] border-solid border rounded-[5px] !bg-black h-[50px] tablet:h-10">
                 <i class="material-icons wk-check-icon wkhide icon_wk_email">&#xE876;</i>
                 <i class="material-icons wk-error-icon wkhide error_wk_email">&#xE001;</i>
                 <span id="wk-email-error" class="wkerrorcolor"></span>
@@ -114,7 +114,7 @@
                 </div>
             {/if}
             <div class="form-group wkpassword_div {if Configuration::get('WK_CHECKOUT_GUEST_ALLOW')}wkhide{/if}">
-                <input maxlength="60" type="password" name="wk-password" id="wk-password" placeholder="{l s='Password' mod='wkonepagecheckout'}" class="form-control border-[#64635D] border-solid border rounded-full bg-gray-normal h-[50px] tablet:h-10">
+                <input maxlength="60" type="password" name="wk-password" id="wk-password" placeholder="{l s='Password' mod='wkonepagecheckout'}" class="form-control text-sm border-[#64635D] border-solid border rounded-[5px] !bg-black h-[50px] tablet:h-10">
                 <i class="material-icons wk-check-icon wkhide icon_wk_password">&#xE876;</i>
                 <i class="material-icons wk-error-icon wkhide error_wk_password">&#xE001;</i>
                 <span id="wk-password-error" class="wkerrorcolor"></span>
