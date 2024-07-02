@@ -17,29 +17,27 @@
 <div class="modal fade" id="wk_login_pop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
-			<div class="modal-header">
+			<div class="modal-header !border-b-gray-normal">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-				<h4 class="modal-title" id="myModalLabel"><i class="material-icons">&#xE851;</i>{l s='Log in' mod='wkonepagecheckout'}</h4>
+				<h4 class="modal-title" id="myModalLabel">{l s='Log in' mod='wkonepagecheckout'}</h4>
 			</div>
 			<form method="POST" action="{url entity='module' name='wkonepagecheckout' controller='wkcheckout'}" id="wk-login-form" name="wk-login-form">
-				<div class="modal-body">
+				<div class="modal-body !border-b-gray-normal">
 					<div class="alert alert-danger wk-login-error wkhide"></div>
 						<div class="form-group">
 							<div class="input-group">
-								<input type="text" class="form-control" name="wk-login-email" id="wk-login-email" placeholder="{l s='Email' mod='wkonepagecheckout'}">
-								<label class="input-group-addon wk-icon">
-									<i class="material-icons">&#xE851;</i>
-								</label>
+								<input type="text" class="form-control border border-[#4F4F4F] hover:border-main focus:border-main rounded-[5px] block text-base text-white px-5 py-3" name="wk-login-email" id="wk-login-email" placeholder="{l s='Email' mod='wkonepagecheckout'}">
 							</div>
 						</div>
 
 						<div class="form-group">
-							<div class="input-group">
-								<input type="password" class="form-control" name="wk-login-password" id="wk-login-password" placeholder="{l s='Password' mod='wkonepagecheckout'}">
-								<label for="uPassword" class="input-group-addon wk-icon toggle-pwd-field">
-									<i class="material-icons">visibility</i>
+							<div class="input-group relative">
+								<input type="password" class="form-control border border-[#4F4F4F] hover:border-main focus:border-main rounded-[5px] block text-base text-white pl-5 pr-10 py-3" name="wk-login-password" id="wk-login-password" placeholder="{l s='Password' mod='wkonepagecheckout'}">
+								<label for="uPassword" class="group input-group-addon wk-icon toggle-pwd-field !bg-transparent !p-0 relative top-0 right-0 bottom-0 w-10">
+									<i class="material-icons !text-gray-normal group-hover:!text-main transition ">visibility</i>
 								</label>
 							</div>
+
 						</div>
 				</div>
 				<div class="modal-footer">
