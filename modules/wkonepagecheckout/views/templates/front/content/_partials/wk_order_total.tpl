@@ -19,18 +19,18 @@
         <div class="col-md-6 col-sm-12">
             <div class="row">
             
-            <div id="voucher-collapse" class="w-full">
+            <div id="voucher-collapse" class="w-full mt-2">
                 <a class="mb-2 block border-b text-main-dark w-full hover:text-main transition text-sm collapsed font-body [&:not(.collapsed)_.shrinkable]:scale-y-0 inline-block !border-0" data-toggle="collapse" href="#collapseVoucher" role="button" aria-expanded="false" aria-controls="collapseVoucher">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill="#a8d727" d="M0 5h12v1H0z"></path><path class="shrinkable transition duration-300" fill="#a8d727" d="M5 0v12H6V0z" class=""></path></svg>
+                    <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill="#a8d727" d="M0 5h12v1H0z"></path><path class="shrinkable transition duration-300" fill="#a8d727" d="M5 0v12H6V0z" class=""></path></svg>
                     {l s='Add voucher' d='Shop.Theme.Checkout'}
                 </a>
                 <div class="collapse" id="collapseVoucher">
 
-                    <div class="border-[#64635D] border-solid border flex rounded-full pl-4 bg-white tablet:max-w-[350px]">
+                    <div class="border-[#64635D] !bg-black border-solid border flex rounded-[5px] pl-4 bg-white tablet:max-w-[350px]">
                         <input placeholder="{l s='Promo code' mod='wkonepagecheckout'}" type="text" name="wk-voucher"
                             id="wk-voucher" class="promo-input w-full bg-transparent border-0 py-3 outline-none font-body focus:ring-0 text-[12px] tablet:text-sm">
-                        <button id="addVoucher" class="bg-main-dark hover:bg-main-hover cursor-pointer overflow-hidden transition border-0 rounded-full text-white px-8 uppercase whitespace-nowrap font-body">
-                            <span class="font-light text-5xl flex justify-center leading-[30px] mb-2.5">+</span>
+                        <button id="addVoucher" class="group cursor-pointer overflow-hidden transition border-0 rounded-full text-white px-4 uppercase whitespace-nowrap font-body">
+                            <span class="material-icons group-hover:text-main transition">add</span>                        
                         </button>
                     </div>
                     <div class=" wkhide col-md-8 col-xs-12 wkpromo-code alert alert-danger" role="alert">
@@ -55,7 +55,7 @@
             </div>
         </div>
         <div class="col-md-6 col-sm-12 mt-5 tablet:mt-0">
-            <div class="row">
+            <div class="row mt-2">
                 {if isset($cart.vouchers.added)}
                     {foreach $cart.vouchers.added as $voucher}
                         <div class="wk-box">
