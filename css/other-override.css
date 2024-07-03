@@ -545,3 +545,7 @@ div.inpost-shipping-container .btn {
     scrollbar-color: #000000 #a8d727;
   }
 }
+
+.login-form .pxd-cloudflare-turnstile iframe{
+  @apply mx-auto mt-5
+}
