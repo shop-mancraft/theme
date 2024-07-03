@@ -581,3 +581,7 @@ div.inpost-shipping-container .btn {
 .js-inpost-shipping-customer-form-save-button:hover{
   @apply !bg-[#87ac20]
 }
+
+.login-form .pxd-cloudflare-turnstile iframe{
+  @apply mx-auto mt-5
+}
