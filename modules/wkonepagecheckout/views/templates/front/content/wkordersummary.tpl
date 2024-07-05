@@ -99,8 +99,14 @@
 
 								<div class="shrink-0 basis-[30%] order-3 tablet:basis-[20%] tablet:order-4">
 									<span class="text-base tablet:text-lg text-main-dark float-right">
+									{if Configuration::get('PS_TAX') && (!Group::getPriceDisplayMethod(Group::getCurrent()->id) || ((int)$customer.addresses[{$cart.{Configuration::get('PS_TAX_ADDRESS_TYPE')}}].id_country == (int)Configuration::get('checkvat_except_country')))}
 										{if isset($product.total)}
-											<span>{$product.total}</span>
+												<span>{Context::getContext()->currentLocale->formatPrice($product.price_wt, Context::getContext()->currency->iso_code)}</span>
+											{/if}
+										{else}
+											{if isset($product.total)}
+												<span>{$product.total}</span>
+											{/if}
 										{/if}
 									</span>
 								</div>
@@ -148,7 +154,7 @@
 										{/if}
 									</div>
 								</div>
-							
+
 							</div>
 
 							{block name='product_images_modal'}
