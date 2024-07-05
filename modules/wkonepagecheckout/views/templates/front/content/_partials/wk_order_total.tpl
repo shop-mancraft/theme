@@ -114,7 +114,7 @@
                     {/if}
                 {/if}
 
-                {if Configuration::get('PS_TAX') && !Group::getPriceDisplayMethod(Group::getCurrent()->id)}
+                {if Configuration::get('PS_TAX') && (!Group::getPriceDisplayMethod(Group::getCurrent()->id) || ((int)$customer.addresses[{$cart.{Configuration::get('PS_TAX_ADDRESS_TYPE')}}].id_country == (int)Configuration::get('checkvat_except_country')))}
 
                     <div class="wk-box border-0 border-t border-solid border-[#64635D] pt-3">
                         <div class="wk-product-info col-md-8 col-sm-6 col-xs-6 text-main-dark text-sm">
