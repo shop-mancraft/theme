@@ -18,7 +18,7 @@
     <div class="row">
         <div class="col-md-6 col-sm-12">
             <div class="row">
-            
+
             <div id="voucher-collapse" class="w-full mt-2">
                 <a class="mb-2 block border-b text-main-dark w-full hover:text-main transition text-sm collapsed font-body collapsible inline-block !border-0" data-toggle="collapse" href="#collapseVoucher" role="button" aria-expanded="false" aria-controls="collapseVoucher">
                     <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill="#a8d727" d="M0 5h12v1H0z"></path><path class="shrinkable transition duration-300" fill="#a8d727" d="M5 0v12H6V0z" class=""></path></svg>
@@ -30,7 +30,7 @@
                         <input placeholder="{l s='Promo code' mod='wkonepagecheckout'}" type="text" name="wk-voucher"
                             id="wk-voucher" class="promo-input w-full bg-transparent border-0 py-3 outline-none font-body focus:ring-0 text-[12px] tablet:text-sm">
                         <button id="addVoucher" class="group cursor-pointer overflow-hidden transition border-0 rounded-full text-white px-4 uppercase whitespace-nowrap font-body">
-                            <span class="material-icons group-hover:!text-main transition">add</span>                        
+                            <span class="material-icons group-hover:!text-main transition">add</span>
                         </button>
                     </div>
                     <div class=" wkhide col-md-8 col-xs-12 wkpromo-code alert alert-danger" role="alert">
@@ -114,7 +114,7 @@
                     {/if}
                 {/if}
 
-                {if Configuration::get('PS_TAX')}
+                {if Configuration::get('PS_TAX') && !Group::getPriceDisplayMethod(Group::getCurrent()->id)}
 
                     <div class="wk-box border-0 border-t border-solid border-[#64635D] pt-3">
                         <div class="wk-product-info col-md-8 col-sm-6 col-xs-6 text-main-dark text-sm">
@@ -144,7 +144,7 @@
                     </div>
                 {/if}
 
-                {if Configuration::get('PS_TAX_DISPLAY') && isset($cart.subtotals.tax)}
+                {if Configuration::get('PS_TAX_DISPLAY') || Group::getPriceDisplayMethod(Group::getCurrent()->id) && isset($cart.subtotals.tax)}
                     <div class="wk-box">
                         <div class="wk-product-info col-md-8 col-sm-6 col-xs-6 text-main-dark text-sm">
                             <span>{l s='Total tax' mod='wkonepagecheckout'}</span>
