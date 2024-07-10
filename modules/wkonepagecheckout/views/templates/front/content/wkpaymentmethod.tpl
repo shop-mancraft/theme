@@ -42,7 +42,7 @@
 						<div class="row wk-payment-select">
 						{assign var=counter value=1}
 							{foreach from=$module_options item="option"}
-							    <div class="!mb-5 {if !('express_checkout_schortcut' == $option.module_name && $hide_other}hide{/if}">
+								<div class="!mb-5 {if !($default_payment == $option.module_name || $is_free) && $hide_other}hide{/if}">
 									<div id="{$option.id}-container" class="flex items-center border-2 border-solid border-[#64635D] p-2 rounded-md">
 										<div class="wk-payment payment-option wkpadding">
 											{* This is the way an option should be selected when Javascript is enabled *}
@@ -79,8 +79,7 @@
 																	{else}
 																       {if $option.call_to_action_text == "Pay by Stripe"}
 																        <img class="!w-auto !max-h-[55px]" src="/themes/feeby/assets/img/Stripe.png" width="50">
-																	   {else if $option.call_to_action_text == "Pay by Stripe"}
-																		{else}
+																       {else}
 																		<img class="!w-auto !max-h-[55px]" class="wk-custom-payment-icon" width="50"
 																			src="{$wk_opc_modules_dir}img/wk-icon-money.png">
 																      {/if}
