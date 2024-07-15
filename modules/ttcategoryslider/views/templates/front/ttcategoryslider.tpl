@@ -82,10 +82,10 @@
 			</div>
 		</div>
 		<div class=" mt-5 tablet:mt-10 flex justify-center flex-wrap" style="gap: 20px;">
-			<a href="/{$language.iso_code}/cms/b2b-mancraft" class="group flex items-center text-white text-lg p-4 py-3 border border-white rounded-full hover:text-white hover:bg-main hover:border-main ">
+			<a href="/{$language.iso_code}/cms/b2b-mancraft" class="font-semibold group flex items-center text-white text-lg p-4 py-3 border border-white rounded-full hover:text-white hover:bg-main hover:border-main ">
 				{l s='Go to B2B zone' mod='ttcategoryslider'}
 			</a>
-			<a href="/{$language.iso_code}/cms/mancraft-brand-ambassador-program" class="group flex items-center text-white text-lg p-4 py-3 border border-white rounded-full hover:text-white hover:bg-main hover:border-main tablet:hidden">
+			<a href="/{$language.iso_code}/cms/mancraft-brand-ambassador-program" class="font-semibold group flex items-center text-white text-lg p-4 py-3 border border-white rounded-full hover:text-white hover:bg-main hover:border-main tablet:hidden">
 				{l s='Ambassador program' mod='ttcategoryslider'}
 			</a>
 		</div>
