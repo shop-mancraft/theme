@@ -27,7 +27,7 @@
 <div class="container_tt_megamenu col-sm-3">
 <div id="tt-menu-horizontal" class="tt-menu-horizontal clearfix">
 {$id_lang = Context::getContext()->language->id}
-	<div class="title-menu-mobile hover:text-main text-white transition duration-200 "><span class="text-inherit">
+	<div class="title-menu-mobile hover:text-main text-white transition duration-200 "><span class="text-inherit font-semibold">
 		{l s='Shop Categories' mod='ttmegamenu'}</span>
 		<svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" class="float-right">
 			<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" fill="#A8D727"/>
