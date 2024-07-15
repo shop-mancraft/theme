@@ -25,7 +25,7 @@
 <div class="block_newsletter text-left tablet-narrow:text-left py-5 w-full float-left px-4 my-4">
   <div class="align-middle flex flex-col flex-wrap justify-between tablet-narrow:flex-row w-full">
     <div class="flex flex-1 flex-col items-center tablet-wide:items-start mb-4 mx-auto tablet-narrow:mb-0 tablet-narrow:ml-0 tablet-narrow:w-1/2">
-      <h1 class="flex flex-1 flex-col font-medium items-center leading-tight tablet-narrow:flex-row tablet-narrow:text-2xl tablet-narrow:text-left text-2xl text-center text-white tracking-pixel">
+      <h1 class="flex flex-1 flex-col font-semibold items-center leading-tight tablet-narrow:flex-row tablet-narrow:text-2xl tablet-narrow:text-left text-2xl text-center text-white tracking-pixel">
         <i class="bg-white flex h-12 items-center justify-center m-auto material-icons material-icons-outlined mb-2 rounded-full tablet-narrow:mb-0 tablet-narrow:ml-0 tablet-narrow:mr-3 text-3xl text-primary w-12">drafts</i>
         {l s='Sign up for Newsletter' d='Shop.Theme.Global'}
       </h1>
