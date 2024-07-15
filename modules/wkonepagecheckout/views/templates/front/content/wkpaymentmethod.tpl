@@ -42,7 +42,7 @@
 						<div class="row wk-payment-select">
 						{assign var=counter value=1}
 							{foreach from=$module_options item="option"}
-							     <div class="!mb-5 {if (('express_checkout_schortcut' !== $option.module_name && 'paypal' !== $option.module_name) && $hide_other)}hide{/if}">
+							     <div class="!mb-5 {if (('express_checkout_schortcut' !== $option.module_name && 'paypal' !== $option.module_name && 'ps_wirepayment' !== $option.module_name) && $hide_other && $default_payment !== 'stripe_official')}hide{/if}">
 									<div id="{$option.id}-container" class="flex items-center border-2 border-solid border-[#64635D] p-2 rounded-md {if $option.module_name == 'stripe_official'}mb-2{/if}">
 										<div class="wk-payment payment-option wkpadding">
 											{* This is the way an option should be selected when Javascript is enabled *}
