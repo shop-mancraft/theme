@@ -2036,3 +2036,12 @@ body#checkout section.checkout-step .delivery-option:first-child {
   float: right;
 }
 }
+
+/* PayPal hide on PLN */
+.page-product.currency-pln div[data-paypal-source-page="product"]{
+  display: none;
+}
+
+.inpost-izi-btn-wrappe .inpostizi-button.inpostizi-button-bottom{
+  color: #fff !important;
+}
