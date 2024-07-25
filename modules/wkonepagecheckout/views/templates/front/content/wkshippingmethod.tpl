@@ -35,13 +35,13 @@
                         <label
                             for="delivery_option_{$carrier.id}"
                             class="cursor-pointer col-md-11 w-full wk-selected-shipping-{$carrier.id} {if $delivery_option == $carrier_id} wkSelectedBorder{/if}">
-                            <div class="row flex items-center min-h-[55px] text-base">
+                            <div class="row flex items-center min-h-[55px] text-base flex-wrap text-left">
                                 {if Configuration::get('WK_CHECKOUT_CARRIER_LOGO')}
                                     <div class="col-md-3 col-xs-12 col-sm-3">
                                         {if isset($carrier.logo) && $carrier.logo}
-                                            <img class="wk-custom-shipping-icon" width="50" src="{$carrier.logo}">
+                                            <img class="wk-custom-shipping-icon !w-auto !max-h-[55px] !m-0" width="50" src="{$carrier.logo}">
                                         {else}
-                                            <img class="wk-custom-shipping-icon" width="50"
+                                            <img class="wk-custom-shipping-icon !w-auto !max-h-[55px] !m-0" width="50"
                                                 src="{$wk_opc_modules_dir}img/carrier-default.jpg">
                                         {/if}
                                     </div>
