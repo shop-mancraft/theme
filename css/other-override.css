@@ -546,6 +546,38 @@ div.inpost-shipping-container .btn {
   }
 }
 
-.login-form .pxd-cloudflare-turnstile iframe{
-  @apply mx-auto mt-5
+.collapsible:not(.collapsed) .shrinkable{
+  @apply scale-y-0
+}
+
+.paypal-marks{
+  @apply !hidden
+}
+
+.form-checkbox:checked{
+  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='1 1 14 14' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.207 4.793a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L6.5 9.086l4.293-4.293a1 1 0 0 1 1.414 0z'/%3E%3C/svg%3E")
+}
+
+.inpost-shipping-customer-change-form input{
+  @apply border-[#64635D] border-solid border rounded-[5px] !bg-black h-[50px] tablet:h-10
+}
+
+.inpost-shipping-button{
+  @apply rounded-[5px]
+}
+
+.js-inpost-shipping-customer-form-save-button{
+  @apply ml-auto block !rounded-[5px] w-fit
+}
+
+#paypal-buttons{
+  @apply mx-auto
+}
+
+.condition-label a{
+  @apply !text-main
+}
+
+.js-inpost-shipping-customer-form-save-button:hover{
+  @apply !bg-[#87ac20]
 }

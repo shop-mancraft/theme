@@ -62,7 +62,7 @@
     
       <!-- FB sign up button -->
     
-    {if !$logged}
+    {if !$logged && isset($hi_sc_fb_on) && $hi_sc_fb_on}
     <li>
       <a onclick="fb_login();" class="profile-btn onclick-btn" title="{l s='Sign in with Facebook' mod='hifacebookconnect'}">
        {l s='Sign in with' d='Shop.Theme.Actions'} 

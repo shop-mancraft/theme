@@ -15,33 +15,29 @@
 *  @license   LICENSE.txt
 *}
 <div id="wk-order-summary-ajax" class="clearfix">
-	<article class="mb-5 p-5 bg-white rounded-[5px] clearfix">
+	<article class="mb-5 p-5 bg-gray-normal rounded-[5px] clearfix">
 		<h4 class="w-max mx-auto font-normal mb-5 tablet:text-2xl text-main-dark text-xl font-main">{l s='Order Summary' mod='wkonepagecheckout'}</h4>
 		<div class="text-sm text-main-dark">
 			<ul class="wk-cart-items clearfix">
 				{if isset($cart.products)}
 					{foreach $cart.products as $product}
-						<li class="clearfix flex py-3 border-0 border-b first:border-t border-solid border-gray-2000 ">
+						<li class="clearfix flex py-3 border-0 border-b first:border-t border-solid border-[#64635D] ">
 
 							<div class="product-line-grid-left shrink-0 basis-1/5 tablet:basis-[15%] tablet-wide:basis-[12%]">
 								<div class="pr-2.5 tablet:pr-5 wk-product-img wk-left product-cover w-full">
 									{if isset($product.cover) && $product.cover}
-										<img class="js-qv-product-cover w-full" {if Configuration::get('WK_CHECKOUT_PRODUCT_IMAGE') == '1'}
+										<img class="js-qv-product-cover w-full rounded-[5px] overflow-hidden aspect-square object-cover" {if Configuration::get('WK_CHECKOUT_PRODUCT_IMAGE') == '1'}
 											width="50" heigth="50" {else if Configuration::get('WK_CHECKOUT_PRODUCT_IMAGE') == '2'}
 											width="80" heigth="80" {else if Configuration::get('WK_CHECKOUT_PRODUCT_IMAGE') == '3'}
 											width="100" heigth="100" {else} width="70" heigth="70"
 											{/if}
 											src="{$product.cover.medium.url}">
-										<div class="layer hidden-sm-down" data-toggle="modal"
-											data-target="#wk-product-modal-{$product.id_product}">
-											<i class="material-icons zoom-in">&#xE8FF;</i>
-										</div>
 									{else}
 										<img {if Configuration::get('WK_CHECKOUT_PRODUCT_IMAGE') == '1'} width="50" heigth="50"
 											{else if Configuration::get('WK_CHECKOUT_PRODUCT_IMAGE') == '2'} width="80" heigth="80"
 											{else if Configuration::get('WK_CHECKOUT_PRODUCT_IMAGE') == '3'} width="100"
 											heigth="100" {else} width="70" heigth="70"
-											{/if} class="product-image w-full"
+											{/if} class="product-image w-full rounded-[5px] overflow-hidden aspect-square object-cover"
 											src="{$wk_opc_modules_dir}img/en.jpg" itemprop="image">
 									{/if}
 								</div>
@@ -84,14 +80,14 @@
 										<input data-id-product-attribute="{$product.id_product_attribute}"
 											data-id-product="{$product.id_product}"
 											value="{if isset($product.cart_quantity)}{$product.cart_quantity}{/if}"
-											class="-mr-5 border border-gray-2000 border-solid float-left focus:ring-0 font-normal h-[50px] pl-1 pr-5 py-3 rounded-md text-center text-lg w-[75px] form-control wk-qty" type="text" name="wk-cart-qty" min="1"
+											class="-mr-5 !border !border-[#64635D] !border-solid !bg-black float-left focus:border- focus:ring-0 font-normal h-[44px] pl-1 pr-5 py-3 rounded-md text-center text-lg w-[75px] !text-white form-control wk-qty" type="text" name="wk-cart-qty" min="1"
 											data-id-customization="{if isset($product.id_customization)}{$product.id_customization}{else}0{/if}" />
-										<span class="flex flex-col relative z-10">
-											<button type="button" class="bg-gray-2000 block bootstrap-touchspin-up border-0 cursor-pointer h-[25px] hover:bg-gray-300 relative rounded-tr-md transition w-5 wk-qty-up">
-												<i class="material-icons touchspin-up  absolute w-full top-0 text-xl left-0"></i>
+										<span class="flex flex-col relative z-10 input-group-btn-vertical">
+											<button type="button" class="!bg-transparent block bootstrap-touchspin-up border-0 cursor-pointer h-[22px] relative rounded-tr-md transition w-5 wk-qty-up">
+												<i class="material-icons touchspin-up  absolute w-full !-top-px !text-xl !left-0 !text-[#64635D] hover:!text-white transition"></i>
 											</button>
-											<button type="button" class="bg-gray-2000 block bootstrap-touchspin-down border-0 cursor-pointer h-[25px] hover:bg-gray-300 relative rounded-br-md transition w-5 wk-qty-down">
-												<i class="material-icons touchspin-down  absolute w-full bottom-2 text-xl left-0"></i>
+											<button type="button" class="!bg-transparent block bootstrap-touchspin-down border-0 cursor-pointer h-[22px] relative rounded-br-md transition w-5 wk-qty-down">
+												<i class="material-icons touchspin-down  absolute w-full !-top-px !text-xl !left-0 !text-[#64635D] hover:!text-white transition"></i>
 											</button>
 										</span>
 									</div>
@@ -119,7 +115,7 @@
 											data-quantity="{$product.cart_quantity}"
 											data-id-customization="{if isset($product.id_customization)}{$product.id_customization}{else}0{/if}"
 											class="remove-from-cart float-right">
-											<i class="material-icons font-light text-2xl relative flex justify-center items-center text-gray-3000 tablet:text-main-dark hover:text-main transition"></i>
+											<i class="material-icons font-light text-2xl relative flex justify-center items-center text-[#64635D] hover:!text-main transition"></i>
 										</a>
 										{hook h='displayWkCartExtraProductActions' product=$product}
 										{if Module::isEnabled('wkstripepayment')}

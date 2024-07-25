@@ -58,7 +58,7 @@
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(21, 21, 21, 0.5);
     z-index: 100000;
     border-color: #fff;
 }
@@ -72,10 +72,6 @@
 
 .wk-login-container .wk-log-btn {
     text-align: right;
-}
-
-.wk-log-btn a:hover {
-    color: white !important;
 }
 
 #wk-voucher {
@@ -588,15 +584,7 @@ a#fbLink:hover {
 }
 
 .border-success {
-    border-color: #468847 !important;
-}
-
-.border-success:focus {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 6px #7aba7b
-}
-
-.border-error:focus {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 6px #d59392
+    border-color: #87ac20 !important;
 }
 
 .wk-separator {

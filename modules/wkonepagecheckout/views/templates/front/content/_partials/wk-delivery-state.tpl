@@ -16,7 +16,7 @@
 *}
 <div class="clearfix form-group">
     <label class="label-control">{l s='State' mod='wkonepagecheckout'}</label>
-    <select name="wk_delivery_address_state" class="form-control wk_address_state bg-white border border-gray-2000 focus:border-gray-3000 focus:ring-0 font-body font-medium form-control-select form-select js-country pl-4 rounded-full w-full" data-attr="delivery" >
+    <select name="wk_delivery_address_state" class="form-control wk_address_state bg-white border border-[#64635D] focus:border-[#64635D] focus:ring-0 font-body font-medium form-control-select form-select js-country pl-4 rounded-full w-full" data-attr="delivery" >
         {foreach $states as $state}
             <option
                 {if isset($delivery_address)}

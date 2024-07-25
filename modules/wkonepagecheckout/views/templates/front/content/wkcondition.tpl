@@ -69,20 +69,20 @@
         <form id="conditions-to-approve" method="GET">
             <ul>
             {foreach from=$conditions_to_approve item="condition" key="condition_name"}
-                <li>
-                    <div class="float-xs-left">
-                        <span class="custom-checkbox">
+                <li class="flex mb-1">
+                    <div class="float-xs-left shrink-0">
+                        <span>
                             <input
                                 id="conditions_to_approve[{$condition_name}]"
                                 name="conditions_to_approve[{$condition_name}]"
                                 required
                                 type="checkbox"
                                 value="1"
-                                class="ps-shown-by-js wk-condition-check form-checkbox  cursor-pointer bg-white border-2 border-gray-3000 border-solid checked:bg-main-dark checked:focus:bg-main-dark checked:hover:bg-main-dark focus:ring-0 focus:ring-transparent form-checkbox opacity-100 outline-none rounded transition">
+                                class="ps-shown-by-js wk-condition-check form-checkbox w-4 h-4 rounded-[5px] appearance-none cursor-pointer border-2 border-[#64635D] border-solid checked:border-main checked:bg-main checked:focus:bg-main checked:hover:bg-main  focus:ring-0 focus:ring-transparent form-checkbox w-4 h-4 rounded-[5px] appearance-none  opacity-100 outline-none rounded transition">
                         </span>
                     </div>
                     <div>
-                        <label class="cursor-pointer block ml-6 js-terms text-xs text-gray-dark mb-3" for="conditions_to_approve[{$condition_name}]">{$condition nofilter}</label>
+                        <label class="cursor-pointer block pl-3 !m-0 js-terms text-xs text-gray-dark text-left mb-3 condition-label" for="conditions_to_approve[{$condition_name}]">{$condition nofilter}</label>
                     </div>
                 </li>
             {/foreach}
@@ -91,7 +91,7 @@
     {/if}
     <div id="payment-confirmation">
         <div class="ps-shown-by-js">
-            <button type="submit" class="max-w-[290px] bg-main-dark border-0 cursor-pointer font-body font-normal h-full hover:bg-main-hover overflow-hidden phone-wide:text-base px-4 py-3 relative rounded-full tablet:text-xl text-base text-center text-white transition uppercase duration-200">
+            <button type="submit" class="max-w-[290px] bg-main border-0 cursor-pointer font-body font-normal h-full disabled:!opacity-50 disabled:cursor-not-allowed hover:disabled:bg-main hover:bg-[#87ac20] block mx-auto overflow-hidden phone-wide:text-base px-6 py-3 relative rounded-[5px] tablet:text-xl text-base text-center text-white transition uppercase duration-200">
                 {l s='Place Order' mod='wkonepagecheckout'}
             </button>
         </div>
