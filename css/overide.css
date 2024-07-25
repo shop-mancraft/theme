@@ -2044,3 +2044,7 @@ body#checkout section.checkout-step .delivery-option:first-child {
 .inpost-izi-btn-wrappe .inpostizi-button.inpostizi-button-bottom{
   color: #fff !important;
 }
+
+.inpost-izi-btn-wrapper{
+  margin-left: 67px;
+}
