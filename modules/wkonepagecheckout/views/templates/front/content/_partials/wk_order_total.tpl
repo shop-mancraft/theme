@@ -19,7 +19,7 @@
         <div class="col-md-6 col-sm-12">
             <div class="row">
 
-            <div id="voucher-collapse" class="w-full">
+            <div id="voucher-collapse" class="w-full mt-2">
                 <a class="mb-2 block border-b text-main-dark w-full hover:text-main transition text-sm collapsed font-body collapsible inline-block !border-0" data-toggle="collapse" href="#collapseVoucher" role="button" aria-expanded="false" aria-controls="collapseVoucher">
                     <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill="#a8d727" d="M0 5h12v1H0z"></path><path class="shrinkable transition duration-300" fill="#a8d727" d="M5 0v12H6V0z" class=""></path></svg>
                     {l s='Add voucher' d='Shop.Theme.Checkout'}

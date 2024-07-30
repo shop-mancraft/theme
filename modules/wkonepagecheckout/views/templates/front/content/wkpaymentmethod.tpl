@@ -70,21 +70,21 @@
 													<label
 														for="{$option.id}"
 														class="cursor-pointer col-md-11 w-full wk-selected-payment-{$option.id} {if $default_payment && ($default_payment == $option.module_name)}wkSelectedBorder{/if}">
-														<div class="row flex items-center min-h-[55px] text-base">
+														<div class="row flex items-center min-h-[55px] text-base flex-wrap text-left">
 															{if Configuration::get('WK_CHECKOUT_PAYMENT_LOGO')}
 																<div class="col-md-3 col-xs-12 col-sm-3">
 																	{if $option.logo}
 
-																		<img class="!w-auto !max-h-[55px]" src="{$option.logo}" width="50">
+																		<img class="!w-auto !max-h-[55px] !m-0" src="{$option.logo}" width="50">
 																	{else}
 																       {if $option.module_name == 'stripe_official'}
-																        <img class="!w-auto !max-h-[55px]" src="/themes/child_PRS171_01/modules/wkonepagecheckout/views/img/stripe.png" width="50">
+																        <img class="!w-auto !max-h-[55px] !m-0" src="/themes/child_PRS171_01/modules/wkonepagecheckout/views/img/stripe.png" width="50">
 																       {else if $option.module_name == 'paypal'}
-         																<img class="!w-auto !max-h-[55px]" src="/themes/child_PRS171_01/modules/wkonepagecheckout/views/img/paypal_logo.png" width="50">
+         																<img class="!w-auto !max-h-[55px] !m-0" src="/themes/child_PRS171_01/modules/wkonepagecheckout/views/img/paypal_logo.png" width="50">
 																	  {else if $option.module_name == 'express_checkout_schortcut'}
-																			<img class="!w-auto !max-h-[55px]" src="/themes/child_PRS171_01/modules/wkonepagecheckout/views/img/paypal_express.jpg" width="50">
+																			<img class="!w-auto !max-h-[55px] !m-0" src="/themes/child_PRS171_01/modules/wkonepagecheckout/views/img/paypal_express.jpg" width="50">
 																       {else}
-																		<img class="!w-auto !max-h-[55px]" class="wk-custom-payment-icon" width="50"
+																		<img class="!w-auto !max-h-[55px] !m-0" class="wk-custom-payment-icon" width="50"
 																			src="{$wk_opc_modules_dir}img/wk-icon-money.png">
 																      {/if}
 																	{/if}
@@ -92,7 +92,7 @@
 															{/if}
 															<div class="col-md-9 col-xs-12 col-sm-9">
 															{if !Configuration::get('WK_CHECKOUT_PAYMENT_LOGO') && $option.call_to_action_text == ""}
-																<img class="!w-auto !max-h-[55px]" src="{$option.logo}" width="50">
+																<img class="!w-auto !max-h-[55px] !m-0" src="{$option.logo}" width="50">
 															{else}
 																<p class="font-normal">{$option.call_to_action_text}</p>
 															{/if}
