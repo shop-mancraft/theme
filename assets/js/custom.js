@@ -1119,12 +1119,10 @@ function initProductSwipers() {
             if (modalCountEl) {
               modalCountEl.innerText = this.activeIndex + 1 + "/" + modalCountEl.dataset.slidesCount;              
             }
-          },
-          realIndexChange: function (swiper) {
             setTimeout(()=>{
               swiper.zoom.in()
             },100)
-          }
+          },
         },
       });
 
