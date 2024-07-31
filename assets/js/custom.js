@@ -1120,9 +1120,12 @@ function initProductSwipers() {
               modalCountEl.innerText = this.activeIndex + 1 + "/" + modalCountEl.dataset.slidesCount;              
             }
           },
-          slideNextTransitionEnd: function (){
+          slideChangeTransitionEnd: function (){
               this.zoom.in()
-          }
+          },
+          slideResetTransitionStart: function (){
+            this.zoom.in()
+        }
         },
       });
 
