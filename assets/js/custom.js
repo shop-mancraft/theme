@@ -1120,7 +1120,7 @@ function initProductSwipers() {
               modalCountEl.innerText = this.activeIndex + 1 + "/" + modalCountEl.dataset.slidesCount;              
             }
             setTimeout(()=>{
-              swiper.zoom.in()
+              this.zoom.in()
             },100)
           },
         },
