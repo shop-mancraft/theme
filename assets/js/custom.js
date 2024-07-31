@@ -1098,14 +1098,9 @@ function initProductSwipers() {
       const swiperProductModal = new Swiper(productModalSliderEl, {
         slidesPerView: 1,
         spaceBetween: 50,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        },
         zoom: {
           minRatio: 1.25,
-          maxRatio: 2
+          maxRatio: 3
         },
         thumbs: {
           swiper: swiperModalThumbnails,
