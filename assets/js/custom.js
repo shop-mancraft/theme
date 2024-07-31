@@ -1100,7 +1100,7 @@ function initProductSwipers() {
         spaceBetween: 50,
         zoom: {
           minRatio: 1.25,
-          maxRatio: 2
+          maxRatio: 3
         },
         thumbs: {
           swiper: swiperModalThumbnails,
@@ -1120,7 +1120,7 @@ function initProductSwipers() {
               modalCountEl.innerText = this.activeIndex + 1 + "/" + modalCountEl.dataset.slidesCount;              
             }
           },
-          activeIndexChange: function (swiper) {
+          realIndexChange: function (swiper) {
             swiper.zoom.in()
           }
         },
