@@ -1100,7 +1100,7 @@ function initProductSwipers() {
         spaceBetween: 50,
         zoom: {
           minRatio: 1.25,
-          maxRatio: 3
+          maxRatio: 2
         },
         thumbs: {
           swiper: swiperModalThumbnails,
