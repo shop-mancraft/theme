@@ -1125,7 +1125,7 @@ function initProductSwipers() {
               modalCountEl.innerText = this.activeIndex + 1 + "/" + modalCountEl.dataset.slidesCount;              
             }
           },
-          slideChangeTransitionEnd: function (swiper) {
+          realIndexChange: function (swiper) {
             swiper.zoom.in()
           }
         },
