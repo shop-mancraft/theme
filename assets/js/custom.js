@@ -1121,11 +1121,15 @@ function initProductSwipers() {
             }
           },
           slideChangeTransitionEnd: function (){
+            if (window.innerWidth > 768) {
               this.zoom.in()
+            }
           },
           slideResetTransitionEnd: function (){
-            this.zoom.in()
-        }
+            if (window.innerWidth > 768) {
+              this.zoom.in()
+            }
+          }
         },
       });
 
@@ -1136,7 +1140,9 @@ function initProductSwipers() {
             document.body.classList.add("overflow-hidden");
             productModalEl.classList.add("active");
             swiperProductModal.slideTo(index, 0);
-            swiperProductModal.zoom.in();
+            if (window.innerWidth > 768) {
+              swiperProductModal.zoom.in();
+            }
           });
         });
         document.querySelector("[data-modal-close]").addEventListener("click", () => {
