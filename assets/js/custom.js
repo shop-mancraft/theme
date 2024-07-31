@@ -1121,7 +1121,9 @@ function initProductSwipers() {
             }
           },
           realIndexChange: function (swiper) {
-            swiper.zoom.in()
+            setTimeout(()=>{
+              swiper.zoom.in()
+            },100)
           }
         },
       });
