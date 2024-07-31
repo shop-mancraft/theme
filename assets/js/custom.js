@@ -1120,13 +1120,14 @@ function initProductSwipers() {
         },
         allowTouchMove: true,
         on: {
-          slideChange: function (swiper) {
+          slideChange: function () {
             if (modalCountEl) {
-              modalCountEl.innerText = this.activeIndex + 1 + "/" + modalCountEl.dataset.slidesCount;
-              swiper.zoom.in()
-              
+              modalCountEl.innerText = this.activeIndex + 1 + "/" + modalCountEl.dataset.slidesCount;              
             }
           },
+          slideChangeTransitionEnd: function (swiper) {
+            swiper.zoom.in()
+          }
         },
       });
 
@@ -1137,6 +1138,7 @@ function initProductSwipers() {
             document.body.classList.add("overflow-hidden");
             productModalEl.classList.add("active");
             swiperProductModal.slideTo(index, 0);
+            swiperProductModal.zoom.in();
           });
         });
         document.querySelector("[data-modal-close]").addEventListener("click", () => {
