@@ -26,12 +26,12 @@
  {assign var=imagesCount value=$product.images|count}
 
  <div data-product-modal class="js-product-images-modal">
-   <div class="flex justify-between items-start grow-0">
+   <div class="flex justify-between items-start grow-0 z-[60]">
      <span class="p-5 pb-0 text-white text-base tablet:text-lg" data-slides-count="{$imagesCount}">
        1/{$imagesCount}
      </span>
      <button class="group" data-modal-close>
-       <svg class="w-10 fill-white group-hover:fill-gray-light transition duration-200 bg-gray-normal"
+       <svg class="w-10 fill-white group-hover:fill-gray-light transition duration-200 bg-gray-normal/20"
          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
          <path
            d="M12 10.6L6.6 5.2 5.2 6.6l5.4 5.4-5.4 5.4 1.4 1.4 5.4-5.4 5.4 5.4 1.4-1.4-5.4-5.4 5.4-5.4-1.4-1.4-5.4 5.4z">
