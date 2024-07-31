@@ -1119,10 +1119,10 @@ function initProductSwipers() {
             if (modalCountEl) {
               modalCountEl.innerText = this.activeIndex + 1 + "/" + modalCountEl.dataset.slidesCount;              
             }
-            setTimeout(()=>{
-              this.zoom.in()
-            },100)
           },
+          slideNextTransitionEnd: function (){
+              this.zoom.in()
+          }
         },
       });
 
