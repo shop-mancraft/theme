@@ -1123,7 +1123,7 @@ function initProductSwipers() {
           slideChangeTransitionEnd: function (){
               this.zoom.in()
           },
-          slideResetTransitionStart: function (){
+          slideResetTransitionEnd: function (){
             this.zoom.in()
         }
         },
