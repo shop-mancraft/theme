@@ -1104,8 +1104,8 @@ function initProductSwipers() {
           pauseOnMouseEnter: true,
         },
         zoom: {
-          minRatio: 1.75,
-          maxRatio: 3.5
+          minRatio: 1.25,
+          maxRatio: 2
         },
         thumbs: {
           swiper: swiperModalThumbnails,
@@ -1120,9 +1120,11 @@ function initProductSwipers() {
         },
         allowTouchMove: true,
         on: {
-          slideChange: function () {
+          slideChange: function (swiper) {
             if (modalCountEl) {
               modalCountEl.innerText = this.activeIndex + 1 + "/" + modalCountEl.dataset.slidesCount;
+              swiper.zoom.in()
+              
             }
           },
         },
