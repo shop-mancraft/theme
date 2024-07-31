@@ -1103,7 +1103,10 @@ function initProductSwipers() {
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         },
-        zoom: true,
+        zoom: {
+          minRatio: 1.75,
+          maxRatio: 3.5
+        },
         thumbs: {
           swiper: swiperModalThumbnails,
         },
