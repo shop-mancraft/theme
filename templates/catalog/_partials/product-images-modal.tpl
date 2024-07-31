@@ -72,7 +72,7 @@
      </svg>
      {l s='Zoom-in image by pinch gesture' d='Shop.Theme.Catalog'}
    </div>
-   <div class="swiper grow-0 h-20 tablet:h-[100px] p-2 overflow-hidden" data-modal-thumbnails-swiper>
+   <div class="swiper grow-0 h-20 tablet:h-[100px] p-2 overflow-hidden !z-50" data-modal-thumbnails-swiper>
      <div class="swiper-wrapper">
        {foreach from=$product.images item=image}
          <div
