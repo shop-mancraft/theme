@@ -64,7 +64,7 @@
 										{$tagline}
 									</p>
 								{/if}
-								<h3 class=" text-white text-lg tablet:text-[22px] text-left group-hover:underline">{$ttcategorysliderinfo.name}</h3>
+								<h3 class="font-semibold text-white text-lg tablet:text-[22px] text-left group-hover:underline">{$ttcategorysliderinfo.name}</h3>
 							</div>
 							<span class="relative z-20 rounded-full border border-solid border-white bg-transparent group-hover:bg-main group-hover:border-main transition duration-300">
 								<svg class="fill-white group-hover:fill-black w-8 tablet:w-[50px]" xmlns="http://www.w3.org/2000/svg" viewBox="-12 -11 47 47">
@@ -82,10 +82,10 @@
 			</div>
 		</div>
 		<div class=" mt-5 tablet:mt-10 flex justify-center flex-wrap" style="gap: 20px;">
-			<a href="/{$language.iso_code}/cms/b2b-mancraft" class="group flex items-center text-white text-lg p-4 py-3 border border-white rounded-full hover:text-white hover:bg-main hover:border-main ">
+			<a href="/{$language.iso_code}/cms/b2b-mancraft" class="font-semibold group flex items-center text-white text-lg p-4 py-3 border border-white rounded-full hover:text-white hover:bg-main hover:border-main ">
 				{l s='Go to B2B zone' mod='ttcategoryslider'}
 			</a>
-			<a href="/{$language.iso_code}/cms/mancraft-brand-ambassador-program" class="group flex items-center text-white text-lg p-4 py-3 border border-white rounded-full hover:text-white hover:bg-main hover:border-main tablet:hidden">
+			<a href="/{$language.iso_code}/cms/mancraft-brand-ambassador-program" class="font-semibold group flex items-center text-white text-lg p-4 py-3 border border-white rounded-full hover:text-white hover:bg-main hover:border-main tablet:hidden">
 				{l s='Ambassador program' mod='ttcategoryslider'}
 			</a>
 		</div>

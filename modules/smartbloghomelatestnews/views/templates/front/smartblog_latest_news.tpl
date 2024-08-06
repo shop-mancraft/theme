@@ -86,7 +86,7 @@
                         {$post.short_description|escape:'htmlall':'UTF-8'|truncate:60:'...'}
                       </p>
                       <div class="read_more">
-                        <a title="Click to view Read More" href="{smartblog::GetSmartBlogLink('smartblog_post',$options)}" class="icon readmore">{l s='read more' d='Shop.Theme.Global'}</a>
+                        <a title="Click to view Read More" href="{smartblog::GetSmartBlogLink('smartblog_post',$options)}" class="icon readmore font-semibold">{l s='read more' d='Shop.Theme.Global'}</a>
                       </div>
                     </div>
                   </div>

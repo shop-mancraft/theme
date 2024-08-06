@@ -31,7 +31,7 @@
 					<span class="cart-products-count">{$cart.products_count}</span>
         </a>
     </div>
-	<div class="cart_block block exclusive" style="max-height: 300px;overflow: auto;">
+	<div class="cart_block block exclusive z-50" style="max-height: 300px;overflow: auto;">
 	<div class="block_content">
 	<div class="cart_block_list">
 			{if $cart.products}

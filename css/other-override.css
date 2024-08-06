@@ -1,6 +1,7 @@
 .footer-container li a {
   max-width: 300px;
   display: block;
+  @apply !font-semibold
 }
 
 .section-3 .row:nth-child(2n + 3) {
@@ -580,4 +581,27 @@ div.inpost-shipping-container .btn {
 
 .js-inpost-shipping-customer-form-save-button:hover{
   @apply !bg-[#87ac20]
+}
+
+.login-form .pxd-cloudflare-turnstile iframe{
+  @apply mx-auto mt-5
+}
+
+.page-index .tthometab-title,
+.page-index .tt-title{
+  @apply !font-semibold tablet:!text-[26px]
+}
+
+#tttop-link-block ul li a{
+  @apply !font-semibold
+}
+
+.btn,
+.btn-primary,
+.ins_button_grab{
+  @apply !font-semibold
+}
+
+.page-content.page-cms *{
+  @apply !font-extralight
 }

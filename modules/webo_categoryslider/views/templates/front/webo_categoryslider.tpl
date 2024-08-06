@@ -65,7 +65,7 @@
 										{$tagline}
 									</p>
 								{/if}
-								<h3 class=" text-white text-lg tablet:text-[22px] text-left group-hover:underline">{$webo_categorysliderinfo.name}</h3>
+								<h3 class="font-semibold text-white text-lg tablet:text-[22px] text-left group-hover:underline">{$webo_categorysliderinfo.name}</h3>
 							</div>
 							<span class="relative z-20 rounded-full border border-solid border-white bg-transparent group-hover:bg-main group-hover:border-main transition duration-300">
 								<svg class="fill-white group-hover:fill-black w-8 tablet:w-[50px]" xmlns="http://www.w3.org/2000/svg" viewBox="-12 -11 47 47">
