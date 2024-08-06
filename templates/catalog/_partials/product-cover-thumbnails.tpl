@@ -50,8 +50,8 @@
       <div class="swiper-wrapper">
         {foreach from=$product.images item=image}
           <div class="swiper-slide tablet:rounded-[5px] overflow-hidden cursor-pointer">
-            <img class="w-full" data-image-large-src="{$image.bySize.large_default.url}"
-              src="{$image.bySize.home_default.url}" alt="{$image.legend}" title="{$image.legend}">
+            <img class="w-full" data-image-large-src="{$image.bySize.large_default.url|replace:'-large_default':''}"
+              src="{$image.bySize.large_default.url}" alt="{$image.legend}" title="{$image.legend}">
           </div>
         {/foreach}
       </div>

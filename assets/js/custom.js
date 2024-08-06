@@ -1098,12 +1098,10 @@ function initProductSwipers() {
       const swiperProductModal = new Swiper(productModalSliderEl, {
         slidesPerView: 1,
         spaceBetween: 50,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
+        zoom: {
+          minRatio: 1.25,
+          maxRatio: 2
         },
-        zoom: true,
         thumbs: {
           swiper: swiperModalThumbnails,
         },
@@ -1119,9 +1117,19 @@ function initProductSwipers() {
         on: {
           slideChange: function () {
             if (modalCountEl) {
-              modalCountEl.innerText = this.activeIndex + 1 + "/" + modalCountEl.dataset.slidesCount;
+              modalCountEl.innerText = this.activeIndex + 1 + "/" + modalCountEl.dataset.slidesCount;              
             }
           },
+          slideChangeTransitionEnd: function (){
+            if (window.innerWidth > 768) {
+              this.zoom.in()
+            }
+          },
+          slideResetTransitionEnd: function (){
+            if (window.innerWidth > 768) {
+              this.zoom.in()
+            }
+          }
         },
       });
 
@@ -1132,6 +1140,9 @@ function initProductSwipers() {
             document.body.classList.add("overflow-hidden");
             productModalEl.classList.add("active");
             swiperProductModal.slideTo(index, 0);
+            if (window.innerWidth > 768) {
+              swiperProductModal.zoom.in();
+            }
           });
         });
         document.querySelector("[data-modal-close]").addEventListener("click", () => {

@@ -26,12 +26,12 @@
  {assign var=imagesCount value=$product.images|count}
 
  <div data-product-modal class="js-product-images-modal">
-   <div class="flex justify-between items-start grow-0">
+   <div class="flex justify-between items-start grow-0 z-[60]">
      <span class="p-5 pb-0 text-white text-base tablet:text-lg" data-slides-count="{$imagesCount}">
        1/{$imagesCount}
      </span>
      <button class="group" data-modal-close>
-       <svg class="w-10 fill-white group-hover:fill-gray-light transition duration-200 bg-gray-normal"
+       <svg class="w-10 fill-white group-hover:fill-gray-light transition duration-200 bg-gray-normal/20"
          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
          <path
            d="M12 10.6L6.6 5.2 5.2 6.6l5.4 5.4-5.4 5.4 1.4 1.4 5.4-5.4 5.4 5.4 1.4-1.4-5.4-5.4 5.4-5.4-1.4-1.4-5.4 5.4z">
@@ -45,7 +45,7 @@
        {foreach from=$product.images item=image}
          <div class="swiper-slide flex items-center justify-center pb-5 tablet:px-5 desktop:px-10">
            <div class="swiper-zoom-container w-full h-full">
-             <img class="object-contain max-h-full h-full" loading="lazy" src="{$image.bySize.large_default.url}"
+             <img class="object-contain max-h-full h-full" loading="lazy" src="{$image.bySize.large_default.url|replace:'-large_default':''}"
                alt="{$image.legend}" title="{$image.legend}" itemprop="image">
            </div>
          </div>
@@ -72,7 +72,7 @@
      </svg>
      {l s='Zoom-in image by pinch gesture' d='Shop.Theme.Catalog'}
    </div>
-   <div class="swiper grow-0 h-20 tablet:h-[100px] p-2 overflow-hidden" data-modal-thumbnails-swiper>
+   <div class="swiper grow-0 h-20 tablet:h-[100px] p-2 overflow-hidden !z-50" data-modal-thumbnails-swiper>
      <div class="swiper-wrapper">
        {foreach from=$product.images item=image}
          <div
