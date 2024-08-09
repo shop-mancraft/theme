@@ -25,18 +25,6 @@
 {if $product.show_price}
   <div class="product-prices">
     <div class="flex items-center mb-5">
-      {block name='product_reference'}
-        {if isset($product.reference_to_display) && $product.reference_to_display neq ''}
-          <div class="product-reference pr-2 mr-2 border-r border-[#64635D] shrink-0 ">
-            <label class=" !text-main">{l s='ean13:' d='Shop.Theme.Catalog'} </label>
-            <span itemprop="gtin13" class="text-white !text-sm">{$product.ean13}</span>
-          </div>
-        {/if}
-      {/block}
-      <div class="product-reference pr-2 mr-2 border-r border-[#64635D] shrink-0 ">
-      <label class="!text-[#64635D]">{l s='SKU:' d='Shop.Theme.Catalog'} </label>
-      <span itemprop="sku" class="!text-[#64635D]">{$product.reference_to_display}</span>
-    </div>
       {block name='product_availability'}
         <div id="product-availability" class=" flex items-center">
           {if $product.show_availability && $product.availability_message}
@@ -56,6 +44,21 @@
           {/if}
         </div>
       {/block}
+
+      <div class="product-reference pr-2 mr-2 border-r border-[#64635D] shrink-0 ">
+        <label class=" !text-main">{l s='ean13:' d='Shop.Theme.Catalog'} </label>
+        <span itemprop="ean" class="text-[#BDBDBD] !text-sm">{$product.ean13}</span>
+      </div>
+
+      {block name='product_reference'}
+        {if isset($product.reference_to_display) && $product.reference_to_display neq ''}
+          <div class="product-reference pr-2 mr-2 border-r border-[#64635D] shrink-0 ">
+            <label class="!text-[#64635D]">{l s='SKU:' d='Shop.Theme.Catalog'} </label>
+            <span itemprop="sku" class="!text-[#64635D]">{$product.reference_to_display}</span>
+          </div>
+        {/if}
+      {/block}
+
     </div>
 
     {block name='product_discount'}
