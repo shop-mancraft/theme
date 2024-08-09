@@ -28,15 +28,19 @@
       {block name='product_reference'}
         {if isset($product.reference_to_display) && $product.reference_to_display neq ''}
           <div class="product-reference pr-2 mr-2 border-r border-[#64635D] shrink-0 ">
-            <label class="!text-[#64635D]">{l s='SKU:' d='Shop.Theme.Catalog'} </label>
-            <span itemprop="sku" class="!text-[#64635D]">{$product.reference_to_display}</span>
+            <label class=" !text-main">{l s='ean13:' d='Shop.Theme.Catalog'} </label>
+            <span itemprop="gtin13" class="text-white !text-sm">{$product.ean13}</span>
           </div>
         {/if}
       {/block}
+      <div class="product-reference pr-2 mr-2 border-r border-[#64635D] shrink-0 ">
+      <label class="!text-[#64635D]">{l s='SKU:' d='Shop.Theme.Catalog'} </label>
+      <span itemprop="sku" class="!text-[#64635D]">{$product.reference_to_display}</span>
+    </div>
       {block name='product_availability'}
         <div id="product-availability" class=" flex items-center">
           {if $product.show_availability && $product.availability_message}
-            <span class="mr-1 w-3 h-3 rounded-full block shrink-0" style="background-color: 
+            <span class="mr-1 w-3 h-3 rounded-full block shrink-0" style="background-color:
               {if $product.availability == 'available'}
                 #7CFC00
               {elseif $product.availability == 'last_remaining_items'}
