@@ -67,10 +67,10 @@
             <div class="order-options">
                 {if $display_order_comment}
                     <div id="delivery">
-                        <p for="delivery_message">
+                        <p for="delivery_message" class="mb-3">
                             {l s='If you would like to add a comment about your order, please write it in the field below.' mod='wkonepagecheckout'}
                         </p>
-                        <textarea rows="2" cols="120" id="delivery_message" name="delivery_message" maxlength="1600">{$delivery_message}</textarea>
+                        <textarea rows="2" cols="120" id="delivery_message" name="delivery_message" class="max-h-[350px] min-h-[50px] !border-[#64635D] focus:!border-white border-solid border rounded-[5px] !bg-black" maxlength="1600">{$delivery_message}</textarea>
                     </div>
                 {/if}
             </div>
