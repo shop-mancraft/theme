@@ -59,6 +59,7 @@
                     {foreach from=$attributesCombinations item=attributeCombination}
                       {if $attributeCombination.id_attribute == $id_attribute}
                         {$attributeCombination.ean13}
+                        {break}{break}{break}
                       {/if}
                     {/foreach}
 

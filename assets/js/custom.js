@@ -1117,7 +1117,7 @@ function initProductSwipers() {
         on: {
           slideChange: function () {
             if (modalCountEl) {
-              modalCountEl.innerText = this.activeIndex + 1 + "/" + modalCountEl.dataset.slidesCount;              
+              modalCountEl.innerText = this.activeIndex + 1 + "/" + modalCountEl.dataset.slidesCount;
             }
           },
           slideChangeTransitionEnd: function (){
@@ -1180,3 +1180,45 @@ if($('#checkout').length === 1){
 }
 
 /* ----------- PayPal Express Fix ----------- */
+
+
+
+$(document).ready(function () {
+
+  if (typeof prestashop !== 'undefined') {
+    prestashop.on(
+      'updateProduct',
+      function (event) {
+        if (event && event.resp ) {
+          if(event.eventType == "updatedProductCombination"){
+
+          }
+//itemprop="ean"
+// here you do some modifications as you want. Like doing ajax calls, add classes to divs, hide elements...
+
+//you can examine the event for available values (event.resp.cart ie.)
+        }
+      }
+    );
+  }
+
+});
+
+$(document).ready(function () {
+
+  if (typeof prestashop !== 'undefined') {
+    prestashop.on(
+      'updatedProduct',
+      function (event) {
+        if (event && event.product_has_combinations) {
+          var doc = new DOMParser().parseFromString(event.product_details, "text/html");
+          var elements = doc.querySelectorAll("[data-key=\"ean13\"");
+          if( elements.length == 1 ){
+            $('[itemprop=\"ean\"]').html(elements[0].innerHTML);
+          }
+        }
+      }
+    );
+  }
+
+});
