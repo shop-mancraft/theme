@@ -47,7 +47,27 @@
 
       <div class="product-reference pr-2 mr-2 border-r border-[#64635D] shrink-0 ">
         <label class=" !text-main">{l s='ean13:' d='Shop.Theme.Catalog'} </label>
-        <span itemprop="ean" class="text-[#BDBDBD] !text-sm">{$product.ean13}</span>
+        <span itemprop="ean" class="text-[#BDBDBD] !text-sm">
+          {if !empty($product.ean13)}
+            {$product.ean13}
+          {else}
+            {foreach from=$groups key=id_attribute_group item=group}
+              {foreach from=$group.attributes key=id_attribute item=group_attribute}
+                {if !empty($group.attributes)}
+                  {if $group_attribute.selected}
+
+                    {foreach from=$attributesCombinations item=attributeCombination}
+                      {if $attributeCombination.id_attribute == $id_attribute}
+                        {$attributeCombination.ean13}
+                      {/if}
+                    {/foreach}
+
+                  {/if}
+                {/if}
+              {/foreach}
+            {/foreach}
+          {/if}
+        </span>
       </div>
 
       {block name='product_reference'}
