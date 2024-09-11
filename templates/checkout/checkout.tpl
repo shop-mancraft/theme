@@ -90,6 +90,11 @@
     <!-- Fix error -->
     <script>
     window.close_text = 'Close';
+    (function($) {
+     if($('input#delivery_option_433').attr('checked') == 'checked' && $('.js-inpost-shipping-machine-name').text().length < 1){
+      $('.js-inpost-shipping-choose-machine').click();
+     }
+    })(jQuery);
     </script>
 
 	<!-- Loyalty Program Checkbox -->
