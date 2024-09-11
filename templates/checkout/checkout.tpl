@@ -91,6 +91,12 @@
     <script>
     window.close_text = 'Close';
     (function($) {
+
+    $(document).ready(function() {
+      if($('input#delivery_option_433').attr('checked') == 'checked' && $('.js-inpost-shipping-machine-name').text().trim().length < 1){
+          $('.js-inpost-shipping-choose-machine').click();
+      }
+    });
       if (typeof prestashop !== 'undefined') {
   prestashop.on(
     'updateDeliveryForm',
