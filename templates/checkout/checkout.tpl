@@ -93,38 +93,9 @@
     (function($) {
 
     $(document).ready(function() {
-      if($('input#delivery_option_433').attr('checked') == 'checked' && $('.js-inpost-shipping-machine-name').text().trim().length < 1){
-          $('.js-inpost-shipping-choose-machine').click();
-      }
+      $('.carrier-extra-content').css('display', 'block');
     });
-      if (typeof prestashop !== 'undefined') {
-  prestashop.on(
-    'updateDeliveryForm',
-    function (event) {
-      if($('input#delivery_option_433').attr('checked') == 'checked' && $('.js-inpost-shipping-machine-name').text().trim().length < 1){
-       $('.js-inpost-shipping-choose-machine').click();
-      }
-    }
-  );
 
-  prestashop.on(
-    'changedCheckoutStep',
-    function (event) {
-      if($('input#delivery_option_433').attr('checked') == 'checked' && $('.js-inpost-shipping-machine-name').text().trim().length < 1){
-       $('.js-inpost-shipping-choose-machine').click();
-      }
-    }
-  );
-
-  prestashop.on(
-    'updatedAddressForm',
-    function (event) {
-      if($('input#delivery_option_433').attr('checked') == 'checked' && $('.js-inpost-shipping-machine-name').text().trim().length < 1){
-       $('.js-inpost-shipping-choose-machine').click();
-      }
-    }
-  );
-}
     })(jQuery);
     </script>
 
