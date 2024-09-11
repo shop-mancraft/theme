@@ -95,7 +95,9 @@
       $(document).ready(function() {
         $('.carrier-extra-content').css('display', 'block');
       });
-
+      $('label[for="delivery_option_433"]').on('click',function(){
+        $('.carrier-extra-content').css('display', 'block');
+      });
     })(jQuery);
     </script>
 
