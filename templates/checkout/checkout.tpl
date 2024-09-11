@@ -100,6 +100,24 @@
       }
     }
   );
+
+  prestashop.on(
+    'changedCheckoutStep',
+    function (event) {
+      if($('input#delivery_option_433').attr('checked') == 'checked' && $('.js-inpost-shipping-machine-name').text().trim().length < 1){
+       $('.js-inpost-shipping-choose-machine').click();
+      }
+    }
+  );
+
+  prestashop.on(
+    'updatedAddressForm',
+    function (event) {
+      if($('input#delivery_option_433').attr('checked') == 'checked' && $('.js-inpost-shipping-machine-name').text().trim().length < 1){
+       $('.js-inpost-shipping-choose-machine').click();
+      }
+    }
+  );
 }
     })(jQuery);
     </script>
