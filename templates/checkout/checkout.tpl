@@ -93,7 +93,9 @@
     (function($) {
 
     $(document).ready(function() {
-      $('.carrier-extra-content').css('display', 'block');
+      $(document).ready(function() {
+        $('.carrier-extra-content').css('display', 'block');
+      });
     });
 
     })(jQuery);
