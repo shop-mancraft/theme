@@ -87,6 +87,11 @@
       {hook h='displayBeforeBodyClosingTag'}
     {/block}
 
+    <!-- Fix error -->
+    <script>
+    window.close_text = 'Close';
+    </script>
+
 	<!-- Loyalty Program Checkbox -->
 	<script>
       (function($) {
