@@ -95,7 +95,7 @@
     $(document).ready(function() {
       $('.carrier-extra-content').css('display', 'block');
 
-      $('label[for="delivery_option_433"]').on('click',function(){
+      $(document).on('click','label[for="delivery_option_433"]', function(){
         $('.carrier-extra-content').css('display', 'block');
         if($('input#delivery_option_433').attr('checked') == 'checked' && $('.js-inpost-shipping-machine-name').text().trim().length < 1){
           $('.js-inpost-shipping-choose-machine').click();
