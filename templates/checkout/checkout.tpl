@@ -92,11 +92,9 @@
     window.close_text = 'Close';
     (function($) {
 
-    $(document).ready(function() {
       $(document).ready(function() {
         $('.carrier-extra-content').css('display', 'block');
       });
-    });
 
     })(jQuery);
     </script>
