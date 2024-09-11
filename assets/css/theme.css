@@ -2652,12 +2652,12 @@ select.form-control-lg:not([size]):not([multiple]),
 @media (min-width: 992px) and (max-width: 1199px){
 	#cart .card-block{
 		padding:10px;
-	}	
+	}
 }
 @media (max-width: 543px) {
 	.card-block{
 		padding:10px;
-	}	
+	}
 }
 .card-block::after {
     content: "";
@@ -4761,7 +4761,7 @@ a.text-danger:hover {
     font-weight: 400;
     src: url(../css/e79bfd88537def476913f3ed52f4f4b3.eot);
     /* For IE6-8 */
-    
+
     src: local("Material Icons"), local("MaterialIcons-Regular"), url(../css/570eb83859dc23dd0eec423a49e147fe.woff2) format("woff2"), url(../css/012cf6a10129e2275d79d6adac7f3b02.woff) format("woff"), url(../css/a37b0c01c0baf1888ca812cc0508f6e2.ttf) format("truetype");
 }
 .material-icons {
@@ -4770,7 +4770,7 @@ a.text-danger:hover {
     font-style: normal;
     font-size: 24px;
     /* Preferred icon size */
-    
+
     display: inline-block;
     vertical-align: middle;
     width: 1em;
@@ -4781,16 +4781,16 @@ a.text-danger:hover {
     white-space: nowrap;
     direction: ltr;
     /* Support for all WebKit browsers. */
-    
+
     -webkit-font-smoothing: antialiased;
     /* Support for Safari and Chrome. */
-    
+
     text-rendering: optimizeLegibility;
     /* Support for Firefox. */
-    
+
     -moz-osx-font-smoothing: grayscale;
     /* Support for IE. */
-    
+
     font-feature-settings: 'liga';
 }
 
@@ -5682,7 +5682,7 @@ body#checkout section.checkout-step #checkout-guest-form .custom-checkbox label 
 }
 @media (max-width: 543px) {
 #checkout #checkout-login-form .form-footer .btn{
-	margin:15px 0 0;	
+	margin:15px 0 0;
 }
 }
 body#checkout section.checkout-step.-current.-reachable.-complete .done,
@@ -7026,14 +7026,14 @@ body#checkout #gift_message {
     display: inline-block;
     vertical-align: top;
 }
-#products .thumbnail-container .wishlist .btn, 
+#products .thumbnail-container .wishlist .btn,
 .products .thumbnail-container .wishlist .btn,
-.featured-products .thumbnail-container .wishlist .btn, 
-.ttfeatured-products .thumbnail-container .wishlist .btn, 
+.featured-products .thumbnail-container .wishlist .btn,
+.ttfeatured-products .thumbnail-container .wishlist .btn,
 .product-accessories .thumbnail-container .wishlist .btn,
-.ttbestseller-products .thumbnail-container .wishlist .btn, 
+.ttbestseller-products .thumbnail-container .wishlist .btn,
 .ttnew-products .thumbnail-container .wishlist .btn,
-.crossselling-product .thumbnail-container .wishlist .btn, 
+.crossselling-product .thumbnail-container .wishlist .btn,
 .category-products .thumbnail-container .wishlist .btn,
 .view-product .thumbnail-container .wishlist .btn {
 border-radius: 50%;
@@ -7046,14 +7046,14 @@ border-radius: 50%;
     width: 36px;
     background: transparent;
 }
-#products .thumbnail-container .wishlist .btn::after, 
+#products .thumbnail-container .wishlist .btn::after,
 .products .thumbnail-container .wishlist .btn::after,
-.featured-products .thumbnail-container .wishlist .btn::after, 
-.ttfeatured-products .thumbnail-container .wishlist .btn::after, 
+.featured-products .thumbnail-container .wishlist .btn::after,
+.ttfeatured-products .thumbnail-container .wishlist .btn::after,
 .product-accessories .thumbnail-container .wishlist .btn::after,
-.ttbestseller-products .thumbnail-container .wishlist .btn::after, 
+.ttbestseller-products .thumbnail-container .wishlist .btn::after,
 .ttnew-products .thumbnail-container .wishlist .btn::after,
-.crossselling-product .thumbnail-container .wishlist .btn::after, 
+.crossselling-product .thumbnail-container .wishlist .btn::after,
 .category-products .thumbnail-container .wishlist .btn::after,
 .view-product .thumbnail-container .wishlist .btn::after{
     font-family: 'Material Icons';
@@ -7064,14 +7064,14 @@ border-radius: 50%;
 
 }
 #products .thumbnail-container:hover .wishlist,
-.products .thumbnail-container:hover .wishlist, 
-.featured-products .thumbnail-container:hover .wishlist, 
-.ttfeatured-products .thumbnail-container:hover .wishlist, 
-.product-accessories .thumbnail-container:hover .wishlist, 
+.products .thumbnail-container:hover .wishlist,
+.featured-products .thumbnail-container:hover .wishlist,
+.ttfeatured-products .thumbnail-container:hover .wishlist,
+.product-accessories .thumbnail-container:hover .wishlist,
 .ttbestseller-products .thumbnail-container:hover .wishlist,
-.ttnew-products .thumbnail-container:hover .wishlist, 
-.ttspecial-products .thumbnail-container:hover .wishlist, 
-.crossselling-product .thumbnail-container:hover .wishlist, 
+.ttnew-products .thumbnail-container:hover .wishlist,
+.ttspecial-products .thumbnail-container:hover .wishlist,
+.crossselling-product .thumbnail-container:hover .wishlist,
 .category-products .thumbnail-container:hover .wishlist,
 .view-product .thumbnail-container:hover .wishlist {
     top: 5px;
@@ -7210,11 +7210,11 @@ border-radius: 50%;
 .featured-products .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button::before,
 .product-accessories .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button::before,
 .ttfeatured-products .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button::before,
-.crossselling-product .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button::before, 
-.ttbestseller-products .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button::before, 
+.crossselling-product .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button::before,
+.ttbestseller-products .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button::before,
 .ttnew-products .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button::before,
 .ttspecial-products .thumbnail-container .ttproducthover div.tt-button-container .btna.ajax_add_to_cart_button::before,
-.category-products .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button::before, 
+.category-products .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button::before,
 .view-product .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button::before {
     bottom: 0;
     content: "\E547";
@@ -7229,14 +7229,14 @@ border-radius: 50%;
 }
 
 @media (max-width: 767px){
-.featured-products .thumbnail-container .wishlist, 
+.featured-products .thumbnail-container .wishlist,
 .ttfeatured-products .thumbnail-container .wishlist,
-.product-accessories .thumbnail-container .wishlist, 
+.product-accessories .thumbnail-container .wishlist,
 .ttbestseller-products .thumbnail-container .wishlist,
-.ttnew-products .thumbnail-container .wishlist, 
-.ttspecial-products .thumbnail-container .wishlist, 
+.ttnew-products .thumbnail-container .wishlist,
+.ttspecial-products .thumbnail-container .wishlist,
 .crossselling-product .thumbnail-container .wishlist,
- .category-products .thumbnail-container .wishlist, 
+ .category-products .thumbnail-container .wishlist,
  .view-product .thumbnail-container .wishlist {
     top:5px;
 }
@@ -7271,11 +7271,11 @@ border-radius: 50%;
 .featured-products .product-grid .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button::before,
 .product-accessories .product-grid .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button::before,
 .ttfeatured-products .product-grid .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button::before,
-.crossselling-product .product-grid .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button::before, 
-.ttbestseller-products .product-grid .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button::before, 
+.crossselling-product .product-grid .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button::before,
+.ttbestseller-products .product-grid .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button::before,
 .ttnew-products .product-grid .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button::before,
 .ttspecial-products .product-grid .thumbnail-container .ttproducthover div.tt-button-container .btna.ajax_add_to_cart_button::before,
-.category-products .product-grid .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button::before, 
+.category-products .product-grid .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button::before,
 .view-product .product-grid .thumbnail-container .ttproducthover div.tt-button-container .btn.ajax_add_to_cart_button::before {
 	bottom: 0;
     content: "\E547";
@@ -8004,9 +8004,9 @@ border-radius: 50%;
     padding: 15px;
     text-align: justify;
     border: 1px solid #e5e5e5;
-	border-radius:15px; 
-	-moz-border-radius:15px; 
-	-webkit-border-radius:15px; 
+	border-radius:15px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
 	-khtml-border-radius:15px;
 }
 .page-content.page-cms .cms-box img {
@@ -8262,10 +8262,10 @@ border-radius: 50%;
     background: #f5f5f5;
     padding: 10px;
     margin-bottom:20px;
-	border-radius:15px; 
-	-moz-border-radius:15px; 
-	-webkit-border-radius:15px; 
-	-khtml-border-radius:15px;    
+	border-radius:15px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	-khtml-border-radius:15px;
 	float: left;
     width: 100%;
 }
@@ -8481,9 +8481,9 @@ border-radius: 50%;
         background: #A8D727;
         color: #fff;
         width: 100%;
-		border-radius:15px; 
-		-moz-border-radius:15px; 
-		-webkit-border-radius:15px; 
+		border-radius:15px;
+		-moz-border-radius:15px;
+		-webkit-border-radius:15px;
 		-khtml-border-radius:15px;
 		font-size:16px;
     }
@@ -8756,7 +8756,7 @@ border-radius: 50%;
 }
 #product #tab-content .product-description > p{
 	margin:0;
-}	
+}
 
 @media (max-width: 991px) {
     .ttproductpagetab {
@@ -8900,8 +8900,8 @@ border-radius: 50%;
 }
 #product-modal .modal-content .modal-body .arrows .arrow-up {
     opacity: 0.2;
-	-moz-opacity: 0.2; 
-	-khtml-opacity: 0.2; 
+	-moz-opacity: 0.2;
+	-khtml-opacity: 0.2;
 	-webkit-opacity: 0.2;
     top: -40px;
 }
@@ -8988,7 +8988,7 @@ border-radius: 50%;
 	}
 	#blockcart-modal .modal-body{
 		padding:15px;
-	}	
+	}
 	#blockcart-modal .product-img{
 		margin:0 0 20px;
 		width:100%;
@@ -9655,9 +9655,9 @@ li.product-flag.on-sale {
 }
 #block-reassurance img {
     opacity: .7;
-	-moz-opacity: .7; 
-	-khtml-opacity:.7; 
-	-webkit-opacity:.7; 
+	-moz-opacity: .7;
+	-khtml-opacity:.7;
+	-webkit-opacity:.7;
     width: 1.5625rem;
     margin-right: 0.625rem;
 }
@@ -9704,9 +9704,9 @@ li.product-flag.on-sale {
 	right: 0;
 	width: 30px;
 	position:absolute;
-	border-radius: 50%; 
-	-moz-border-radius: 50%; 
-	-webkit-border-radius: 50%; 
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
 	-khtml-border-radius: 50%;
 	cursor:pointer;
 }
@@ -10566,7 +10566,7 @@ li.product-flag.on-sale {
     margin-left: 1.25rem;
 }
 .popover {
-    
+
 }
 /*** WRAPPER ***/
 
@@ -10727,7 +10727,7 @@ li.product-flag.on-sale {
 #index #content {
     text-align: center;
   }
-  
+
   #content {
     float: left;
     width: 100%;
@@ -11632,8 +11632,8 @@ li.product-flag.on-sale {
         position: relative;
         width: 100%;
 		opacity: 0.5;
-		-moz-opacity: 0.5; 
-		-khtml-opacity: 0.5; 
+		-moz-opacity: 0.5;
+		-khtml-opacity: 0.5;
 		-webkit-opacity: 0.5;
     }
     #products .product-list .thumbnail-container .ttproducthover div.tt-button-container .btn.add-to-cart-disable span {
@@ -11836,9 +11836,9 @@ li.product-flag.on-sale {
     padding: 25px 0;
 	float:left;
 	width:100%;
-	border-radius:15px; 
-	-moz-border-radius:15px; 
-	-webkit-border-radius:15px; 
+	border-radius:15px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
 	-khtml-border-radius:15px;
 }
 .sitemap ul li a {
@@ -12062,7 +12062,7 @@ li.product-flag.on-sale {
 		padding: 0 0 10px!important;
 		text-align: center;
 		vertical-align: top;
-		width: auto; 
+		width: auto;
     }
 	#ttcategory-tabs {
 		float:left;
@@ -13138,9 +13138,9 @@ color: #fff !important;
 #product-modal .modal-dialog {
     max-width: 800px;
 	background:#fff;
-	border-radius:0.3rem; 
-	-moz-border-radius:0.3rem; 
-	-webkit-border-radius:0.3rem; 
+	border-radius:0.3rem;
+	-moz-border-radius:0.3rem;
+	-webkit-border-radius:0.3rem;
 	-khtml-border-radius:0.3rem;
 	margin:30px auto;
 }
@@ -13233,7 +13233,7 @@ color: #fff !important;
 	}
 	#product-modal .modal-content .modal-body .arrows i {
 		left:0;
-	}	
+	}
 	#product-modal .modal-content .modal-body .arrows .arrow-up {
 		top: -10px;
 	}
@@ -13352,7 +13352,7 @@ color: #fff !important;
 /*------------ End subcategories--------------*/
 /* ------------Start left column/Right column product css -----------*/
 #search_filters #_desktop_search_filters_clear_all .btn.btn-tertiary.js-search-filters-clear-all{
-	margin:8px 0 6px 15px;	
+	margin:8px 0 6px 15px;
 }
 #left-column > div,
 #right-column > div,
@@ -13594,12 +13594,12 @@ color: #fff !important;
 /*--------------Start ttcmsleftbanner--------------*/
 #left-column .ttleftbanner-img.ttimg img,#right-column .ttleftbanner-img.ttimg img{
 	max-width:100%;
-	border-radius:15px; 
-	-moz-border-radius:15px; 
-	-webkit-border-radius:15px; 
+	border-radius:15px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
 	-khtml-border-radius:15px;
 }
-@media (max-width: 991px) {	
+@media (max-width: 991px) {
 	#ttcmsleftbanner{
 		width: auto !important;
 	}
@@ -14008,9 +14008,9 @@ color: #fff !important;
     width: 30px;
     height: 30px;
     padding: 0;
-	border-radius: 50%; 
-	-moz-border-radius: 50%; 
-	-webkit-border-radius: 50%; 
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
 	-khtml-border-radius: 50%;
 }
 .customNavigation a.prev {
@@ -14043,7 +14043,7 @@ color: #fff !important;
 .customNavigation {
 	right:20px;
 	top:15px;
-}	
+}
 }
 @media (max-width: 991px) {
     .customNavigation {
@@ -14380,8 +14380,8 @@ color: #fff !important;
 	border: 80px double rgba(55,55,55,0);
 	z-index: 1;
 	transition: all 0.5s ease-in-out;
-	-webkit-transition: all 0.5s ease-in-out; 
-	-moz-transition: all 0.5s ease-in-out; 
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
 	-ms-transition:  all 0.5s ease-in-out;
 	-o-transition:  all 0.5s ease-in-out;
 	border-radius:8px;
@@ -14454,8 +14454,8 @@ color: #fff !important;
 	border: 80px double rgba(0,0,0,0);
 	z-index: 1;
 	transition: all 0.5s ease-in-out;
-	-webkit-transition: all 0.5s ease-in-out; 
-	-moz-transition: all 0.5s ease-in-out; 
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
 	-ms-transition:  all 0.5s ease-in-out;
 	-o-transition:  all 0.5s ease-in-out;
 	border-radius:8px;
@@ -14546,8 +14546,8 @@ color: #fff !important;
 	border: 80px double rgba(55,55,55,0);
 	z-index: 1;
 	transition: all 0.5s ease-in-out;
-	-webkit-transition: all 0.5s ease-in-out; 
-	-moz-transition: all 0.5s ease-in-out; 
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
 	-ms-transition:  all 0.5s ease-in-out;
 	-o-transition:  all 0.5s ease-in-out;
 	border-radius:8px;
@@ -14709,7 +14709,7 @@ color: #fff !important;
 #left-column #ttcmstestimonial .tt-titletab,#right-column #ttcmstestimonial .tt-titletab{
 	border:none;
 	margin:0;
-}	
+}
 #ttcmstestimonial {
     position: relative;
 }
@@ -14937,8 +14937,8 @@ color: #fff !important;
 	border: 80px double rgba(0,0,0,0);
 	z-index: 1;
 	transition: all 0.5s ease-in-out;
-	-webkit-transition: all 0.5s ease-in-out; 
-	-moz-transition: all 0.5s ease-in-out; 
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
 	-ms-transition:  all 0.5s ease-in-out;
 	-o-transition:  all 0.5s ease-in-out;
 }
@@ -15436,7 +15436,7 @@ color: #fff !important;
 }
 #ttcmsfooter ul li:last-child{
 	margin:0;
-}	
+}
 #ttcmsfooter .payment_logo_block{
 	float:left;
 	width:100%;
@@ -15479,7 +15479,7 @@ color: #fff !important;
 }
 /*--------------- End TT - CMS Footer --------------*/
 /*--------------------- start Product Comaprasion Css ---------------------------*/
-#module-ttcompare-compare .table-responsive, 
+#module-ttcompare-compare .table-responsive,
 #module-ttcompare-compare .table-bordered{
     border:0;
     border-radius: 0;;
@@ -16322,7 +16322,7 @@ table#product_comparison .product-rating {
 	 left: 10px;
 	 padding: 0;
 	 position: absolute;
-	 top: 18px;    
+	 top: 18px;
 	 border-radius: 50%;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -16475,7 +16475,7 @@ table#product_comparison .product-rating {
 }
 @media (max-width: 991px) {
 	#smartblog_block .container{
-		padding:15px 20px 20px;	
+		padding:15px 20px 20px;
 	}
 }
 @media (max-width: 767px) {
@@ -16733,8 +16733,8 @@ table#product_comparison .product-rating {
 }
 .ttspecial-products .owl-buttons {
     opacity: 0;
-	-moz-opacity: 0; 
-	-khtml-opacity: 0; 
+	-moz-opacity: 0;
+	-khtml-opacity: 0;
 	-webkit-opacity: 0;
 	transition: all 400ms ease-in-out 0s;
 	-webkit-transition: all 400ms ease-in-out 0s;
@@ -16744,8 +16744,8 @@ table#product_comparison .product-rating {
 }
 .ttspecial-products .js-qv-mask:hover .owl-buttons {
     opacity: 1;
-	-moz-opacity: 1; 
-	-khtml-opacity: 1; 
+	-moz-opacity: 1;
+	-khtml-opacity: 1;
 	-webkit-opacity: 1;
 }
 .ttspecial-products .products .product-miniature {
@@ -16765,9 +16765,9 @@ table#product_comparison .product-rating {
 	border:none;
     border-right: 1px solid #eee;
 	text-align:center;
-	border-radius:0; 
-	-moz-border-radius:0; 
-	-webkit-border-radius:0; 
+	border-radius:0;
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
 	-khtml-border-radius:0;
 	box-shadow: none;
 	-moz-box-shadow: none;
@@ -16913,8 +16913,8 @@ position: static !important;
     -khtml-border-radius: 25px;
     width: auto;
 	opacity:0.5!important;
-	-moz-opacity: 0.5!important; 
-	-khtml-opacity: 0.5!important; 
+	-moz-opacity: 0.5!important;
+	-khtml-opacity: 0.5!important;
 	-webkit-opacity: 0.5!important;
 	z-index:1;
 	position:relative;
@@ -16999,8 +16999,8 @@ position: static !important;
 	}
 	.ttspecial-products .owl-buttons {
 		opacity: 1;
-		-moz-opacity: 1; 
-		-khtml-opacity: 1; 
+		-moz-opacity: 1;
+		-khtml-opacity: 1;
 		-webkit-opacity:1;
 	}
 	.ttspecial-products .ttspecial-list .ttproduct-image .new,.ttspecial-products .ttspecial-list .ttproduct-image .pack{
@@ -17498,4 +17498,10 @@ position: static !important;
 
 .product-description img{
 	float:none!important;
+}
+
+.easypack-widget .easypack-search-widget{
+    margin: 0;
+    position: relative;
+    right: 0;
 }
