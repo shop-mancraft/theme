@@ -35,7 +35,7 @@
 								<div class="collapse" id="collapseCompanyInvoice">
 									<div class="flex justify-between">
 						{/if}
-										<div class="form-group w-[calc(50%_-_5px)] input-{$fieldName}">
+										<div class="form-group w-[calc(50%_-_5px)] {if $fieldName == 'phone_mobile'} hidden {/if} input-{$fieldName}">
 											<input maxlength="{$field.maxlength}" {if $field.required}data-required="1"
 											{else}data-required="0"
 												{/if} data-validate="{$field.validate}" type="text" name="{$field.delivery_field_name}"
