@@ -1033,7 +1033,7 @@ $(document).ready(function () {
 
   document.querySelector("body").addEventListener("click", () => $("#variants .collapse").collapse("hide"));
 
-  initCheckoutInputTests()
+  initInputTests()
 
 });
 
@@ -1041,12 +1041,10 @@ $(window).load(function () {
   $("#checkout #checkout-payment-step #payment-option-1").trigger("click");
 });
 
-function initCheckoutInputTests() {
-  document.querySelectorAll('#checkout input[type="text"]').forEach(input => {
-    input.addEventListener('beforeinput',(e)=>{
+function initInputTests() {
+  document.addEventListener('beforeinput',(e)=>{
       if (isForeignChar(e.data)) e.preventDefault()
     })
-  })
 }
 
 function isForeignChar(char) {

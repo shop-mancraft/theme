@@ -77,4 +77,8 @@
   {$HOOK_HEADER nofilter}
 {/block}
 
+<script type="text/javascript">
+const alertCharText = "{l s='Due to the correct generation of courier labels, please use only Latin characters in the address data.' d='Custom'}"
+</script>
+
 {block name='hook_extra'}{/block}
