@@ -35,7 +35,7 @@
 								<div class="collapse" id="collapseCompanyInvoice">
 									<div class="flex justify-between">
 						{/if}
-										<div class="form-group w-[calc(50%_-_5px)] {if $fieldName == 'phone_mobile'} hidden {/if} input-{$fieldName}">
+										<div class="form-group w-[calc(50%_-_5px)] input-{$fieldName}">
 											<input maxlength="{$field.maxlength}" {if $field.required}data-required="1"
 											{else}data-required="0"
 												{/if} data-validate="{$field.validate}" type="text" name="{$field.delivery_field_name}"
@@ -61,7 +61,7 @@
 			{foreach from=$addressFormFields item=field key=fieldName}
 				{if !in_array($fieldName, ['country', 'state', 'alias','company','vat_number']) && $field}
 
-				<div class="form-group w-[calc(50%_-_5px)] {if $fieldName == 'company' || $fieldName == 'vat_number' }float-left{/if} {if $fieldName == 'phone_mobile'} hidden {/if} input-{$fieldName}">
+				<div class="form-group w-[calc(50%_-_5px)] {if $fieldName == 'company' || $fieldName == 'vat_number' }float-left{/if} input-{$fieldName}">
 						<input
 							maxlength="{$field.maxlength}"
 							{if $field.required}data-required="1"{else}data-required="0"{/if}
