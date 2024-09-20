@@ -19,6 +19,9 @@
 {block name='content'}
     <section class="main" id="wk-one-page-checkout">
         <section class="desktop-presta:px-24 tablet-medium:px-7 font-body">
+
+            <p class="!text-main max-w-[320px] mx-auto text-center pb-8 text-base">{l s='Due to a natural disaster, orders may take several weeks to be processed. If you accept, you help us'}</p>
+
             <div class="pt-10 dekstop-presta:pt-60px max-w-[850px] mx-auto">
                 {block name='wk_order_summary'}
                     {include file="module:wkonepagecheckout/views/templates/front/content/wkordersummary.tpl"}
