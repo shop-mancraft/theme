@@ -20,7 +20,7 @@
     <section class="main" id="wk-one-page-checkout">
         <section class="desktop-presta:px-24 tablet-medium:px-7 font-body">
 
-            <p class="!text-main max-w-[320px] mx-auto text-center pb-8 text-base">{l s='Dear friends, Dear customers. Due to a natural disaster, orders may take several weeks to be processed. We declare that every order will be sent to you. By accepting this situation you are helping us a lot, thanks so much! #mancraftteam' d='Shop.Theme.Checkout'}</p>
+            <p class="!text-main max-w-[320px] mx-auto text-center pb-8 text-base">{l s='Dear customers, we would like to inform you that we have resumed production and we are fulfilling all orders placed on an ongoing basis. Thank you and best regards to everyone!' d='Shop.Theme.Checkout'}</p>
 
             <div class="pt-10 dekstop-presta:pt-60px max-w-[850px] mx-auto">
                 {block name='wk_order_summary'}
