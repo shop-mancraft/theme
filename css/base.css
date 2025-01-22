@@ -73,13 +73,24 @@ select.form-control:not([size]):not([multiple]) {
 
 
 .socials-tiles{
-  @apply: flex items-center justify-center flex-wrap gap-4;
+  gap: 24px;
+  @apply !flex flex-wrap !pl-0 !mt-10;
 }
 
 .socials-tiles li{
-  @apply block
+  @apply block aspect-square
 }
 
 .socials-tiles li a{
-  @apply p-5 border border-gray-dark hover:border-primary rounded-lg transition duration-200;
+  background-size: 200% 200%;
+  background-position: 0% 0%;
+  @apply h-full flex items-center justify-center p-5 tablet:p-8 bg-black bg-gradient-to-t from-[#A8D72780] via-black to-black rounded-[10px] transition-all duration-200;
+}
+
+.socials-tiles li a:hover{
+  background-position: 100% 85%;
+}
+
+.socials-tiles li a svg{
+  @apply !w-full !h-full max-h-10 tablet:max-h-[74px]
 }
