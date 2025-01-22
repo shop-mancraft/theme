@@ -92,5 +92,5 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .socials-tiles li a svg{
-  @apply !w-auto !h-full max-h-10 md:max-h-[74px]
+  @apply !w-full !h-full max-h-10 tablet:max-h-[74px]
 }
