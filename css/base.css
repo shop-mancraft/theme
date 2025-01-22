@@ -73,7 +73,8 @@ select.form-control:not([size]):not([multiple]) {
 
 
 .socials-tiles{
-  @apply flex items-center justify-center flex-wrap gap-4;
+  gap: 16px;
+  @apply flex items-center justify-center flex-wrap pl-0;
 }
 
 .socials-tiles li{
