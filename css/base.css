@@ -73,8 +73,8 @@ select.form-control:not([size]):not([multiple]) {
 
 
 .socials-tiles{
-  gap: 16px;
-  @apply !flex items-center flex-wrap !pl-0;
+  gap: 24px;
+  @apply !flex items-center flex-wrap !pl-0 !mt-10;
 }
 
 .socials-tiles li{
@@ -82,5 +82,15 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .socials-tiles li a{
-  @apply block p-5 border border-gray-dark hover:border-primary rounded-lg transition duration-200;
+  background-size: 200% 200%;
+  background-position: 0% 0%;
+  @apply flex items-center justify-center p-5 tablet:p-8 bg-black bg-gradient-to-t from-[#A8D72780] via-black to-black rounded-[10px] transition-all duration-200;
+}
+
+.socials-tiles li a:hover{
+  background-position: 100% 100%;
+}
+
+.socials-tiles li a svg{
+  @apply !w-auto !h-full max-h-10 md:max-h-[74px]
 }
