@@ -76,7 +76,7 @@
         <dl class="data-sheet">
           {foreach from=$product.specific_references item=reference key=key}
             <dt class="name">{$key}</dt>
-            <dd class="value">{$reference}</dd>
+            <dd class="value" data-key="{$key}">{$reference}</dd>
           {/foreach}
         </dl>
       </section>
