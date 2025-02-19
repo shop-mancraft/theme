@@ -14206,22 +14206,6 @@ color: #fff !important;
     margin: 0;
     transition: background 400ms ease-in-out;
 }
-#tttop-link-block > ul#tttoplink > li:hover > a::after {
-    position: absolute;
-    content: '';
-    background: #A8D727;
-    left: 0;
-    right: 0;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-	border-radius: 8px;
-    -moz-border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -khtml-border-radius: 8px;
-
-}
 #tttop-link-block li.more_menu ul li a {
     color: #333333;
 	padding: 6px 20px;

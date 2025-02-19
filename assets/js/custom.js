@@ -582,10 +582,10 @@ $(document).ready(function () {
 
   /* ---------------- start Templatetrip link more menu ----------------------*/
 
-  var max_link = 5;
-  var items = $("#tttop-link-block ul li");
-  var surplus = items.slice(max_link, items.length);
-  surplus.wrapAll('<li class="more_menu tttoplink"><ul class="top-link clearfix">');
+  // var max_link = 5;
+  // var items = $("#tttop-link-block ul li");
+  // var surplus = items.slice(max_link, items.length);
+  // surplus.wrapAll('<li class="more_menu tttoplink"><ul class="top-link clearfix">');
   $(".more_menu").prepend('<a href="#" class="level-top">More	<i class="material-icons icon">chevron_right</i> </a>');
   $(".more_menu").mouseover(function () {
     $(this).children("ul").addClass("shown-link");
