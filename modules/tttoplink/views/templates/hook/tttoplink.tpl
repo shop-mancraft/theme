@@ -38,7 +38,7 @@
 				{if $tttoplink_link.url == '/contact-us' && $language.id == 1}/pl/kontakt{/if}{if $tttoplink_link.url == '/contact-us' && $language.id == 2}/en/contact-us{/if}
 				{if $tttoplink_link.url == '/distributors-map' && $language.id == 1}/pl/mapa-dystrybutorow{/if}{if $tttoplink_link.url == '/distributors-map' && $language.id == 2}/en/distributors-map{/if}
 				{if $tttoplink_link.url == '/module/smartblog/category' && $language.id == 1}/pl/instrukcje-montazu{/if}{if $tttoplink_link.url == '/module/smartblog/category' && $language.id == 2}/en/assembly-guide{/if}
-				{if $tttoplink_link.url != '/promotions' && $tttoplink_link.url != '/best-sales' && $tttoplink_link.url != '/new-products' && $tttoplink_link.url != '/contact-us' && $tttoplink_link.url != '/distributors-map' && $tttoplink_link.url != '/module/smartblog/category'}{$tttoplink_link.url}{/if}
+				{if $tttoplink_link.url != '/promotions' && $tttoplink_link.url != '/60-hot-deals' && $tttoplink_link.url != '/best-sales' && $tttoplink_link.url != '/new-products' && $tttoplink_link.url != '/contact-us' && $tttoplink_link.url != '/distributors-map' && $tttoplink_link.url != '/module/smartblog/category'}{$tttoplink_link.url}{/if}
 				" title="{$tttoplink_link.$lang}" {if $tttoplink_link.newWindow}target="_blank"{/if}>{$tttoplink_link.$lang}</a>
 			</li>
 		{/if}
