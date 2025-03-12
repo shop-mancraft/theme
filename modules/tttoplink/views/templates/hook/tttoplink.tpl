@@ -32,12 +32,13 @@
 			<li class="tttoplink">
 				<a href="
 				{if $tttoplink_link.url == '/promotions' && $language.id == 1}/pl/promocje{/if}{if $tttoplink_link.url == '/promotions' && $language.id == 2}/en/price-drop{/if}
+				{if $tttoplink_link.url == '/60-hot-deals' && $language.id == 1}/pl/60-hot-deals{/if}{if $tttoplink_link.url == '/60-hot-deals' && $language.id == 2}/en/60-hot-deals{/if}
 				{if $tttoplink_link.url == '/best-sales' && $language.id == 1}/pl/najczesciej-kupowane{/if}{if $tttoplink_link.url == '/best-sales' && $language.id == 2}/en/best-sales{/if}
 				{if $tttoplink_link.url == '/new-products' && $language.id == 1}/pl/nowe-produkty{/if}{if $tttoplink_link.url == '/new-products' && $language.id == 2}/en/new-products{/if}
 				{if $tttoplink_link.url == '/contact-us' && $language.id == 1}/pl/kontakt{/if}{if $tttoplink_link.url == '/contact-us' && $language.id == 2}/en/contact-us{/if}
 				{if $tttoplink_link.url == '/distributors-map' && $language.id == 1}/pl/mapa-dystrybutorow{/if}{if $tttoplink_link.url == '/distributors-map' && $language.id == 2}/en/distributors-map{/if}
 				{if $tttoplink_link.url == '/module/smartblog/category' && $language.id == 1}/pl/instrukcje-montazu{/if}{if $tttoplink_link.url == '/module/smartblog/category' && $language.id == 2}/en/assembly-guide{/if}
-				{if $tttoplink_link.url != '/promotions' && $tttoplink_link.url != '/best-sales' && $tttoplink_link.url != '/new-products' && $tttoplink_link.url != '/contact-us' && $tttoplink_link.url != '/distributors-map' && $tttoplink_link.url != '/module/smartblog/category'}{$tttoplink_link.url}{/if}
+				{if $tttoplink_link.url != '/promotions' && $tttoplink_link.url != '/60-hot-deals' && $tttoplink_link.url != '/best-sales' && $tttoplink_link.url != '/new-products' && $tttoplink_link.url != '/contact-us' && $tttoplink_link.url != '/distributors-map' && $tttoplink_link.url != '/module/smartblog/category'}{$tttoplink_link.url}{/if}
 				" title="{$tttoplink_link.$lang}" {if $tttoplink_link.newWindow}target="_blank"{/if}>{$tttoplink_link.$lang}</a>
 			</li>
 		{/if}
